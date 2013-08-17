@@ -1,0 +1,26 @@
+HKCR
+{
+	CxDrawShapes.DrawDataLink.1 = s 'DrawDataLink Class'
+	{
+		CLSID = s '{653F53C1-8EF4-42FC-9119-225C51DE6523}'
+	}
+	CxDrawShapes.DrawDataLink = s 'DrawDataLink Class'
+	{
+		CLSID = s '{653F53C1-8EF4-42FC-9119-225C51DE6523}'
+		CurVer = s 'CxDrawShapes.DrawDataLink.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {653F53C1-8EF4-42FC-9119-225C51DE6523} = s 'DrawDataLink Class'
+		{
+			ProgID = s 'CxDrawShapes.DrawDataLink.1'
+			VersionIndependentProgID = s 'CxDrawShapes.DrawDataLink'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{D75F0066-DC61-4679-A739-5B046E2C9088}'
+		}
+	}
+}

@@ -1,0 +1,26 @@
+HKCR
+{
+	CxDrawShapes.DrawPolyLine.1 = s 'DrawPolyLine Class'
+	{
+		CLSID = s '{A4E66FE3-9D90-4F3A-A119-97B815914DA5}'
+	}
+	CxDrawShapes.DrawPolyLine = s 'DrawPolyLine Class'
+	{
+		CLSID = s '{A4E66FE3-9D90-4F3A-A119-97B815914DA5}'
+		CurVer = s 'CxDrawShapes.DrawPolyLine.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {A4E66FE3-9D90-4F3A-A119-97B815914DA5} = s 'DrawPolyLine Class'
+		{
+			ProgID = s 'CxDrawShapes.DrawPolyLine.1'
+			VersionIndependentProgID = s 'CxDrawShapes.DrawPolyLine'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{D75F0066-DC61-4679-A739-5B046E2C9088}'
+		}
+	}
+}

@@ -1,0 +1,29 @@
+// CxAppearExp.idl : IDL source for CxAppearExp.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (CxAppearExp.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	uuid(610B614F-CB09-4510-8BBC-E4FEB0F015A3),
+	version(1.0),
+	helpstring("CxAppearExp 1.0 Type Library")
+]
+library CXAPPEAREXPLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+
+	[
+		uuid(90EFE451-2B10-40D3-9CDE-DA0B122FDFB3),
+		helpstring("CxAppearanceExpert Class")
+	]
+	coclass CxAppearanceExpert
+	{
+		interface IUnknown;
+	};
+};

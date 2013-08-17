@@ -1,0 +1,26 @@
+HKCR
+{
+	CxFormatDyn.FormatDynamic.1 = s 'FormatDynamic Class'
+	{
+		CLSID = s '{6DC9B1A9-0153-46C2-900F-D6C14F057B12}'
+	}
+	CxFormatDyn.FormatDynamic = s 'FormatDynamic Class'
+	{
+		CLSID = s '{6DC9B1A9-0153-46C2-900F-D6C14F057B12}'
+		CurVer = s 'CxFormatDyn.FormatDynamic.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {6DC9B1A9-0153-46C2-900F-D6C14F057B12} = s 'FormatDynamic Class'
+		{
+			ProgID = s 'CxFormatDyn.FormatDynamic.1'
+			VersionIndependentProgID = s 'CxFormatDyn.FormatDynamic'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{60FACC5E-2B67-4F04-A526-84B9628C793C}'
+		}
+	}
+}

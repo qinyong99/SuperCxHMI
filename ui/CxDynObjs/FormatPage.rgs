@@ -1,0 +1,23 @@
+HKCR
+{
+	CxFormatDyn.FormatPage.1 = s 'FormatPage Class'
+	{
+		CLSID = s '{97F23A79-DAE2-4AA3-A6B3-1628FB5C482C}'
+	}
+	CxFormatDyn.FormatPage = s 'FormatPage Class'
+	{
+		CLSID = s '{97F23A79-DAE2-4AA3-A6B3-1628FB5C482C}'
+		CurVer = s 'CxFormatDyn.FormatPage.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {97F23A79-DAE2-4AA3-A6B3-1628FB5C482C} = s 'FormatPage Class'
+		{
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+		}
+	}
+}

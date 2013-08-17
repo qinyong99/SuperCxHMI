@@ -1,0 +1,488 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\CxRun.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""l.chs\\afxres.rc""          // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\Axmediabrowser 1.ico"
+IDR_CXRUNTYPE           ICON    DISCARDABLE     "res\\RunDoc.ico"
+IDI_DCOM_WARNING        ICON    DISCARDABLE     "res\\warning.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU PRELOAD DISCARDABLE 
+BEGIN
+    POPUP "文件(&F)"
+    BEGIN
+        MENUITEM "打开(&O)...\tCtrl+O",         ID_FILE_OPEN
+        MENUITEM "连接(&C)...",                 ID_FILE_CONNECT
+        MENUITEM SEPARATOR
+        MENUITEM "退出(&X)",                    ID_APP_EXIT
+    END
+    POPUP "查看(&V)"
+    BEGIN
+        MENUITEM "全屏幕(&F)\tF11",             ID_VIEW_FULL_SCREEN
+    END
+    POPUP "工具(&T)"
+    BEGIN
+        MENUITEM "选项(&O)",                    ID_APP_OPTION
+        MENUITEM SEPARATOR
+        MENUITEM "管理控制台(&M)\tCtrl+M",      ID_TOOL_MC
+        MENUITEM "画面开发(&D)\tCtrl+D",        ID_TOOL_DEV
+    END
+    POPUP "帮助(&H)"
+    BEGIN
+        MENUITEM "内容(&C)",                    ID_HELP_CONTENT
+        MENUITEM "索引(&I)...",                 ID_HELP_INDEX
+        MENUITEM "搜索(&S)...",                 ID_HELP_SEARCH
+        MENUITEM "关于运行系统(&A)...",         ID_APP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS PRELOAD MOVEABLE PURE 
+BEGIN
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    "D",            ID_TOOL_DEV,            VIRTKEY, CONTROL, NOINVERT
+    "M",            ID_TOOL_MC,             VIRTKEY, CONTROL, NOINVERT
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL, NOINVERT
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL, NOINVERT
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL, NOINVERT
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL, NOINVERT
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT, NOINVERT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT, NOINVERT
+    VK_F11,         ID_VIEW_FULL_SCREEN,    VIRTKEY, NOINVERT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY, NOINVERT
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT, NOINVERT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT, NOINVERT
+    VK_RETURN,      ID_EDIT_CUT,            VIRTKEY, CONTROL, NOINVERT
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_INPUT_PASSWORD DIALOG DISCARDABLE  0, 0, 147, 75
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "密码"
+FONT 9, "宋体"
+BEGIN
+    LTEXT           "请输入退出密码",-1,10,10,60,8,SS_NOPREFIX
+    EDITTEXT        IDC_EDIT1,10,25,125,14,ES_PASSWORD | ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "确定",IDOK,20,50,50,14,WS_GROUP
+    PUSHBUTTON      "取消",IDCANCEL,85,50,50,14,WS_GROUP
+END
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 235, 55
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "关于 SuperCx 运行系统 "
+FONT 9, "宋体"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "SuperCx 运行系统 3.0 版",IDC_APP_NAME,40,10,119,8,
+                    SS_NOPREFIX
+    LTEXT           "版权所有 (C) 2001-2006",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "确定",IDOK,178,7,50,14,WS_GROUP
+END
+
+IDD_PAGE_GEN DIALOG DISCARDABLE  0, 0, 292, 301
+STYLE WS_POPUP | WS_CAPTION
+CAPTION "常规"
+FONT 9, "宋体"
+BEGIN
+    LTEXT           "启动后进行的默认连接和其它设置。",IDC_STATIC,10,10,235,
+                    10
+    GROUPBOX        "",IDC_STATIC,7,25,278,30
+    GROUPBOX        "",IDC_STATIC,7,65,278,55
+    GROUPBOX        "",IDC_STATIC,7,131,278,99
+    CONTROL         "连接本地服务器",IDC_RADIO1,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,10,25,72,10
+    CONTROL         "连接远程服务器",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,
+                    11,65,72,10
+    CONTROL         "使用下面设置",IDC_RADIO3,"Button",BS_AUTORADIOBUTTON,11,
+                    131,64,10
+    CONTROL         "启动时对服务器配置改动进行提示",IDC_CHECK3,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,25,40,136,10
+    LTEXT           "主服务器",IDC_STATIC,25,83,33,8
+    EDITTEXT        IDC_SERVER,65,81,80,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BUTTON_SERVER,145,81,16,14
+    LTEXT           "备服务器",IDC_STATIC,25,103,33,8
+    EDITTEXT        IDC_SERVER2,65,101,80,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BUTTON_SERVER2,145,101,16,14
+    LTEXT           "指定启动时打开的画面，如果不进行指定，则会在当前用户指定的画面文件夹中查找默认的起始画面（主画面.grf，Main.grf）。",
+                    IDC_STATIC,25,151,252,15
+    LTEXT           "画面",IDC_STATIC,41,179,17,8
+    EDITTEXT        IDC_PICTURE,65,175,175,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BUTTON_PICTURE,241,175,16,14
+    CONTROL         "启动后切换到全屏幕",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,25,201,88,10
+    CONTROL         "动作对象在鼠标移过时高亮显示",IDC_CHECK2,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,25,215,128,10
+    GROUPBOX        "",IDC_STATIC,7,238,278,55
+    LTEXT           "用户名",IDC_STATIC,25,254,27,10
+    EDITTEXT        IDC_DEFAULT_USER,65,251,80,14,ES_AUTOHSCROLL
+    LTEXT           "密码",IDC_STATIC,25,274,27,10
+    EDITTEXT        IDC_DEFAULT_PASSWORD,65,271,80,14,ES_PASSWORD | 
+                    ES_AUTOHSCROLL
+    CONTROL         "使用默认用户名和密码",IDC_CHECK4,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,15,239,100,9
+END
+
+IDD_PROMPT_MODIFIED DIALOG DISCARDABLE  0, 0, 217, 65
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "服务器刷新提示"
+FONT 9, "宋体"
+BEGIN
+    LTEXT           "数据服务器正在运行中，其配置已改动，是否进行刷新？",
+                    IDC_STATIC,10,10,200,10
+    CONTROL         "下次不再提示",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,10,25,64,10
+    DEFPUSHBUTTON   "是",IDOK,85,45,50,14,WS_GROUP
+    DEFPUSHBUTTON   "否",IDCANCEL,145,45,50,14,WS_GROUP
+END
+
+IDD_DCOM_ERROR DIALOG DISCARDABLE  0, 0, 227, 85
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "服务器没有响应"
+FONT 9, "宋体"
+BEGIN
+    ICON            IDI_DCOM_WARNING,IDC_STATIC,10,20,20,20
+    LTEXT           "使用分布式 COM 与服务器通信超时， 请选择“重试”继续等待，选择“忽略”取消此次操作，选择“中止”将关闭应用程序。",
+                    IDC_STATIC,45,10,155,25
+    DEFPUSHBUTTON   "重试(&R)",IDRETRY,40,55,50,14,WS_GROUP
+    DEFPUSHBUTTON   "忽略(&I)",IDIGNORE,100,55,50,14,WS_GROUP
+    DEFPUSHBUTTON   "中止(&A)",IDABORT,155,55,50,14,WS_GROUP
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080404B0"
+        BEGIN
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "CxRun Microsoft 基础类应用程序\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "CxRun\0"
+            VALUE "LegalCopyright", "版权所有 (C) 2005\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "CxRun.EXE\0"
+            VALUE "ProductName", "CxRun 应用程序\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_INPUT_PASSWORD, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 140
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 68
+    END
+
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_PAGE_GEN, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 285
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 294
+    END
+
+    IDD_PROMPT_MODIFIED, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 210
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 58
+    END
+
+    IDD_DCOM_ERROR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 220
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 78
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_SPLASH              BITMAP  DISCARDABLE     "Splsh16.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDP_OLE_INIT_FAILED     "OLE 程序初始化失败。请确认 OLE 库程序是正确的版本。"
+END
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    IDR_MAINFRAME           "SuperCx 运行系统\n\nCxRun\nSuperCx 画面文件 (*.grf)\n.grf\nCxRun.Document\nCxRun Document"
+END
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "CxRun"
+    AFX_IDS_IDLEMESSAGE     "就绪"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_INDICATOR_EXT        "扩展名"
+    ID_INDICATOR_CAPS       "大写"
+    ID_INDICATOR_NUM        "数字"
+    ID_INDICATOR_SCRL       "滚动"
+    ID_INDICATOR_OVR        "改写"
+    ID_INDICATOR_REC        "记录"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_FILE_NEW             "建立新文档\n新建"
+    ID_FILE_OPEN            "打开一个现有文档\n打开"
+    ID_FILE_CLOSE           "关闭活动文档\n关闭"
+    ID_FILE_SAVE            "保存活动文档\n保存"
+    ID_FILE_SAVE_AS         "将活动文档以一个新文件名保存\n另存为"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_APP_ABOUT            "显示程序信息，版本号和版权\n关于"
+    ID_APP_EXIT             "退出应用程序；提示保存文档\n退出"
+    ID_HELP_INDEX           "帮助索引\n索引"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_FILE_MRU_FILE1       "打开该文档"
+    ID_FILE_MRU_FILE2       "打开该文档"
+    ID_FILE_MRU_FILE3       "打开该文档"
+    ID_FILE_MRU_FILE4       "打开该文档"
+    ID_FILE_MRU_FILE5       "打开该文档"
+    ID_FILE_MRU_FILE6       "打开该文档"
+    ID_FILE_MRU_FILE7       "打开该文档"
+    ID_FILE_MRU_FILE8       "打开该文档"
+    ID_FILE_MRU_FILE9       "打开该文档"
+    ID_FILE_MRU_FILE10      "打开该文档"
+    ID_FILE_MRU_FILE11      "打开该文档"
+    ID_FILE_MRU_FILE12      "打开该文档"
+    ID_FILE_MRU_FILE13      "打开该文档"
+    ID_FILE_MRU_FILE14      "打开该文档"
+    ID_FILE_MRU_FILE15      "打开该文档"
+    ID_FILE_MRU_FILE16      "打开该文档"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_NEXT_PANE            "切换到下一个窗格\n下一窗格"
+    ID_PREV_PANE            "切换回前一个窗格\n前一窗格"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_WINDOW_SPLIT         "将活动的窗口分隔成窗格\n分隔"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_EDIT_CLEAR           "删除被选对象\n删除"
+    ID_EDIT_CLEAR_ALL       "全部删除\n全部删除"
+    ID_EDIT_COPY            "复制被选对象并将其置于剪贴板上\n复制"
+    ID_EDIT_CUT             "剪切被选对象并将其置于剪贴板上\n剪切"
+    ID_EDIT_FIND            "查找指定的正文\n查找"
+    ID_EDIT_PASTE           "插入剪贴板内容\n粘贴"
+    ID_EDIT_REPEAT          "重复上一步操作\n重复"
+    ID_EDIT_REPLACE         "用不同的正文替换指定的正文\n替换"
+    ID_EDIT_SELECT_ALL      "选择整个文档\n选择全部"
+    ID_EDIT_UNDO            "撤消最后一步操作\n撤消"
+    ID_EDIT_REDO            "重新执行先前已撤消的操作\n重新执行"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_SCSIZE          "改变窗口大小"
+    AFX_IDS_SCMOVE          "改变窗口位置"
+    AFX_IDS_SCMINIMIZE      "将窗口缩小成图标"
+    AFX_IDS_SCMAXIMIZE      "把窗口放大到最大尺寸"
+    AFX_IDS_SCNEXTWINDOW    "切换到下一个文档窗口"
+    AFX_IDS_SCPREVWINDOW    "切换到先前的文档窗口"
+    AFX_IDS_SCCLOSE         "关闭活动的窗口并提示保存所有文档"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_SCRESTORE       "把窗口恢复到正常大小"
+    AFX_IDS_SCTASKLIST      "激活任务表"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_VIEW_FULL_SCREEN     "切换至全屏幕显示方式\n全屏幕"
+    ID_FILE_CONNECT         "连接到远程服务器获取文档\n连接"
+    ID_TOOL_OPTION          "更改设置\n选项"
+    ID_TOOL_DEV             "启动画面开发环境。\n画面开发环境"
+    ID_TOOL_MC              "启动管理控制台\n管理控制台"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_HELP_CONTENT         "显示帮助内容\n内容"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_HELP_SEARCH          "收索帮助主题\n收索"
+END
+
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE 4, 2
+#pragma code_page(936)
+#endif //_WIN32
+#include "res\CxRun.rc2"  // non-Microsoft Visual C++ edited resources
+#include "l.chs\afxres.rc"          // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

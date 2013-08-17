@@ -1,0 +1,29 @@
+// CxDynExp.idl : IDL source for CxDynExp.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (CxDynExp.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	uuid(D87D792A-DF5D-443A-BE95-9768DE01F751),
+	version(1.0),
+	helpstring("CxDynExp 1.0 Type Library")
+]
+library CXDYNEXPLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+
+	[
+		uuid(A5034306-39CC-42FD-B5E6-C394A947F88E),
+		helpstring("CxDynamicExpert Class")
+	]
+	coclass CxDynamicExpert
+	{
+		interface IUnknown;
+	};
+};

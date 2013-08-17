@@ -1,0 +1,26 @@
+HKCR
+{
+	CxDrawTools.PolyTool.1 = s 'PolyTool Class'
+	{
+		CLSID = s '{89B0F88E-F233-4E0A-84F1-4672191B8A2E}'
+	}
+	CxDrawTools.PolyTool = s 'PolyTool Class'
+	{
+		CLSID = s '{89B0F88E-F233-4E0A-84F1-4672191B8A2E}'
+		CurVer = s 'CxDrawTools.PolyTool.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {89B0F88E-F233-4E0A-84F1-4672191B8A2E} = s 'PolyTool Class'
+		{
+			ProgID = s 'CxDrawTools.PolyTool.1'
+			VersionIndependentProgID = s 'CxDrawTools.PolyTool'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{7309E63D-3287-11D5-A468-9299FCC96908}'
+		}
+	}
+}

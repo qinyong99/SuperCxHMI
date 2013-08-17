@@ -1,0 +1,23 @@
+HKCR
+{
+	CxDynExp.CxDynamicExpert.1 = s 'CxDynamicExpert Class'
+	{
+		CLSID = s '{A5034306-39CC-42FD-B5E6-C394A947F88E}'
+	}
+	CxDynExp.CxDynamicExpert = s 'CxDynamicExpert Class'
+	{
+		CLSID = s '{A5034306-39CC-42FD-B5E6-C394A947F88E}'
+		CurVer = s 'CxDynExp.CxDynamicExpert.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {A5034306-39CC-42FD-B5E6-C394A947F88E} = s 'CxDynamicExpert Class'
+		{
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+		}
+	}
+}

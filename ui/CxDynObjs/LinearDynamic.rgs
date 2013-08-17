@@ -1,0 +1,26 @@
+HKCR
+{
+	CxLinearDyn.LinearDynamic.1 = s 'LinearDynamic Class'
+	{
+		CLSID = s '{D5BAB7D7-F3ED-4F21-996D-492C8F1CD572}'
+	}
+	CxLinearDyn.LinearDynamic = s 'LinearDynamic Class'
+	{
+		CLSID = s '{D5BAB7D7-F3ED-4F21-996D-492C8F1CD572}'
+		CurVer = s 'CxLinearDyn.LinearDynamic.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {D5BAB7D7-F3ED-4F21-996D-492C8F1CD572} = s 'LinearDynamic Class'
+		{
+			ProgID = s 'CxLinearDyn.LinearDynamic.1'
+			VersionIndependentProgID = s 'CxLinearDyn.LinearDynamic'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{D64F82F4-A248-49E0-9E65-B79BA8179593}'
+		}
+	}
+}

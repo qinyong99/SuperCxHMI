@@ -1,0 +1,602 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "winres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""winres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "1 TYPELIB ""CxChartCtrl.tlb""\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", "\0"
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "CxChartCtrl Module\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "CxChartCtrl\0"
+            VALUE "LegalCopyright", "Copyright 2003\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OLESelfRegister", "\0"
+            VALUE "OriginalFilename", "CxChartCtrl.DLL\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "CxChartCtrl Module\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_CXTRENDCTRL         BITMAP  DISCARDABLE     "cxchartc.bmp"
+IDB_TOOL1               BITMAP  DISCARDABLE     "tool1.bmp"
+IDR_TOOL                BITMAP  DISCARDABLE     "toolbar1.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// REGISTRY
+//
+
+IDR_DRAWTREND           REGISTRY DISCARDABLE    "DrawTrend.rgs"
+IDR_CXTRENDCTRL         REGISTRY DISCARDABLE    "CxTrendCtrl.rgs"
+IDR_CXGENTRENDPAGE      REGISTRY DISCARDABLE    "CxGenTrendPage.rgs"
+IDR_CXTRENDCTRLPAGE     REGISTRY DISCARDABLE    "CxTrendCtrlPage.rgs"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_VALUEAXIS_PAGE DIALOG DISCARDABLE  0, 0, 281, 147
+STYLE WS_CHILD | WS_VISIBLE
+FONT 9, "宋体"
+BEGIN
+    GROUPBOX        "坐标轴",IDC_STATIC,15,0,245,90
+    CONTROL         "显示",IDC_AXIS_SHOW,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,74,11,32,10
+    LTEXT           "颜色",IDC_STATIC,145,12,17,8
+    COMBOBOX        IDC_AXIS_COLOR,170,10,48,30,CBS_DROPDOWNLIST | 
+                    CBS_OWNERDRAWFIXED | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "标号数目",IDC_STATIC,35,36,33,8
+    EDITTEXT        IDC_TICKS_NUM,75,30,40,14,ES_AUTOHSCROLL
+    LTEXT           "字体",IDC_STATIC,145,33,17,8
+    EDITTEXT        IDC_TICK_FONT,170,30,50,14,ES_AUTOHSCROLL | ES_READONLY
+    PUSHBUTTON      "...",IDC_TICKFONT_PICK,220,30,15,14
+    LTEXT           "数字位数",IDC_STATIC,35,55,33,8
+    EDITTEXT        IDC_WHOLEDIGITS,75,50,40,14,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "小数位数",IDC_STATIC,129,53,33,8
+    EDITTEXT        IDC_DECIMALDIGITS,170,50,40,14,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    LTEXT           "最小值",IDC_STATIC,43,73,25,8
+    EDITTEXT        IDC_MIN_VALUE,75,70,40,14,ES_AUTOHSCROLL
+    LTEXT           "最大值",IDC_STATIC,137,73,25,8
+    EDITTEXT        IDC_MAX_VALUE,170,70,40,14,ES_AUTOHSCROLL
+    GROUPBOX        "标题",IDC_STATIC,15,95,245,50
+    CONTROL         "显示",IDC_TITLE_SHOW,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,60,107,32,10
+    LTEXT           "标题",IDC_STATIC,145,108,17,8
+    EDITTEXT        IDC_TITLE,170,105,85,14,ES_AUTOHSCROLL
+    LTEXT           "字体",IDC_STATIC,40,128,17,8
+    EDITTEXT        IDC_TITLE_FONT,60,125,50,14,ES_AUTOHSCROLL | ES_READONLY
+    PUSHBUTTON      "...",IDC_TITLEFONT_PICK,110,125,15,14
+    LTEXT           "颜色",IDC_STATIC,145,127,17,8
+    COMBOBOX        IDC_TITLE_COLOR,170,125,48,30,CBS_DROPDOWNLIST | 
+                    CBS_OWNERDRAWFIXED | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_TIMEAXIS_PAGE DIALOG DISCARDABLE  0, 0, 281, 147
+STYLE WS_CHILD | WS_VISIBLE
+FONT 9, "宋体"
+BEGIN
+    GROUPBOX        "坐标轴",IDC_STATIC,15,0,245,88
+    CONTROL         "显示",IDC_AXIS_SHOW,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,75,12,32,10
+    LTEXT           "颜色",IDC_STATIC,146,14,17,8
+    COMBOBOX        IDC_AXIS_COLOR,166,11,48,30,CBS_DROPDOWNLIST | 
+                    CBS_OWNERDRAWFIXED | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "标号数目",IDC_STATIC,40,34,33,8
+    EDITTEXT        IDC_TICKS_NUM,75,30,40,14,ES_AUTOHSCROLL
+    LTEXT           "字体",IDC_STATIC,146,34,17,8
+    EDITTEXT        IDC_TICK_FONT,166,29,50,14,ES_AUTOHSCROLL | ES_READONLY
+    PUSHBUTTON      "...",IDC_TICKFONT_PICK,216,29,15,14
+    LTEXT           "时间格式",IDC_STATIC,40,53,33,8
+    COMBOBOX        IDC_FORMAT,76,50,109,95,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "时间跨度",IDC_STATIC,40,71,33,8
+    EDITTEXT        IDC_DAY,75,67,27,14,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "天",IDC_STATIC,106,71,8,8
+    EDITTEXT        IDC_HOUR,115,67,27,14,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "时",IDC_STATIC,146,71,9,8
+    EDITTEXT        IDC_MINUTE,156,68,27,14,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "分",IDC_STATIC,186,71,9,8
+    EDITTEXT        IDC_SECOND,195,68,27,14,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "秒",IDC_STATIC,224,71,9,8
+    GROUPBOX        "标题",IDC_STATIC,15,95,245,50
+    CONTROL         "显示",IDC_TITLE_SHOW,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,60,107,32,10
+    LTEXT           "标题",IDC_STATIC,145,109,17,8
+    EDITTEXT        IDC_TITLE,165,105,85,14,ES_AUTOHSCROLL
+    LTEXT           "字体",IDC_STATIC,40,130,17,8
+    EDITTEXT        IDC_TITLE_FONT,60,125,50,14,ES_AUTOHSCROLL | ES_READONLY
+    PUSHBUTTON      "...",IDC_TITLEFONT_PICK,110,125,15,14
+    LTEXT           "颜色",IDC_STATIC,145,131,17,8
+    COMBOBOX        IDC_TITLE_COLOR,165,125,48,30,CBS_DROPDOWNLIST | 
+                    CBS_OWNERDRAWFIXED | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_PEN_PAGE DIALOG DISCARDABLE  0, 0, 281, 147
+STYLE WS_CHILD | WS_VISIBLE
+FONT 9, "宋体"
+BEGIN
+    CONTROL         "显示",IDC_SHOW,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,38,
+                    9,32,10
+    GROUPBOX        "数据",IDC_STATIC,4,26,270,57
+    LTEXT           "下限",IDC_STATIC,35,43,17,8
+    EDITTEXT        IDC_MIN_VALUE_LIMIT,60,40,45,14,ES_AUTOHSCROLL
+    LTEXT           "显示数据点数",IDC_STATIC,126,45,49,8
+    EDITTEXT        IDC_POINTS_NUM,180,40,48,14,ES_AUTOHSCROLL
+    LTEXT           "上值",IDC_STATIC,35,63,17,8
+    EDITTEXT        IDC_MAX_VALUE_LIMIT,60,60,48,14,ES_AUTOHSCROLL
+    GROUPBOX        "风格",IDC_STATIC,4,90,270,57
+    LTEXT           "颜色",IDC_STATIC,35,109,17,8
+    COMBOBOX        IDC_LINE_COLOR,57,105,48,30,CBS_DROPDOWNLIST | 
+                    CBS_OWNERDRAWFIXED | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "线型",IDC_STATIC,158,109,17,8
+    COMBOBOX        IDC_LINE_STYLE,180,105,48,61,CBS_DROPDOWNLIST | 
+                    CBS_OWNERDRAWFIXED | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "线宽",IDC_STATIC,35,128,17,8
+    EDITTEXT        IDC_LINE_WIDTH,57,125,48,14,ES_AUTOHSCROLL
+    LTEXT           "标记",IDC_STATIC,158,127,17,8
+    COMBOBOX        IDC_MARKER_STYLE,180,125,48,61,CBS_DROPDOWNLIST | 
+                    CBS_OWNERDRAWFIXED | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_LEGEND_PAGE DIALOG DISCARDABLE  0, 0, 281, 147
+STYLE WS_CHILD
+FONT 9, "宋体"
+BEGIN
+    CONTROL         "显示",IDC_SHOW,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,25,
+                    30,32,10
+    LTEXT           "描述",IDC_STATIC,25,55,17,8
+    EDITTEXT        IDC_DESC,45,50,202,14,ES_AUTOHSCROLL
+    LTEXT           "字体",IDC_STATIC,25,75,17,8
+    EDITTEXT        IDC_TEXT_FONT,45,70,50,14,ES_AUTOHSCROLL | ES_READONLY
+    PUSHBUTTON      "...",IDC_TEXTFONT_PICK,95,70,15,14
+    LTEXT           "文本颜色",IDC_STATIC,25,95,33,8
+    COMBOBOX        IDC_TEXT_COLOR,63,90,48,30,CBS_DROPDOWNLIST | 
+                    CBS_OWNERDRAWFIXED | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_GRID_PAGE DIALOG DISCARDABLE  0, 0, 281, 147
+STYLE WS_CHILD | WS_VISIBLE
+FONT 9, "宋体"
+BEGIN
+    GROUPBOX        "水平网格",IDC_STATIC,15,9,121,112
+    CONTROL         "显示",IDC_HOR_SHOW,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,41,26,32,10
+    LTEXT           "数目",IDC_STATIC,41,51,17,8
+    EDITTEXT        IDC_HOR_NUM,62,48,48,14,ES_AUTOHSCROLL
+    LTEXT           "颜色",IDC_STATIC,41,74,17,8
+    COMBOBOX        IDC_HOR_COLOR,62,71,48,30,CBS_DROPDOWNLIST | 
+                    CBS_OWNERDRAWFIXED | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "线型",IDC_STATIC,41,97,17,8
+    COMBOBOX        IDC_HOR_STYLE,62,95,48,61,CBS_DROPDOWNLIST | 
+                    CBS_OWNERDRAWFIXED | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "垂直网格",IDC_STATIC,148,9,121,112
+    CONTROL         "显示",IDC_VER_SHOW,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,174,26,32,10
+    LTEXT           "数目",IDC_STATIC,174,51,17,8
+    EDITTEXT        IDC_VER_NUM,195,48,48,14,ES_AUTOHSCROLL
+    LTEXT           "颜色",IDC_STATIC,174,74,17,8
+    COMBOBOX        IDC_VER_COLOR,195,71,48,30,CBS_DROPDOWNLIST | 
+                    CBS_OWNERDRAWFIXED | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "线型",IDC_STATIC,174,97,17,8
+    COMBOBOX        IDC_VER_STYLE,195,96,48,61,CBS_DROPDOWNLIST | 
+                    CBS_OWNERDRAWFIXED | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_CXGENTRENDPAGE DIALOG DISCARDABLE  0, 0, 289, 257
+STYLE WS_CHILD
+FONT 9, "宋体"
+BEGIN
+    GROUPBOX        "外观",IDC_STATIC,23,2,124,238
+    LTEXT           "标题",IDC_STATIC,44,15,17,8
+    EDITTEXT        IDC_CAPTION,66,11,64,14,ES_AUTOHSCROLL
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME | SS_SUNKEN,37,32,
+                    95,1
+    LTEXT           "边框类型",IDC_STATIC,42,43,33,8
+    COMBOBOX        IDC_FRAME_TYPE,81,39,48,59,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "边框颜色",IDC_STATIC,42,64,33,8
+    COMBOBOX        IDC_FRAME_COLOR,81,61,48,30,CBS_DROPDOWNLIST | 
+                    CBS_OWNERDRAWFIXED | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME | SS_SUNKEN,37,80,
+                    95,1
+    CONTROL         "透明",IDC_TRANSPARENCY,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,42,86,32,10
+    LTEXT           "前景颜色",IDC_STATIC,42,105,39,8
+    COMBOBOX        IDC_FORE_COLOR,81,102,48,30,CBS_DROPDOWNLIST | 
+                    CBS_OWNERDRAWFIXED | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "背景颜色",IDC_STATIC,41,125,39,8
+    COMBOBOX        IDC_BACK_COLOR,81,122,48,30,CBS_DROPDOWNLIST | 
+                    CBS_OWNERDRAWFIXED | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME | SS_SUNKEN,35,141,
+                    95,1
+    CONTROL         "显示多个时间轴",IDC_SHOW_MUTITIMEAXIS,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,40,150,72,10
+    CONTROL         "显示多个值轴",IDC_SHOW_MUTIVALEAXIS,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,40,165,64,10
+    CONTROL         "显示多个网格",IDC_SHOW_MUTIGRID,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,40,180,64,10
+    CONTROL         "显示标识",IDC_SHOW_LEGEND,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,40,195,48,10
+    CONTROL         "显示工具条",IDC_SHOW_TOOLPANE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,40,210,56,10
+    CONTROL         "显示列表",IDC_SHOW_LIST,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,40,225,48,10
+    LTEXT           "刷新间隔",IDC_STATIC,171,11,33,8
+    EDITTEXT        IDC_REFRESH_INTERVAL,208,7,37,14,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    LTEXT           "毫秒",IDC_STATIC,247,11,17,8
+    GROUPBOX        "趋势模式",IDC_STATIC,171,35,91,56
+    CONTROL         "实时",IDC_RADIO6,"Button",BS_AUTORADIOBUTTON,195,49,32,
+                    10
+    CONTROL         "历史",IDC_RADIO7,"Button",BS_AUTORADIOBUTTON,195,69,32,
+                    10
+    GROUPBOX        "卷动方向",IDC_STATIC,170,103,91,56
+    CONTROL         "向左",IDC_RADIO1,"Button",BS_AUTORADIOBUTTON | WS_GROUP,
+                    195,117,32,10
+    CONTROL         "向右",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,195,137,32,
+                    10
+    GROUPBOX        "缩放",IDC_STATIC,171,169,91,71
+    CONTROL         "水平",IDC_RADIO3,"Button",BS_AUTORADIOBUTTON | WS_GROUP,
+                    195,183,32,10
+    CONTROL         "垂直",IDC_RADIO4,"Button",BS_AUTORADIOBUTTON,195,203,32,
+                    10
+    CONTROL         "两者都",IDC_RADIO5,"Button",BS_AUTORADIOBUTTON,195,223,
+                    40,10
+END
+
+IDD_CXTRENDCTRLPAGE DIALOG DISCARDABLE  0, 0, 289, 256
+STYLE WS_CHILD
+FONT 9, "宋体"
+BEGIN
+    GROUPBOX        "数据源",IDC_STATIC,3,6,284,71
+    LISTBOX         IDC_LIST_TAGS,9,18,227,52,LBS_SORT | LBS_OWNERDRAWFIXED | 
+                    LBS_HASSTRINGS | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | 
+                    WS_TABSTOP
+    PUSHBUTTON      "添加",IDC_ADD,243,18,35,14
+    PUSHBUTTON      "编辑",IDC_EDIT,243,37,35,14
+    PUSHBUTTON      "删除",IDC_REMOVE,243,55,35,14
+    CONTROL         "Tab1",IDC_TAB,"SysTabControl32",WS_TABSTOP,2,85,285,170
+END
+
+IDD_SCROLL_TIMESPAN DIALOG DISCARDABLE  0, 0, 246, 159
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "卷动时间跨度"
+FONT 9, "宋体"
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,7,138,50,14
+    PUSHBUTTON      "取消",IDCANCEL,189,138,50,14
+    LTEXT           "跨度",IDC_STATIC,13,17,17,8
+    EDITTEXT        IDC_EDIT1,32,13,40,14,ES_AUTOHSCROLL
+    CONTROL         "Spin2",IDC_SPIN2,"msctls_updown32",UDS_ARROWKEYS,74,13,
+                    11,14
+    COMBOBOX        IDC_COMBO1,91,14,37,50,CBS_DROPDOWN | 
+                    CBS_OWNERDRAWVARIABLE | CBS_SORT | CBS_HASSTRINGS | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "List1",IDC_LIST1,"SysListView32",LVS_REPORT | 
+                    LVS_OWNERDRAWFIXED | WS_BORDER | WS_TABSTOP,28,34,162,
+                    108
+END
+
+IDD_FONTDIALOG DIALOG FIXED IMPURE  13, 54, 287, 196
+STYLE DS_MODALFRAME | DS_3DLOOK | DS_CONTEXTHELP | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "字体"
+FONT 9, "宋体"
+BEGIN
+    LTEXT           "字体(&F):",1088,7,5,40,9
+    COMBOBOX        1136,7,16,98,76,CBS_SIMPLE | CBS_OWNERDRAWFIXED | 
+                    CBS_AUTOHSCROLL | CBS_SORT | CBS_HASSTRINGS | 
+                    CBS_DISABLENOSCROLL | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "字形(&Y):",1089,110,5,44,9
+    COMBOBOX        1137,110,16,74,76,CBS_SIMPLE | CBS_DISABLENOSCROLL | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "大小(&S):",1090,189,5,33,8
+    COMBOBOX        1138,190,16,36,76,CBS_SIMPLE | CBS_OWNERDRAWFIXED | 
+                    CBS_AUTOHSCROLL | CBS_SORT | CBS_HASSTRINGS | 
+                    CBS_DISABLENOSCROLL | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "效果",1072,7,97,98,73,WS_GROUP
+    CONTROL         "删除线(&K)",1040,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    13,110,60,10
+    CONTROL         "下划线(&U)",1041,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    13,123,60,10
+    LTEXT           "颜色(&C):",1091,13,138,33,8,NOT WS_VISIBLE
+    COMBOBOX        1139,13,150,82,100,CBS_DROPDOWNLIST | CBS_OWNERDRAWFIXED | 
+                    CBS_AUTOHSCROLL | CBS_HASSTRINGS | NOT WS_VISIBLE | 
+                    WS_BORDER | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "示例",1073,110,97,116,43,WS_GROUP
+    CTEXT           "AaBbYyZz",1092,118,111,100,23,SS_NOPREFIX | NOT 
+                    WS_VISIBLE
+    LTEXT           "",1093,7,172,228,20,SS_NOPREFIX | NOT WS_GROUP
+    LTEXT           "字符集(&R):",1094,110,146,41,8
+    COMBOBOX        1140,110,157,116,30,CBS_DROPDOWNLIST | 
+                    CBS_OWNERDRAWFIXED | CBS_AUTOHSCROLL | CBS_HASSTRINGS | 
+                    WS_BORDER | WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "确定",1,231,16,45,14,WS_GROUP
+    PUSHBUTTON      "取消",2,231,32,45,14,WS_GROUP
+    PUSHBUTTON      "应用(&A)",1026,231,48,45,14,WS_GROUP
+    PUSHBUTTON      "帮助(&H)",1038,231,64,45,14,WS_GROUP
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_VALUEAXIS_PAGE, DIALOG
+    BEGIN
+        LEFTMARGIN, 6
+        RIGHTMARGIN, 271
+    END
+
+    IDD_TIMEAXIS_PAGE, DIALOG
+    BEGIN
+        LEFTMARGIN, 6
+        RIGHTMARGIN, 271
+    END
+
+    IDD_PEN_PAGE, DIALOG
+    BEGIN
+        LEFTMARGIN, 4
+        RIGHTMARGIN, 274
+    END
+
+    IDD_LEGEND_PAGE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 279
+        TOPMARGIN, 7
+    END
+
+    IDD_GRID_PAGE, DIALOG
+    BEGIN
+        LEFTMARGIN, 6
+        RIGHTMARGIN, 271
+        BOTTOMMARGIN, 146
+    END
+
+    IDD_SCROLL_TIMESPAN, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 239
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 152
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDB_TOOL1 TOOLBAR DISCARDABLE  20, 15
+BEGIN
+    BUTTON      ID_BUTTON32770
+    BUTTON      ID_BUTTON32768
+    BUTTON      ID_BUTTON32775
+    BUTTON      ID_BUTTON32769
+    BUTTON      ID_BUTTON32771
+    BUTTON      ID_BUTTON32772
+    BUTTON      ID_BUTTON32773
+    BUTTON      ID_BUTTON32774
+END
+
+IDR_TOOL TOOLBAR DISCARDABLE  16, 15
+BEGIN
+    BUTTON      ID_SCROLL_BACK
+    BUTTON      ID_TIME_FROM
+    BUTTON      ID_TIME_UPDATE
+    BUTTON      ID_TIME_TO
+    BUTTON      ID_SCROLL_FORWARD
+    BUTTON      ID_SCROLL_FORWARD_MOST
+    BUTTON      ID_ZOOM_RADIO
+    BUTTON      ID_ZOOM_IN
+    BUTTON      ID_ZOOM_OUT
+    BUTTON      ID_CROSS_CURSOR
+    BUTTON      ID_PRINT
+    BUTTON      ID_MODE_REAL
+    BUTTON      ID_MODE_HIST
+    BUTTON      ID_EDIT_PROPERTIES
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_ZOOM_RADIO MENU DISCARDABLE 
+BEGIN
+    POPUP "ZOOM"
+    BEGIN
+        MENUITEM "1600%",                       ID_ZOOM_1600
+        MENUITEM "800%",                        ID_ZOOM_800
+        MENUITEM "400%",                        ID_ZOOM_400
+        MENUITEM "200%",                        ID_ZOOM_200
+        MENUITEM "150%",                        ID_ZOOM_150
+        MENUITEM "100%",                        ID_ZOOM_100
+        MENUITEM "50%",                         ID_ZOOM_50
+        MENUITEM "25%",                         ID_ZOOM_25
+        MENUITEM "12.5%",                       ID_ZOOM_12_5
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_SCROLL_TIMESPAN DLGINIT
+BEGIN
+    IDC_COMBO1, 0x403, 3, 0
+0xeccc, "\000" 
+    IDC_COMBO1, 0x403, 5, 0
+0xa1d0, 0xb1ca, "\000" 
+    IDC_COMBO1, 0x403, 3, 0
+0xd6b7, "\000" 
+    IDC_COMBO1, 0x403, 3, 0
+0xebc3, "\000" 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDC_TRACKNWSE           CURSOR  DISCARDABLE     "trcknwse.cur"
+IDC_TRACKNESW           CURSOR  DISCARDABLE     "trcknesw.cur"
+IDC_TRACKNS             CURSOR  DISCARDABLE     "trckns.cur"
+IDC_TRACKWE             CURSOR  DISCARDABLE     "trckwe.cur"
+IDC_TRACK4WAY           CURSOR  DISCARDABLE     "trck4way.cur"
+IDC_MOVE4WAY            CURSOR  DISCARDABLE     "move4way.cur"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_PROJNAME            "CxTrendCtrl"
+    IDS_TITLECxGenTrendPage "常规"
+    IDS_HELPFILECxGenTrendPage "Help File Name"
+    IDS_DOCSTRINGCxGenTrendPage "Your Help String"
+    IDS_TITLECxTrendCtrlPage "曲线"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_HELPFILECxTrendCtrlPage "Help File Name"
+    IDS_DOCSTRINGCxTrendCtrlPage "Your Help String"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_SCROLL_BACK          "向后卷动"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_TIME_FROM            "开始时间"
+    ID_TIME_UPDATE          "刷新"
+    ID_TIME_TO              "结束时间"
+    ID_SCROLL_FORWARD       "向前卷动"
+    ID_SCROLL_FORWARD_MOST  "卷洞到最前"
+    ID_ZOOM_RADIO           "缩放比例"
+    ID_ZOOM_IN              "放大"
+    ID_ZOOM_OUT             "缩小"
+    ID_CROSS_CURSOR         "定位光标"
+    ID_PRINT                "打印"
+    ID_EDIT_SERIALS         "编辑曲线"
+    ID_MODE_REAL            "实时模式"
+    ID_MODE_HIST            "历史模式"
+    ID_EDIT_PROPERTIES      "属性"
+END
+
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+1 TYPELIB "CxChartCtrl.tlb"
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

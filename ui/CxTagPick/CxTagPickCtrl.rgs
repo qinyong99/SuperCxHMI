@@ -1,0 +1,34 @@
+HKCR
+{
+	CxTagPick.CxTagPickCtrl.1 = s 'CxTagPickCtrl Class'
+	{
+		CLSID = s '{8C20E5D5-2ADA-4639-A77B-D5D4230E044A}'
+	}
+	CxTagPick.CxTagPickCtrl = s 'CxTagPickCtrl Class'
+	{
+		CLSID = s '{8C20E5D5-2ADA-4639-A77B-D5D4230E044A}'
+		CurVer = s 'CxTagPick.CxTagPickCtrl.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {8C20E5D5-2ADA-4639-A77B-D5D4230E044A} = s 'CxTagPickCtrl Class'
+		{
+			ProgID = s 'CxTagPick.CxTagPickCtrl.1'
+			VersionIndependentProgID = s 'CxTagPick.CxTagPickCtrl'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			ForceRemove 'Control'
+			ForceRemove 'Insertable'
+			ForceRemove 'ToolboxBitmap32' = s '%MODULE%, 103'
+			'MiscStatus' = s '0'
+			{
+			    '1' = s '131473'
+			}
+			'TypeLib' = s '{C95AF575-9A23-4BB6-987D-82FF103A63DD}'
+			'Version' = s '1.0'
+		}
+	}
+}

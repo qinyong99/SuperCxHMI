@@ -1,0 +1,29 @@
+// CxEvnExp.idl : IDL source for CxEvnExp.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (CxEvnExp.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	uuid(B59E851E-2556-4D22-8EBE-FD228A8A1E98),
+	version(1.0),
+	helpstring("CxEvnExp 1.0 Type Library")
+]
+library CXEVNEXPLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+
+	[
+		uuid(D4C4E688-44D3-4781-B461-3FFC8B862B68),
+		helpstring("CxEventExpert Class")
+	]
+	coclass CxEventExpert
+	{
+		interface IUnknown;
+	};
+};

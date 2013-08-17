@@ -1,0 +1,6 @@
+// Microsoft Developer Studio generated Help ID include file.
+// Used by CxDev.rc
+//
+#define HIDCANCEL                       0x80980002    // IDD_INSERTCONTROL
+#define HIDC_STATIC                     0x80b2ffff    // IDD_SYMBOL_PROP
+#define HIDOK                           0x80980001    // IDD_INSERTCONTROL

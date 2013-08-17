@@ -1,0 +1,25 @@
+HKCR
+{
+	CxDrawTools.DataLinkTool.1 = s 'DataLinkTool Class'
+	{
+		CLSID = s '{838DC9B7-46F5-4AB6-8C0F-50CC1121621E}'
+	}
+	CxDrawTools.DataLinkTool = s 'DataLinkTool Class'
+	{
+		CLSID = s '{838DC9B7-46F5-4AB6-8C0F-50CC1121621E}'
+		CurVer = s 'CxDrawTools.DataLinkTool.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {838DC9B7-46F5-4AB6-8C0F-50CC1121621E} = s 'DataLinkTool Class'
+		{
+			ProgID = s 'CxDrawTools.DataLinkTool.1'
+			VersionIndependentProgID = s 'CxDrawTools.DataLinkTool'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{41EFD0F2-3639-47D9-AA62-D51877DE7879}'
+		}
+	}
+}

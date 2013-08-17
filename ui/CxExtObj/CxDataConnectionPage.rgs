@@ -1,0 +1,23 @@
+HKCR
+{
+	CxExtObj.CxDataConnectionPage.1 = s 'CxDataConnectionPage Class'
+	{
+		CLSID = s '{6E390124-837E-447D-AD60-29A84E6EDB19}'
+	}
+	CxExtObj.CxDataConnectionPage = s 'CxDataConnectionPage Class'
+	{
+		CLSID = s '{6E390124-837E-447D-AD60-29A84E6EDB19}'
+		CurVer = s 'CxExtObj.CxDataConnectionPage.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {6E390124-837E-447D-AD60-29A84E6EDB19} = s 'CxDataConnectionPage Class'
+		{
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+		}
+	}
+}

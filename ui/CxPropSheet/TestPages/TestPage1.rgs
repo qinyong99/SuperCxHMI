@@ -1,0 +1,23 @@
+HKCR
+{
+	TestPages.TestPage1.1 = s 'TestPage1 Class'
+	{
+		CLSID = s '{4081C3E5-DC50-497D-9711-28C0A3DAA0D7}'
+	}
+	TestPages.TestPage1 = s 'TestPage1 Class'
+	{
+		CLSID = s '{4081C3E5-DC50-497D-9711-28C0A3DAA0D7}'
+		CurVer = s 'TestPages.TestPage1.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {4081C3E5-DC50-497D-9711-28C0A3DAA0D7} = s 'TestPage1 Class'
+		{
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+		}
+	}
+}

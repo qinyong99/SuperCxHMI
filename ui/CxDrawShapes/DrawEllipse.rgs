@@ -1,0 +1,26 @@
+HKCR
+{
+	CxDrawShapes.DrawEllipse.1 = s 'DrawEllipse Class'
+	{
+		CLSID = s '{D7E0A108-CCA8-4EDF-AFCC-5EEAF3145A59}'
+	}
+	CxDrawShapes.DrawEllipse = s 'DrawEllipse Class'
+	{
+		CLSID = s '{D7E0A108-CCA8-4EDF-AFCC-5EEAF3145A59}'
+		CurVer = s 'CxDrawShapes.DrawEllipse.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {D7E0A108-CCA8-4EDF-AFCC-5EEAF3145A59} = s 'DrawEllipse Class'
+		{
+			ProgID = s 'CxDrawShapes.DrawEllipse.1'
+			VersionIndependentProgID = s 'CxDrawShapes.DrawEllipse'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{D75F0066-DC61-4679-A739-5B046E2C9088}'
+		}
+	}
+}

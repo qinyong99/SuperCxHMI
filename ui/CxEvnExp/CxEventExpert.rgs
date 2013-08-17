@@ -1,0 +1,23 @@
+HKCR
+{
+	CxEvnExp.CxEventExpert.1 = s 'CxEventExpert Class'
+	{
+		CLSID = s '{D4C4E688-44D3-4781-B461-3FFC8B862B68}'
+	}
+	CxEvnExp.CxEventExpert = s 'CxEventExpert Class'
+	{
+		CLSID = s '{D4C4E688-44D3-4781-B461-3FFC8B862B68}'
+		CurVer = s 'CxEvnExp.CxEventExpert.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {D4C4E688-44D3-4781-B461-3FFC8B862B68} = s 'CxEventExpert Class'
+		{
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+		}
+	}
+}

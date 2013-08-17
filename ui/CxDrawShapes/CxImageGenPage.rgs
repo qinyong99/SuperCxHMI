@@ -1,0 +1,23 @@
+HKCR
+{
+	CxDrawShapes.CxImageGenPage.1 = s 'CxImageGenPage Class'
+	{
+		CLSID = s '{D5569F18-5CFE-4EE6-8308-301A31017CA6}'
+	}
+	CxDrawShapes.CxImageGenPage = s 'CxImageGenPage Class'
+	{
+		CLSID = s '{D5569F18-5CFE-4EE6-8308-301A31017CA6}'
+		CurVer = s 'CxDrawShapes.CxImageGenPage.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {D5569F18-5CFE-4EE6-8308-301A31017CA6} = s 'CxImageGenPage Class'
+		{
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+		}
+	}
+}

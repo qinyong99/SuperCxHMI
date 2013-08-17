@@ -1,0 +1,25 @@
+HKCR
+{
+	CxDrawTools.TextTool.1 = s 'TextTool Class'
+	{
+		CLSID = s '{161F9ED6-E789-47E6-8576-2454F57A37F6}'
+	}
+	CxDrawTools.TextTool = s 'TextTool Class'
+	{
+		CLSID = s '{161F9ED6-E789-47E6-8576-2454F57A37F6}'
+		CurVer = s 'CxDrawTools.TextTool.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {161F9ED6-E789-47E6-8576-2454F57A37F6} = s 'TextTool Class'
+		{
+			ProgID = s 'CxDrawTools.TextTool.1'
+			VersionIndependentProgID = s 'CxDrawTools.TextTool'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{7309E63D-3287-11D5-A468-9299FCC96908}'
+		}
+	}
+}

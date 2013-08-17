@@ -1,0 +1,26 @@
+HKCR
+{
+	CxTagPick.CxTagGroupPicker.1 = s 'CxTagGroupPicker Class'
+	{
+		CLSID = s '{C47061FC-4EDC-43B0-AF42-1F9ACD96BFE9}'
+	}
+	CxTagPick.CxTagGroupPicker = s 'CxTagGroupPicker Class'
+	{
+		CLSID = s '{C47061FC-4EDC-43B0-AF42-1F9ACD96BFE9}'
+		CurVer = s 'CxTagPick.CxTagGroupPicker.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {C47061FC-4EDC-43B0-AF42-1F9ACD96BFE9} = s 'CxTagGroupPicker Class'
+		{
+			ProgID = s 'CxTagPick.CxTagGroupPicker.1'
+			VersionIndependentProgID = s 'CxTagPick.CxTagGroupPicker'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{C95AF575-9A23-4BB6-987D-82FF103A63DD}'
+		}
+	}
+}

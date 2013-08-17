@@ -1,0 +1,26 @@
+HKCR
+{
+	CxDrawShapes.FloatPoint.1 = s 'FloatPoint Class'
+	{
+		CLSID = s '{80E4C822-6F0E-11D5-A46A-ABD633FF0766}'
+	}
+	CxDrawShapes.FloatPoint = s 'FloatPoint Class'
+	{
+		CLSID = s '{80E4C822-6F0E-11D5-A46A-ABD633FF0766}'
+		CurVer = s 'CxDrawShapes.FloatPoint.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {80E4C822-6F0E-11D5-A46A-ABD633FF0766} = s 'FloatPoint Class'
+		{
+			ProgID = s 'CxDrawShapes.FloatPoint.1'
+			VersionIndependentProgID = s 'CxDrawShapes.FloatPoint'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{D75F0066-DC61-4679-A739-5B046E2C9088}'
+		}
+	}
+}

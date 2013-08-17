@@ -1,0 +1,29 @@
+// TestPages.idl : IDL source for TestPages.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (TestPages.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	uuid(937E48F8-F57A-4FCB-98A9-63DE639A1CEA),
+	version(1.0),
+	helpstring("TestPages 1.0 Type Library")
+]
+library TESTPAGESLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+
+	[
+		uuid(4081C3E5-DC50-497D-9711-28C0A3DAA0D7),
+		helpstring("TestPage1 Class")
+	]
+	coclass TestPage1
+	{
+		interface IUnknown;
+	};
+};

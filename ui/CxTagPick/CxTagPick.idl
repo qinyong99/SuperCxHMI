@@ -1,0 +1,135 @@
+// CxTagPick.idl : IDL source for CxTagPick.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (CxTagPick.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+#include "olectl.h"
+	
+	[
+		object,
+		uuid(0347AC44-57FB-46D0-AA0D-9AE9A89A5750),
+		dual,
+		helpstring("ICxTagPicker Interface"),
+		pointer_default(unique)
+	]
+	interface ICxTagPicker : IDispatch
+	{
+		[id(1), helpstring("选择标签")] HRESULT PickTag(
+				[in] long hParent, 
+				[in] long nX, 
+				[in] long nY, 
+				[in] BOOL bUseLocalSetup,
+				[in] BOOL bDisableAssoc,
+				[in] BSTR bstrAssocGroup,
+				[in] BSTR bstrTag,
+				[out, retval] BSTR* pbstrPickTag);
+		[id(2), helpstring("选择标签组")] HRESULT PickTagGroup(
+			[in] long hParent, 
+			[in] long nX, 
+			[in] long nY, 
+			[in] BOOL bUseLocalSetup,
+			[in] BOOL bDisableAssoc,
+			[in] BSTR bstrAssocGroup, 
+			[in] BSTR bstrGroup,
+			[out, retval] BSTR* pbstrPickGroup);
+		[id(3), helpstring("选择安全区")] HRESULT PickSecurityArea(
+			[in] long hParent, 
+			[in] long nX, 
+			[in] long nY, 
+			[in] BOOL bUseLocalSetup,
+			[in] BSTR bstrArea,
+			[out, retval] BSTR* pbstrPickArea);
+	};
+	
+
+	[
+		object,
+		uuid(C3C4D985-7DC3-4004-893F-F259B8E3F5D0),
+		dual,
+		helpstring("ICxTagPickCtrl Interface"),
+		pointer_default(unique)
+	]
+	interface ICxTagPickCtrl : IDispatch
+	{
+		[propget, id(1), helpstring("property Value")] HRESULT Value([out, retval] BSTR *pVal);
+		[propput, id(1), helpstring("property Value")] HRESULT Value([in] BSTR newVal);
+		[propget, id(2), helpstring("property AssocGroup")] HRESULT AssocGroup([out, retval] BSTR *pVal);
+		[propput, id(2), helpstring("property AssocGroup")] HRESULT AssocGroup([in] BSTR newVal);
+		[propget, id(3), helpstring("property UseLocalSetup")] HRESULT UseLocalSetup([out, retval] BOOL *pVal);
+		[propput, id(3), helpstring("property UseLocalSetup")] HRESULT UseLocalSetup([in] BOOL newVal);
+		[propget, id(4), helpstring("property DisableAssoc")] HRESULT DisableAssoc([out, retval] BOOL *pVal);
+		[propput, id(4), helpstring("property DisableAssoc")] HRESULT DisableAssoc([in] BOOL newVal);
+		[propget, id(5), helpstring("property Browsed")] HRESULT Browsed([out, retval] BOOL *pVal);
+		[propput, id(5), helpstring("property Browsed")] HRESULT Browsed([in] BOOL newVal);
+		[propget, id(6), helpstring("property ShowGroupTree")] HRESULT ShowGroupTree([out, retval] BOOL *pVal);
+		[propput, id(6), helpstring("property ShowGroupTree")] HRESULT ShowGroupTree([in] BOOL newVal);
+		[propget, id(7), helpstring("property UseAssocGroup")] HRESULT UseAssocGroup([out, retval] BOOL *pVal);
+		[propput, id(7), helpstring("property UseAssocGroup")] HRESULT UseAssocGroup([in] BOOL newVal);
+		[propget, id(8), helpstring("property ViewListMode")] HRESULT ViewListMode([out, retval] long *pVal);
+		[propput, id(8), helpstring("property ViewListMode")] HRESULT ViewListMode([in] long newVal);
+		[propget, id(9), helpstring("property ShowAnalog")] HRESULT ShowAnalog([out, retval] BOOL *pVal);
+		[propput, id(9), helpstring("property ShowAnalog")] HRESULT ShowAnalog([in] BOOL newVal);
+		[propget, id(10), helpstring("property ShowDigital")] HRESULT ShowDigital([out, retval] BOOL *pVal);
+		[propput, id(10), helpstring("property ShowDigital")] HRESULT ShowDigital([in] BOOL newVal);
+		[propget, id(11), helpstring("property ShowText")] HRESULT ShowText([out, retval] BOOL *pVal);
+		[propput, id(11), helpstring("property ShowText")] HRESULT ShowText([in] BOOL newVal);
+		[propget, id(12), helpstring("property FilterPattern1")] HRESULT FilterPattern1([out, retval] BSTR *pVal);
+		[propput, id(12), helpstring("property FilterPattern1")] HRESULT FilterPattern1([in] BSTR newVal);
+		[propget, id(13), helpstring("property FilterPattern2")] HRESULT FilterPattern2([out, retval] BSTR *pVal);
+		[propput, id(13), helpstring("property FilterPattern2")] HRESULT FilterPattern2([in] BSTR newVal);
+		[propget, id(14), helpstring("property FilterPattern3")] HRESULT FilterPattern3([out, retval] BSTR *pVal);
+		[propput, id(14), helpstring("property FilterPattern3")] HRESULT FilterPattern3([in] BSTR newVal);
+		[propget, id(15), helpstring("property FilterPattern4")] HRESULT FilterPattern4([out, retval] BSTR *pVal);
+		[propput, id(15), helpstring("property FilterPattern4")] HRESULT FilterPattern4([in] BSTR newVal);
+		[propget, id(16), helpstring("property FilterPattern5")] HRESULT FilterPattern5([out, retval] BSTR *pVal);
+		[propput, id(16), helpstring("property FilterPattern5")] HRESULT FilterPattern5([in] BSTR newVal);
+		[propget, id(17), helpstring("property FilterPattern6")] HRESULT FilterPattern6([out, retval] BSTR *pVal);
+		[propput, id(17), helpstring("property FilterPattern6")] HRESULT FilterPattern6([in] BSTR newVal);
+		[propget, id(18), helpstring("property FilterPattern7")] HRESULT FilterPattern7([out, retval] BSTR *pVal);
+		[propput, id(18), helpstring("property FilterPattern7")] HRESULT FilterPattern7([in] BSTR newVal);
+		[propget, id(19), helpstring("property FilterPattern8")] HRESULT FilterPattern8([out, retval] BSTR *pVal);
+		[propput, id(19), helpstring("property FilterPattern8")] HRESULT FilterPattern8([in] BSTR newVal);
+	};
+
+[
+	uuid(C95AF575-9A23-4BB6-987D-82FF103A63DD),
+	version(1.0),
+	helpstring("CxTagPick 1.0 Type Library")
+]
+library CXTAGPICKLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	[
+		uuid(8FF523E4-955F-4BA4-8366-EA87BCB4C4D7),
+		helpstring("_ICxTagPickCtrlEvents Interface")
+	]
+	dispinterface _ICxTagPickCtrlEvents
+	{
+		properties:
+		methods:
+		[id(1), helpstring("method Changed")] HRESULT Changed();
+	};
+
+	[
+		uuid(6CF3993A-1D26-40BF-B4D8-94C4B54F1390),
+		helpstring("CxTagPicker Class")
+	]
+	coclass CxTagPicker
+	{
+		[default] interface ICxTagPicker;
+	};
+	[
+		uuid(8C20E5D5-2ADA-4639-A77B-D5D4230E044A),
+		helpstring("CxTagPickCtrl Class")
+	]
+	coclass CxTagPickCtrl
+	{
+		[default] interface ICxTagPickCtrl;
+		[default, source] dispinterface _ICxTagPickCtrlEvents;
+	};
+};

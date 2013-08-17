@@ -1,0 +1,34 @@
+HKCR
+{
+	CxScripCrt.CxScriptEditor.1 = s 'CxScriptEditor Class'
+	{
+		CLSID = s '{00EEDA05-1A41-4255-A69C-00F924DF2453}'
+	}
+	CxScripCrt.CxScriptEditor = s 'CxScriptEditor Class'
+	{
+		CLSID = s '{00EEDA05-1A41-4255-A69C-00F924DF2453}'
+		CurVer = s 'CxScripCrt.CxScriptEditor.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {00EEDA05-1A41-4255-A69C-00F924DF2453} = s 'CxScriptEditor Class'
+		{
+			ProgID = s 'CxScripCrt.CxScriptEditor.1'
+			VersionIndependentProgID = s 'CxScripCrt.CxScriptEditor'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			ForceRemove 'Control'
+			ForceRemove 'Insertable'
+			ForceRemove 'ToolboxBitmap32' = s '%MODULE%, 102'
+			'MiscStatus' = s '0'
+			{
+			    '1' = s '131473'
+			}
+			'TypeLib' = s '{6DC198C0-4DBC-417F-9CCB-5C1567869138}'
+			'Version' = s '1.0'
+		}
+	}
+}

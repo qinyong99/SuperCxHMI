@@ -1,0 +1,23 @@
+HKCR
+{
+	CxAppearExp.CxAppearanceExpert.1 = s 'CxAppearanceExpert Class'
+	{
+		CLSID = s '{90EFE451-2B10-40D3-9CDE-DA0B122FDFB3}'
+	}
+	CxAppearExp.CxAppearanceExpert = s 'CxAppearanceExpert Class'
+	{
+		CLSID = s '{90EFE451-2B10-40D3-9CDE-DA0B122FDFB3}'
+		CurVer = s 'CxAppearExp.CxAppearanceExpert.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {90EFE451-2B10-40D3-9CDE-DA0B122FDFB3} = s 'CxAppearanceExpert Class'
+		{
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+		}
+	}
+}

@@ -1,0 +1,34 @@
+HKCR
+{
+	CxChartCtrl.CxTrendCtrl.1 = s 'CxTrendCtrl Class'
+	{
+		CLSID = s '{5B3622F5-EBAA-4DAE-80D0-DEE4F251F969}'
+	}
+	CxChartCtrl.CxTrendCtrl = s 'CxTrendCtrl Class'
+	{
+		CLSID = s '{5B3622F5-EBAA-4DAE-80D0-DEE4F251F969}'
+		CurVer = s 'CxChartCtrl.CxTrendCtrl.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {5B3622F5-EBAA-4DAE-80D0-DEE4F251F969} = s 'SuperCx Chart Control 1.0'
+		{
+			ProgID = s 'CxChartCtrl.ChartCtrl.1'
+			VersionIndependentProgID = s 'CxChartCtrl.CxTrendCtrl'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			ForceRemove 'Control'
+			ForceRemove 'Insertable'
+			ForceRemove 'ToolboxBitmap32' = s '%MODULE%, 101'
+			'MiscStatus' = s '0'
+			{
+			    '1' = s '131473'
+			}
+			'TypeLib' = s '{E0B4114F-E821-4023-B141-5D65BAE2DDDC}'
+			'Version' = s '1.0'
+		}
+	}
+}

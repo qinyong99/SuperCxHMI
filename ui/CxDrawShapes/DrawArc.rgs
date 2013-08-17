@@ -1,0 +1,26 @@
+HKCR
+{
+	CxDrawShapes.DrawArc.1 = s 'DrawArc Class'
+	{
+		CLSID = s '{71E8B5A5-37B9-4DC5-8BDA-098C391A98AF}'
+	}
+	CxDrawShapes.DrawArc = s 'DrawArc Class'
+	{
+		CLSID = s '{71E8B5A5-37B9-4DC5-8BDA-098C391A98AF}'
+		CurVer = s 'CxDrawShapes.DrawArc.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {71E8B5A5-37B9-4DC5-8BDA-098C391A98AF} = s 'DrawArc Class'
+		{
+			ProgID = s 'CxDrawShapes.DrawArc.1'
+			VersionIndependentProgID = s 'CxDrawShapes.DrawArc'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{D75F0066-DC61-4679-A739-5B046E2C9088}'
+		}
+	}
+}

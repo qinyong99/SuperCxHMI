@@ -1,0 +1,26 @@
+HKCR
+{
+	CxDrawShapes.DrawRoundRectangle.1 = s 'DrawRoundRectangle Class'
+	{
+		CLSID = s '{07659E7F-E686-4576-A646-AF186D6C8720}'
+	}
+	CxDrawShapes.DrawRoundRectangle = s 'DrawRoundRectangle Class'
+	{
+		CLSID = s '{07659E7F-E686-4576-A646-AF186D6C8720}'
+		CurVer = s 'CxDrawRoundRect.DrawRoundRectangle.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {07659E7F-E686-4576-A646-AF186D6C8720} = s 'DrawRoundRectangle Class'
+		{
+			ProgID = s 'CxDrawShapes.DrawRoundRectangle.1'
+			VersionIndependentProgID = s 'CxDrawShapes.DrawRoundRectangle'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{D75F0066-DC61-4679-A739-5B046E2C9088}'
+		}
+	}
+}

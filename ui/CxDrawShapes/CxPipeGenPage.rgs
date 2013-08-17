@@ -1,0 +1,23 @@
+HKCR
+{
+	CxDrawShapes.CxPipeGenPage.1 = s 'CxPipeGenPage Class'
+	{
+		CLSID = s '{5A531D02-EFC2-4A66-9905-8A8CEA94E7F5}'
+	}
+	CxDrawShapes.CxPipeGenPage = s 'CxPipeGenPage Class'
+	{
+		CLSID = s '{5A531D02-EFC2-4A66-9905-8A8CEA94E7F5}'
+		CurVer = s 'CxDrawShapes.CxPipeGenPage.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {5A531D02-EFC2-4A66-9905-8A8CEA94E7F5} = s 'CxPipeGenPage Class'
+		{
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+		}
+	}
+}

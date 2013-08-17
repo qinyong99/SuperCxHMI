@@ -1,0 +1,26 @@
+HKCR
+{
+	CxExtObj.CxSQLBuilder.1 = s 'CxSQLBuilder Class'
+	{
+		CLSID = s '{32CF356E-28E4-4D7F-8084-FCA6AC42B55B}'
+	}
+	CxExtObj.CxSQLBuilder = s 'CxSQLBuilder Class'
+	{
+		CLSID = s '{32CF356E-28E4-4D7F-8084-FCA6AC42B55B}'
+		CurVer = s 'CxExtObj.CxSQLBuilder.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {32CF356E-28E4-4D7F-8084-FCA6AC42B55B} = s 'CxSQLBuilder Class'
+		{
+			ProgID = s 'CxExtObj.CxSQLBuilder.1'
+			VersionIndependentProgID = s 'CxExtObj.CxSQLBuilder'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{ACF61CEA-3805-11D5-A468-8E961CC7BB0B}'
+		}
+	}
+}

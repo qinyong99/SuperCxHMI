@@ -1,0 +1,113 @@
+// CxDrawShapes.idl : IDL source for CxDrawShape.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (CxDrawShape.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+import "CxHmiObj.idl";
+import "CxHmiMisc.idl";
+
+[
+	uuid(47D020EA-E241-4400-8721-D56749368C63),
+	version(1.0),
+	helpstring("CxDrawShapes 1.0 Type Library")
+]
+library CXDRAWSHAPESLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+
+
+	[
+		uuid(59E38E0A-D58F-44D8-8FBE-35C3545699A1),
+		helpstring("CxShapeGenPage Class")
+	]
+	coclass CxShapeGenPage
+	{
+		interface IUnknown;
+	};
+
+	[
+		uuid(5A531D02-EFC2-4A66-9905-8A8CEA94E7F5),
+		helpstring("CxPipeGenPage Class")
+	]
+	coclass CxPipeGenPage
+	{
+		interface IUnknown;
+	};
+
+	[
+		uuid(30AFFE31-D815-47EF-A10E-CF18CB705A9C),
+		helpstring("CxButtonGenPage Class")
+	]
+	coclass CxButtonGenPage
+	{
+		interface IUnknown;
+	};
+
+	[
+		uuid(D5569F18-5CFE-4EE6-8308-301A31017CA6),
+		helpstring("CxImageGenPage Class")
+	]
+	coclass CxImageGenPage
+	{
+		interface IUnknown;
+	};
+
+	[
+		uuid(CF974B17-F0F1-4B12-AF59-814E4BF9ECD3),
+		helpstring("CxTextGenPage Class")
+	]
+	coclass CxTextGenPage
+	{
+		interface IUnknown;
+	};
+
+	[
+		uuid(54B8954A-2302-4AD2-9DED-C046377EA507),
+		helpstring("CxTextTextPage Class")
+	]
+	coclass CxTextTextPage
+	{
+		interface IUnknown;
+	};
+
+	[
+		uuid(08622C0C-CC20-4730-81FC-7700EECF1658),
+		helpstring("CxDataLinkGenPage Class")
+	]
+	coclass CxDataLinkGenPage
+	{
+		interface IUnknown;
+	};
+	
+	[
+		uuid(0E9838EB-CF27-4CD8-9270-EB58120F7508),
+		helpstring("CxVariableGenPage Class")
+	]
+	coclass CxVariableGenPage
+	{
+		interface IUnknown;
+	};
+
+	[
+		uuid(1361C062-1F58-41ED-8637-0B247C254635),
+		helpstring("CxTimerGenPage Class")
+	]
+	coclass CxTimerGenPage
+	{
+		interface IUnknown;
+	};
+
+	[
+		uuid(288FEEE5-9177-4B20-8D57-70062F5B929F),
+		helpstring("CxMenuGenPage Class")
+	]
+	coclass CxMenuGenPage
+	{
+		interface IUnknown;
+	};
+};

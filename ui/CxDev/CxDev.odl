@@ -1,0 +1,68 @@
+// CxDev.odl : type library source for CxDev.exe
+
+// This file will be processed by the MIDL compiler to produce the
+// type library (CxDev.tlb).
+
+[ uuid(18703A54-2F8D-11D5-A468-B85CCDCD2108), version(1.0) ]
+library CxDev
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+
+	//  Primary dispatch interface for CDevDoc
+	
+	[ uuid(18703A55-2F8D-11D5-A468-B85CCDCD2108) ]
+	dispinterface ICxDev
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CDevDoc)
+			//}}AFX_ODL_PROP
+			
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CDevDoc)
+			//}}AFX_ODL_METHOD
+
+	};
+
+	//  Class information for CDevDoc
+	
+	[ uuid(8CCCD9F3-E47C-11D4-8C60-5254AB20ED22) ]
+	coclass Document
+	{
+		[default] dispinterface ICxDev;
+	};
+
+/*	//  Primary dispatch interface for CAutoClickPoint
+	
+	[ uuid(0368D830-A050-11CE-B0F3-00AA006C28B3) ]
+	dispinterface IGroupObject
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CGroupObj)
+			//}}AFX_ODL_PROP
+			
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CGroupObj)
+			//}}AFX_ODL_METHOD
+
+	};
+
+	//  Class information for CGroupObject
+
+	[ uuid(0368D831-A050-11CE-B0F3-00AA006C28B3) ]
+	coclass GroupObject
+	{
+		[default] dispinterface IGroupObject;
+	};
+*/
+	//{{AFX_APPEND_ODL}}
+};

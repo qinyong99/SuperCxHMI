@@ -1,0 +1,26 @@
+HKCR
+{
+	CxAlmSumCtrl.DrawAlmSum.1 = s 'DrawAlmSum Class'
+	{
+		CLSID = s '{967B0FC2-0761-4D0F-865F-0CCB7BA34F3F}'
+	}
+	CxAlmSumCtrl.DrawAlmSum = s 'DrawAlmSum Class'
+	{
+		CLSID = s '{967B0FC2-0761-4D0F-865F-0CCB7BA34F3F}'
+		CurVer = s 'CxAlmSumCtrl.DrawAlmSum.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {967B0FC2-0761-4D0F-865F-0CCB7BA34F3F} = s 'DrawAlmSum Class'
+		{
+			ProgID = s 'CxAlmSumCtrl.DrawAlmSum.1'
+			VersionIndependentProgID = s 'CxAlmSumCtrl.DrawAlmSum'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{BA323D20-89E8-4C23-8EEF-3369511F166E}'
+		}
+	}
+}

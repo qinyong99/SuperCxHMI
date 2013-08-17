@@ -1,0 +1,26 @@
+HKCR
+{
+	CxComObj.CxFontCombo.1 = s 'CxFontCombo Class'
+	{
+		CLSID = s '{F7D44E38-BE9A-4BCA-9719-992C0A5E9FEA}'
+	}
+	CxComObj.CxFontCombo = s 'CxFontCombo Class'
+	{
+		CLSID = s '{F7D44E38-BE9A-4BCA-9719-992C0A5E9FEA}'
+		CurVer = s 'CxComObj.CxFontCombo.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {F7D44E38-BE9A-4BCA-9719-992C0A5E9FEA} = s 'CxFontCombo Class'
+		{
+			ProgID = s 'CxComObj.CxFontCombo.1'
+			VersionIndependentProgID = s 'CxComObj.CxFontCombo'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{EF162B9A-28EF-11D5-A468-A2981E5E0009}'
+		}
+	}
+}

@@ -1,0 +1,25 @@
+HKCR
+{
+	CxDrawTools.RectTool.1 = s 'RectTool Class'
+	{
+		CLSID = s '{7309E63D-3287-11D5-A468-9299FCC96908}'
+	}
+	CxDrawTools.RectTool = s 'RectTool Class'
+	{
+		CLSID = s '{7309E63D-3287-11D5-A468-9299FCC96908}'
+		CurVer = s 'CxDrawTools.RectTool.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {7309E63D-3287-11D5-A468-9299FCC96908} = s 'RectTool Class'
+		{
+			ProgID = s 'CxDrawTools.RectTool.1'
+			VersionIndependentProgID = s 'CxDrawTools.RectTool'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{7309E63D-3287-11D5-A468-9299FCC96908}'
+		}
+	}
+}

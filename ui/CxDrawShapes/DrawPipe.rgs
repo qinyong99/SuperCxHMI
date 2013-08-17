@@ -1,0 +1,26 @@
+HKCR
+{
+	CxDrawShapes.DrawPipe.1 = s 'DrawPipe Class'
+	{
+		CLSID = s '{E85F842F-07D5-11D5-8C61-5254AB20ED22}'
+	}
+	CxDrawShapes.DrawPipe = s 'DrawPipe Class'
+	{
+		CLSID = s '{E85F842F-07D5-11D5-8C61-5254AB20ED22}'
+		CurVer = s 'CxDrawShapes.DrawPipe.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {E85F842F-07D5-11D5-8C61-5254AB20ED22} = s 'DrawPipe Class'
+		{
+			ProgID = s 'CxDrawShapes.DrawPipe.1'
+			VersionIndependentProgID = s 'CxDrawShapes.DrawPipe'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{D75F0066-DC61-4679-A739-5B046E2C9088}'
+		}
+	}
+}

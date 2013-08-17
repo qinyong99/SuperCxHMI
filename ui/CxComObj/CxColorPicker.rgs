@@ -1,0 +1,26 @@
+HKCR
+{
+	CxComObj.CxColorPicker.1 = s 'CxColorPicker Class'
+	{
+		CLSID = s '{EF162BA7-28EF-11D5-A468-A2981E5E0009}'
+	}
+	CxComObj.CxColorPicker = s 'CxColorPicker Class'
+	{
+		CLSID = s '{EF162BA7-28EF-11D5-A468-A2981E5E0009}'
+		CurVer = s 'CxComObj.CxColorPicker.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {EF162BA7-28EF-11D5-A468-A2981E5E0009} = s 'CxColorPicker Class'
+		{
+			ProgID = s 'CxComObj.CxColorPicker.1'
+			VersionIndependentProgID = s 'CxComObj.CxColorPicker'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Both'
+			}
+			'TypeLib' = s '{EF162B9A-28EF-11D5-A468-A2981E5E0009}'
+		}
+	}
+}

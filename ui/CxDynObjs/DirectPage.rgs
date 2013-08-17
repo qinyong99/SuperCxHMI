@@ -1,0 +1,23 @@
+HKCR
+{
+	CxDirectDyn.DirectPage.1 = s 'DirectPage Class'
+	{
+		CLSID = s '{4B825127-13C1-454C-8B24-05966D8B71C8}'
+	}
+	CxDirectDyn.DirectPage = s 'DirectPage Class'
+	{
+		CLSID = s '{4B825127-13C1-454C-8B24-05966D8B71C8}'
+		CurVer = s 'CxDirectDyn.DirectPage.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {4B825127-13C1-454C-8B24-05966D8B71C8} = s 'DirectPage Class'
+		{
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+		}
+	}
+}

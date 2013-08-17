@@ -1,0 +1,26 @@
+HKCR
+{
+	CxLookupDyn.LookupDynamic.1 = s 'LookupDynamic Class'
+	{
+		CLSID = s '{96943274-47C5-430C-9ECC-FA515325A209}'
+	}
+	CxLookupDyn.LookupDynamic = s 'LookupDynamic Class'
+	{
+		CLSID = s '{96943274-47C5-430C-9ECC-FA515325A209}'
+		CurVer = s 'CxLookupDyn.LookupDynamic.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {96943274-47C5-430C-9ECC-FA515325A209} = s 'LookupDynamic Class'
+		{
+			ProgID = s 'CxLookupDyn.LookupDynamic.1'
+			VersionIndependentProgID = s 'CxLookupDyn.LookupDynamic'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{EBEE4E96-0755-483B-86F5-470414C9EFBB}'
+		}
+	}
+}

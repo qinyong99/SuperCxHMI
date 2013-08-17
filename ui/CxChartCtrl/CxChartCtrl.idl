@@ -1,0 +1,434 @@
+// CxChartCtrl.idl : IDL source for CxChartCtrl.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (CxChartCtrl.tlb) and marshalling code.
+
+#include "CxDispid.h"
+import "oaidl.idl";
+import "ocidl.idl";
+import "CxHmiObj.idl";
+import "CxHmiMisc.idl";
+	
+	interface ISerial;
+	interface IValueAxis;
+	interface ITimeAxis;
+	interface ILegend;
+	interface IGrid;
+//
+//	typedef enum 
+//	{
+//		LineStyleSolid = 0,
+//		LineStyleDash = 1,
+//		LineStyleDot = 2,
+//		LineStyleDashDot = 3,
+//		LineStyleDashDotDot = 4,
+//		LineStyleNone = 5,
+//		LineStyleInsideFrame = 6
+//	} enumLineStyle;
+//
+//	typedef enum 
+//	{
+//		MarkerStyleNone = 0,
+//		MarkerStyleCross = 1,
+//		MarkerStyleCircle = 2,
+//		MarkerStyleTriangle = 3,
+//		MarkerStyleDiamond = 4,
+//		MarkerStyleSquare = 5,
+//	} enumMarkerStyle;
+//
+	typedef
+	[
+		uuid(E49389EC-3BC1-4d10-A46B-CB6D5A219C5B),
+		helpstring("Trend Mode"),	
+	] 
+	enum
+	{	
+		[helpstring("实时")] TrendModeRealTime  = 0x0, 
+		[helpstring("历史")] TrendModeHistory  = 0x1, 
+	} enumTrendMode;
+
+//	typedef
+//	[
+//		uuid(8382361D-9D3D-4feb-98CD-35E77DD38980),
+//		helpstring("Frame Style"),	
+//	] 
+//	enum {
+//		[helpstring("无")] FrameStyleNone  = 0x0, 
+//		[helpstring("突出")] FrameStyleRaised  = 0x1, 
+//		[helpstring("凹陷")] FrameStyleSunken  = 0x2, 
+//		[helpstring("矩形")] FrameStyleRectangle  = 0x3, 
+//	} enumFrameStyle;
+//
+//	typedef
+//	[
+//		uuid(83F2361D-9D4D-4feb-98CD-35E73DD38387),
+//		helpstring("Scroll Directionion"),	
+//	] 
+//	enum {
+//		[helpstring("向左")] ScrollDirectionLeft  = 0x0, 
+//		[helpstring("向右")] ScrollDirectionRight  = 0x1, 
+//	} enumScrollDirection;
+//
+//	typedef
+//	[
+//		uuid(DF9E6BD1-B791-4dd9-AD78-8361C50DFB6E),
+//		helpstring("Zoom mode"),	
+//	] 
+//	enum {
+//		[helpstring("水平")] ZoomModeHorizontal  = 0x0, 
+//		[helpstring("垂直")] ZoomModeVertical  = 0x1, 
+//		[helpstring("两者都")] ZoomModeBoth  = 0x2, 
+//	} enumZoomMode;
+
+	[
+		object,
+		uuid(096FCC8E-6415-49b6-95EB-5110C7C0E103),
+		dual,
+		helpstring("ICxTrend Interface"),
+		pointer_default(unique)
+	]
+	interface ICxTrend : IDispatch
+	{
+		[propget, id(101), helpstring("卷动方向")] HRESULT ScrollDirection([out, retval] enumScrollDirection *pVal);
+		[propput, id(101), helpstring("卷动方向")] HRESULT ScrollDirection([in] enumScrollDirection newVal);
+		[propget, id(102), helpstring("缩放模式")] HRESULT ZoomMode([out, retval] enumZoomMode *pVal);
+		[propput, id(102), helpstring("缩放模式")] HRESULT ZoomMode([in] enumZoomMode newVal);
+		[propget, id(103), helpstring("刷新间隔")] HRESULT RefreshInterval([out, retval] long *pVal);
+		[propput, id(103), helpstring("刷新间隔")] HRESULT RefreshInterval([in] long newVal);
+		[propget, id(104), helpstring("前景颜色")] HRESULT ForeColor([out, retval] OLE_COLOR *pVal);
+		[propput, id(104), helpstring("前景颜色")] HRESULT ForeColor([in] OLE_COLOR newVal);
+		[propget, id(105), helpstring("背景颜色")] HRESULT BackColor([out, retval] OLE_COLOR *pVal);
+		[propput, id(105), helpstring("背景颜色")] HRESULT BackColor([in] OLE_COLOR newVal);
+		[propget, id(106), helpstring("边框风格")] HRESULT FrameStyle([out, retval] enumFrameStyle *pVal);
+		[propput, id(106), helpstring("边框风格")] HRESULT FrameStyle([in] enumFrameStyle newVal);
+		[propget, id(107), helpstring("边框颜色")] HRESULT FrameColor([out, retval] OLE_COLOR *pVal);
+		[propput, id(107), helpstring("边框颜色")] HRESULT FrameColor([in] OLE_COLOR newVal);
+		[propget, id(108), helpstring("透明")] HRESULT Transparency([out, retval] VARIANT_BOOL *pVal);
+		[propput, id(108), helpstring("透明")] HRESULT Transparency([in] VARIANT_BOOL newVal);
+		[propget, id(109), helpstring("多个网格")] HRESULT ShowMutiGrid([out, retval] VARIANT_BOOL *pVal);
+		[propput, id(109), helpstring("多个网格")] HRESULT ShowMutiGrid([in] VARIANT_BOOL newVal);
+		[propget, id(110), helpstring("多个时间轴")] HRESULT ShowMutiTimeAxis([out, retval] VARIANT_BOOL *pVal);
+		[propput, id(110), helpstring("多个时间轴")] HRESULT ShowMutiTimeAxis([in] VARIANT_BOOL newVal);
+		[propget, id(111), helpstring("多个值轴")] HRESULT ShowMutiValueAxis([out, retval] VARIANT_BOOL *pVal);
+		[propput, id(111), helpstring("多个值轴")] HRESULT ShowMutiValueAxis([in] VARIANT_BOOL newVal);
+		[propget, id(112), helpstring("显示标识")] HRESULT ShowLegend([out, retval] VARIANT_BOOL *pVal);
+		[propput, id(112), helpstring("显示标识")] HRESULT ShowLegend([in] VARIANT_BOOL newVal);
+		[propget, id(113), helpstring("标题")] HRESULT Caption([out, retval] BSTR *pVal);
+		[propput, id(113), helpstring("标题")] HRESULT Caption([in] BSTR newVal);
+		[propput, id(114), helpstring("标题字体")] HRESULT CaptionFont([in]IFontDisp* pFont);
+		[propputref, id(114), helpstring("标题字体")]	HRESULT CaptionFont([in]IFontDisp* pFont);
+		[propget, id(114), helpstring("标题字体")] HRESULT CaptionFont([out,retval]IFontDisp** ppFont);
+		[propget, id(115), helpstring("标题颜色")] HRESULT CaptionColor([out, retval] OLE_COLOR *pVal);
+		[propput, id(115), helpstring("标题颜色")] HRESULT CaptionColor([in] OLE_COLOR newVal);
+		[propget, id(116), helpstring("卷动百分率")] HRESULT ScrollPercentage([out, retval] float *pVal);
+		[propput, id(116), helpstring("卷动百分率")] HRESULT ScrollPercentage([in] float newVal);
+		[propget, id(117), helpstring("趋势模式")] HRESULT TrendMode([out, retval] enumTrendMode *pVal);
+		[propput, id(117), helpstring("趋势模式")] HRESULT TrendMode([in] enumTrendMode newVal);
+		[propget, id(118), helpstring("property RunMode")] HRESULT RunMode([out, retval] VARIANT_BOOL *pVal);
+		[propget, id(119), helpstring("property TimeAxis")] HRESULT TimeAxis([out, retval] ITimeAxis* *pVal);
+		[propget, id(120), helpstring("property ValueAxis")] HRESULT ValueAxis([out, retval] IValueAxis * *pVal);
+		[propget, id(121), helpstring("property Grid")] HRESULT Grid([out, retval] IGrid* *pVal);
+	
+		[id(1), helpstring("method AddSerial")] HRESULT AddSerial([in] BSTR szSource, [out, retval] ISerial** ppSerial);
+		[id(2), helpstring("method GetSerial")] HRESULT GetSerial([in] long lIndex, [out, retval] ISerial** ppSerial);
+		[id(3), helpstring("method RemoveSerial")] HRESULT RemoveSerial([in] long lIndex);
+		[id(4), helpstring("method GetSerialsCount")] HRESULT GetSerialsCount([out, retval] long* plCount);
+		[id(5), helpstring("method ScrollTo")] HRESULT ScrollTo(VARIANT FromTime, [in, optional] VARIANT ToTime);
+		[id(6), helpstring("method ScrollForward")] HRESULT ScrollForward([in, optional] VARIANT TimeSpan);
+		[id(7), helpstring("method ScrollBack")] HRESULT ScrollBack([in, optional] VARIANT TimeSpan);
+		[id(8), helpstring("method Zoom")] HRESULT Zoom([in] float fYHi, [in] float fYLo, [in] float fXHi, [in] float fXLo);
+		[id(9), helpstring("method ZoomIn")] HRESULT ZoomIn();
+		[id(10), helpstring("method ZoomOut")] HRESULT ZoomOut();
+		[id(11), helpstring("method ScrollForwardMost")] HRESULT ScrollForwardMost();
+		[id(12), helpstring("method Scroll")] HRESULT Scroll(BOOL bHorizon, BOOL bUpOrRight);
+		[id(13), helpstring("method EditProperties")] HRESULT EditProperties();
+		[id(14), helpstring("method EditSerials")] HRESULT EditSerials();
+		[id(15), helpstring("method PrintOut")] HRESULT PrintOut();
+	}
+
+	[
+		object,
+		uuid(D5D54180-AE60-4B10-810A-7F2BDC0175C4),
+		dual,
+		helpstring("ICxTrend Interface"),
+		pointer_default(unique)
+	]
+	interface IDrawTrend : ICxTrend
+	{
+		[propget, id(CXPROPID_HorPosition), helpstring("水平位置")] HRESULT HorizontalPosition([out, retval] float *pVal);
+		[propput, id(CXPROPID_HorPosition), helpstring("水平位置")] HRESULT HorizontalPosition([in] float newVal);
+		[propget, id(CXPROPID_VerPosition), helpstring("垂直位置")] HRESULT VerticalPosition([out, retval] float *pVal);
+		[propput, id(CXPROPID_VerPosition), helpstring("垂直位置")] HRESULT VerticalPosition([in] float newVal);
+		[propget, id(CXPROPID_Width), helpstring("宽度")] HRESULT Width([out, retval] float *pVal);
+		[propput, id(CXPROPID_Width), helpstring("宽度")] HRESULT Width([in] float newVal);
+		[propget, id(CXPROPID_Height), helpstring("高度")] HRESULT Height([out, retval] float *pVal);
+		[propput, id(CXPROPID_Height), helpstring("高度")] HRESULT Height([in] float newVal);
+		
+		[propget, id(CXPROPID_Description), helpstring("描述")] HRESULT Description([out, retval] BSTR *pVal);
+		[propput, id(CXPROPID_Description), helpstring("描述")] HRESULT Description([in] BSTR newVal);
+		[propget, id(CXPROPID_Layer), helpstring("图层")] HRESULT Layer([out, retval] int *pVal);
+		[propput, id(CXPROPID_Layer), helpstring("图层")] HRESULT Layer([in] int newVal);
+		[propget, id(CXPROPID_Locked), helpstring("锁定")] HRESULT Locked([out, retval] VARIANT_BOOL *pVal);
+		[propput, id(CXPROPID_Locked), helpstring("锁定")] HRESULT Locked([in] VARIANT_BOOL newVal);
+		[propget, id(CXPROPID_MousePointer), helpstring("鼠标指针")] HRESULT MousePointer([out, retval] enumMousePointer *pVal);
+		[propput, id(CXPROPID_MousePointer), helpstring("鼠标指针")] HRESULT MousePointer([in] enumMousePointer newVal);
+		[propget, id(CXPROPID_Privilege), helpstring("权限")] HRESULT Privilege([out, retval] int *pVal);
+		[propput, id(CXPROPID_Privilege), helpstring("权限")] HRESULT Privilege([in] int newVal);
+		[propget, id(CXPROPID_ToolTipText), helpstring("提示文本")] HRESULT ToolTipText([out, retval] BSTR *pVal);
+		[propput, id(CXPROPID_ToolTipText), helpstring("提示文本")] HRESULT ToolTipText([in] BSTR newVal);
+		[propget, id(CXPROPID_Visible), helpstring("可见")] HRESULT Visible([out, retval] VARIANT_BOOL *pVal);
+		[propput, id(CXPROPID_Visible), helpstring("可见")] HRESULT Visible([in] VARIANT_BOOL newVal);
+	
+		[propput, id(CXPROPID_Name), helpstring("名称")] HRESULT Name([in] BSTR bstrName);
+		[propget, id(CXPROPID_Name), helpstring("名称")] HRESULT Name([out, retval] BSTR* pbstrName);
+		[id(CXMETHID_IsConnected), helpstring("method IsConnected")] 
+		HRESULT IsConnected([in] BSTR bstrPropertyName, [out, retval] VARIANT_BOOL* pbHasConnection);
+		[id(CXMETHID_ConnectObject), helpstring("method ConnectObject")] 
+		HRESULT ConnectObject([in] BSTR bstrPropertyName, [in] IUnknown* punkObject);
+		[id(CXMETHID_ConnectDirect), helpstring("method ConnectDirect")] 
+		HRESULT ConnectDirect([in] BSTR bstrPropertyName, [in] BSTR bstrDataSource);
+		[id(CXMETHID_GetConnectObject), helpstring("method GetConnectObject")] 
+		HRESULT GetConnectObject([in] BSTR bstrPropertyName, [out, retval] IUnknown** ppunkObject);
+		[id(CXMETHID_Disconnect), helpstring("method Disconnect")] 
+		HRESULT Disconnect([in] BSTR bstrPropertyName);
+		[id(CXMETHID_GetConnectState), helpstring("method GetConnectState"), hidden] 
+		HRESULT GetConnectState(DISPID dispid, [out, retval] int* pState);
+
+	};
+
+	[
+		object,
+		uuid(1B082742-37C7-4BE4-9AA0-E0E9740DDF88),
+		dual,
+		helpstring("ICxTrendCtrl Interface"),
+		pointer_default(unique)
+	]
+	interface ICxTrendCtrl : ICxTrend
+	{
+		[propget, id(155), helpstring("显示工具栏")] HRESULT ShowToolPane([out, retval] VARIANT_BOOL *pVal);
+		[propput, id(155), helpstring("显示工具栏")] HRESULT ShowToolPane([in] VARIANT_BOOL newVal);
+		[propget, id(156), helpstring("显示列表")] HRESULT ShowList([out, retval] VARIANT_BOOL *pVal);
+		[propput, id(156), helpstring("显示列表")] HRESULT ShowList([in] VARIANT_BOOL newVal);
+		[propget, id(157), helpstring("显示光标")] HRESULT ShowCursor([out, retval] VARIANT_BOOL *pVal);
+		[propput, id(157), helpstring("显示光标")] HRESULT ShowCursor([in] VARIANT_BOOL newVal);
+	
+		[id(20), helpstring("method InsertDataNotation")] HRESULT InsertDataNotation([in] int nCurve, [in] int nIndex);
+	};
+
+	[
+		object,
+		uuid(66645856-EFD4-4C02-B465-DA3EBB1A6DE3),
+		dual,
+		helpstring("ISerial Interface"),
+		pointer_default(unique)
+	]
+	interface ISerial : IDispatch
+	{
+		[propget, id(1), helpstring("property Source")] HRESULT Source([out, retval] BSTR *pVal);
+		[propput, id(1), helpstring("property Source")] HRESULT Source([in] BSTR newVal);
+		[propget, id(2), helpstring("property TimeAxis")] HRESULT TimeAxis([out, retval] ITimeAxis* *pVal);
+		[propget, id(3), helpstring("property ValueAxis")] HRESULT ValueAxis([out, retval] IValueAxis * *pVal);
+		[propget, id(4), helpstring("property Legend")] HRESULT Legend([out, retval] ILegend* *pVal);
+		[propget, id(5), helpstring("property MaxNumPoints")] HRESULT MaxNumPoints([out, retval] long *pVal);
+		[propput, id(5), helpstring("property MaxNumPoints")] HRESULT MaxNumPoints([in] long newVal);
+		[propget, id(6), helpstring("property MaxNumDisplayPoints")] HRESULT MaxNumDisplayPoints([out, retval] long *pVal);
+		[propput, id(6), helpstring("property MaxNumDisplayPoints")] HRESULT MaxNumDisplayPoints([in] long newVal);
+		[propget, id(12), helpstring("property MarkerStyle")] HRESULT MarkerStyle([out, retval] enumMarkerStyle *pVal);
+		[propput, id(12), helpstring("property MarkerStyle")] HRESULT MarkerStyle([in] enumMarkerStyle newVal);
+		[propget, id(13), helpstring("property Grid")] HRESULT Grid([out, retval] IGrid* *pVal);
+		[propget, id(14), helpstring("property Show")] HRESULT Show([out, retval] VARIANT_BOOL *pVal);
+		[propput, id(14), helpstring("property Show")] HRESULT Show([in] VARIANT_BOOL newVal);
+		[propget, id(7), helpstring("property LineColor")] HRESULT LineColor([out, retval] OLE_COLOR *pVal);
+		[propput, id(7), helpstring("property LineColor")] HRESULT LineColor([in] OLE_COLOR newVal);
+		[propget, id(8), helpstring("property LineStyle")] HRESULT LineStyle([out, retval] enumLineStyle *pVal);
+		[propput, id(8), helpstring("property LineStyle")] HRESULT LineStyle([in] enumLineStyle newVal);
+		[propget, id(9), helpstring("property LineWidth")] HRESULT LineWidth([out, retval] long *pVal);
+		[propput, id(9), helpstring("property LineWidth")] HRESULT LineWidth([in] long newVal);
+		[propget, id(10), helpstring("property MaxValueLimit")] HRESULT MaxValueLimit([out, retval] double *pVal);
+		[propput, id(10), helpstring("property MaxValueLimit")] HRESULT MaxValueLimit([in] double newVal);
+		[propget, id(11), helpstring("property MinValueLimit")] HRESULT MinValueLimit([out, retval] double *pVal);
+		[propput, id(11), helpstring("property MinValueLimit")] HRESULT MinValueLimit([in] double newVal);
+	};
+	
+	[
+		object,
+		uuid(5889C28B-EF84-4D27-8191-91FC9EE19A36),
+		dual,
+		helpstring("IAxis Interface"),
+		pointer_default(unique)
+	]
+	interface IValueAxis : IDispatch
+	{
+		[propget, id(1), helpstring("property NumTicks")] HRESULT NumTicks([out, retval] long *pVal);
+		[propput, id(1), helpstring("property NumTicks")] HRESULT NumTicks([in] long newVal);
+		[propget, id(2), helpstring("property Title")] HRESULT Title([out, retval] BSTR *pVal);
+		[propput, id(2), helpstring("property Title")] HRESULT Title([in] BSTR newVal);
+		[propget, id(3), helpstring("property ShowAxis")] HRESULT ShowAxis([out, retval] VARIANT_BOOL *pVal);
+		[propput, id(3), helpstring("property ShowAxis")] HRESULT ShowAxis([in] VARIANT_BOOL newVal);
+		[propget, id(4), helpstring("property ShowTitle")] HRESULT ShowTitle([out, retval] VARIANT_BOOL *pVal);
+		[propput, id(4), helpstring("property ShowTitle")] HRESULT ShowTitle([in] VARIANT_BOOL newVal);
+		[propget, id(5), helpstring("property AxisColor")] HRESULT AxisColor([out, retval] OLE_COLOR *pVal);
+		[propput, id(5), helpstring("property AxisColor")] HRESULT AxisColor([in] OLE_COLOR newVal);
+		[propget, id(6), helpstring("property TitleColor")] HRESULT TitleColor([out, retval] OLE_COLOR *pVal);
+		[propput, id(6), helpstring("property TitleColor")] HRESULT TitleColor([in] OLE_COLOR newVal);
+		[propget, id(7), helpstring("property MaxValue")] HRESULT MaxValue([out, retval] double *pVal);
+		[propput, id(7), helpstring("property MaxValue")] HRESULT MaxValue([in] double newVal);
+		[propget, id(8), helpstring("property MinValue")] HRESULT MinValue([out, retval] double *pVal);
+		[propput, id(8), helpstring("property MinValue")] HRESULT MinValue([in] double newVal);
+		[propget, id(9), helpstring("property WholeDigits")] HRESULT WholeDigits([out, retval] long *pVal);
+		[propput, id(9), helpstring("property WholeDigits")] HRESULT WholeDigits([in] long newVal);
+		[propget, id(10), helpstring("property DecimalDigits")] HRESULT DecimalDigits([out, retval] long *pVal);
+		[propput, id(10), helpstring("property DecimalDigits")] HRESULT DecimalDigits([in] long newVal);
+		[propput, id(11), helpstring("TickFont")] HRESULT TickFont([in]IFontDisp* pFont);
+		[propputref, id(11), helpstring("TickFont")]	HRESULT TickFont([in]IFontDisp* pFont);
+		[propget, id(11), helpstring("TickFont")] HRESULT TickFont([out,retval]IFontDisp** ppFont);
+		[propput, id(12), helpstring("TitleFont")] HRESULT TitleFont([in]IFontDisp* pFont);
+		[propputref, id(12), helpstring("TitleFont")]	HRESULT TitleFont([in]IFontDisp* pFont);
+		[propget, id(12), helpstring("TitleFont")] HRESULT TitleFont([out,retval]IFontDisp** ppFont);
+	};
+
+	[
+		object,
+		uuid(E541C527-EA96-4319-AA18-BE732DA6BD8F),
+		dual,
+		helpstring("ITimeAxis Interface"),
+		pointer_default(unique)
+	]
+	interface ITimeAxis : IDispatch
+	{
+		[propget, id(1), helpstring("property NumTicks")] HRESULT NumTicks([out, retval] long *pVal);
+		[propput, id(1), helpstring("property NumTicks")] HRESULT NumTicks([in] long newVal);
+		[propget, id(2), helpstring("property Title")] HRESULT Title([out, retval] BSTR *pVal);
+		[propput, id(2), helpstring("property Title")] HRESULT Title([in] BSTR newVal);
+		[propget, id(3), helpstring("property ShowAxis")] HRESULT ShowAxis([out, retval] VARIANT_BOOL *pVal);
+		[propput, id(3), helpstring("property ShowAxis")] HRESULT ShowAxis([in] VARIANT_BOOL newVal);
+		[propget, id(4), helpstring("property ShowTitle")] HRESULT ShowTitle([out, retval] VARIANT_BOOL *pVal);
+		[propput, id(4), helpstring("property ShowTitle")] HRESULT ShowTitle([in] VARIANT_BOOL newVal);
+		[propget, id(5), helpstring("property AxisColor")] HRESULT AxisColor([out, retval] OLE_COLOR *pVal);
+		[propput, id(5), helpstring("property AxisColor")] HRESULT AxisColor([in] OLE_COLOR newVal);
+		[propget, id(6), helpstring("property TitleColor")] HRESULT TitleColor([out, retval] OLE_COLOR *pVal);
+		[propput, id(6), helpstring("property TitleColor")] HRESULT TitleColor([in] OLE_COLOR newVal);
+		[propget, id(7), helpstring("property MaxValue")] HRESULT MaxValue([out, retval] double *pVal);
+		[propput, id(7), helpstring("property MaxValue")] HRESULT MaxValue([in] double newVal);
+		[propget, id(8), helpstring("property MinValue")] HRESULT MinValue([out, retval] double *pVal);
+		[propput, id(8), helpstring("property MinValue")] HRESULT MinValue([in] double newVal);
+		[propget, id(9), helpstring("property DisplayFormat")] HRESULT DisplayFormat([out, retval] BSTR *pVal);
+		[propput, id(9), helpstring("property DisplayFormat")] HRESULT DisplayFormat([in] BSTR newVal);
+		[propget, id(10), helpstring("property TimeSpan")] HRESULT TimeSpan([out, retval] double *pVal);
+		[propput, id(10), helpstring("property TimeSpan")] HRESULT TimeSpan([in] double newVal);
+		[propput, id(11), helpstring("TickFont")] HRESULT TickFont([in]IFontDisp* pFont);
+		[propputref, id(11), helpstring("TickFont")]	HRESULT TickFont([in]IFontDisp* pFont);
+		[propget, id(11), helpstring("TickFont")] HRESULT TickFont([out,retval]IFontDisp** ppFont);
+		[propput, id(12), helpstring("TitleFont")] HRESULT TitleFont([in]IFontDisp* pFont);
+		[propputref, id(12), helpstring("TitleFont")]	HRESULT TitleFont([in]IFontDisp* pFont);
+		[propget, id(12), helpstring("TitleFont")] HRESULT TitleFont([out,retval]IFontDisp** ppFont);
+	};
+	
+	[
+		object,
+		uuid(658D464E-7E94-4D4E-8773-C2C0D5F8AF4E),
+		dual,
+		helpstring("ILegend Interface"),
+		pointer_default(unique)
+	]
+	interface ILegend : IDispatch
+	{
+		[propget, id(1), helpstring("property Show")] HRESULT Show([out, retval] VARIANT_BOOL *pVal);
+		[propput, id(1), helpstring("property Show")] HRESULT Show([in] VARIANT_BOOL newVal);
+		[propget, id(2), helpstring("property Description")] HRESULT Description([out, retval] BSTR *pVal);
+		[propput, id(2), helpstring("property Description")] HRESULT Description([in] BSTR newVal);
+		[propput, id(3), helpstring("TextFont")] HRESULT TextFont([in]IFontDisp* pFont);
+		[propputref, id(3), helpstring("TextFont")]	HRESULT TextFont([in]IFontDisp* pFont);
+		[propget, id(3), helpstring("TextFont")] HRESULT TextFont([out,retval]IFontDisp** ppFont);
+		[propget, id(4), helpstring("TextColor")] HRESULT TextColor([out, retval] OLE_COLOR *pVal);
+		[propput, id(4), helpstring("TextColor")] HRESULT TextColor([in] OLE_COLOR newVal);
+	};
+	
+	[
+		object,
+		uuid(5E416CF5-8CA1-4C61-8C9C-B3E01A81F18A),
+		dual,
+		helpstring("IGrid Interface"),
+		pointer_default(unique)
+	]
+	interface IGrid : IDispatch
+	{
+		[propget, id(1), helpstring("property HorizontalColor")] HRESULT HorizontalColor([out, retval] OLE_COLOR *pVal);
+		[propput, id(1), helpstring("property HorizontalColor")] HRESULT HorizontalColor([in] OLE_COLOR newVal);
+		[propget, id(2), helpstring("property VerticalColor")] HRESULT VerticalColor([out, retval] OLE_COLOR *pVal);
+		[propput, id(2), helpstring("property VerticalColor")] HRESULT VerticalColor([in] OLE_COLOR newVal);
+		[propget, id(3), helpstring("property Width")] HRESULT Width([out, retval] long *pVal);
+		[propput, id(3), helpstring("property Width")] HRESULT Width([in] long newVal);
+		[propget, id(4), helpstring("property HorizontalStyle")] HRESULT HorizontalStyle([out, retval] enumLineStyle *pVal);
+		[propput, id(4), helpstring("property HorizontalStyle")] HRESULT HorizontalStyle([in] enumLineStyle newVal);
+		[propget, id(5), helpstring("property VerticalStyle")] HRESULT VerticalStyle([out, retval] enumLineStyle *pVal);
+		[propput, id(5), helpstring("property VerticalStyle")] HRESULT VerticalStyle([in] enumLineStyle newVal);
+		[propget, id(6), helpstring("property NumberOfHorizontalLines")] HRESULT NumberOfHorizontalLines([out, retval] long *pVal);
+		[propput, id(6), helpstring("property NumberOfHorizontalLines")] HRESULT NumberOfHorizontalLines([in] long newVal);
+		[propget, id(7), helpstring("property NumberOfVerticalLines")] HRESULT NumberOfVerticalLines([out, retval] long *pVal);
+		[propput, id(7), helpstring("property NumberOfVerticalLines")] HRESULT NumberOfVerticalLines([in] long newVal);
+		[propget, id(8), helpstring("property ShowHorizontal")] HRESULT ShowHorizontal([out, retval] VARIANT_BOOL *pVal);
+		[propput, id(8), helpstring("property ShowHorizontal")] HRESULT ShowHorizontal([in] VARIANT_BOOL newVal);
+		[propget, id(9), helpstring("property ShowVertical")] HRESULT ShowVertical([out, retval] VARIANT_BOOL *pVal);
+		[propput, id(9), helpstring("property ShowVertical")] HRESULT ShowVertical([in] VARIANT_BOOL newVal);
+	};
+
+[
+	uuid(E0B4114F-E821-4023-B141-5D65BAE2DDDC),
+	version(1.0),
+	helpstring("CxChartCtrl 1.0 Type Library")
+]
+library CXCHARTCTRLLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	[
+		uuid(50CFDF54-99C0-495D-BD83-62369D569144),
+		helpstring("_ICxChartCtrlEvents Interface")
+	]
+	dispinterface _ICxTrendCtrlEvents
+	{
+		properties:
+		methods:
+	};
+
+	[
+		uuid(EF34F70F-78B8-4A70-937C-380244524C67),
+		helpstring("DrawTrend Class")
+	]
+	coclass DrawTrend
+	{
+		[default] interface IDrawTrend;
+		[default, source] dispinterface _ICxDrawObjectEvents;
+	};
+
+	[
+		uuid(5B3622F5-EBAA-4DAE-80D0-DEE4F251F969),
+		helpstring("CxChartCtrl Class")
+	]
+	coclass TrendCtrl
+	{
+		[default] interface ICxTrendCtrl;
+		[default, source] dispinterface _ICxTrendCtrlEvents;
+	};
+
+	[
+		uuid(43F01A0F-744D-4F26-B90E-C28BCE1A9042),
+		helpstring("CxGenChartPage Class")
+	]
+	coclass CxGenTrendPage
+	{
+		interface IUnknown;
+	};
+
+	[
+		uuid(5A09C772-0349-4BE3-B8D9-4AFECF9F6963),
+		helpstring("CxTrendCtrlPage Class")
+	]
+	coclass CxTrendCtrlPage
+	{
+		interface IUnknown;
+	};
+};

@@ -1,0 +1,23 @@
+HKCR
+{
+	CxChartCtrl.CxGenTrendPage.1 = s 'CxGenTrendPage Class'
+	{
+		CLSID = s '{43F01A0F-744D-4F26-B90E-C28BCE1A9042}'
+	}
+	CxChartCtrl.CxGenTrendPage = s 'CxGenTrendPage Class'
+	{
+		CLSID = s '{43F01A0F-744D-4F26-B90E-C28BCE1A9042}'
+		CurVer = s 'CxChartCtrl.CxGenTrendPage.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {43F01A0F-744D-4F26-B90E-C28BCE1A9042} = s 'CxGenTrendPage Class'
+		{
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+		}
+	}
+}

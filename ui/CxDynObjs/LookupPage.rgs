@@ -1,0 +1,23 @@
+HKCR
+{
+	CxLookupDyn.LookupPage.1 = s 'LookupPage Class'
+	{
+		CLSID = s '{9F0A1B68-FB38-4726-A565-E259C1CA98E8}'
+	}
+	CxLookupDyn.LookupPage = s 'LookupPage Class'
+	{
+		CLSID = s '{9F0A1B68-FB38-4726-A565-E259C1CA98E8}'
+		CurVer = s 'CxLookupDyn.LookupPage.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {9F0A1B68-FB38-4726-A565-E259C1CA98E8} = s 'LookupPage Class'
+		{
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+		}
+	}
+}

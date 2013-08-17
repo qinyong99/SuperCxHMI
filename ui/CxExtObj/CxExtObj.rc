@@ -1,0 +1,376 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "winres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""winres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "1 TYPELIB ""CxExtObj.tlb""\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "CxExtObj Module\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "CxExtObj\0"
+            VALUE "LegalCopyright", "Copyright 2001\0"
+            VALUE "OriginalFilename", "CxExtObj.DLL\0"
+            VALUE "ProductName", "CxExtObj Module\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+            VALUE "OLESelfRegister", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// REGISTRY
+//
+
+IDR_CXDATAENTRY         REGISTRY DISCARDABLE    "CxDataEntry.rgs"
+IDR_CXEVENTOBJ          REGISTRY DISCARDABLE    "CxEventObj.rgs"
+IDR_CXRETURNINTEGER     REGISTRY DISCARDABLE    "CxReturnInteger.rgs"
+IDR_CXBLANKPAGE         REGISTRY DISCARDABLE    "CxBlankPage.rgs"
+IDR_CXDATACONNECTION    REGISTRY DISCARDABLE    "CxDataConnection.rgs"
+IDR_CXDATARECORDSET     REGISTRY DISCARDABLE    "CxDataRecordset.rgs"
+IDR_CXDATAFIELD         REGISTRY DISCARDABLE    "CxDataField.rgs"
+IDR_CXDATARECORDSETPAGE REGISTRY DISCARDABLE    "CxDataRecordsetPage.rgs"
+IDR_CXDATACONNECTIONPAGE REGISTRY DISCARDABLE    "CxDataConnectionPage.rgs"
+IDR_CXSQLBUILDER        REGISTRY DISCARDABLE    "CxSQLBuilder.rgs"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ALPHANUM DIALOG DISCARDABLE  0, 0, 93, 43
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "数字输入"
+FONT 9, "宋体"
+BEGIN
+    EDITTEXT        IDC_ALPHANUM,7,5,79,15,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "确定",IDOK,7,26,36,14
+    PUSHBUTTON      "取消",IDCANCEL,50,26,36,14
+END
+
+IDD_SLIDER DIALOG DISCARDABLE  0, 0, 110, 59
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "滑动条输入"
+FONT 9, "宋体"
+BEGIN
+    CONTROL         "Slider1",IDC_SLIDER,"msctls_trackbar32",WS_TABSTOP,13,6,
+                    83,15
+    DEFPUSHBUTTON   "确定",IDOK,62,42,36,14
+    CTEXT           "0",IDC_MIN,6,21,32,8
+    CTEXT           "0",IDC_MAX,73,21,29,8
+    EDITTEXT        IDC_NUM,14,42,40,14,ES_AUTOHSCROLL | ES_READONLY | 
+                    ES_NUMBER
+END
+
+IDD_PUSHBUTTON DIALOG DISCARDABLE  0, 0, 93, 57
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "数字输入"
+FONT 9, "宋体"
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,30,40,36,14
+    PUSHBUTTON      "关",IDC_CLOSE,23,19,50,14
+    PUSHBUTTON      "开",IDC_OPEN,23,2,50,14
+END
+
+IDD_CXBLANKPAGE DIALOG DISCARDABLE  0, 0, 200, 123
+STYLE WS_CHILD
+FONT 9, "宋体"
+BEGIN
+    LTEXT           "选择的对象没有属性页或没有公共属性页。",-1,20,54,161,9
+END
+
+IDD_CXDATARECORDSETPAGE DIALOG DISCARDABLE  0, 0, 241, 167
+STYLE WS_CHILD
+FONT 9, "宋体"
+BEGIN
+    COMBOBOX        IDC_COMMAND_TYPE,25,37,185,61,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "命令对象",IDC_STATIC,25,27,33,8
+    COMBOBOX        IDC_DATABASE_OBJECT,25,67,185,95,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "表格或存贮过程名称",IDC_STATIC,25,57,73,8
+    LTEXT           "命令文本（SQL）",IDC_STATIC,25,87,61,8
+    EDITTEXT        IDC_COMMAND_TEXT,25,97,185,45,ES_MULTILINE | 
+                    ES_AUTOVSCROLL | WS_VSCROLL
+    GROUPBOX        "记录集",IDC_STATIC,10,10,220,157
+    PUSHBUTTON      "SuperCx SQL 命令生成器...",IDC_BUILD_SQL,25,145,115,14
+END
+
+IDD_CXDATACONNECTIONPAGE DIALOG DISCARDABLE  0, 0, 241, 167
+STYLE WS_CHILD
+FONT 9, "宋体"
+BEGIN
+    GROUPBOX        "连接源",IDC_STATIC,10,10,220,157
+    CONTROL         "使用数据链接文件",IDC_RADIO1,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,25,30,75,10
+    EDITTEXT        IDC_FILE_NAME,28,49,147,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "浏览...",IDC_BROWSE,180,49,38,14
+    CONTROL         "使用连接字符串",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,
+                    25,77,75,10
+    EDITTEXT        IDC_CONNECTION_STRING,28,95,147,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "生成...",IDC_BUILDE,180,95,38,14
+    CONTROL         "SuperCx 实时数据源连接字符串",IDC_RADIO3,"Button",
+                    BS_AUTORADIOBUTTON,25,125,128,10
+    CONTROL         "SuperCx 历史数据源连接字符串",IDC_RADIO4,"Button",
+                    BS_AUTORADIOBUTTON,25,145,128,10
+END
+
+IDD_SQLBUILD DIALOG DISCARDABLE  0, 0, 312, 360
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "SuperCx SQL 命令生成器"
+FONT 9, "宋体"
+BEGIN
+    LTEXT           "语句",IDC_STATIC,15,9,17,8
+    COMBOBOX        IDC_STATEMENT,35,5,60,30,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "表格",IDC_STATIC,15,23,17,8
+    COMBOBOX        IDC_TAB,35,21,60,80,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "字段",IDC_STATIC,15,40,215,125
+    CONTROL         "全部（*）",IDC_ALL_FIELD,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,30,55,52,10
+    CONTROL         "List1",IDC_FIELD,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_OWNERDRAWFIXED | WS_BORDER | 
+                    WS_TABSTOP,30,70,190,70
+    PUSHBUTTON      "插入",IDC_FIELD_INSERT,30,145,40,14
+    PUSHBUTTON      "删除",IDC_FIELD_DELETE,80,145,40,14
+    PUSHBUTTON      "上移",IDC_FIELD_UP,130,145,40,14
+    PUSHBUTTON      "下移",IDC_FIELD_DOWN,180,145,40,14
+    GROUPBOX        "条件",IDC_STATIC,15,170,215,180
+    CONTROL         "时间",IDC_TIME,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,30,
+                    187,32,10
+    LTEXT           "从",IDC_STATIC,75,188,9,8
+    CONTROL         "DateTimePicker1",IDC_DATETIMEPICKER1,"SysDateTimePick32",
+                    DTS_RIGHTALIGN | DTS_UPDOWN | DTS_LONGDATEFORMAT | 
+                    WS_TABSTOP,90,185,75,15
+    CONTROL         "DateTimePicker1",IDC_DATETIMEPICKER2,"SysDateTimePick32",
+                    DTS_RIGHTALIGN | DTS_UPDOWN | WS_TABSTOP | 0x8,170,185,
+                    50,15
+    LTEXT           "到",IDC_STATIC,75,203,9,8
+    CONTROL         "DateTimePicker1",IDC_DATETIMEPICKER3,"SysDateTimePick32",
+                    DTS_RIGHTALIGN | DTS_UPDOWN | DTS_LONGDATEFORMAT | 
+                    WS_TABSTOP,90,200,75,15
+    CONTROL         "DateTimePicker1",IDC_DATETIMEPICKER4,"SysDateTimePick32",
+                    DTS_RIGHTALIGN | DTS_UPDOWN | WS_TABSTOP | 0x8,170,200,
+                    50,15
+    CONTROL         "类型",IDC_TYPE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,30,
+                    221,32,10
+    GROUPBOX        "",IDC_STATIC,90,215,130,20
+    CONTROL         "模拟量",IDC_ANALOG,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,95,221,40,10
+    CONTROL         "开关量",IDC_DIGITAL,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,135,221,40,10
+    CONTROL         "字符串",IDC_STRING,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,175,221,40,10
+    CONTROL         "名称",IDC_NAME,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,30,
+                    237,32,10
+    EDITTEXT        IDC_NAME_QUALIFY,90,235,130,14,ES_AUTOHSCROLL
+    CONTROL         "源",IDC_SOURCE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,30,
+                    252,24,10
+    EDITTEXT        IDC_SOURCE_QUALIFY,90,250,130,14,ES_AUTOHSCROLL
+    CONTROL         "报警区",IDC_AREA,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    30,267,40,10
+    EDITTEXT        IDC_AREA_QUALIFY,90,265,130,14,ES_AUTOHSCROLL
+    CONTROL         "操作员",IDC_ACTOR,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    30,282,40,10
+    EDITTEXT        IDC_ACTOR_QUALIFY,90,280,130,14,ES_AUTOHSCROLL
+    CONTROL         "严重级",IDC_SEVERITY,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,30,297,40,10
+    LTEXT           "从",IDC_STATIC,75,298,9,8
+    EDITTEXT        IDC_SEVERITY_LOW,90,295,55,14,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "到",IDC_STATIC,150,298,9,8
+    EDITTEXT        IDC_SEVERITY_HIGH,165,295,55,14,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    PUSHBUTTON      "确定(&O)",IDOK,245,10,50,14
+    PUSHBUTTON      "取消(&C)",IDCANCEL,245,30,50,14
+    CONTROL         "间隔",IDC_INTERVAL,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,30,312,32,10
+    EDITTEXT        IDC_INTERVAL_QUALIFY,90,310,55,14,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    LTEXT           "毫秒",IDC_STATIC,150,313,17,8
+    CONTROL         "按时间降序",IDC_ORDER,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,30,327,56,10
+END
+
+IDD_DATA_SOURCE DIALOG DISCARDABLE  0, 0, 137, 95
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "选择数据源"
+FONT 9, "宋体"
+BEGIN
+    CONTROL         "实时数据",IDC_RADIO1,"Button",BS_AUTORADIOBUTTON,45,20,
+                    48,10
+    CONTROL         "历史数据",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,45,40,
+                    48,10
+    PUSHBUTTON      "确定(&O)",IDOK,15,70,50,14
+    PUSHBUTTON      "取消(&C)",IDCANCEL,75,70,50,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ALPHANUM, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 86
+        TOPMARGIN, 2
+        BOTTOMMARGIN, 40
+    END
+
+    IDD_SLIDER, DIALOG
+    BEGIN
+        LEFTMARGIN, 1
+        RIGHTMARGIN, 107
+        TOPMARGIN, 2
+        BOTTOMMARGIN, 56
+    END
+
+    IDD_PUSHBUTTON, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 86
+        TOPMARGIN, 2
+        BOTTOMMARGIN, 54
+    END
+
+    IDD_CXDATARECORDSETPAGE, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 151
+    END
+
+    IDD_CXDATACONNECTIONPAGE, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 121
+    END
+
+    IDD_SQLBUILD, DIALOG
+    BEGIN
+        RIGHTMARGIN, 260
+        BOTTOMMARGIN, 284
+    END
+
+    IDD_DATA_SOURCE, DIALOG
+    BEGIN
+        RIGHTMARGIN, 85
+        BOTTOMMARGIN, 19
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_PROJNAME            "CxExtObj"
+    IDS_TITLECxBlankPage    "空白页"
+    IDS_HELPFILECxBlankPage "Help File Name"
+    IDS_DOCSTRINGCxBlankPage "Your Help String"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_TITLECxDataRecordsetPage "&Title"
+    IDS_HELPFILECxDataRecordsetPage "Help File Name"
+    IDS_DOCSTRINGCxDataRecordsetPage "Your Help String"
+    IDS_TITLECxDataConnectionPage "Title"
+    IDS_HELPFILECxDataConnectionPage "Help File Name"
+    IDS_DOCSTRINGCxDataConnectionPage "Your Help String"
+END
+
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+1 TYPELIB "CxExtObj.tlb"
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

@@ -1,0 +1,390 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "winres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""winres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "1 TYPELIB ""CxDynObjs.tlb""\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "CxDynObjs Module\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "CxDynObjs\0"
+            VALUE "LegalCopyright", "Copyright 2006\0"
+            VALUE "OriginalFilename", "CxDynObjs.DLL\0"
+            VALUE "ProductName", "CxDynObjs Module\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+            VALUE "OLESelfRegister", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// REGISTRY
+//
+
+IDR_LOOKUPDYNAMIC       REGISTRY DISCARDABLE    "LookupDynamic.rgs"
+IDR_LOOKUPPAGE          REGISTRY DISCARDABLE    "LookupPage.rgs"
+IDR_LINEARDYNAMIC       REGISTRY DISCARDABLE    "LinearDynamic.rgs"
+IDR_LINEARPAGE          REGISTRY DISCARDABLE    "LinearPage.rgs"
+IDR_FORMATDYNAMIC       REGISTRY DISCARDABLE    "FormatDynamic.rgs"
+IDR_FORMATPAGE          REGISTRY DISCARDABLE    "FormatPage.rgs"
+IDR_DIRECTDYNAMIC       REGISTRY DISCARDABLE    "DirectDynamic.rgs"
+IDR_DIRECTPAGE          REGISTRY DISCARDABLE    "DirectPage.rgs"
+IDR_DYNAMICFRM          REGISTRY DISCARDABLE    "DynamicFrm.rgs"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_LINEARPAGE DIALOG DISCARDABLE  0, 0, 228, 104
+STYLE WS_CHILD
+FONT 9, "宋体"
+BEGIN
+    LTEXT           "最大值",IDC_STATIC,107,12,27,9
+    EDITTEXT        IDC_LOINVALUE,35,8,54,15,ES_AUTOHSCROLL
+    LTEXT           "最小值",IDC_STATIC,8,12,25,9
+    EDITTEXT        IDC_HIINVALUE,137,8,54,15,ES_AUTOHSCROLL
+    LTEXT           "最大值",IDC_STATIC,120,48,25,9
+    EDITTEXT        IDC_LOOUTVALUE,47,44,54,15,ES_AUTOHSCROLL
+    LTEXT           "最小值",IDC_STATIC,20,49,25,9
+    EDITTEXT        IDC_HIOUTVALUE,149,44,54,15,ES_AUTOHSCROLL
+    CONTROL         "运行时取输入值",IDC_FETCHINPUT,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,7,70,72,10
+    CONTROL         "允许鼠标(或反向)输入",IDC_ENABLEMOUSEINPUT,"Button",
+                    BS_AUTOCHECKBOX | BS_NOTIFY | WS_TABSTOP,107,69,106,10
+    ICON            IDI_ARWSE,IDC_STATIC,15,24,21,21
+    ICON            IDI_ARWSE,IDC_STATIC,117,23,21,21
+    CONTROL         "使用偏移量",IDC_USEOFFSET,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,7,89,56,10
+    PUSHBUTTON      "？",IDC_LOINVALUE_EXP,90,8,11,15
+    PUSHBUTTON      "？",IDC_HIINVALUE_EXP,192,7,11,15
+    PUSHBUTTON      "？",IDC_HIOUTVALUE_EXP,204,44,11,15
+    PUSHBUTTON      "？",IDC_LOOUTVALUE_EXP,102,44,11,15
+END
+
+IDD_FORMATPAGE DIALOG DISCARDABLE  0, 0, 222, 99
+STYLE DS_CENTER | WS_CHILD | WS_VISIBLE
+FONT 9, "宋体"
+BEGIN
+    CONTROL         "格式化字符串",IDC_ENABLEFORMAT,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,15,7,60,13
+    EDITTEXT        IDC_FORMAT,79,5,129,14,ES_AUTOHSCROLL
+    COMBOBOX        IDC_DATATYPE,35,31,55,53,CBS_DROPDOWNLIST | WS_TABSTOP
+    COMBOBOX        IDC_JUSTIFY,35,58,56,53,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    EDITTEXT        IDC_WHOLEDIGITS,143,31,53,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_DECIMALDIGITS,143,56,54,14,ES_AUTOHSCROLL
+    LTEXT           "    行数",IDC_STATIC_LINES,103,34,36,10
+    LTEXT           "字符数/行",IDC_STATIC_CHARSPERLINE,101,59,36,10
+    LTEXT           "对齐",IDC_STATIC,15,61,18,10
+    LTEXT           "类型",IDC_STATIC,15,35,16,10
+    EDITTEXT        IDC_LINES,143,31,53,14,ES_AUTOHSCROLL
+    LTEXT           "数字位数",IDC_STATIC_WHOLEDIGITS,105,35,36,10
+    LTEXT           "小数位数",IDC_STATIC_DECIMALDIGITS,105,61,36,10
+    EDITTEXT        IDC_CHARSPERLINE,143,56,54,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "？",IDC_PARA_EXP1,197,30,11,15
+    PUSHBUTTON      "？",IDC_PARA_EXP2,197,55,11,15
+    CONTROL         "允许键盘(或反向)输入",IDC_ENABLEMOUSEINPUT,"Button",
+                    BS_AUTOCHECKBOX | BS_NOTIFY | WS_TABSTOP,15,85,106,10
+END
+
+IDD_DIRECTPAGE DIALOG DISCARDABLE  0, 0, 175, 85
+STYLE WS_CHILD
+FONT 9, "宋体"
+BEGIN
+    CONTROL         "允许鼠标(或反向)输入",IDC_ENABLEMOUSEINPUT,"Button",
+                    BS_AUTOCHECKBOX | BS_NOTIFY | WS_TABSTOP,34,37,106,11
+END
+
+IDD_FONTDIALOG DIALOG FIXED IMPURE  13, 54, 287, 196
+STYLE DS_MODALFRAME | DS_3DLOOK | DS_CONTEXTHELP | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "字体"
+FONT 9, "宋体"
+BEGIN
+    LTEXT           "字体(&F):",1088,7,5,40,9
+    COMBOBOX        1136,7,16,98,76,CBS_SIMPLE | CBS_OWNERDRAWFIXED | 
+                    CBS_AUTOHSCROLL | CBS_SORT | CBS_HASSTRINGS | 
+                    CBS_DISABLENOSCROLL | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "字形(&Y):",1089,110,5,44,9
+    COMBOBOX        1137,110,16,74,76,CBS_SIMPLE | CBS_DISABLENOSCROLL | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "大小(&S):",1090,189,5,33,8
+    COMBOBOX        1138,190,16,36,76,CBS_SIMPLE | CBS_OWNERDRAWFIXED | 
+                    CBS_AUTOHSCROLL | CBS_SORT | CBS_HASSTRINGS | 
+                    CBS_DISABLENOSCROLL | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "效果",1072,7,97,98,73,WS_GROUP
+    CONTROL         "删除线(&K)",1040,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    13,110,60,10
+    CONTROL         "下划线(&U)",1041,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    13,123,60,10
+    LTEXT           "颜色(&C):",1091,13,138,33,8,NOT WS_VISIBLE
+    COMBOBOX        1139,13,150,82,100,CBS_DROPDOWNLIST | CBS_OWNERDRAWFIXED | 
+                    CBS_AUTOHSCROLL | CBS_HASSTRINGS | NOT WS_VISIBLE | 
+                    WS_BORDER | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "示例",1073,110,97,116,43,WS_GROUP
+    CTEXT           "AaBbYyZz",1092,118,111,100,23,SS_NOPREFIX | NOT 
+                    WS_VISIBLE
+    LTEXT           "",1093,7,172,228,20,SS_NOPREFIX | NOT WS_GROUP
+    LTEXT           "字符集(&R):",1094,110,146,41,8
+    COMBOBOX        1140,110,157,116,30,CBS_DROPDOWNLIST | 
+                    CBS_OWNERDRAWFIXED | CBS_AUTOHSCROLL | CBS_HASSTRINGS | 
+                    WS_BORDER | WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "确定",1,231,16,45,14,WS_GROUP
+    PUSHBUTTON      "取消",2,231,32,45,14,WS_GROUP
+    PUSHBUTTON      "应用(&A)",1026,231,48,45,14,WS_GROUP
+    PUSHBUTTON      "帮助(&H)",1038,231,64,45,14,WS_GROUP
+END
+
+IDD_ITEM_EDIT DIALOG DISCARDABLE  0, 0, 202, 115
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "编辑行"
+FONT 9, "宋体"
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,76,93,50,14
+    PUSHBUTTON      "取消",IDCANCEL,136,93,50,14
+    EDITTEXT        IDC_ITEM_INPUT1,42,29,42,14,ES_AUTOHSCROLL
+    LTEXT           "最小值",IDC_STATIC,13,31,24,10
+    EDITTEXT        IDC_ITEM_INPUT2,42,58,42,14,ES_AUTOHSCROLL
+    LTEXT           "最大值",IDC_STATIC,13,60,24,10
+    GROUPBOX        "表达式值",IDC_STATIC,7,7,91,73
+    GROUPBOX        "属性值",IDC_STATIC,103,7,91,73
+    CONTROL         "",IDC_OUTPUT,"{BFBB9868-C022-436A-A071-192FFE31F7E5}",
+                    WS_TABSTOP,109,29,77,14
+END
+
+IDD_LOOKUPPAGE DIALOG DISCARDABLE  0, 0, 222, 102
+STYLE WS_CHILD
+FONT 9, "宋体"
+BEGIN
+    CONTROL         "List1",IDC_LIST,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_OWNERDRAWFIXED | WS_BORDER | 
+                    WS_TABSTOP,0,17,220,68
+    PUSHBUTTON      "插入行",IDC_INSERT_ROW,3,88,50,14
+    PUSHBUTTON      "编辑行",IDC_EDIT_ROW,81,88,50,14
+    PUSHBUTTON      "删除行",IDC_DELETE_ROW,159,88,50,14
+    CONTROL         " 完全匹配",IDC_EXACTMATCH,"Button",BS_AUTORADIOBUTTON,
+                    36,3,52,10
+    CONTROL         "范围比较",IDC_RANGECOMPARE,"Button",BS_AUTORADIOBUTTON,
+                    135,3,48,10
+END
+
+IDD_DYNAMICFRM DIALOG DISCARDABLE  0, 0, 291, 199
+STYLE DS_MODALFRAME | DS_CONTEXTHELP | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "动态关联"
+FONT 9, "宋体"
+BEGIN
+    EDITTEXT        IDC_EXPRESSION,16,19,228,15,ES_AUTOHSCROLL
+    CONTROL         "表格",IDC_LOOKUP,"Button",BS_AUTORADIOBUTTON | WS_GROUP,
+                    252,65,32,10
+    CONTROL         "线性",IDC_LINEAR,"Button",BS_AUTORADIOBUTTON,252,94,32,
+                    10
+    CONTROL         "格式",IDC_FORMAT,"Button",BS_AUTORADIOBUTTON,252,125,32,
+                    10
+    CONTROL         "直接",IDC_DIRECT,"Button",BS_AUTORADIOBUTTON,252,151,32,
+                    10
+    DEFPUSHBUTTON   "确 定",IDOK,173,178,50,14
+    PUSHBUTTON      "取 消",IDCANCEL,234,178,50,14
+    PUSHBUTTON      "...",IDC_CREATE_EXPRESSION,254,20,19,14
+    LTEXT           "",IDC_RECT,7,54,236,110,SS_SUNKEN | NOT WS_VISIBLE | 
+                    NOT WS_GROUP
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME | SS_SUNKEN,244,57,
+                    1,106
+    GROUPBOX        "表达式",IDC_STATIC,7,6,277,38
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ARWSE               ICON    DISCARDABLE     "ARW09RT.ICO"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_LINEARPAGE, DIALOG
+    BEGIN
+        RIGHTMARGIN, 222
+        BOTTOMMARGIN, 101
+    END
+
+    IDD_FORMATPAGE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 215
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 94
+    END
+
+    IDD_ITEM_EDIT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 195
+        BOTTOMMARGIN, 108
+    END
+
+    IDD_LOOKUPPAGE, DIALOG
+    BEGIN
+        RIGHTMARGIN, 220
+        BOTTOMMARGIN, 86
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_ARROW               BITMAP  DISCARDABLE     "toolbar1.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_ITEM_EDIT DLGINIT
+BEGIN
+    IDC_OUTPUT, 0x376, 16, 0
+0x0000, 0x0000, 0x0300, 0x0000, 0x0bfd, 0x0000, 0x022c, 0x0000, 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDB_ARROW TOOLBAR DISCARDABLE  16, 15
+BEGIN
+    BUTTON      IDB_ARROW1
+    BUTTON      ID_BUTTON32769
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_PROJNAME            "CxDynObjs"
+    IDS_TITLELookupPage     "&Title"
+    IDS_TITLELinearPage     "&Title"
+    IDS_TITLEFormatPage     "&Title"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_TITLEDirectPage     "&Title"
+    IDS_HELPFILELookupPage  "Help File Name"
+    IDS_HELPFILEFormatPage  "Help File Name"
+    IDS_HELPFILELinearPage  "Help File Name"
+    IDS_HELPFILEDirectPage  "Help File Name"
+    IDS_DOCSTRINGLookupPage "Your Help String"
+    IDS_DOCSTRINGFormatPage "Your Help String"
+    IDS_DOCSTRINGLinearPage "Your Help String"
+    IDS_DOCSTRINGDirectPage "Your Help String"
+END
+
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+1 TYPELIB "CxDynObjs.tlb"
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

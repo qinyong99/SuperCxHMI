@@ -1,0 +1,333 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "winres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""winres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "1 TYPELIB ""CxAlmSumCtrl.tlb""\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "CxAlmSumCtrl Module\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "CxAlmSumCtrl\0"
+            VALUE "LegalCopyright", "Copyright 2003\0"
+            VALUE "OriginalFilename", "CxAlmSumCtrl.DLL\0"
+            VALUE "ProductName", "CxAlmSumCtrl Module\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+            VALUE "OLESelfRegister", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_CXALMSUMCTRL        BITMAP  DISCARDABLE     "cxalmsum.bmp"
+IDB_BARDISABLE          BITMAP  DISCARDABLE     "bmp00001.bmp"
+IDB_BARSCROLL           BITMAP  DISCARDABLE     "bitmap1.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// REGISTRY
+//
+
+IDR_DRAWALMSUM          REGISTRY DISCARDABLE    "DrawAlmSum.rgs"
+IDR_CXALMSUMCTRL        REGISTRY DISCARDABLE    "CxAlmSumCtrl.rgs"
+IDR_CXCOLUMNALMSUMPAGE  REGISTRY DISCARDABLE    "CxColumnAlmSumPage.rgs"
+IDR_CXFORMATALMSUMPAGE  REGISTRY DISCARDABLE    "CxFormatAlmSumPage.rgs"
+IDR_CXGENALMSUMPAGE     REGISTRY DISCARDABLE    "CxGenAlmSumPage.rgs"
+IDR_CXFILTERALMSUMPAGE  REGISTRY DISCARDABLE    "CxFilterAlmSumPage.rgs"
+IDR_CXOPERATORALMSUMPAGE REGISTRY DISCARDABLE    "CxOperatorAlmSumPage.rgs"
+IDR_CXSORTALMSUMPAGE    REGISTRY DISCARDABLE    "CxSortAlmSumPage.rgs"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_CXOPERATORALMSUMPAGE DIALOG DISCARDABLE  0, 0, 270, 190
+STYLE WS_CHILD
+FONT 9, "宋体"
+BEGIN
+    CONTROL         "允许确认报警",IDC_ACK,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,38,26,64,10
+    CONTROL         "允许右键菜单",IDC_CONTEXT_MENU,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,38,47,64,10
+    CONTROL         "允许在线配置",IDC_ONLINE_CONFIGURE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,38,68,64,10
+END
+
+IDD_CXGENALMSUMPAGE DIALOG DISCARDABLE  0, 0, 270, 190
+STYLE WS_CHILD
+FONT 9, "宋体"
+BEGIN
+    CONTROL         "显示",IDC_HEADER,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    42,35,64,10
+    CONTROL         "显示卷动条",IDC_SCROOLBAR,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,150,123,64,10
+    CONTROL         "显示",IDC_GRID,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,41,
+                    105,64,10
+    COMBOBOX        IDC_HEADER_FORECOLOR,187,32,48,30,CBS_DROPDOWNLIST | 
+                    CBS_OWNERDRAWFIXED | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_HEADER_BACKCOLOR,187,52,48,30,CBS_DROPDOWNLIST | 
+                    CBS_OWNERDRAWFIXED | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    RTEXT           "前景颜色",IDC_STATIC,149,36,32,8,SS_NOPREFIX
+    RTEXT           "背景颜色",IDC_STATIC,148,54,33,8,SS_NOPREFIX
+    GROUPBOX        "表头",IDC_STATIC,15,21,238,50
+    COMBOBOX        IDC_BACKCOLOR,188,101,48,30,CBS_DROPDOWNLIST | 
+                    CBS_OWNERDRAWFIXED | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    RTEXT           "背景颜色",IDC_STATIC,146,105,36,8,SS_NOPREFIX
+    LTEXT           "字体",IDC_STATIC,42,53,17,8
+    EDITTEXT        IDC_HEADER_FONT,65,50,50,14,ES_AUTOHSCROLL | ES_READONLY
+    PUSHBUTTON      "...",IDC_HEADERFONT_PICK,115,50,15,14
+    GROUPBOX        "网格",IDC_STATIC,15,90,237,50
+    LTEXT           "行高",IDC_STATIC,40,123,17,8
+    EDITTEXT        IDC_ROW_HEIGHT,64,119,40,14,ES_AUTOHSCROLL | ES_NUMBER
+END
+
+IDD_CXFORMATALMSUMPAGE DIALOG DISCARDABLE  0, 0, 270, 190
+STYLE WS_CHILD
+FONT 9, "宋体"
+BEGIN
+    CONTROL         "List2",IDC_STATUS,"SysListView32",LVS_REPORT | 
+                    LVS_OWNERDRAWFIXED | WS_BORDER | WS_TABSTOP,19,25,227,68
+    CONTROL         "List2",IDC_PRIORITY,"SysListView32",LVS_REPORT | 
+                    LVS_OWNERDRAWFIXED | WS_BORDER | WS_TABSTOP,19,117,227,
+                    58
+    GROUPBOX        "背景颜色",IDC_STATIC,12,105,242,76
+    GROUPBOX        "前景颜色",IDC_STATIC,12,10,242,90
+END
+
+IDD_CXFILTERALMSUMPAGE DIALOG DISCARDABLE  0, 0, 270, 190
+STYLE WS_CHILD
+FONT 9, "宋体"
+BEGIN
+    CONTROL         "List2",IDC_NODE,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_NOCOLUMNHEADER | WS_BORDER | 
+                    WS_TABSTOP,16,26,108,81
+    LTEXT           "节点",IDC_STATIC,22,13,17,8
+    CONTROL         "低(0-333)",IDC_LOW,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,40,127,52,10
+    CONTROL         "中(334-666)",IDC_MIDDLE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,40,142,60,10
+    CONTROL         "高(667-999)",IDC_HIGH,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,40,158,60,10
+    GROUPBOX        "报警优先级",IDC_STATIC,16,116,108,59
+    CONTROL         "List2",IDC_AREA,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_NOCOLUMNHEADER | WS_BORDER | 
+                    WS_TABSTOP,142,27,113,147
+    LTEXT           "报警区",IDC_STATIC,145,14,25,8
+END
+
+IDD_CXCOLUMNALMSUMPAGE DIALOG DISCARDABLE  0, 0, 270, 190
+STYLE WS_CHILD
+FONT 9, "宋体"
+BEGIN
+    LISTBOX         IDC_LIST1,9,26,96,101,LBS_NOINTEGRALHEIGHT | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "未选择的字段",IDC_STATIC,11,13,49,8
+    LTEXT           "已选择的字段",IDC_STATIC,147,13,49,8
+    PUSHBUTTON      "->",IDC_ADD,109,45,30,14
+    PUSHBUTTON      "<-",IDC_REMOVE,109,88,30,14
+    LISTBOX         IDC_LIST2,145,26,96,101,LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "上移",IDC_UP,245,43,18,18
+    PUSHBUTTON      "下移",IDC_DOWN,245,86,18,18
+END
+
+IDD_CXSORTALMSUMPAGE DIALOG DISCARDABLE  0, 0, 270, 190
+STYLE WS_CHILD
+FONT 9, "宋体"
+BEGIN
+    COMBOBOX        IDC_SORTFIELD,73,42,124,94,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "排序按",IDC_STATIC,74,31,25,8
+    CONTROL         "升序",IDC_SORTASCENDING,"Button",BS_AUTORADIOBUTTON,90,
+                    76,32,10
+    CONTROL         "降序",IDC_SORTDESCENDING,"Button",BS_AUTORADIOBUTTON,
+                    148,76,32,10
+    GROUPBOX        "排序次序",IDC_STATIC,73,64,124,30
+    GROUPBOX        "排序",IDC_STATIC,47,20,175,80
+END
+
+IDD_FONTDIALOG DIALOG FIXED IMPURE  13, 54, 287, 196
+STYLE DS_MODALFRAME | DS_3DLOOK | DS_CONTEXTHELP | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "字体"
+FONT 9, "宋体"
+BEGIN
+    LTEXT           "字体(&F):",1088,7,5,40,9
+    COMBOBOX        1136,7,16,98,76,CBS_SIMPLE | CBS_OWNERDRAWFIXED | 
+                    CBS_AUTOHSCROLL | CBS_SORT | CBS_HASSTRINGS | 
+                    CBS_DISABLENOSCROLL | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "字形(&Y):",1089,110,5,44,9
+    COMBOBOX        1137,110,16,74,76,CBS_SIMPLE | CBS_DISABLENOSCROLL | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "大小(&S):",1090,189,5,33,8
+    COMBOBOX        1138,190,16,36,76,CBS_SIMPLE | CBS_OWNERDRAWFIXED | 
+                    CBS_AUTOHSCROLL | CBS_SORT | CBS_HASSTRINGS | 
+                    CBS_DISABLENOSCROLL | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "效果",1072,7,97,98,73,WS_GROUP
+    CONTROL         "删除线(&K)",1040,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    13,110,60,10
+    CONTROL         "下划线(&U)",1041,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    13,123,60,10
+    LTEXT           "颜色(&C):",1091,13,138,33,8,NOT WS_VISIBLE
+    COMBOBOX        1139,13,150,82,100,CBS_DROPDOWNLIST | CBS_OWNERDRAWFIXED | 
+                    CBS_AUTOHSCROLL | CBS_HASSTRINGS | NOT WS_VISIBLE | 
+                    WS_BORDER | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "示例",1073,110,97,116,43,WS_GROUP
+    CTEXT           "AaBbYyZz",1092,118,111,100,23,SS_NOPREFIX | NOT 
+                    WS_VISIBLE
+    LTEXT           "",1093,7,172,228,20,SS_NOPREFIX | NOT WS_GROUP
+    LTEXT           "字符集(&R):",1094,110,146,41,8
+    COMBOBOX        1140,110,157,116,30,CBS_DROPDOWNLIST | 
+                    CBS_OWNERDRAWFIXED | CBS_AUTOHSCROLL | CBS_HASSTRINGS | 
+                    WS_BORDER | WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "确定",1,231,16,45,14,WS_GROUP
+    PUSHBUTTON      "取消",2,231,32,45,14,WS_GROUP
+    PUSHBUTTON      "应用(&A)",1026,231,48,45,14,WS_GROUP
+    PUSHBUTTON      "帮助(&H)",1038,231,64,45,14,WS_GROUP
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_CXGENALMSUMPAGE, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 188
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_PROJNAME            "CxAlmSumCtrl"
+    IDS_TITLECxColumnAlmSumPage "字段"
+    IDS_HELPFILECxColumnAlmSumPage "Help File Name"
+    IDS_DOCSTRINGCxColumnAlmSumPage "Your Help String"
+    IDS_TITLECxFormatAlmSumPage "格式"
+    IDS_HELPFILECxFormatAlmSumPage "Help File Name"
+    IDS_DOCSTRINGCxFormatAlmSumPage "Your Help String"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_TITLECxGenAlmSumPage "常规"
+    IDS_HELPFILECxGenAlmSumPage "Help File Name"
+    IDS_DOCSTRINGCxGenAlmSumPage "Your Help String"
+    IDS_TITLECxFilterAlmSumPage "过滤"
+    IDS_HELPFILECxFilterAlmSumPage "Help File Name"
+    IDS_DOCSTRINGCxFilterAlmSumPage "Your Help String"
+    IDS_TITLECxOperatorAlmSumPage "操作"
+    IDS_HELPFILECxOperatorAlmSumPage "Help File Name"
+    IDS_DOCSTRINGCxOperatorAlmSumPage "Your Help String"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_TITLECxSortAlmSumPage "排序"
+    IDS_HELPFILECxSortAlmSumPage "Help File Name"
+    IDS_DOCSTRINGCxSortAlmSumPage "Your Help String"
+END
+
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+1 TYPELIB "CxAlmSumCtrl.tlb"
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

@@ -1,0 +1,34 @@
+HKCR
+{
+	CxAlmSumCtrl.CxAlmSumCtrl.1 = s 'CxAlmSumCtrl Class'
+	{
+		CLSID = s '{203E598C-03CD-4FD5-8DBB-90E10D210F8C}'
+	}
+	CxAlmSumCtrl.CxAlmSumCtrl = s 'CxAlmSumCtrl Class'
+	{
+		CLSID = s '{203E598C-03CD-4FD5-8DBB-90E10D210F8C}'
+		CurVer = s 'CxAlmSumCtrl.CxAlmSumCtrl.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {203E598C-03CD-4FD5-8DBB-90E10D210F8C} = s 'SuperCx Alarm Summary Control 1.0'
+		{
+			ProgID = s 'CxAlmSumCtrl.AlmSumCtrl.1'
+			VersionIndependentProgID = s 'CxAlmSumCtrl.CxAlmSumCtrl'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			ForceRemove 'Control'
+			ForceRemove 'Insertable'
+			ForceRemove 'ToolboxBitmap32' = s '%MODULE%, 101'
+			'MiscStatus' = s '0'
+			{
+			    '1' = s '131473'
+			}
+			'TypeLib' = s '{BA323D20-89E8-4C23-8EEF-3369511F166E}'
+			'Version' = s '1.0'
+		}
+	}
+}

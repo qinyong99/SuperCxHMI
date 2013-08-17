@@ -1,0 +1,7 @@
+; CxSCBar.def : Declares the module parameters for the DLL.
+
+LIBRARY      "CxSCBar"
+DESCRIPTION  'CxSCBar Windows Dynamic Link Library'
+
+EXPORTS
+    ; Explicit exports can go here

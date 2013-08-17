@@ -1,0 +1,378 @@
+// opc_ae.idl : IDL source for opc_aeps.dll
+//
+// REVISION:  05/25/99 09:32 AM (GMT)
+// VERSIONINFO	1.0.5.0
+// 
+// This file will be processed by the MIDL tool to
+// produce the type library (opc_ae.tlb) and marshalling code (opc_aeps.dll).
+// The type library is embedded in the resource of opc_aeps.dll
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+
+// define OPC Alarm & Events Component Categories
+
+
+	[
+		uuid(58E13251-AC87-11d1-84D5-00608CB8A7E9),
+		helpstring("OPC Event Server Category ID (CATID)"),
+		pointer_default(unique)
+	]
+	interface OPCEventServerCATID
+	{
+		// This empty interface is here so that 
+		// IID_OPCEventServerCATID will be defined
+	};
+
+
+
+typedef DWORD OPCHANDLE;
+
+typedef enum { OPCAE_BROWSE_UP = 1,
+			OPCAE_BROWSE_DOWN, 
+			OPCAE_BROWSE_TO
+} OPCAEBROWSEDIRECTION;
+
+typedef enum { OPC_AREA = 1,
+			OPC_SOURCE
+} OPCAEBROWSETYPE;
+
+
+typedef enum { OPCAE_STATUS_RUNNING = 1,
+			OPCAE_STATUS_FAILED,
+			OPCAE_STATUS_NOCONFIG,
+			OPCAE_STATUS_SUSPENDED,
+			OPCAE_STATUS_TEST
+} OPCEVENTSERVERSTATE;
+
+
+
+
+
+typedef  struct {
+				WORD			wChangeMask;
+				WORD			wNewState;
+	[string]	LPWSTR 			szSource;
+				FILETIME		ftTime;
+	[string]	LPWSTR			szMessage;
+				DWORD			dwEventType;
+				DWORD			dwEventCategory;
+				DWORD			dwSeverity; 
+	[string]	LPWSTR			szConditionName;
+	[string]	LPWSTR			szSubconditionName;
+				WORD			wQuality;
+				WORD			wReserved;		// added for natural alignment
+				BOOL 			bAckRequired;
+				FILETIME		ftActiveTime;
+				DWORD			dwCookie;
+				DWORD			dwNumEventAttrs;
+	[size_is(dwNumEventAttrs)]	VARIANT*		pEventAttributes;
+	[string]	LPWSTR			szActorID;
+} ONEVENTSTRUCT;
+
+
+typedef struct {
+	FILETIME 			ftStartTime;
+	FILETIME 			ftCurrentTime;
+	FILETIME 			ftLastUpdateTime;
+	OPCEVENTSERVERSTATE	dwServerState;
+	WORD				wMajorVersion;
+	WORD				wMinorVersion;
+	WORD				wBuildNumber;
+	WORD				wReserved;		// added for natural alignment
+	[string]	LPWSTR		szVendorInfo;
+} OPCEVENTSERVERSTATUS;
+
+
+typedef  struct {
+	WORD	wState;
+	WORD	wReserved1;		// added for natural alignment
+	LPWSTR 	szActiveSubCondition;
+	LPWSTR	szASCDefinition;
+	DWORD	dwASCSeverity;
+	LPWSTR	szASCDescription;
+	WORD	wQuality;
+	WORD	wReserved2;		// added for natural alignment
+	FILETIME	ftLastAckTime;
+	FILETIME	ftSubCondLastActive;
+	FILETIME	ftCondLastActive;
+	FILETIME	ftCondLastInactive;
+	LPWSTR	szAcknowledgerID;
+	LPWSTR	szComment;
+	DWORD	dwNumSCs;
+	[size_is (dwNumSCs)] LPWSTR * pszSCNames;
+	[size_is (dwNumSCs)] LPWSTR * pszSCDefinitions;
+	[size_is (dwNumSCs)] DWORD  * pdwSCSeverities;
+	[size_is (dwNumSCs)] LPWSTR * pszSCDescriptions;
+	DWORD	dwNumEventAttrs;
+	[size_is(dwNumEventAttrs)]	VARIANT*		pEventAttributes;
+	[size_is(dwNumEventAttrs)]	HRESULT*		pErrors;
+} OPCCONDITIONSTATE;
+
+
+
+	[
+		uuid(65168851-5783-11D1-84A0-00608CB8A7E9),
+	
+		helpstring("IOPCEventServer Interface"),
+		pointer_default(unique)
+	]
+	interface IOPCEventServer : IUnknown
+	{
+		HRESULT GetStatus(
+			[out] OPCEVENTSERVERSTATUS **ppEventServerStatus
+			);
+
+
+		HRESULT CreateEventSubscription(
+			[in] BOOL bActive,
+			[in] DWORD dwBufferTime, 
+			[in] DWORD dwMaxSize,
+			[in] OPCHANDLE hClientSubscription,
+			[in] REFIID riid,
+			[out, iid_is(riid)] LPUNKNOWN * ppUnk,
+			[out] DWORD *pdwRevisedBufferTime,
+			[out] DWORD *pdwRevisedMaxSize
+			);
+
+		HRESULT QueryAvailableFilters(
+			[out] DWORD* pdwFilterMask
+			);
+
+
+		HRESULT QueryEventCategories(
+			[in]  DWORD  dwEventType,	
+			[out] DWORD* pdwCount, 
+			[out, size_is(,*pdwCount)] DWORD** ppdwEventCategories,
+			[out, size_is(,*pdwCount)] LPWSTR** ppszEventCategoryDescs
+ 			);
+
+		HRESULT QueryConditionNames(
+			[in]  DWORD  dwEventCategory, 
+			[out] DWORD* pdwCount, 
+			[out, size_is(,*pdwCount)] LPWSTR** ppszConditionNames
+			);
+
+
+		HRESULT QuerySubConditionNames(
+			[in]  LPWSTR szConditionName, 
+			[out] DWORD* pdwCount, 
+			[out, size_is(,*pdwCount)] LPWSTR** ppszSubConditionNames
+ 			);
+
+
+		HRESULT QuerySourceConditions(
+			[in]  LPWSTR szSource, 
+			[out] DWORD* pdwCount, 
+			[out, size_is(,*pdwCount)] LPWSTR** ppszConditionNames
+ 			);
+	
+
+		HRESULT QueryEventAttributes(
+			[in]  DWORD dwEventCategory, 
+			[out] DWORD* pdwCount, 
+			[out, size_is(,*pdwCount)] DWORD** ppdwAttrIDs,
+			[out, size_is(,*pdwCount)] LPWSTR** ppszAttrDescs,
+			[out, size_is(,*pdwCount)] VARTYPE** ppvtAttrTypes
+			);
+
+		HRESULT TranslateToItemIDs(
+			[in] LPWSTR szSource,
+			[in] DWORD dwEventCategory,
+ 			[in] LPWSTR szConditionName,
+ 			[in] LPWSTR szSubconditionName,
+			[in] DWORD  dwCount, 
+			[in, size_is(dwCount)] DWORD* pdwAssocAttrIDs, 
+			[out, size_is(,dwCount)] LPWSTR** ppszAttrItemIDs,
+			[out, size_is(,dwCount)] LPWSTR** ppszNodeNames,
+			[out, size_is(,dwCount)] CLSID** ppCLSIDs
+			);
+
+		HRESULT GetConditionState (
+			[in]  LPWSTR szSource,
+			[in]  LPWSTR szConditionName,
+			[in]  DWORD dwNumEventAttrs,
+			[in, size_is(dwNumEventAttrs)] DWORD* pdwAttributeIDs,
+			[out] OPCCONDITIONSTATE ** ppConditionState
+			);
+
+		HRESULT EnableConditionByArea(
+			[in] DWORD dwNumAreas, 
+			[in, size_is(dwNumAreas)] LPWSTR* pszAreas
+			);
+
+
+		HRESULT EnableConditionBySource(
+			[in] DWORD dwNumSources, 
+			[in, size_is(dwNumSources)] LPWSTR* pszSources
+			);
+
+		HRESULT DisableConditionByArea(
+			[in] DWORD dwNumAreas, 
+			[in, size_is(dwNumAreas)] LPWSTR* pszAreas
+			);
+
+		HRESULT DisableConditionBySource(
+			[in] DWORD dwNumSources, 
+			[in, size_is(dwNumSources)] LPWSTR* pszSources
+			);
+
+		HRESULT AckCondition(
+			[in] DWORD dwCount,
+			[in, string] LPWSTR szAcknowledgerID ,
+			[in, string] LPWSTR szComment ,
+			[in, size_is(dwCount)] LPWSTR* pszSource,
+			[in, size_is(dwCount)] LPWSTR* pszConditionName,
+			[in, size_is(dwCount)] FILETIME* pftActiveTime,
+			[in, size_is(dwCount)] DWORD* pdwCookie,
+			[out, size_is(,dwCount)] HRESULT **ppErrors 
+			);
+
+		HRESULT CreateAreaBrowser(
+			[in] REFIID riid,
+			[out, iid_is(riid)] LPUNKNOWN* ppUnk
+			);
+
+	};
+	[
+	
+		uuid(65168855-5783-11D1-84A0-00608CB8A7E9),
+	
+		helpstring("IOPCEventSubscriptionMgt Interface"),
+		pointer_default(unique)
+	]
+	interface IOPCEventSubscriptionMgt : IUnknown
+	{
+		HRESULT SetFilter(	
+			[in] DWORD  dwEventType, 
+			[in] DWORD dwNumCategories,		
+			[in, size_is(dwNumCategories)] DWORD* pdwEventCategories, 
+			[in] DWORD dwLowSeverity,
+			[in] DWORD dwHighSeverity,
+			[in] DWORD dwNumAreas,		
+			[in, size_is(dwNumAreas)] LPWSTR* pszAreaList,
+			[in] DWORD dwNumSources,
+			[in, size_is(dwNumSources)] LPWSTR* pszSourceList
+			);
+
+		HRESULT GetFilter(	
+			[out] DWORD* pdwEventType, 
+			[out] DWORD* pdwNumCategories,		
+			[out, size_is(,*pdwNumCategories)] DWORD** ppdwEventCategories, 
+			[out] DWORD* pdwLowSeverity,
+			[out] DWORD* pdwHighSeverity,
+			[out] DWORD* pdwNumAreas,		
+			[out, size_is(,*pdwNumAreas)] LPWSTR** ppszAreaList,
+			[out] DWORD* pdwNumSources,
+			[out, size_is(,*pdwNumSources)] LPWSTR** ppszSourceList
+			);
+
+		HRESULT SelectReturnedAttributes(	
+			[in] DWORD dwEventCategory,		
+			[in] DWORD dwCount,		
+			[in, size_is(dwCount)] DWORD* dwAttributeIDs
+			);
+
+		HRESULT GetReturnedAttributes(	
+			[in]  DWORD dwEventCategory,		
+			[out] DWORD * pdwCount,		
+			[out, size_is(,*pdwCount)] DWORD** ppdwAttributeIDs
+		);
+
+
+		HRESULT Refresh(
+			[in] DWORD dwConnection
+			);
+
+		HRESULT CancelRefresh(
+			[in] DWORD dwConnection
+			);
+
+		HRESULT GetState(
+			[out] BOOL	* pbActive, 
+			[out] DWORD * pdwBufferTime,  
+			[out] DWORD * pdwMaxSize,
+			[out] OPCHANDLE * phClientSubscription
+			);
+
+		HRESULT SetState( 
+			[unique, in] BOOL *  pbActive, 
+			[unique, in] DWORD * pdwBufferTime,
+			[unique, in] DWORD * pdwMaxSize,
+			[in] OPCHANDLE hClientSubscription,
+			[out] DWORD * pdwRevisedBufferTime,
+			[out] DWORD * pdwRevisedMaxSize
+			);
+	};
+	[
+	
+		uuid(65168857-5783-11D1-84A0-00608CB8A7E9),
+	
+		helpstring("IOPCEventAreaBrowser Interface"),
+		pointer_default(unique)
+	]
+	interface IOPCEventAreaBrowser : IUnknown
+	{
+		HRESULT ChangeBrowsePosition(
+    		[in]  OPCAEBROWSEDIRECTION dwBrowseDirection,  
+    		[in, string] LPCWSTR  szString
+			);
+
+		HRESULT BrowseOPCAreas(
+    		[in] OPCAEBROWSETYPE   dwBrowseFilterType,
+    		[in, string] LPCWSTR  szFilterCriteria,  
+    		[out] LPENUMSTRING  * ppIEnumString
+			);  
+
+		HRESULT GetQualifiedAreaName( 
+			[in] LPCWSTR szAreaName,
+			[out, string] LPWSTR *pszQualifiedAreaName
+			);
+
+		HRESULT GetQualifiedSourceName( 
+			[in] LPCWSTR szSourceName,
+			[out, string] LPWSTR *pszQualifiedSourceName
+			);
+
+	};
+	[
+	
+		uuid(6516885F-5783-11D1-84A0-00608CB8A7E9),
+	
+		helpstring("IOPCEventSink Interface"),
+		pointer_default(unique)
+	]
+	interface IOPCEventSink : IUnknown
+	{
+		HRESULT OnEvent(
+			[in] OPCHANDLE hClientSubscription,
+			[in] BOOL bRefresh,
+			[in] BOOL bLastRefresh,
+			[in] DWORD dwCount,
+			[in, size_is(dwCount)] ONEVENTSTRUCT* pEvents
+			);
+
+	};
+
+
+
+[
+	uuid(65168844-5783-11D1-84A0-00608CB8A7E9),
+	version(1.0),
+	helpstring("opc_ae 1.0 Type Library")
+]
+library OPC_AE
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	interface IOPCEventServer;
+	interface IOPCEventSubscriptionMgt;
+	interface IOPCEventAreaBrowser;
+	interface IOPCEventSink;
+	interface OPCEventServerCATID;
+
+};
+
+

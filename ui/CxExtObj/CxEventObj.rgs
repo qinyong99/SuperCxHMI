@@ -1,0 +1,26 @@
+HKCR
+{
+	CxExtObj.CxEventObj.1 = s 'CxEventObj Class'
+	{
+		CLSID = s '{6D977D5E-8793-458C-ABD3-EA6CCF339CED}'
+	}
+	CxExtObj.CxEventObj = s 'CxEventObj Class'
+	{
+		CLSID = s '{6D977D5E-8793-458C-ABD3-EA6CCF339CED}'
+		CurVer = s 'CxExtObj.CxEventObj.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {6D977D5E-8793-458C-ABD3-EA6CCF339CED} = s 'CxEventObj Class'
+		{
+			ProgID = s 'CxExtObj.CxEventObj.1'
+			VersionIndependentProgID = s 'CxExtObj.CxEventObj'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{D75F0066-DC61-4679-A739-5B046E2C9088}'
+		}
+	}
+}

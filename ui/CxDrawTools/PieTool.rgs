@@ -1,0 +1,26 @@
+HKCR
+{
+	CxDrawTools.PieTool.1 = s 'PieTool Class'
+	{
+		CLSID = s '{D3F3A3BC-42FF-4EDE-8619-C7AFB9BDDFA8}'
+	}
+	CxDrawTools.PieTool = s 'PieTool Class'
+	{
+		CLSID = s '{D3F3A3BC-42FF-4EDE-8619-C7AFB9BDDFA8}'
+		CurVer = s 'CxDrawTools.PieTool.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {D3F3A3BC-42FF-4EDE-8619-C7AFB9BDDFA8} = s 'PieTool Class'
+		{
+			ProgID = s 'CxDrawTools.PieTool.1'
+			VersionIndependentProgID = s 'CxDrawTools.PieTool'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{7309E63D-3287-11D5-A468-9299FCC96908}'
+		}
+	}
+}

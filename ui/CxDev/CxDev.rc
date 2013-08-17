@@ -1,0 +1,2213 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+// Generated Help ID header file
+#define APSTUDIO_HIDDEN_SYMBOLS
+#include "resource.hm"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "1 TYPELIB ""CxDev.tlb""\r\n"
+    "\r\n"
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\CxDev.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""l.chs\\afxres.rc""          // Standard components\r\n"
+    "#include ""l.chs\\afxprint.rc""        // printing/print preview resources\r\n"
+    "#include ""l.chs\\afxolecl.rc""        // OLE container resources\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\idr_main.ico"
+IDR_CXDEVTYPE           ICON    DISCARDABLE     "res\\DevDoc.ico"
+IDI_PROJECT             ICON    DISCARDABLE     "res\\icon1.ico"
+IDI_PICTURES            ICON    DISCARDABLE     "res\\picture.ico"
+IDI_PICTURE             ICON    DISCARDABLE     "res\\ico00001.ico"
+IDI_FORM                ICON    DISCARDABLE     "res\\ico00002.ico"
+IDI_MAINFORM            ICON    DISCARDABLE     "res\\ico00003.ico"
+IDI_FOLDER_CLOSE        ICON    DISCARDABLE     "res\\ico00004.ico"
+IDI_FOLDER_OPEN         ICON    DISCARDABLE     "res\\ico00005.ico"
+IDI_CODEMODULE          ICON    DISCARDABLE     "res\\ico00006.ico"
+IDR_LAYOUTFRAME         ICON    DISCARDABLE     "res\\ico00007.ico"
+IDR_SCRIPTFRAME         ICON    DISCARDABLE     "res\\idr_layo.ico"
+IDI_SUBFORM             ICON    DISCARDABLE     "res\\suform.ico"
+IDI_REPORT              ICON    DISCARDABLE     "res\\ico00008.ico"
+IDI_SUBREPORT           ICON    DISCARDABLE     "res\\report1.ico"
+IDR_REPORTFRAME         ICON    DISCARDABLE     "res\\ico00009.ico"
+IDI_PORTRAIT            ICON    DISCARDABLE     "res\\ico00010.ico"
+IDI_LANDSCAPE           ICON    DISCARDABLE     "res\\portrait.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_FONTTYPE            BITMAP  DISCARDABLE     "res\\font.bmp"
+IDB_FORMATBAR           BITMAP  DISCARDABLE     "res\\formatba.bmp"
+IDR_LAYOUTBAR           BITMAP  DISCARDABLE     "res\\bmp00001.bmp"
+IDR_FULLSCREEN          BITMAP  DISCARDABLE     "res\\fullscre.bmp"
+IDB_TOOLBOX             BITMAP  DISCARDABLE     "res\\toolbox1.bmp"
+IDR_TOOLBAR5            BITMAP  DISCARDABLE     "res\\toolbar2.bmp"
+IDB_CURSOR              BITMAP  DISCARDABLE     "res\\idb_.bmp"
+IDB_BITMAP_PATTERN1     BITMAP  DISCARDABLE     "res\\bitmap_p.bmp"
+IDB_BITMAP_PATTERN      BITMAP  DISCARDABLE     "res\\bitmap_.bmp"
+IDB_EXPLORER_ICONS      BITMAP  DISCARDABLE     "res\\bitmap1.bmp"
+IDB_GLIB_LARGE          BITMAP  DISCARDABLE     "res\\bmp00002.bmp"
+IDB_GLIB_SMALL          BITMAP  DISCARDABLE     "res\\bmp00003.bmp"
+IDB_GLIB_TOOL           BITMAP  DISCARDABLE     "res\\bmp00004.bmp"
+IDB_LAYER_STATE         BITMAP  DISCARDABLE     "res\\bmp00005.bmp"
+IDB_LSTATE              BITMAP  DISCARDABLE     "res\\bmp00006.bmp"
+IDB_HANDLE_ROTATE       BITMAP  DISCARDABLE     "res\\bmp00007.bmp"
+IDB_HANDLE_GENERAL      BITMAP  DISCARDABLE     "res\\handle_r.bmp"
+IDR_MAINFRAME           BITMAP  MOVEABLE PURE   "res\\mainfram.bmp"
+IDB_SPLASH              BITMAP  DISCARDABLE     "Splsh16.bmp"
+IDB_COLUMNAR            BITMAP  DISCARDABLE     "res\\bmp00008.bmp"
+IDB_TABULAR             BITMAP  DISCARDABLE     "res\\columnar.bmp"
+IDB_JUSTIFIED           BITMAP  DISCARDABLE     "res\\tabular1.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDC_HANDCUR             CURSOR  DISCARDABLE     "res\\cur27537.cur"
+IDC_PAUSE               CURSOR  DISCARDABLE     "res\\cursor1.cur"
+IDC_ROTATE              CURSOR  DISCARDABLE     "res\\cur00001.cur"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_LAYOUTBAR TOOLBAR DISCARDABLE  16, 15
+BEGIN
+    BUTTON      ID_GRID_SETTING
+    BUTTON      ID_LAYER_SETUP
+    SEPARATOR
+    BUTTON      ID_ALIGN_LEFT
+    BUTTON      ID_ALIGN_HORIZ_CENTER
+    BUTTON      ID_ALIGN_RIGHT
+    SEPARATOR
+    BUTTON      ID_ALIGN_TOP
+    BUTTON      ID_ALIGN_VERT_CENTER
+    BUTTON      ID_ALIGN_BOTTOM
+    SEPARATOR
+    BUTTON      ID_SPACE_EVENHORIZ
+    BUTTON      ID_SPACE_EVENVERT
+    SEPARATOR
+    BUTTON      ID_ARRAGE_SAMEWIDTH
+    BUTTON      ID_ARRAGE_SAMEHIGHT
+    BUTTON      ID_ARRAGE_BOTH
+    SEPARATOR
+    BUTTON      ID_GROUP_OBJECT
+    BUTTON      ID_UNGROUP_OBJECT
+    SEPARATOR
+    BUTTON      ID_OBJECT_FORWARD_MOST
+    BUTTON      ID_OBJECT_BACKWORD_MOST
+END
+
+IDR_FULLSCREEN TOOLBAR DISCARDABLE  16, 15
+BEGIN
+    BUTTON      ID_VIEW_FULL_SCREEN
+END
+
+IDR_TOOLBAR5 TOOLBAR DISCARDABLE  16, 10
+BEGIN
+    BUTTON      ID_BUTTON32815
+END
+
+IDB_TOOLBOX TOOLBAR DISCARDABLE  16, 15
+BEGIN
+    BUTTON      ID_BUTTON32901
+    BUTTON      ID_BUTTON32902
+    BUTTON      ID_BUTTON32903
+    BUTTON      ID_BUTTON32904
+    BUTTON      ID_BUTTON32905
+    BUTTON      ID_BUTTON32906
+    BUTTON      ID_BUTTON32907
+    BUTTON      ID_BUTTON32908
+    BUTTON      ID_DRAW_ARC
+    BUTTON      ID_DRAW_PIE
+    BUTTON      ID_DRAW_CHORD
+    BUTTON      ID_BUTTON32909
+    BUTTON      ID_BUTTON32945
+    BUTTON      ID_BUTTON32967
+    BUTTON      ID_DRAW_BUTTON
+    BUTTON      ID_BUTTON32972
+    BUTTON      ID_DRAW_TIMER
+    BUTTON      ID_DRAW_CHART
+    BUTTON      ID_DRAW_ALMSUM
+    BUTTON      ID_INSERT_BITMAP
+END
+
+IDR_MAINFRAME TOOLBAR DISCARDABLE  16, 15
+BEGIN
+    BUTTON      ID_FILE_NEW
+    BUTTON      ID_FILE_OPEN
+    BUTTON      ID_FILE_SAVE
+    SEPARATOR
+    BUTTON      ID_EDIT_CUT
+    BUTTON      ID_EDIT_COPY
+    BUTTON      ID_EDIT_PASTE
+    SEPARATOR
+    BUTTON      ID_EDIT_UNDO
+    BUTTON      ID_EDIT_REDO
+    SEPARATOR
+    BUTTON      ID_VIEW_FULL_SCREEN
+    SEPARATOR
+    BUTTON      ID_VIEW_APPEAR_EXPERT
+    BUTTON      ID_VIEW_DYNAMIC_EXPERT
+    BUTTON      ID_VIEW_ACTION_EXPERT
+    SEPARATOR
+    BUTTON      ID_VIEW_OBJECT
+    BUTTON      ID_VIEW_SCRIPT
+    SEPARATOR
+    BUTTON      ID_EXECUTE_APPMC
+    BUTTON      ID_PICTURE_RUN
+    SEPARATOR
+    BUTTON      ID_APP_ABOUT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_LAYOUTFRAME MENU PRELOAD DISCARDABLE 
+BEGIN
+    POPUP "文件(&F)"
+    BEGIN
+        MENUITEM "新建(&N)\tCtrl+N",            ID_FILE_NEW
+        MENUITEM "打开(&O)...\tCtrl+O",         ID_FILE_OPEN
+        MENUITEM "关闭(&C)",                    ID_FILE_CLOSE
+        MENUITEM SEPARATOR
+        MENUITEM "保存(&S)\tCtrl+S",            ID_FILE_SAVE
+        MENUITEM "保存画面(&D)",                ID_FILE_SAVE_PICTURE
+        MENUITEM "另存画面为(&A)",              ID_FILE_SAVE_PICTURE_AS
+        MENUITEM "全部保存(&L)",                ID_FILE_SAVE_ALL
+        MENUITEM SEPARATOR
+        MENUITEM "导入(&I)...",                 ID_FILE_IMPORT
+        MENUITEM "导出(&E)...",                 ID_FILE_EXPORT
+        MENUITEM SEPARATOR
+        MENUITEM "打印(&P)...\tCtrl+P",         ID_FILE_PRINT
+        MENUITEM "打印预览(&V)",                ID_FILE_PRINT_PREVIEW
+        MENUITEM "页面设置(&U)...",             ID_PAGE_SETUP
+        MENUITEM SEPARATOR
+        MENUITEM "最近文件",                    ID_FILE_MRU_FILE1, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "退出(&X)",                    ID_APP_EXIT
+    END
+    POPUP "编辑(&E)"
+    BEGIN
+        MENUITEM "撤消(&U)\tCtrl+Z",            ID_EDIT_UNDO
+        MENUITEM "恢复(&R)\tCtrl+Y",            ID_EDIT_REDO
+        MENUITEM SEPARATOR
+        MENUITEM "剪切(&T)\tCtrl+X",            ID_EDIT_CUT
+        MENUITEM "复制(&L)\tCtrl+D",            ID_EDIT_CLONE
+        MENUITEM "拷贝(&C)\tCtrl+C",            ID_EDIT_COPY
+        MENUITEM "粘贴(&P)\tCtrl+V",            ID_EDIT_PASTE
+        MENUITEM "删除(&D)\tDel",               ID_EDIT_CLEAR
+        MENUITEM SEPARATOR
+        MENUITEM "&查找(&F)...\tCtrl+F",        ID_EDIT_FIND
+        MENUITEM "查找下一个(&N)\tF3",          ID_EDIT_REPEAT
+        MENUITEM "替换(&E)\tCtrl+H",            ID_EDIT_REPLACE
+        MENUITEM SEPARATOR
+        MENUITEM "转到(&G)...\tCtrl+G",         ID_EDIT_GOTO
+        POPUP "书签(&K)"
+        BEGIN
+            MENUITEM "切换书签(&T)",                ID_BOOKMARK_TOGGLE
+            MENUITEM "下一书签(&N)",                ID_BOOKMARK_NEXT
+            MENUITEM "上一书签(&P)",                ID_BOOKMARK_PREVIOUS
+            MENUITEM "清除书签(&C)",                ID_BOOKMARK_CLEAR
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "全选(&S)\tCtrl+A",            ID_EDIT_SELECTALL
+    END
+    POPUP "查看(&V)"
+    BEGIN
+        POPUP "显示比例(&Z)"
+        BEGIN
+            MENUITEM "50%",                         ID_VIEW_ZOOM50
+            MENUITEM "75%",                         ID_VIEW_ZOOM75
+            MENUITEM "100%",                        ID_VIEW_ZOOM100
+            MENUITEM "150%",                        ID_VIEW_ZOOM150
+            MENUITEM "200%",                        ID_VIEW_ZOOM200
+			MENUITEM "400%",                        ID_VIEW_ZOOM400
+            MENUITEM "用户比例(&C)",                ID_VIEW_ZOOMCUSTOM
+        END
+        MENUITEM "全屏幕(&F)\tF11",             ID_VIEW_FULL_SCREEN
+        MENUITEM SEPARATOR
+        MENUITEM "对象窗口(&O)\tShift + F7",    ID_VIEW_OBJECT
+        MENUITEM "脚本窗口(&C)\tF7",            ID_VIEW_SCRIPT
+        MENUITEM SEPARATOR
+        MENUITEM "资源浏览器(&E)",              ID_VIEW_EXPLORER_BAR
+        MENUITEM "属性窗口(&W)",                ID_VIEW_PROPERTY_BAR
+        MENUITEM "工具箱(&B)",                  ID_VIEW_TOOLBOX
+        MENUITEM SEPARATOR
+        POPUP "专家(&X)"
+        BEGIN
+            MENUITEM "颜色和线条(&F)",              ID_VIEW_APPEAR_EXPERT
+            MENUITEM "动画(&M)",                    ID_VIEW_DYNAMIC_EXPERT
+            MENUITEM "动作(&A)",                    ID_VIEW_ACTION_EXPERT
+        END
+        POPUP "工具栏(&T)"
+        BEGIN
+            MENUITEM "标准(&T)",                    ID_VIEW_STAND_BAR
+            MENUITEM "布局(&L)",                    ID_VIEW_LAYOUT_BAR
+            MENUITEM "状态(&S)",                    ID_VIEW_STATUS_BAR
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "Tab 键顺序(&A)",              ID_TAB_ORDER
+        MENUITEM "属性(&P)",                    ID_EDIT_PROPERTIES
+    END
+    POPUP "画面(&P)"
+    BEGIN
+        MENUITEM "选项(&O)...",                 ID_PICTURE_OPTIONS
+        MENUITEM "OPC 数据源(&S)",              ID_PICTURE_OPCSERVER
+        MENUITEM "管理控制台(&C)",              ID_EXECUTE_APPMC
+        MENUITEM SEPARATOR
+        MENUITEM "插入子窗体(&F)",              ID_ADD_FORM
+        MENUITEM "插入模块(&M)",                ID_ADD_SUBMODULE
+        POPUP "插入报表(&E)"
+        BEGIN
+            MENUITEM "空白报表(&B)",                ID_ADD_BLANK_REPORT
+            MENUITEM "报表向导(&W)",                ID_ADD_REPORT_WIZARD
+        END
+        MENUITEM "插入子报表(&P)",              ID_ADD_SUBREPORT
+        MENUITEM SEPARATOR
+        MENUITEM "运行(&R)\tF5",                ID_PICTURE_RUN
+    END
+    POPUP "工具(&T)"
+    BEGIN
+        MENUITEM "选择(&S)",                    ID_DRAW_SELECT
+        MENUITEM SEPARATOR
+        MENUITEM "直线(&L)",                    ID_DRAW_LINE
+        MENUITEM "矩形(&R)",                    ID_DRAW_RECT
+        MENUITEM "圆角矩形(&N)",                ID_DRAW_ROUNDRECT
+        MENUITEM "椭圆(&E)",                    ID_DRAW_ELLIPSE
+        MENUITEM "折线(&P)",                    ID_DRAW_POLYLINE
+        MENUITEM "管道(&I)",                    ID_DRAW_PIPE
+        MENUITEM "多边形(&G)",                  ID_DRAW_POLYGON
+        MENUITEM "弧线(&A)",                    ID_DRAW_ARC
+        MENUITEM "扇形(&I)",                    ID_DRAW_PIE
+        MENUITEM "弧形(&C)",                    ID_DRAW_CHORD
+        MENUITEM "文本(&X)",                    ID_DRAW_TEXT
+        MENUITEM "数据戳(&D)",                  ID_DRAW_DATALINK
+        MENUITEM "变量(&V)",                    ID_DRAW_VARIABLE
+        MENUITEM "按钮(&U)",                    ID_DRAW_BUTTON
+        MENUITEM "菜单(&M)",                    ID_DRAW_MENU
+        MENUITEM "定时器(&T)",                  ID_DRAW_TIMER
+        MENUITEM "趋势(&H)",                    ID_DRAW_CHART
+        MENUITEM "报警表(&S)",                  ID_DRAW_ALMSUM
+        MENUITEM "图像(&B)",                    ID_INSERT_BITMAP
+        MENUITEM SEPARATOR
+        MENUITEM "转换为图像(&G)",              ID_EDIT_CONVERTTOBMP
+        MENUITEM "附加控件(&O)",                ID_ADD_CONTROL
+        MENUITEM SEPARATOR
+        POPUP "图符"
+        BEGIN
+            MENUITEM "生成图符(&Y)",                ID_CREATE_SYMBOL
+            MENUITEM "分解图符(&B)",                ID_BREAK_SYMBOL
+        END
+        POPUP "模块"
+        BEGIN
+            MENUITEM "生成模块(&M)",                ID_CREATE_SUBFORM
+            MENUITEM "分解模块(&B)",                ID_BREAK_SUBFORM
+        END
+        MENUITEM SEPARATOR
+        POPUP "添加到"
+        BEGIN
+            MENUITEM "图符库(&S)",                  ID_ADDTO_SYMBOL, GRAYED
+            MENUITEM "模块库(&M)",                  ID_ADDTO_MODULE, GRAYED
+        END
+    END
+    POPUP "排列(&L)"
+    BEGIN
+        MENUITEM "网格(&N)...",                 ID_GRID_SETTING
+        MENUITEM "图层(&L)...",                 ID_LAYER_SETUP
+        MENUITEM SEPARATOR
+        POPUP "对齐(&A)"
+        BEGIN
+            MENUITEM "左对齐(&L)",                  ID_ALIGN_LEFT
+            MENUITEM "水平居中(&C)",                ID_ALIGN_HORIZ_CENTER
+            MENUITEM "右对齐(&R)",                  ID_ALIGN_RIGHT
+            MENUITEM SEPARATOR
+            MENUITEM "顶端对齐(&T)",                ID_ALIGN_TOP
+            MENUITEM "垂直居中(&M)",                ID_ALIGN_VERT_CENTER
+            MENUITEM "底端对齐(&B)",                ID_ALIGN_BOTTOM
+        END
+        POPUP "窗体内居中(&C)"
+        BEGIN
+            MENUITEM "水平对齐(&H)",                ID_HORIZ_CENTER
+            MENUITEM "垂直对齐(&V)",                ID_VERT_CENTER
+        END
+        POPUP "间距调整(&I)"
+        BEGIN
+            MENUITEM "水平等间隔(&H)",              ID_SPACE_EVENHORIZ
+            MENUITEM "垂直等间隔(&V)",              ID_SPACE_EVENVERT
+        END
+        MENUITEM SEPARATOR
+        POPUP "统一尺寸(&M)"
+        BEGIN
+            MENUITEM "宽度相同(&W)",                ID_ARRAGE_SAMEWIDTH
+            MENUITEM "高度相同(&H)",                ID_ARRAGE_SAMEHIGHT
+            MENUITEM "两者都相同(&A)",              ID_ARRAGE_BOTH
+        END
+        POPUP "旋转或翻转(&P)"
+        BEGIN
+            MENUITEM "自由旋转(&T)",                ID_TRACKER_ROTATE
+            MENUITEM SEPARATOR
+            MENUITEM "向左旋转(&L)",                ID_ROTATE_LEFT
+            MENUITEM "向右旋转(&R)",                ID_ROTATE_RIGHT
+            MENUITEM SEPARATOR
+            MENUITEM "水平翻转(&H)",                ID_MIRROR_HORIZ
+            MENUITEM "垂直翻转(&V)",                ID_MIRROR_VERT
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "改变尺寸(&S)",                ID_TRACKER_RESIZE
+        MENUITEM "编辑顶点(&F)",                ID_TRACKER_RESHAPE
+        MENUITEM SEPARATOR
+        MENUITEM "合成组(&G)",                  ID_GROUP_OBJECT
+        MENUITEM "分解组(&U)",                  ID_UNGROUP_OBJECT
+        MENUITEM SEPARATOR
+        POPUP "顺序(&O)"
+        BEGIN
+            MENUITEM "上移一层(&F)",                ID_OBJECT_MOVEFORWARD
+            MENUITEM "下移一层(&W)",                ID_OBJECT_MOVEBACK
+            MENUITEM "移至顶层(&B)\tCtrl+J",        ID_OBJECT_FORWARD_MOST
+            MENUITEM "移至底层(&S)\tCtrl+K",        ID_OBJECT_BACKWORD_MOST
+        END
+    END
+    POPUP "窗口(&W)"
+    BEGIN
+        MENUITEM "关闭(&O)",                    ID_WINDOW_CLOSE
+        MENUITEM "关闭所有(&L)",                ID_WINDOW_CLOSEALL
+        MENUITEM SEPARATOR
+        MENUITEM "下一个(&X)",                  ID_WINDOW_NEXT
+        MENUITEM "上一个(&V)",                  ID_WINDOW_PREVIOUS
+        MENUITEM SEPARATOR
+        MENUITEM "层叠(&C)",                    ID_WINDOW_CASCADE
+        MENUITEM "平铺(&T)",                    ID_WINDOW_TILE_HORZ
+        MENUITEM "排列图标(&A)",                ID_WINDOW_ARRANGE
+    END
+    POPUP "帮助(&H)"
+    BEGIN
+        MENUITEM "内容(&C)",                    ID_HELP_CONTENT
+        MENUITEM "索引(&I)...",                 ID_HELP_INDEX
+        MENUITEM "搜索(&S)...",                 ID_HELP_SEARCH
+        MENUITEM "关于 CxDev(&A)...",           ID_APP_ABOUT
+    END
+END
+
+IDR_CXDEVTYPE_CNTR_IP MENU PRELOAD DISCARDABLE 
+BEGIN
+    POPUP "文件(&F)"
+    BEGIN
+        MENUITEM "新建(&N)\tCtrl+N",            ID_FILE_NEW
+        MENUITEM "打开(&O)...\tCtrl+O",         ID_FILE_OPEN
+        MENUITEM "关闭(&C)",                    ID_FILE_CLOSE
+        MENUITEM "保存(&S)\tCtrl+S",            ID_FILE_SAVE
+        MENUITEM "另存为(&A)...",               ID_FILE_SAVE_AS
+        MENUITEM SEPARATOR
+        MENUITEM "打印(&P)...\tCtrl+P",         ID_FILE_PRINT
+        MENUITEM "打印预览(&V)",                ID_FILE_PRINT_PREVIEW
+        MENUITEM "打印设置(&R)...",             ID_FILE_PRINT_SETUP
+        MENUITEM SEPARATOR
+        MENUITEM "最近文件",                    ID_FILE_MRU_FILE1, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "退出(&X)",                    ID_APP_EXIT
+    END
+    MENUITEM SEPARATOR
+    MENUITEM SEPARATOR
+    POPUP "窗口(&W)"
+    BEGIN
+        MENUITEM "新建窗口(&N)",                ID_WINDOW_NEW
+        MENUITEM "层叠(&C)",                    ID_WINDOW_CASCADE
+        MENUITEM "平铺(&T)",                    ID_WINDOW_TILE_HORZ
+        MENUITEM "排列图标(&A)",                ID_WINDOW_ARRANGE
+    END
+END
+
+IDR_SYMBOLWND MENU DISCARDABLE 
+BEGIN
+    POPUP "图符库"
+    BEGIN
+        MENUITEM "新建(&N)",                    ID_LIB_NEW
+        MENUITEM SEPARATOR
+        MENUITEM "打开(&O)",                    ID_LIB_OPEN
+        MENUITEM "重命名(&M)",                  ID_LIB_RENAME
+        MENUITEM "删除(&D)",                    ID_LIB_DELETE
+        MENUITEM SEPARATOR
+        MENUITEM "属性(&P)",                    ID_LIB_PROPERTY
+    END
+END
+
+IDR_MODULEWND MENU DISCARDABLE 
+BEGIN
+    POPUP "模块库"
+    BEGIN
+        MENUITEM "新建(&N)",                    ID_LIB_NEW
+        MENUITEM SEPARATOR
+        MENUITEM "打开(&O)",                    ID_LIB_OPEN
+        MENUITEM "重命名(&M)",                  ID_LIB_RENAME
+        MENUITEM "删除(&D)",                    ID_LIB_DELETE
+        MENUITEM SEPARATOR
+        MENUITEM "属性(&P)",                    ID_LIB_PROPERTY
+        MENUITEM "新建画面(&N)",                ID_FILE_NEW
+        MENUITEM "插入子窗体(&F)",              ID_ADD_FORM
+        MENUITEM "插入模块(&M)",                ID_ADD_SUBMODULE
+    END
+END
+
+IDR_SCRIPTFRAME MENU PRELOAD DISCARDABLE 
+BEGIN
+    POPUP "文件(&F)"
+    BEGIN
+        MENUITEM "新建(&N)\tCtrl+N",            ID_FILE_NEW
+        MENUITEM "打开(&O)...\tCtrl+O",         ID_FILE_OPEN
+        MENUITEM "关闭(&C)",                    ID_FILE_CLOSE
+        MENUITEM SEPARATOR
+        MENUITEM "保存(&S)\tCtrl+S",            ID_FILE_SAVE
+        MENUITEM "保存画面(&D)",                ID_FILE_SAVE_PICTURE
+        MENUITEM "另存画面为(&A)",              ID_FILE_SAVE_PICTURE_AS
+        MENUITEM "全部保存(&L)",                ID_FILE_SAVE_ALL
+        MENUITEM SEPARATOR
+        MENUITEM "导入(&I)...",                 ID_FILE_IMPORT
+        MENUITEM "导出(&E)...",                 ID_FILE_EXPORT
+        MENUITEM SEPARATOR
+        MENUITEM "打印(&P)...\tCtrl+P",         ID_FILE_PRINT
+        MENUITEM "打印预览(&V)",                ID_FILE_PRINT_PREVIEW
+        MENUITEM "页面设置(&U)...",             ID_PAGE_SETUP
+        MENUITEM SEPARATOR
+        MENUITEM "最近文件",                    ID_FILE_MRU_FILE1, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "退出(&X)",                    ID_APP_EXIT
+    END
+    POPUP "编辑(&E)"
+    BEGIN
+        MENUITEM "撤消(&U)\tCtrl+Z",            ID_EDIT_UNDO
+        MENUITEM "恢复(&R)\tCtrl+Y",            ID_EDIT_REDO
+        MENUITEM SEPARATOR
+        MENUITEM "剪切(&T)\tCtrl+X",            ID_EDIT_CUT
+        MENUITEM "复制(&L)\tCtrl+D",            ID_EDIT_CLONE
+        MENUITEM "拷贝(&C)\tCtrl+C",            ID_EDIT_COPY
+        MENUITEM "粘贴(&P)\tCtrl+V",            ID_EDIT_PASTE
+        MENUITEM "删除(&D)\tDel",               ID_EDIT_CLEAR
+        MENUITEM SEPARATOR
+        MENUITEM "&查找(&F)...\tCtrl+F",        ID_EDIT_FIND
+        MENUITEM "查找下一个(&N)\tF3",          ID_EDIT_REPEAT
+        MENUITEM "替换(&E)\tCtrl+H",            ID_EDIT_REPLACE
+        MENUITEM SEPARATOR
+        MENUITEM "转到(&G)...\tCtrl+G",         ID_EDIT_GOTO
+        POPUP "书签(&K)"
+        BEGIN
+            MENUITEM "切换书签(&T)",                ID_BOOKMARK_TOGGLE
+            MENUITEM "下一书签(&N)",                ID_BOOKMARK_NEXT
+            MENUITEM "上一书签(&P)",                ID_BOOKMARK_PREVIOUS
+            MENUITEM "清除书签(&C)",                ID_BOOKMARK_CLEAR
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "全选(&S)\tCtrl+A",            ID_EDIT_SELECTALL
+    END
+    POPUP "查看(&V)"
+    BEGIN
+        POPUP "显示比例(&Z)"
+        BEGIN
+            MENUITEM "50%",                         ID_VIEW_ZOOM50
+            MENUITEM "75%",                         ID_VIEW_ZOOM75
+            MENUITEM "100%",                        ID_VIEW_ZOOM100
+            MENUITEM "150%",                        ID_VIEW_ZOOM150
+            MENUITEM "200%",                        ID_VIEW_ZOOM200
+			MENUITEM "400%",                        ID_VIEW_ZOOM400
+            MENUITEM "用户比例(&C)",                ID_VIEW_ZOOMCUSTOM
+        END
+        MENUITEM "全屏幕(&F)\tF11",             ID_VIEW_FULL_SCREEN
+        MENUITEM SEPARATOR
+        MENUITEM "对象窗口(&O)\tShift + F7",    ID_VIEW_OBJECT
+        MENUITEM "脚本窗口(&C)\tF7",            ID_VIEW_SCRIPT
+        MENUITEM SEPARATOR
+        MENUITEM "资源浏览器(&E)",              ID_VIEW_EXPLORER_BAR
+        MENUITEM "属性窗口(&W)",                ID_VIEW_PROPERTY_BAR
+        MENUITEM "工具箱(&B)",                  ID_VIEW_TOOLBOX
+        MENUITEM SEPARATOR
+        POPUP "专家(&X)"
+        BEGIN
+            MENUITEM "颜色和线条(&F)",              ID_VIEW_APPEAR_EXPERT
+            MENUITEM "动画(&M)",                    ID_VIEW_DYNAMIC_EXPERT
+            MENUITEM "动作(&A)",                    ID_VIEW_ACTION_EXPERT
+        END
+        POPUP "工具栏(&T)"
+        BEGIN
+            MENUITEM "标准(&T)",                    ID_VIEW_STAND_BAR
+            MENUITEM "布局(&L)",                    ID_VIEW_LAYOUT_BAR
+            MENUITEM "状态(&S)",                    ID_VIEW_STATUS_BAR
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "Tab 键顺序(&A)",              ID_TAB_ORDER
+        MENUITEM "属性(&P)",                    ID_EDIT_PROPERTIES
+    END
+    POPUP "画面(&P)"
+    BEGIN
+        MENUITEM "选项(&O)...",                 ID_PICTURE_OPTIONS
+        MENUITEM "OPC 数据源(&S)",              ID_PICTURE_OPCSERVER
+        MENUITEM "管理控制台(&C)",              ID_EXECUTE_APPMC
+        MENUITEM SEPARATOR
+        MENUITEM "插入子窗体(&F)",              ID_ADD_FORM
+        MENUITEM "插入模块(&M)",                ID_ADD_SUBMODULE
+        POPUP "插入报表(&E)"
+        BEGIN
+            MENUITEM "空白报表(&B)",                ID_ADD_BLANK_REPORT
+            MENUITEM "报表向导(&W)",                ID_ADD_REPORT_WIZARD
+        END
+        MENUITEM "插入子报表(&P)",              ID_ADD_SUBREPORT
+        MENUITEM SEPARATOR
+        MENUITEM "运行(&R)\tF5",                ID_PICTURE_RUN
+    END
+    POPUP "工具(&T)"
+    BEGIN
+        MENUITEM "选择(&S)",                    ID_DRAW_SELECT
+        MENUITEM SEPARATOR
+        MENUITEM "直线(&L)",                    ID_DRAW_LINE
+        MENUITEM "矩形(&R)",                    ID_DRAW_RECT
+        MENUITEM "圆角矩形(&N)",                ID_DRAW_ROUNDRECT
+        MENUITEM "椭圆(&E)",                    ID_DRAW_ELLIPSE
+        MENUITEM "折线(&P)",                    ID_DRAW_POLYLINE
+        MENUITEM "管道(&I)",                    ID_DRAW_PIPE
+        MENUITEM "多边形(&G)",                  ID_DRAW_POLYGON
+        MENUITEM "弧线(&A)",                    ID_DRAW_ARC
+        MENUITEM "扇形(&I)",                    ID_DRAW_PIE
+        MENUITEM "弧形(&C)",                    ID_DRAW_CHORD
+        MENUITEM "文本(&X)",                    ID_DRAW_TEXT
+        MENUITEM "数据戳(&D)",                  ID_DRAW_DATALINK
+        MENUITEM "变量(&V)",                    ID_DRAW_VARIABLE
+        MENUITEM "按钮(&U)",                    ID_DRAW_BUTTON
+        MENUITEM "菜单(&M)",                    ID_DRAW_MENU
+        MENUITEM "定时器(&T)",                  ID_DRAW_TIMER
+        MENUITEM "趋势(&H)",                    ID_DRAW_CHART
+        MENUITEM "报警表(&S)",                  ID_DRAW_ALMSUM
+        MENUITEM "图像(&B)",                    ID_INSERT_BITMAP
+        MENUITEM SEPARATOR
+        MENUITEM "转换为图像(&G)",              ID_EDIT_CONVERTTOBMP
+        MENUITEM "附加控件(&O)",                ID_ADD_CONTROL
+        MENUITEM SEPARATOR
+        POPUP "图符"
+        BEGIN
+            MENUITEM "生成图符(&Y)",                ID_CREATE_SYMBOL
+            MENUITEM "分解图符(&B)",                ID_BREAK_SYMBOL
+        END
+        POPUP "模块"
+        BEGIN
+            MENUITEM "生成模块(&M)",                ID_CREATE_SUBFORM
+            MENUITEM "分解模块(&B)",                ID_BREAK_SUBFORM
+        END
+        MENUITEM SEPARATOR
+        POPUP "添加到"
+        BEGIN
+            MENUITEM "图符库(&S)",                  ID_ADDTO_SYMBOL, GRAYED
+            MENUITEM "模块库(&M)",                  ID_ADDTO_MODULE, GRAYED
+        END
+    END
+    POPUP "排列(&L)"
+    BEGIN
+        MENUITEM "网格(&N)...",                 ID_GRID_SETTING
+        MENUITEM "图层(&L)...",                 ID_LAYER_SETUP
+        MENUITEM SEPARATOR
+        POPUP "对齐(&A)"
+        BEGIN
+            MENUITEM "左对齐(&L)",                  ID_ALIGN_LEFT
+            MENUITEM "水平居中(&C)",                ID_ALIGN_HORIZ_CENTER
+            MENUITEM "右对齐(&R)",                  ID_ALIGN_RIGHT
+            MENUITEM SEPARATOR
+            MENUITEM "顶端对齐(&T)",                ID_ALIGN_TOP
+            MENUITEM "垂直居中(&M)",                ID_ALIGN_VERT_CENTER
+            MENUITEM "底端对齐(&B)",                ID_ALIGN_BOTTOM
+        END
+        POPUP "窗体内居中(&C)"
+        BEGIN
+            MENUITEM "水平对齐(&H)",                ID_HORIZ_CENTER
+            MENUITEM "垂直对齐(&V)",                ID_VERT_CENTER
+        END
+        POPUP "间距调整(&I)"
+        BEGIN
+            MENUITEM "水平等间隔(&H)",              ID_SPACE_EVENHORIZ
+            MENUITEM "垂直等间隔(&V)",              ID_SPACE_EVENVERT
+        END
+        MENUITEM SEPARATOR
+        POPUP "统一尺寸(&M)"
+        BEGIN
+            MENUITEM "宽度相同(&W)",                ID_ARRAGE_SAMEWIDTH
+            MENUITEM "高度相同(&H)",                ID_ARRAGE_SAMEHIGHT
+            MENUITEM "两者都相同(&A)",              ID_ARRAGE_BOTH
+        END
+        POPUP "旋转或翻转(&P)"
+        BEGIN
+            MENUITEM "自由旋转(&T)",                ID_TRACKER_ROTATE
+            MENUITEM SEPARATOR
+            MENUITEM "向左旋转(&L)",                ID_ROTATE_LEFT
+            MENUITEM "向右旋转(&R)",                ID_ROTATE_RIGHT
+            MENUITEM SEPARATOR
+            MENUITEM "水平翻转(&H)",                ID_MIRROR_HORIZ
+            MENUITEM "垂直翻转(&V)",                ID_MIRROR_VERT
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "改变尺寸(&S)",                ID_TRACKER_RESIZE
+        MENUITEM "编辑顶点(&F)",                ID_TRACKER_RESHAPE
+        MENUITEM SEPARATOR
+        MENUITEM "合成组(&G)",                  ID_GROUP_OBJECT
+        MENUITEM "分解组(&U)",                  ID_UNGROUP_OBJECT
+        MENUITEM SEPARATOR
+        POPUP "顺序(&O)"
+        BEGIN
+            MENUITEM "上移一层(&F)",                ID_OBJECT_MOVEFORWARD
+            MENUITEM "下移一层(&W)",                ID_OBJECT_MOVEBACK
+            MENUITEM "移至顶层(&B)\tCtrl+J",        ID_OBJECT_FORWARD_MOST
+            MENUITEM "移至底层(&S)\tCtrl+K",        ID_OBJECT_BACKWORD_MOST
+        END
+    END
+    POPUP "窗口(&W)"
+    BEGIN
+        MENUITEM "关闭(&O)",                    ID_WINDOW_CLOSE
+        MENUITEM "关闭所有(&L)",                ID_WINDOW_CLOSEALL
+        MENUITEM SEPARATOR
+        MENUITEM "下一个(&X)",                  ID_WINDOW_NEXT
+        MENUITEM "上一个(&V)",                  ID_WINDOW_PREVIOUS
+        MENUITEM SEPARATOR
+        MENUITEM "层叠(&C)",                    ID_WINDOW_CASCADE
+        MENUITEM "平铺(&T)",                    ID_WINDOW_TILE_HORZ
+        MENUITEM "排列图标(&A)",                ID_WINDOW_ARRANGE
+    END
+    POPUP "帮助(&H)"
+    BEGIN
+        MENUITEM "内容(&C)",                    ID_HELP_CONTENT
+        MENUITEM "索引(&I)...",                 ID_HELP_INDEX
+        MENUITEM "搜索(&S)...",                 ID_HELP_SEARCH
+        MENUITEM "关于 CxDev(&A)...",           ID_APP_ABOUT
+    END
+END
+
+IDR_REPORTFRAME MENU PRELOAD DISCARDABLE 
+BEGIN
+    POPUP "文件(&F)"
+    BEGIN
+        MENUITEM "新建(&N)\tCtrl+N",            ID_FILE_NEW
+        MENUITEM "打开(&O)...\tCtrl+O",         ID_FILE_OPEN
+        MENUITEM "关闭(&C)",                    ID_FILE_CLOSE
+        MENUITEM SEPARATOR
+        MENUITEM "保存(&S)\tCtrl+S",            ID_FILE_SAVE
+        MENUITEM "保存画面(&D)",                ID_FILE_SAVE_PICTURE
+        MENUITEM "另存画面为(&A)",              ID_FILE_SAVE_PICTURE_AS
+        MENUITEM "全部保存(&L)",                ID_FILE_SAVE_ALL
+        MENUITEM SEPARATOR
+        MENUITEM "导入(&I)...",                 ID_FILE_IMPORT
+        MENUITEM "导出(&E)...",                 ID_FILE_EXPORT
+        MENUITEM SEPARATOR
+        MENUITEM "打印(&P)...\tCtrl+P",         ID_FILE_PRINT
+        MENUITEM "打印预览(&V)",                ID_FILE_PRINT_PREVIEW
+        MENUITEM "页面设置(&U)...",             ID_PAGE_SETUP
+        MENUITEM SEPARATOR
+        MENUITEM "最近文件",                    ID_FILE_MRU_FILE1, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "退出(&X)",                    ID_APP_EXIT
+    END
+    POPUP "编辑(&E)"
+    BEGIN
+        MENUITEM "撤消(&U)\tCtrl+Z",            ID_EDIT_UNDO
+        MENUITEM "恢复(&R)\tCtrl+Y",            ID_EDIT_REDO
+        MENUITEM SEPARATOR
+        MENUITEM "剪切(&T)\tCtrl+X",            ID_EDIT_CUT
+        MENUITEM "复制(&L)\tCtrl+D",            ID_EDIT_CLONE
+        MENUITEM "拷贝(&C)\tCtrl+C",            ID_EDIT_COPY
+        MENUITEM "粘贴(&P)\tCtrl+V",            ID_EDIT_PASTE
+        MENUITEM "删除(&D)\tDel",               ID_EDIT_CLEAR
+        MENUITEM SEPARATOR
+        MENUITEM "&查找(&F)...\tCtrl+F",        ID_EDIT_FIND
+        MENUITEM "查找下一个(&N)\tF3",          ID_EDIT_REPEAT
+        MENUITEM "替换(&E)\tCtrl+H",            ID_EDIT_REPLACE
+        MENUITEM SEPARATOR
+        MENUITEM "转到(&G)...\tCtrl+G",         ID_EDIT_GOTO
+        POPUP "书签(&K)"
+        BEGIN
+            MENUITEM "切换书签(&T)",                ID_BOOKMARK_TOGGLE
+            MENUITEM "下一书签(&N)",                ID_BOOKMARK_NEXT
+            MENUITEM "上一书签(&P)",                ID_BOOKMARK_PREVIOUS
+            MENUITEM "清除书签(&C)",                ID_BOOKMARK_CLEAR
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "全选(&S)\tCtrl+A",            ID_EDIT_SELECTALL
+    END
+    POPUP "查看(&V)"
+    BEGIN
+        POPUP "显示比例(&Z)"
+        BEGIN
+            MENUITEM "50%",                         ID_VIEW_ZOOM50
+            MENUITEM "75%",                         ID_VIEW_ZOOM75
+            MENUITEM "100%",                        ID_VIEW_ZOOM100
+            MENUITEM "150%",                        ID_VIEW_ZOOM150
+            MENUITEM "200%",                        ID_VIEW_ZOOM200
+			MENUITEM "400%",                        ID_VIEW_ZOOM400
+            MENUITEM "用户比例(&C)",                ID_VIEW_ZOOMCUSTOM
+        END
+        MENUITEM "全屏幕(&F)\tF11",             ID_VIEW_FULL_SCREEN
+        MENUITEM SEPARATOR
+        MENUITEM "对象窗口(&O)\tShift + F7",    ID_VIEW_OBJECT
+        MENUITEM "脚本窗口(&C)\tF7",            ID_VIEW_SCRIPT
+        MENUITEM SEPARATOR
+        MENUITEM "资源浏览器(&E)",              ID_VIEW_EXPLORER_BAR
+        MENUITEM "属性窗口(&W)",                ID_VIEW_PROPERTY_BAR
+        MENUITEM "工具箱(&B)",                  ID_VIEW_TOOLBOX
+        MENUITEM SEPARATOR
+        POPUP "专家(&X)"
+        BEGIN
+            MENUITEM "颜色和线条(&F)",              ID_VIEW_APPEAR_EXPERT
+            MENUITEM "动画(&M)",                    ID_VIEW_DYNAMIC_EXPERT
+            MENUITEM "动作(&A)",                    ID_VIEW_ACTION_EXPERT
+        END
+        POPUP "工具栏(&T)"
+        BEGIN
+            MENUITEM "标准(&T)",                    ID_VIEW_STAND_BAR
+            MENUITEM "布局(&L)",                    ID_VIEW_LAYOUT_BAR
+            MENUITEM "状态(&S)",                    ID_VIEW_STATUS_BAR
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "Tab 键顺序(&A)",              ID_TAB_ORDER
+        MENUITEM "属性(&P)",                    ID_EDIT_PROPERTIES
+    END
+    POPUP "画面(&P)"
+    BEGIN
+        MENUITEM "选项(&O)...",                 ID_PICTURE_OPTIONS
+        MENUITEM "OPC 数据源(&S)",              ID_PICTURE_OPCSERVER
+        MENUITEM "管理控制台(&C)",              ID_EXECUTE_APPMC
+        MENUITEM SEPARATOR
+        MENUITEM "插入子窗体(&F)",              ID_ADD_FORM
+        MENUITEM "插入模块(&M)",                ID_ADD_SUBMODULE
+        POPUP "插入报表(&E)"
+        BEGIN
+            MENUITEM "空白报表(&B)",                ID_ADD_BLANK_REPORT
+            MENUITEM "报表向导(&W)",                ID_ADD_REPORT_WIZARD
+        END
+        MENUITEM "插入子报表(&P)",              ID_ADD_SUBREPORT
+        MENUITEM SEPARATOR
+        MENUITEM "运行(&R)\tF5",                ID_PICTURE_RUN
+    END
+    POPUP "工具(&T)"
+    BEGIN
+        MENUITEM "选择(&S)",                    ID_DRAW_SELECT
+        MENUITEM SEPARATOR
+        MENUITEM "直线(&L)",                    ID_DRAW_LINE
+        MENUITEM "矩形(&R)",                    ID_DRAW_RECT
+        MENUITEM "圆角矩形(&N)",                ID_DRAW_ROUNDRECT
+        MENUITEM "椭圆(&E)",                    ID_DRAW_ELLIPSE
+        MENUITEM "折线(&P)",                    ID_DRAW_POLYLINE
+        MENUITEM "管道(&I)",                    ID_DRAW_PIPE
+        MENUITEM "多边形(&G)",                  ID_DRAW_POLYGON
+        MENUITEM "弧线(&A)",                    ID_DRAW_ARC
+        MENUITEM "扇形(&I)",                    ID_DRAW_PIE
+        MENUITEM "弧形(&C)",                    ID_DRAW_CHORD
+        MENUITEM "文本(&X)",                    ID_DRAW_TEXT
+        MENUITEM "数据戳(&D)",                  ID_DRAW_DATALINK
+        MENUITEM "变量(&V)",                    ID_DRAW_VARIABLE
+        MENUITEM "按钮(&U)",                    ID_DRAW_BUTTON
+        MENUITEM "菜单(&M)",                    ID_DRAW_MENU
+        MENUITEM "定时器(&T)",                  ID_DRAW_TIMER
+        MENUITEM "趋势(&H)",                    ID_DRAW_CHART
+        MENUITEM "报警表(&S)",                  ID_DRAW_ALMSUM
+        MENUITEM "图像(&B)",                    ID_INSERT_BITMAP
+        MENUITEM SEPARATOR
+        MENUITEM "转换为图像(&G)",              ID_EDIT_CONVERTTOBMP
+        MENUITEM "附加控件(&O)",                ID_ADD_CONTROL
+        MENUITEM SEPARATOR
+        POPUP "图符"
+        BEGIN
+            MENUITEM "生成图符(&Y)",                ID_CREATE_SYMBOL
+            MENUITEM "分解图符(&B)",                ID_BREAK_SYMBOL
+        END
+        POPUP "模块"
+        BEGIN
+            MENUITEM "生成模块(&M)",                ID_CREATE_SUBFORM
+            MENUITEM "分解模块(&B)",                ID_BREAK_SUBFORM
+        END
+        MENUITEM SEPARATOR
+        POPUP "添加到"
+        BEGIN
+            MENUITEM "图符库(&S)",                  ID_ADDTO_SYMBOL, GRAYED
+            MENUITEM "模块库(&M)",                  ID_ADDTO_MODULE, GRAYED
+        END
+    END
+    POPUP "排列(&L)"
+    BEGIN
+        MENUITEM "网格(&N)...",                 ID_GRID_SETTING
+        MENUITEM "图层(&L)...",                 ID_LAYER_SETUP
+        MENUITEM SEPARATOR
+        POPUP "对齐(&A)"
+        BEGIN
+            MENUITEM "左对齐(&L)",                  ID_ALIGN_LEFT
+            MENUITEM "水平居中(&C)",                ID_ALIGN_HORIZ_CENTER
+            MENUITEM "右对齐(&R)",                  ID_ALIGN_RIGHT
+            MENUITEM SEPARATOR
+            MENUITEM "顶端对齐(&T)",                ID_ALIGN_TOP
+            MENUITEM "垂直居中(&M)",                ID_ALIGN_VERT_CENTER
+            MENUITEM "底端对齐(&B)",                ID_ALIGN_BOTTOM
+        END
+        POPUP "窗体内居中(&C)"
+        BEGIN
+            MENUITEM "水平对齐(&H)",                ID_HORIZ_CENTER
+            MENUITEM "垂直对齐(&V)",                ID_VERT_CENTER
+        END
+        POPUP "间距调整(&I)"
+        BEGIN
+            MENUITEM "水平等间隔(&H)",              ID_SPACE_EVENHORIZ
+            MENUITEM "垂直等间隔(&V)",              ID_SPACE_EVENVERT
+        END
+        MENUITEM SEPARATOR
+        POPUP "统一尺寸(&M)"
+        BEGIN
+            MENUITEM "宽度相同(&W)",                ID_ARRAGE_SAMEWIDTH
+            MENUITEM "高度相同(&H)",                ID_ARRAGE_SAMEHIGHT
+            MENUITEM "两者都相同(&A)",              ID_ARRAGE_BOTH
+        END
+        POPUP "旋转或翻转(&P)"
+        BEGIN
+            MENUITEM "自由旋转(&T)",                ID_TRACKER_ROTATE
+            MENUITEM SEPARATOR
+            MENUITEM "向左旋转(&L)",                ID_ROTATE_LEFT
+            MENUITEM "向右旋转(&R)",                ID_ROTATE_RIGHT
+            MENUITEM SEPARATOR
+            MENUITEM "水平翻转(&H)",                ID_MIRROR_HORIZ
+            MENUITEM "垂直翻转(&V)",                ID_MIRROR_VERT
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "改变尺寸(&S)",                ID_TRACKER_RESIZE
+        MENUITEM "编辑顶点(&F)",                ID_TRACKER_RESHAPE
+        MENUITEM SEPARATOR
+        MENUITEM "合成组(&G)",                  ID_GROUP_OBJECT
+        MENUITEM "分解组(&U)",                  ID_UNGROUP_OBJECT
+        MENUITEM SEPARATOR
+        POPUP "顺序(&O)"
+        BEGIN
+            MENUITEM "上移一层(&F)",                ID_OBJECT_MOVEFORWARD
+            MENUITEM "下移一层(&W)",                ID_OBJECT_MOVEBACK
+            MENUITEM "移至顶层(&B)\tCtrl+J",        ID_OBJECT_FORWARD_MOST
+            MENUITEM "移至底层(&S)\tCtrl+K",        ID_OBJECT_BACKWORD_MOST
+        END
+    END
+    POPUP "窗口(&W)"
+    BEGIN
+        MENUITEM "关闭(&O)",                    ID_WINDOW_CLOSE
+        MENUITEM "关闭所有(&L)",                ID_WINDOW_CLOSEALL
+        MENUITEM SEPARATOR
+        MENUITEM "下一个(&X)",                  ID_WINDOW_NEXT
+        MENUITEM "上一个(&V)",                  ID_WINDOW_PREVIOUS
+        MENUITEM SEPARATOR
+        MENUITEM "层叠(&C)",                    ID_WINDOW_CASCADE
+        MENUITEM "平铺(&T)",                    ID_WINDOW_TILE_HORZ
+        MENUITEM "排列图标(&A)",                ID_WINDOW_ARRANGE
+    END
+    POPUP "帮助(&H)"
+    BEGIN
+        MENUITEM "内容(&C)",                    ID_HELP_CONTENT
+        MENUITEM "索引(&I)...",                 ID_HELP_INDEX
+        MENUITEM "搜索(&S)...",                 ID_HELP_SEARCH
+        MENUITEM "关于 CxDev(&A)...",           ID_APP_ABOUT
+    END
+END
+
+IDR_MAINFRAME MENU PRELOAD DISCARDABLE 
+BEGIN
+    POPUP "文件(&F)"
+    BEGIN
+        MENUITEM "新建(&N)\tCtrl+N",            ID_FILE_NEW
+        MENUITEM "打开(&O)...\tCtrl+O",         ID_FILE_OPEN
+        MENUITEM "关闭(&C)",                    ID_FILE_CLOSE
+        MENUITEM SEPARATOR
+        MENUITEM "保存(&S)\tCtrl+S",            ID_FILE_SAVE
+        MENUITEM "保存画面(&D)",                ID_FILE_SAVE_PICTURE
+        MENUITEM "另存画面为(&A)",              ID_FILE_SAVE_PICTURE_AS
+        MENUITEM "全部保存(&L)",                ID_FILE_SAVE_ALL
+        MENUITEM SEPARATOR
+        MENUITEM "导入(&I)...",                 ID_FILE_IMPORT
+        MENUITEM "导出(&E)...",                 ID_FILE_EXPORT
+        MENUITEM SEPARATOR
+        MENUITEM "打印(&P)...\tCtrl+P",         ID_FILE_PRINT
+        MENUITEM "打印预览(&V)",                ID_FILE_PRINT_PREVIEW
+        MENUITEM "页面设置(&U)...",             ID_PAGE_SETUP
+        MENUITEM SEPARATOR
+        MENUITEM "最近文件",                    ID_FILE_MRU_FILE1, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "退出(&X)",                    ID_APP_EXIT
+    END
+    POPUP "编辑(&E)"
+    BEGIN
+        MENUITEM "撤消(&U)\tCtrl+Z",            ID_EDIT_UNDO
+        MENUITEM "恢复(&R)\tCtrl+Y",            ID_EDIT_REDO
+        MENUITEM SEPARATOR
+        MENUITEM "剪切(&T)\tCtrl+X",            ID_EDIT_CUT
+        MENUITEM "复制(&L)\tCtrl+D",            ID_EDIT_CLONE
+        MENUITEM "拷贝(&C)\tCtrl+C",            ID_EDIT_COPY
+        MENUITEM "粘贴(&P)\tCtrl+V",            ID_EDIT_PASTE
+        MENUITEM "删除(&D)\tDel",               ID_EDIT_CLEAR
+        MENUITEM SEPARATOR
+        MENUITEM "&查找(&F)...\tCtrl+F",        ID_EDIT_FIND
+        MENUITEM "查找下一个(&N)\tF3",          ID_EDIT_REPEAT
+        MENUITEM "替换(&E)\tCtrl+H",            ID_EDIT_REPLACE
+        MENUITEM SEPARATOR
+        MENUITEM "转到(&G)...\tCtrl+G",         ID_EDIT_GOTO
+        POPUP "书签(&K)"
+        BEGIN
+            MENUITEM "切换书签(&T)",                ID_BOOKMARK_TOGGLE
+            MENUITEM "下一书签(&N)",                ID_BOOKMARK_NEXT
+            MENUITEM "上一书签(&P)",                ID_BOOKMARK_PREVIOUS
+            MENUITEM "清除书签(&C)",                ID_BOOKMARK_CLEAR
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "全选(&S)\tCtrl+A",            ID_EDIT_SELECTALL
+    END
+    POPUP "查看(&V)"
+    BEGIN
+        POPUP "显示比例(&Z)"
+        BEGIN
+            MENUITEM "50%",                         ID_VIEW_ZOOM50
+            MENUITEM "75%",                         ID_VIEW_ZOOM75
+            MENUITEM "100%",                        ID_VIEW_ZOOM100
+            MENUITEM "150%",                        ID_VIEW_ZOOM150
+            MENUITEM "200%",                        ID_VIEW_ZOOM200
+			MENUITEM "400%",                        ID_VIEW_ZOOM400
+            MENUITEM "用户比例(&C)",                ID_VIEW_ZOOMCUSTOM
+        END
+        MENUITEM "全屏幕(&F)\tF11",             ID_VIEW_FULL_SCREEN
+        MENUITEM SEPARATOR
+        MENUITEM "对象窗口(&O)\tShift + F7",    ID_VIEW_OBJECT
+        MENUITEM "脚本窗口(&C)\tF7",            ID_VIEW_SCRIPT
+        MENUITEM SEPARATOR
+        MENUITEM "资源浏览器(&E)",              ID_VIEW_EXPLORER_BAR
+        MENUITEM "属性窗口(&W)",                ID_VIEW_PROPERTY_BAR
+        MENUITEM "工具箱(&B)",                  ID_VIEW_TOOLBOX
+        MENUITEM SEPARATOR
+        POPUP "专家(&X)"
+        BEGIN
+            MENUITEM "颜色和线条(&F)",              ID_VIEW_APPEAR_EXPERT
+            MENUITEM "动画(&M)",                    ID_VIEW_DYNAMIC_EXPERT
+            MENUITEM "动作(&A)",                    ID_VIEW_ACTION_EXPERT
+        END
+        POPUP "工具栏(&T)"
+        BEGIN
+            MENUITEM "标准(&T)",                    ID_VIEW_STAND_BAR
+            MENUITEM "布局(&L)",                    ID_VIEW_LAYOUT_BAR
+            MENUITEM "状态(&S)",                    ID_VIEW_STATUS_BAR
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "Tab 键顺序(&A)",              ID_TAB_ORDER
+        MENUITEM "属性(&P)",                    ID_EDIT_PROPERTIES
+    END
+    POPUP "画面(&P)"
+    BEGIN
+        MENUITEM "选项(&O)...",                 ID_PICTURE_OPTIONS
+        MENUITEM "OPC 数据源(&S)",              ID_PICTURE_OPCSERVER
+        MENUITEM "管理控制台(&C)",              ID_EXECUTE_APPMC
+        MENUITEM SEPARATOR
+        MENUITEM "插入子窗体(&F)",              ID_ADD_FORM
+        MENUITEM "插入模块(&M)",                ID_ADD_SUBMODULE
+        POPUP "插入报表(&E)"
+        BEGIN
+            MENUITEM "空白报表(&B)",                ID_ADD_BLANK_REPORT
+            MENUITEM "报表向导(&W)",                ID_ADD_REPORT_WIZARD
+        END
+        MENUITEM "插入子报表(&P)",              ID_ADD_SUBREPORT
+        MENUITEM SEPARATOR
+        MENUITEM "运行(&R)\tF5",                ID_PICTURE_RUN
+    END
+    POPUP "工具(&T)"
+    BEGIN
+        MENUITEM "选择(&S)",                    ID_DRAW_SELECT
+        MENUITEM SEPARATOR
+        MENUITEM "直线(&L)",                    ID_DRAW_LINE
+        MENUITEM "矩形(&R)",                    ID_DRAW_RECT
+        MENUITEM "圆角矩形(&N)",                ID_DRAW_ROUNDRECT
+        MENUITEM "椭圆(&E)",                    ID_DRAW_ELLIPSE
+        MENUITEM "折线(&P)",                    ID_DRAW_POLYLINE
+        MENUITEM "管道(&I)",                    ID_DRAW_PIPE
+        MENUITEM "多边形(&G)",                  ID_DRAW_POLYGON
+        MENUITEM "弧线(&A)",                    ID_DRAW_ARC
+        MENUITEM "扇形(&I)",                    ID_DRAW_PIE
+        MENUITEM "弧形(&C)",                    ID_DRAW_CHORD
+        MENUITEM "文本(&X)",                    ID_DRAW_TEXT
+        MENUITEM "数据戳(&D)",                  ID_DRAW_DATALINK
+        MENUITEM "变量(&V)",                    ID_DRAW_VARIABLE
+        MENUITEM "按钮(&U)",                    ID_DRAW_BUTTON
+        MENUITEM "菜单(&M)",                    ID_DRAW_MENU
+        MENUITEM "定时器(&T)",                  ID_DRAW_TIMER
+        MENUITEM "趋势(&H)",                    ID_DRAW_CHART
+        MENUITEM "报警表(&S)",                  ID_DRAW_ALMSUM
+        MENUITEM "图像(&B)",                    ID_INSERT_BITMAP
+        MENUITEM SEPARATOR
+        MENUITEM "转换为图像(&G)",              ID_EDIT_CONVERTTOBMP
+        MENUITEM "附加控件(&O)",                ID_ADD_CONTROL
+        MENUITEM SEPARATOR
+        POPUP "图符"
+        BEGIN
+            MENUITEM "生成图符(&Y)",                ID_CREATE_SYMBOL
+            MENUITEM "分解图符(&B)",                ID_BREAK_SYMBOL
+        END
+        POPUP "模块"
+        BEGIN
+            MENUITEM "生成模块(&M)",                ID_CREATE_SUBFORM
+            MENUITEM "分解模块(&B)",                ID_BREAK_SUBFORM
+        END
+        MENUITEM SEPARATOR
+        POPUP "添加到"
+        BEGIN
+            MENUITEM "图符库(&S)",                  ID_ADDTO_SYMBOL, GRAYED
+            MENUITEM "模块库(&M)",                  ID_ADDTO_MODULE, GRAYED
+        END
+    END
+    POPUP "排列(&L)"
+    BEGIN
+        MENUITEM "网格(&N)...",                 ID_GRID_SETTING
+        MENUITEM "图层(&L)...",                 ID_LAYER_SETUP
+        MENUITEM SEPARATOR
+        POPUP "对齐(&A)"
+        BEGIN
+            MENUITEM "左对齐(&L)",                  ID_ALIGN_LEFT
+            MENUITEM "水平居中(&C)",                ID_ALIGN_HORIZ_CENTER
+            MENUITEM "右对齐(&R)",                  ID_ALIGN_RIGHT
+            MENUITEM SEPARATOR
+            MENUITEM "顶端对齐(&T)",                ID_ALIGN_TOP
+            MENUITEM "垂直居中(&M)",                ID_ALIGN_VERT_CENTER
+            MENUITEM "底端对齐(&B)",                ID_ALIGN_BOTTOM
+        END
+        POPUP "窗体内居中(&C)"
+        BEGIN
+            MENUITEM "水平对齐(&H)",                ID_HORIZ_CENTER
+            MENUITEM "垂直对齐(&V)",                ID_VERT_CENTER
+        END
+        POPUP "间距调整(&I)"
+        BEGIN
+            MENUITEM "水平等间隔(&H)",              ID_SPACE_EVENHORIZ
+            MENUITEM "垂直等间隔(&V)",              ID_SPACE_EVENVERT
+        END
+        MENUITEM SEPARATOR
+        POPUP "统一尺寸(&M)"
+        BEGIN
+            MENUITEM "宽度相同(&W)",                ID_ARRAGE_SAMEWIDTH
+            MENUITEM "高度相同(&H)",                ID_ARRAGE_SAMEHIGHT
+            MENUITEM "两者都相同(&A)",              ID_ARRAGE_BOTH
+        END
+        POPUP "旋转或翻转(&P)"
+        BEGIN
+            MENUITEM "自由旋转(&T)",                ID_TRACKER_ROTATE
+            MENUITEM SEPARATOR
+            MENUITEM "向左旋转(&L)",                ID_ROTATE_LEFT
+            MENUITEM "向右旋转(&R)",                ID_ROTATE_RIGHT
+            MENUITEM SEPARATOR
+            MENUITEM "水平翻转(&H)",                ID_MIRROR_HORIZ
+            MENUITEM "垂直翻转(&V)",                ID_MIRROR_VERT
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "改变尺寸(&S)",                ID_TRACKER_RESIZE
+        MENUITEM "编辑顶点(&F)",                ID_TRACKER_RESHAPE
+        MENUITEM SEPARATOR
+        MENUITEM "合成组(&G)",                  ID_GROUP_OBJECT
+        MENUITEM "分解组(&U)",                  ID_UNGROUP_OBJECT
+        MENUITEM SEPARATOR
+        POPUP "顺序(&O)"
+        BEGIN
+            MENUITEM "上移一层(&F)",                ID_OBJECT_MOVEFORWARD
+            MENUITEM "下移一层(&W)",                ID_OBJECT_MOVEBACK
+            MENUITEM "移至顶层(&B)\tCtrl+J",        ID_OBJECT_FORWARD_MOST
+            MENUITEM "移至底层(&S)\tCtrl+K",        ID_OBJECT_BACKWORD_MOST
+        END
+    END
+    POPUP "窗口(&W)"
+    BEGIN
+        MENUITEM "关闭(&O)",                    ID_WINDOW_CLOSE
+        MENUITEM "关闭所有(&L)",                ID_WINDOW_CLOSEALL
+        MENUITEM SEPARATOR
+        MENUITEM "下一个(&X)",                  ID_WINDOW_NEXT
+        MENUITEM "上一个(&V)",                  ID_WINDOW_PREVIOUS
+        MENUITEM SEPARATOR
+        MENUITEM "层叠(&C)",                    ID_WINDOW_CASCADE
+        MENUITEM "平铺(&T)",                    ID_WINDOW_TILE_HORZ
+        MENUITEM "排列图标(&A)",                ID_WINDOW_ARRANGE
+    END
+    POPUP "帮助(&H)"
+    BEGIN
+        MENUITEM "内容(&C)",                    ID_HELP_CONTENT
+        MENUITEM "索引(&I)...",                 ID_HELP_INDEX
+        MENUITEM "搜索(&S)...",                 ID_HELP_SEARCH
+        MENUITEM "关于 CxDev(&A)...",           ID_APP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS PRELOAD MOVEABLE PURE 
+BEGIN
+    "A",            ID_EDIT_SELECTALL,      VIRTKEY, CONTROL, NOINVERT
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    "D",            ID_EDIT_CLONE,          VIRTKEY, CONTROL, NOINVERT
+    "F",            ID_EDIT_FIND,           VIRTKEY, CONTROL, NOINVERT
+    "H",            ID_EDIT_REPLACE,        VIRTKEY, CONTROL, NOINVERT
+    "J",            ID_OBJECT_FORWARD_MOST, VIRTKEY, CONTROL, NOINVERT
+    "K",            ID_OBJECT_BACKWORD_MOST, VIRTKEY, CONTROL, NOINVERT
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL, NOINVERT
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL, NOINVERT
+    "P",            ID_FILE_PRINT,          VIRTKEY, CONTROL, NOINVERT
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL, NOINVERT
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL, NOINVERT
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT, NOINVERT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT, NOINVERT
+    VK_ESCAPE,      ID_CANCEL_EDIT,         VIRTKEY, NOINVERT
+    VK_F1,          ID_HELP_CONTENT,        VIRTKEY, NOINVERT
+    VK_F11,         ID_VIEW_FULL_SCREEN,    VIRTKEY, NOINVERT
+    VK_F3,          ID_EDIT_REPEAT,         VIRTKEY, NOINVERT
+    VK_F5,          ID_PICTURE_RUN,         VIRTKEY, NOINVERT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY, NOINVERT
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT, NOINVERT
+    VK_F7,          ID_VIEW_SCRIPT,         VIRTKEY, NOINVERT
+    VK_F7,          ID_VIEW_OBJECT,         VIRTKEY, SHIFT, NOINVERT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT, NOINVERT
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL, NOINVERT
+    "Y",            ID_EDIT_REDO,           VIRTKEY, CONTROL, NOINVERT
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL, NOINVERT
+END
+
+IDR_CXDEVTYPE_CNTR_IP ACCELERATORS PRELOAD MOVEABLE PURE 
+BEGIN
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL, NOINVERT
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL, NOINVERT
+    "P",            ID_FILE_PRINT,          VIRTKEY, CONTROL, NOINVERT
+    "P",            ID_EDIT_PASTE,          VIRTKEY, CONTROL, NOINVERT
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL, NOINVERT
+    VK_DELETE,      ID_EDIT_CLEAR,          VIRTKEY, NOINVERT
+    VK_ESCAPE,      ID_CANCEL_EDIT,         VIRTKEY, NOINVERT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY, NOINVERT
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 269, 63
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "关于 SuperCx 画面开发环境"
+FONT 9, "宋体"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "SuperCx 画面开发环境 3.0 版",IDC_APP_NAME,39,10,119,8,
+                    SS_NOPREFIX
+    LTEXT           "版权所有 (C) 2001-2007",IDC_STATIC,39,26,119,8
+    DEFPUSHBUTTON   "确定",IDOK,212,7,50,14,WS_GROUP
+    CONTROL         "http://www.supercx.com",IDC_WWW,"Static",
+                    SS_LEFTNOWORDWRAP | WS_GROUP,39,42,89,8
+END
+
+IDD_CUSTZOOM DIALOG DISCARDABLE  0, 0, 185, 92
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "定制缩放"
+FONT 9, "宋体"
+BEGIN
+    GROUPBOX        "新缩放因子",IDC_STATIC,5,4,118,80
+    LTEXT           "&X-轴",IDC_STATIC,12,21,42,8
+    EDITTEXT        IDC_EDIT1,12,31,71,13,ES_AUTOHSCROLL
+    LTEXT           "&Y-轴",IDC_STATIC,12,54,42,8
+    EDITTEXT        IDC_EDIT2,12,64,71,13,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "确定",IDOK,129,6,50,14
+    PUSHBUTTON      "取消",IDCANCEL,129,23,50,14
+END
+
+IDD_FOLDERNAME DIALOG DISCARDABLE  0, 0, 173, 51
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "输入组名"
+FONT 9, "宋体"
+BEGIN
+    EDITTEXT        IDC_FOLDERNAME,7,7,159,15,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "确定",IDOK,58,30,50,14
+    PUSHBUTTON      "取消",IDCANCEL,116,30,50,14
+END
+
+IDD_SAVEPROMPT DIALOG DISCARDABLE  0, 0, 195, 128
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "保存文件"
+FONT 9, "宋体"
+BEGIN
+    LISTBOX         IDC_LIST,7,7,138,114,LBS_MULTIPLESEL | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "是",IDYES,160,7,28,14
+    PUSHBUTTON      "否",IDNO,160,30,28,14
+    PUSHBUTTON      "取消",IDCANCEL,160,53,28,14
+END
+
+IDD_INSERTCONTROL DIALOGEX 0, 0, 247, 185
+STYLE DS_MODALFRAME | DS_CONTEXTHELP | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_CONTEXTHELP
+CAPTION "附加控件"
+FONT 9, "宋体", 0, 0, 0x1
+BEGIN
+    LTEXT           "可用控件(&A)",IDC_STATIC,5,5,45,8
+    LISTBOX         IDC_CONTROLS,5,15,175,145,LBS_SORT | LBS_OWNERDRAWFIXED | 
+                    LBS_HASSTRINGS | LBS_NOINTEGRALHEIGHT | LBS_EXTENDEDSEL | 
+                    WS_VSCROLL | WS_HSCROLL | WS_TABSTOP
+    LTEXT           "",IDC_SERVERPATH,10,170,160,8
+    DEFPUSHBUTTON   "确定",IDOK,190,15,50,14,0,0,HIDOK
+    PUSHBUTTON      "取消",IDCANCEL,190,35,50,14,0,0,HIDCANCEL
+END
+
+IDD_PAGE_GEN DIALOG DISCARDABLE  0, 0, 277, 189
+STYLE WS_POPUP | WS_CAPTION
+CAPTION "常规"
+FONT 9, "宋体"
+BEGIN
+    ICON            IDI_FOLDER_CLOSE,IDC_STATIC,13,10,20,20
+    RTEXT           "画面文件夹",IDC_STATIC,36,19,41,8
+    EDITTEXT        IDC_FOLDER,10,35,240,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BUTTON_FOLDER,250,35,16,14
+    GROUPBOX        "",IDC_STATIC,10,70,255,105
+    CONTROL         "使用下面配置启动运行环境",IDC_USESETTING,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,20,70,112,10
+    LTEXT           "指定启动时打开的画面，如果不进行指定，则会在当前用户指定的画面文件夹中查找默认的起始画面（主画面.grf，Main.grf）。",
+                    IDC_STATIC,27,90,225,15
+    LTEXT           "画面",IDC_STATIC,45,119,17,8
+    EDITTEXT        IDC_PICTURE,70,116,165,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BUTTON_PICTURE,236,115,16,14
+    CONTROL         "启动后切换到全屏幕",IDC_CHECK2,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,30,140,88,10
+    CONTROL         "动作对象在鼠标移过时高亮显示",IDC_CHECK3,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,30,155,128,10
+END
+
+IDD_PAGE_MAINFORM DIALOG DISCARDABLE  0, 0, 239, 195
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "主窗体"
+FONT 9, "宋体"
+BEGIN
+    LTEXT           "背景色:",IDC_STATIC,119,23,30,10
+    LTEXT           "默认宽:",IDC_STATIC,13,21,28,10
+    LTEXT           "默认高:",IDC_STATIC,13,43,28,10
+    LTEXT           "前景色:",IDC_STATIC,120,43,32,10
+    LTEXT           "网格色:",IDC_STATIC,122,74,29,9
+    EDITTEXT        IDC_EDIT_WIDTH,42,19,70,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_HEIGHT,42,42,71,14,ES_AUTOHSCROLL
+    CONTROL         "显示网格",IDC_CHECK_GRID,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,42,75,62,9
+    PUSHBUTTON      "禁用",IDC_BACKGROUND,156,21,50,12
+    PUSHBUTTON      "禁用",IDC_FOREGROUND,156,41,50,12
+    PUSHBUTTON      "禁用",IDC_GRIDCOLOR,157,73,50,12
+END
+
+IDD_PAGE_SUBFORM DIALOG DISCARDABLE  0, 0, 227, 204
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "子窗体"
+FONT 9, "宋体"
+BEGIN
+    LTEXT           "背景色:",IDC_STATIC,119,23,30,10
+    LTEXT           "前景色:",IDC_STATIC,120,43,32,10
+    LTEXT           "网格色:",IDC_STATIC,122,74,29,9
+    EDITTEXT        IDC_EDIT_WIDTH,42,19,70,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_HEIGHT,42,42,71,14,ES_AUTOHSCROLL
+    CONTROL         "显示网格",IDC_CHECK_GRID,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,42,75,62,9
+    PUSHBUTTON      "禁用",IDC_BACKGROUND,156,21,50,12
+    PUSHBUTTON      "禁用",IDC_FOREGROUND,156,41,50,12
+    PUSHBUTTON      "禁用",IDC_GRIDCOLOR,157,73,50,12
+    LTEXT           "默认宽:",IDC_STATIC,13,21,28,10
+    LTEXT           "默认高:",IDC_STATIC,13,43,28,10
+END
+
+IDD_PAGE_OBJECT DIALOG DISCARDABLE  0, 0, 243, 189
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "对象"
+FONT 9, "宋体"
+BEGIN
+    LTEXT           "高亮填充颜色",IDC_STATIC,16,140,49,8
+    LTEXT           "填充颜色",IDC_STATIC,146,142,33,8
+    LTEXT           "高亮边界颜色",IDC_STATIC,16,160,49,8
+    LTEXT           "边界颜色",IDC_STATIC,145,162,33,8
+    PUSHBUTTON      "Button1",IDC_HIGHLIGHTFILLCOLOR,69,136,50,14
+    PUSHBUTTON      "Button2",IDC_FILLCOLOR,185,138,50,14
+    PUSHBUTTON      "Button3",IDC_HIGHLIGHTEDGECOLOR,70,160,50,14
+    PUSHBUTTON      "Button4",IDC_EDGECOLOR,185,158,50,14
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME | SS_SUNKEN,30,128,
+                    206,1
+    LTEXT           "颜色",IDC_STATIC,9,124,17,8
+    LTEXT           "填充",IDC_STATIC,7,6,17,8
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME | SS_SUNKEN,27,9,
+                    206,1
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME | SS_SUNKEN,28,76,
+                    206,1
+    LTEXT           "边界",IDC_STATIC,7,72,17,8
+    COMBOBOX        IDC_COMBO1,36,91,67,30,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_GROUP_DESIGN DIALOG DISCARDABLE  0, 0, 357, 261
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "图符属性"
+FONT 9, "宋体"
+BEGIN
+    LTEXT           "预览",IDC_STATIC,6,10,17,8
+    CONTROL         "",IDC_PREVIEW,"Static",SS_BLACKFRAME | NOT WS_VISIBLE,6,
+                    23,165,165
+    LTEXT           "    请在右上的列表中定义图符属性, 并在右下的树图中选择需要与该属性关联的子对象属性。",
+                    IDC_STATIC,6,199,165,26
+    LTEXT           "名称",IDC_STATIC,179,8,18,9
+    EDITTEXT        IDC_EDIT_NAME,199,5,151,14,ES_AUTOHSCROLL
+    CONTROL         "List1",IDC_GROUPTAG_LIST,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_OWNERDRAWFIXED | 
+                    WS_BORDER | WS_TABSTOP,179,24,171,62
+    PUSHBUTTON      "插入行",IDC_INSERT_LINE,182,87,44,14
+    PUSHBUTTON      "编辑行",IDC_EDITLINE,240,87,46,14
+    PUSHBUTTON      "删除行",IDC_DELLINE,300,87,47,14
+    CONTROL         "显示全部属性",IDC_CHECK_ALL,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,179,108,60,11
+    CONTROL         "Tree1",IDC_TREE_PROP,"SysTreeView32",TVS_HASBUTTONS | 
+                    TVS_HASLINES | TVS_LINESATROOT | TVS_DISABLEDRAGDROP | 
+                    TVS_SHOWSELALWAYS | TVS_CHECKBOXES | WS_BORDER | 
+                    WS_TABSTOP,179,121,171,86
+    LTEXT           "属性值",IDC_STATIC,179,213,25,8
+    CONTROL         "",IDC_PROP_VALUE,"{BFBB9868-C022-436A-A071-192FFE31F7E5}",
+                    WS_TABSTOP,207,210,90,14
+    PUSHBUTTON      "高级...",IDC_BUTTON_ADVANCE,303,210,47,14,WS_DISABLED
+    DEFPUSHBUTTON   "确定",IDOK,230,236,49,14
+    PUSHBUTTON      "取消",IDCANCEL,286,236,64,14
+END
+
+IDD_SYMBOL_PROP DIALOGEX 0, 0, 240, 143
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "属性项设置"
+FONT 9, "宋体", 0, 0, 0x1
+BEGIN
+    LTEXT           "名称",IDC_STATIC,23,14,19,10
+    EDITTEXT        IDC_EDIT_NAME,42,13,69,12,ES_AUTOHSCROLL
+    LTEXT           "类型",IDC_STATIC,23,39,19,10
+    COMBOBOX        IDC_COMBO_TYPE,42,36,70,80,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    PUSHBUTTON      "...",IDC_BUTTON_ENUM,107,35,13,14
+    LTEXT           "描述",IDC_STATIC,23,66,19,10
+    EDITTEXT        IDC_EDIT_DES,42,63,145,13,ES_AUTOHSCROLL
+    LTEXT           "初始值",IDC_STATIC,15,91,25,8
+    CONTROL         "",IDC_VALUE,"{BFBB9868-C022-436A-A071-192FFE31F7E5}",
+                    WS_TABSTOP,42,87,70,13
+    LTEXT           "值判断式",IDC_STATIC,7,116,35,8,0,0,HIDC_STATIC
+    EDITTEXT        IDC_EDIT_VALID,42,113,127,13,ES_AUTOHSCROLL
+    PUSHBUTTON      "？",IDC_BUTTON_VALEXP,171,113,15,14
+    DEFPUSHBUTTON   "确定",IDOK,190,12,43,14
+    PUSHBUTTON      "取消",IDCANCEL,190,35,43,14
+END
+
+IDD_LAYER DIALOG DISCARDABLE  0, 0, 271, 169
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "图层"
+FONT 9, "宋体"
+BEGIN
+    GROUPBOX        "层状态",IDC_STATIC_LAYERGROUP,7,7,158,155
+    GROUPBOX        "全部",IDC_STATIC,169,7,95,126
+    PUSHBUTTON      "可见",IDC_BT_VISIBLE,192,23,46,15
+    PUSHBUTTON      "隐藏",IDC_BT_HIDDEN,192,45,46,16
+    PUSHBUTTON      "锁定",IDC_BT_LOCK,192,81,46,15
+    PUSHBUTTON      "解锁",IDC_BT_UNLOCK,192,104,46,16
+    DEFPUSHBUTTON   "确定",IDOK,170,141,44,14
+    PUSHBUTTON      "取消",IDCANCEL,220,141,44,14
+END
+
+IDD_OPC_DATASOURCE DIALOG DISCARDABLE  0, 0, 251, 181
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "OPC 数据源"
+FONT 9, "宋体"
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,135,160,50,14
+    PUSHBUTTON      "取消",IDCANCEL,194,160,50,14
+    LISTBOX         IDC_LIST1,12,21,168,78,LBS_SORT | LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "增加",IDC_ADD_SERVER,194,16,50,14
+    PUSHBUTTON      "编辑",IDC_EDIT_SERVER,194,43,50,14
+    PUSHBUTTON      "删除",IDC_REMOVE_SERVER,194,70,50,14
+    GROUPBOX        "OPC 服务器",IDC_STATIC,7,12,178,132
+    LTEXT           "OPC",IDC_STATIC,59,111,13,8
+    LTEXT           "计算机",IDC_STATIC,49,125,25,8
+    EDITTEXT        IDC_EDIT1,77,105,103,14,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_EDIT2,77,123,103,14,ES_AUTOHSCROLL | ES_READONLY
+END
+
+IDD_OPC_SERVER DIALOG DISCARDABLE  0, 0, 210, 119
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "OPC 服务器"
+FONT 9, "宋体"
+BEGIN
+    GROUPBOX        "OPC 服务器",IDC_STATIC,7,6,138,106
+    LTEXT           "名称",IDC_STATIC,25,18,17,8
+    EDITTEXT        IDC_EDIT1,25,28,102,14,ES_AUTOHSCROLL
+    LTEXT           "OPC 服务器",IDC_STATIC,25,50,41,8
+    COMBOBOX        IDC_COMBO1,25,60,102,78,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "计算机(空代表本地计算机)",IDC_STATIC,25,81,100,8
+    EDITTEXT        IDC_EDIT2,25,91,102,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "确定",IDOK,153,13,50,14
+    PUSHBUTTON      "取消",IDCANCEL,153,36,50,14
+END
+
+IDD_GRID_SETTING DIALOG DISCARDABLE  0, 0, 187, 131
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "网格"
+FONT 9, "宋体"
+BEGIN
+    GROUPBOX        "网格",IDC_STATIC,10,5,103,115
+    CONTROL         "显示",IDC_GRID_ENABLE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,32,20,32,10
+    LTEXT           "颜色",IDC_STATIC,30,40,17,8
+    COMBOBOX        IDC_GRID_COLOR,49,37,48,30,CBS_DROPDOWNLIST | 
+                    CBS_OWNERDRAWFIXED | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "水平间隔",IDC_STATIC,13,61,34,8
+    EDITTEXT        IDC_GRID_SPACE_WIDTH,49,58,48,13,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    LTEXT           "垂直间隔",IDC_STATIC,13,82,34,8
+    EDITTEXT        IDC_GRID_SPACE_HEIGHT,49,78,48,13,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    CONTROL         "对齐到网格",IDC_ALIGN_GRID,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,32,101,56,10
+    DEFPUSHBUTTON   "确定",IDOK,130,10,50,14
+    PUSHBUTTON      "取消",IDCANCEL,130,27,50,14
+END
+
+IDD_REPORT_WIZARD DIALOG DISCARDABLE  0, 0, 282, 219
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "报表向导"
+FONT 9, "宋体"
+BEGIN
+    DEFPUSHBUTTON   "下一步(&N)>>",IDC_NEXT,150,201,50,14
+    PUSHBUTTON      "取消(&C)",IDCANCEL,205,201,50,14
+    DEFPUSHBUTTON   "<<上一步(B)",IDC_BACK,95,201,50,14
+    DEFPUSHBUTTON   "完成(&F)",IDC_FINISH,150,201,50,14
+    CONTROL         "",IDC_RECT,"Static",SS_BLACKFRAME | NOT WS_VISIBLE,10,
+                    10,260,180
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,10,195,260,1
+END
+
+IDD_REPORT_FIELD DIALOG DISCARDABLE  0, 0, 220, 176
+STYLE WS_CHILD
+FONT 9, "宋体"
+BEGIN
+    LTEXT           "可用字段(&A):",IDC_STATIC,8,20,49,8
+    LISTBOX         IDC_LEFT,7,31,87,124,LBS_NOINTEGRALHEIGHT | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "选定的字段(&S):",IDC_STATIC,124,20,57,8
+    LISTBOX         IDC_RIGHT,125,31,88,124,LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      ">",IDC_RIGHT_ONE,100,50,16,13
+    PUSHBUTTON      ">>",IDC_RIGHT_ALL,100,69,16,13
+    PUSHBUTTON      "<",IDC_LEFT_ONE,100,100,16,13
+    PUSHBUTTON      "<<",IDC_LEFT_ALL,100,120,16,13
+END
+
+IDD_REPORT_LAYOUT DIALOG DISCARDABLE  0, 0, 231, 161
+STYLE WS_CHILD
+FONT 9, "宋体"
+BEGIN
+    CONTROL         "纵栏表",IDC_COLUMNAR,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,175,20,40,10
+    CONTROL         "表格",IDC_TABULAR,"Button",BS_AUTORADIOBUTTON,175,35,32,
+                    10
+    CONTROL         "对齐",IDC_JUSTIFIED,"Button",BS_AUTORADIOBUTTON,175,50,
+                    32,10
+    GROUPBOX        "布局",IDC_STATIC,160,7,70,58
+    CONTROL         IDI_PORTRAIT,IDC_LAYOUT,"Static",SS_BITMAP,0,20,149,133
+    LTEXT           "请确定报表的布局方式",IDC_STATIC,1,7,81,8
+    CONTROL         "纵向",IDC_PORTRAIT,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,175,88,32,10
+    CONTROL         "横向",IDC_LANDSCAPE,"Button",BS_AUTORADIOBUTTON,175,103,
+                    32,10
+    GROUPBOX        "方向",IDC_STATIC,160,75,70,80
+    ICON            IDI_PORTRAIT,IDC_ORIENTATION,180,125,20,20,
+                    SS_REALSIZEIMAGE
+END
+
+IDD_FILE_NEW DIALOG DISCARDABLE  0, 0, 247, 179
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "新建画面"
+FONT 9, "宋体"
+BEGIN
+    GROUPBOX        "基本",IDC_STATIC,10,5,170,55
+    LTEXT           "名称",IDC_STATIC,30,23,17,8
+    EDITTEXT        IDC_EDIT1,50,20,55,14,ES_AUTOHSCROLL
+    LTEXT           "描述",IDC_STATIC,30,43,17,8
+    EDITTEXT        IDC_EDIT2,50,40,120,14,ES_AUTOHSCROLL
+    GROUPBOX        "尺寸",IDC_STATIC,10,65,170,35
+    LTEXT           "高度",IDC_STATIC,30,83,17,8
+    EDITTEXT        IDC_EDIT3,50,80,45,14,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "宽度",IDC_STATIC,105,83,17,8
+    EDITTEXT        IDC_EDIT4,125,80,45,14,ES_AUTOHSCROLL | ES_NUMBER
+    GROUPBOX        "背景",IDC_STATIC,10,105,170,50
+    LTEXT           "颜色",IDC_STATIC,30,122,17,8
+    COMBOBOX        IDC_COMBO1,50,120,45,30,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "画刷文件",IDC_STATIC,14,139,33,8
+    EDITTEXT        IDC_EDIT6,50,135,105,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BUTTON1,155,135,15,15
+    CONTROL         "下次不再显示此对话框",IDC_CHECK1,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,10,165,96,10
+    DEFPUSHBUTTON   "确定",IDOK,190,10,50,14
+    PUSHBUTTON      "取消",IDCANCEL,190,30,50,14
+END
+
+IDD_TAB_ORDER DIALOG DISCARDABLE  0, 0, 222, 150
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Tab 键顺序"
+FONT 9, "宋体"
+BEGIN
+    LTEXT           "Tab 键顺序(&T)",IDC_STATIC,10,5,53,8
+    LISTBOX         IDC_LIST,10,15,145,125,LBS_NOINTEGRALHEIGHT | WS_VSCROLL | 
+                    WS_TABSTOP
+    DEFPUSHBUTTON   "确定",IDOK,165,15,50,14
+    PUSHBUTTON      "取消",IDCANCEL,165,35,50,14
+    PUSHBUTTON      "上移(&U)",IDC_UP,165,70,50,14
+    PUSHBUTTON      "下移(&D)",IDC_DOWN,165,90,50,14
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080404B0"
+        BEGIN
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "SuperCx 画面开发环境\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "CxDev\0"
+            VALUE "LegalCopyright", "版权所有 (C) 2001\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "CxDev.EXE\0"
+            VALUE "ProductName", "CxDev 应用程序\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 262
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 56
+    END
+
+    IDD_SAVEPROMPT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 188
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 121
+    END
+
+    IDD_INSERTCONTROL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 240
+        TOPMARGIN, 7
+    END
+
+    IDD_PAGE_GEN, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 270
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 182
+    END
+
+    IDD_PAGE_MAINFORM, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 232
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 188
+    END
+
+    IDD_PAGE_SUBFORM, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 220
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 197
+    END
+
+    IDD_PAGE_OBJECT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 236
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 182
+    END
+
+    IDD_GROUP_DESIGN, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 350
+        VERTGUIDE, 229
+        VERTGUIDE, 278
+        VERTGUIDE, 285
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 254
+        HORZGUIDE, 91
+    END
+
+    IDD_SYMBOL_PROP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 233
+        VERTGUIDE, 7
+        VERTGUIDE, 42
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 137
+    END
+
+    IDD_LAYER, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 264
+        VERTGUIDE, 192
+        VERTGUIDE, 238
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 162
+    END
+
+    IDD_OPC_DATASOURCE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 244
+        TOPMARGIN, 10
+        BOTTOMMARGIN, 174
+    END
+
+    IDD_OPC_SERVER, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 203
+        BOTTOMMARGIN, 112
+    END
+
+    IDD_REPORT_WIZARD, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 275
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 212
+    END
+
+    IDD_REPORT_FIELD, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 213
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 169
+    END
+
+    IDD_REPORT_LAYOUT, DIALOG
+    BEGIN
+        TOPMARGIN, 7
+    END
+
+    IDD_FILE_NEW, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 240
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 172
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_SYMBOL_PROP DLGINIT
+BEGIN
+    IDC_VALUE, 0x376, 16, 0
+0x0000, 0x0000, 0x0300, 0x0000, 0x0ada, 0x0000, 0x0211, 0x0000, 
+    0
+END
+
+IDD_GROUP_DESIGN DLGINIT
+BEGIN
+    IDC_PROP_VALUE, 0x376, 16, 0
+0x0000, 0x0000, 0x0300, 0x0000, 0x0df4, 0x0000, 0x022c, 0x0000, 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDP_OLE_INIT_FAILED     "OLE 程序初始化失败。请确认 OLE 库程序是正确的版本。"
+    IDS_STRING101           "0.0174533"
+    IDP_FAILED_TO_CREATE    "建立对象失败。请确认该对象已被注册入系统。"
+    IDP_OLE_INIT_FAILED2    "OLE 程序初始化失败。请确认 OLE 库程序是正确的版本。"
+END
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    IDR_MAINFRAME           "SuperCx 画面开发环境"
+    IDR_LAYOUTFRAME         "\nCxDev\npic\nSuperCx 画面文件 (*.grf)\n.grf\nCxDev.Document\nCxDev Document"
+END
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "CxDev"
+    AFX_IDS_IDLEMESSAGE     "就绪"
+    IDS_INVALID_NUMBER      "This is not a valid number."
+    IDS_INVALID_FONTSIZE    "The number must be between 1 and 1638."
+    IDS_TITLE_FORMATBAR     "Formatting"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_INDICATOR_EXT        "扩展名"
+    ID_INDICATOR_CAPS       "大写"
+    ID_INDICATOR_NUM        "数字"
+    ID_INDICATOR_SCRL       "滚动"
+    ID_INDICATOR_OVR        "改写"
+    ID_INDICATOR_REC        "记录"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_FILE_NEW             "建立新画面\n新建"
+    ID_FILE_OPEN            "打开一个现有文档\n打开"
+    ID_FILE_CLOSE           "关闭活动文档\n关闭"
+    ID_FILE_SAVE            "保存活动文档\n保存"
+    ID_FILE_SAVE_AS         "将活动窗体以一个新文件名保存\n导出"
+    ID_FILE_PAGE_SETUP      "改变打印选项\n页面设置"
+    ID_FILE_PRINT_SETUP     "改变打印机及打印选项\n打印设置"
+    ID_FILE_PRINT           "打印活动文档\n打印"
+    IDS_DEFAULT_EDGECOLOR   "缺省边界颜色"
+    ID_FILE_PRINT_PREVIEW   "显示整页\n打印预览"
+    IDS_DEFAULT_FILLCOLOR   "缺省填充颜色"
+    IDS_NEW_PICTURE         "新画面"
+    IDS_CANNOT_OPEN_PICTURE "%1 不能打开，或者不是画面文件。"
+    IDS_CANNOT_CREATE_PICTURE "%1 不能创建。请确保在可读写的媒体上创建文件。"
+    IDS_SERVERNOTFOUND      "组件服务器没找到！"
+    IDS_CREATEFAILED        "对象创建失败！"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_APP_ABOUT            "显示程序信息，版本号和版权\n关于"
+    ID_APP_EXIT             "退出应用程序；提示保存文档\n退出"
+    ID_HELP_INDEX           "帮助索引\n索引"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_FILE_MRU_FILE1       "打开该文档"
+    ID_FILE_MRU_FILE2       "打开该文档"
+    ID_FILE_MRU_FILE3       "打开该文档"
+    ID_FILE_MRU_FILE4       "打开该文档"
+    ID_FILE_MRU_FILE5       "打开该文档"
+    ID_FILE_MRU_FILE6       "打开该文档"
+    ID_FILE_MRU_FILE7       "打开该文档"
+    ID_FILE_MRU_FILE8       "打开该文档"
+    ID_FILE_MRU_FILE9       "打开该文档"
+    ID_FILE_MRU_FILE10      "打开该文档"
+    ID_FILE_MRU_FILE11      "打开该文档"
+    ID_FILE_MRU_FILE12      "打开该文档"
+    ID_FILE_MRU_FILE13      "打开该文档"
+    ID_FILE_MRU_FILE14      "打开该文档"
+    ID_FILE_MRU_FILE15      "打开该文档"
+    ID_FILE_MRU_FILE16      "打开该文档"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_NEXT_PANE            "切换到下一个窗格\n下一窗格"
+    ID_PREV_PANE            "切换回前一个窗格\n前一窗格"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_WINDOW_NEW           "为活动文档打开另一个窗口\n新建窗口"
+    ID_WINDOW_ARRANGE       "将图标排列在窗口底部\n排列图标"
+    ID_WINDOW_CASCADE       "排列窗口成相互重叠\n层叠窗口"
+    ID_WINDOW_TILE_HORZ     "排列窗口成互不重叠\n平铺窗口"
+    ID_WINDOW_TILE_VERT     "排列窗口成互不重叠\n平铺窗口"
+    ID_WINDOW_SPLIT         "将活动的窗口分隔成窗格\n分隔"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_EDIT_CLEAR           "删除选中对象\n删除"
+    ID_EDIT_CLEAR_ALL       "全部删除\n全部删除"
+    ID_EDIT_COPY            "拷贝选中对象并把它放在剪贴板上\n拷贝"
+    ID_EDIT_CUT             "剪切选中对象并把它放在剪贴板上\n剪切"
+    ID_EDIT_FIND            "查找指定的正文\n查找"
+    ID_EDIT_PASTE           "插入剪贴板内容\n粘贴"
+    ID_EDIT_PASTE_LINK      "插入剪贴板内容和一条通向其来源的链接\n粘贴链接"
+    ID_EDIT_PASTE_SPECIAL   "用选项插入剪贴板内容\n选择性粘贴"
+    ID_EDIT_REPEAT          "重复上一步操作\n重复"
+    ID_EDIT_REPLACE         "用不同的正文替换指定的正文\n替换"
+    ID_EDIT_SELECT_ALL      "选择整个文档\n选择全部"
+    ID_EDIT_UNDO            "撤消最后一步操作\n撤消"
+    ID_EDIT_REDO            "重新执行先前已撤消的操作\n恢复"
+    IDS_DEFAULT_FILLSTYLE   "缺省填充风格"
+    IDS_DEFAULT_BACKGROUNDCOLOR "缺省背景颜色"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_VIEW_TOOLBAR         "显示或隐藏工具栏\n显隐工具栏"
+    ID_VIEW_STATUS_BAR      "显示或隐藏状态栏\n显隐状态栏"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_OLE_INSERT_NEW       "插入新嵌入的对象\n新对象"
+    ID_OLE_EDIT_LINKS       "编辑链接对象\n编辑链接"
+    ID_OLE_EDIT_CONVERT     "将对象转换成不同的类型\n转换对象"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_OLE_VERB_FIRST       "激活嵌入或链接的对象"
+    57873                   "激活嵌入或链接的对象"
+    57874                   "激活嵌入或链接的对象"
+    57875                   "激活嵌入或链接的对象"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_SCSIZE          "改变窗口大小"
+    AFX_IDS_SCMOVE          "改变窗口位置"
+    AFX_IDS_SCMINIMIZE      "将窗口缩小成图标"
+    AFX_IDS_SCMAXIMIZE      "把窗口放大到最大尺寸"
+    AFX_IDS_SCNEXTWINDOW    "切换到下一个文档窗口"
+    AFX_IDS_SCPREVWINDOW    "切换到先前的文档窗口"
+    AFX_IDS_SCCLOSE         "关闭活动的窗口并提示保存所有文档"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_SCRESTORE       "把窗口恢复到正常大小"
+    AFX_IDS_SCTASKLIST      "激活任务表"
+    AFX_IDS_MDICHILD        "激活该窗口"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_PREVIEW_CLOSE   "关闭打印预览模式\n取消预阅"
+    IDS_MAINFORM            "主窗体"
+    IDS_BAD_INSTALL         "出现内部错误, 你可能需要要重新运行安装程序!"
+    ID_INDICATOR_CURSOR     "光标位置"
+    IDS_ADDOBJ              "添加对象"
+    IDS_SINGLESELECTION     "属性（%s）"
+    IDS_MULTIPLESELECTION   "多个选择对象属性"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_ADD_FORM             "当前画面插入子窗体\n插入子窗体"
+    ID_ADD_REPORT           "插入报表\n当前画面窗体插入报表"
+    ID_ADD_CODE             "添加脚本模块\n添加脚本"
+    ID_TRACK_MOVE           "移动该项\n移动到"
+    ID_TRACK_COPY           "复制到\n复制到"
+    ID_FILE_IMPORT          "将原来导出的窗体加入到文档中\n导入"
+    ID_FILE_SAVE_ALL        "全部保存所有的内容\n全部保存"
+    ID_FILE_SAVE_PICTURE    "保存当前窗体对应的文档\n保存文档"
+    ID_PICTURE_SETUP        "设置对象缺省属性\n设置"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_TOBE_CHILD           "添加为子窗体\n添加为子窗体"
+    ID_TOBE_CHILDMODULE     "添加为模块\n添加为模块"
+    ID_TOBE_MAIN            "添加为主窗体\n添加为主窗体"
+    ID_OBJECT_PROPERTY      "属性\n属性"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_EDIT_GOTO            "转到指定位置\n转到"
+    ID_BOOKMARK_TOGGLE      "所在行切换书签"
+    ID_BOOKMART_NEXT        "移动到下一书签行"
+    ID_BOOKMART_PREVIOUS    "移动到上一书签行"
+    ID_BOOKMARK_CLEAR       "清除所有书签"
+    ID_GRID_SETTING         "改变网格的颜色和间距等\n网格设置"
+    ID_ADD_SUBREPORT        "当前报表插入子报表\n插入子报表"
+    ID_PAGE_SETUP           "改变页面设置\n页面设置"
+    ID_VIEW_ACTION_EXPERT   "显示/隐藏动作专家\n动作"
+    ID_VIEW_DYNAMIC_EXPERT  "显示/隐藏动画专家\n动画"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_EDIT_CONVERTTOBMP    "转换为图像\n转换为图像"
+    ID_ADDTO_MODULE         "加入模块库\n加入模块库"
+    ID_ADDTO_SYMBOL         "加入图符库\n加入图符库"
+    ID_VIEW_APPEAR_EXPERT   "显示/隐藏颜色和线条专家\n颜色和线条"
+    ID_LAYER_SETUP          "图层设置\n图层"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_EDIT_SELECTALL       "选中全部对象\n全选"
+    ID_VIEW_OBJECT          "对象窗口\n对象窗口"
+    ID_VIEW_SCRIPT          "脚本窗口\n脚本窗口"
+    ID_INSERT_CONTROL       "插入ActiveX控件\n插入控件"
+    ID_EDIT_PROPERTIES      "显示属性窗口\n属性窗口"
+    ID_GROUP_OBJECT         "选中对象合并为组合对象\n合成组"
+    ID_INSERT_BITMAP        "插入图像工具\n图像"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_VIEW_ZOOMCUSTOM      "用户自定义比例\n用户自定义比例"
+    ID_ALIGN_BOTTOM         "选中对象底端对齐\n底端对齐"
+    ID_ALIGN_HORIZ_CENTER   "选中对象垂直中心线对齐\n水平居中"
+    ID_ALIGN_LEFT           "选中对象左方对齐\n左对齐"
+    ID_ALIGN_VERT_CENTER    "选中对象水平中心线对齐\n垂直居中"
+    ID_ALIGN_RIGHT          "选中对象右方对齐\n右对齐"
+    ID_ALIGN_TOP            "选中对象顶端对齐\n顶端对齐"
+    ID_UNGROUP_OBJECT       "选中组合对象分解为独立对象\n分解组"
+    ID_ITEM_MOVEFORWARD     "对象上移\n上移"
+    ID_ITEM_MOVEBACK        "对象下移\n下移"
+    ID_SPACE_EVENVERT       "选中对象垂直方向等间隔分布\n垂直等间隔"
+    ID_SPACE_EVENHORIZ      "选中对象水平方向等间隔分布\n水平等间隔"
+    ID_VIEW_FULL_SCREEN     "切换至全屏显示方式\n全屏幕"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_VIEW_TOOLBOX         "显示/隐藏工具箱\n工具箱"
+    ID_ARRAGE_SAMEHIGHT     "调整选中对象高度相同\n高度相同"
+    ID_ARRAGE_SAMEWIDTH     "调整选中对象宽度相同\n宽度相同"
+    ID_ARRAGE_BOTH          "调整选中对象高度、宽度都相同\n两者都相同"
+    ID_ITEM_FORWARD         "最上"
+    ID_ITEM_BACKWORD        "最下"
+    ID_ITEM_FORWARD_MOST    "选中对象成为最前方对象\n最上"
+    ID_ITEM_BACKWORD_MOST   "选中对象成为最后方对象\n最下"
+    ID_VIEW_NORMAL          "显示或隐藏工具栏\n显隐工具栏"
+    ID_VIEW_SPACE           "显示或隐藏布局栏\n显隐布局栏"
+    ID_VIEW_STATUS          "状态\n状态"
+    ID_HELP_CONTENT         "显示帮助内容\n内容"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_VIEW_PROPERTY_BAR    "显示/隐藏属性窗口\n属性窗口"
+    ID_VIEW_EXPLORER_BAR    "显示/隐藏资源浏览器窗口\n资源浏览器"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_DRAW_SELECT          "选择对象工具\n选择"
+    ID_DRAW_LINE            "直线绘制工具\n直线"
+    ID_DRAW_RECT            "矩型绘制工具\n矩形"
+    ID_DRAW_ROUNDRECT       "圆角矩型绘制工具\n圆角矩形"
+    ID_DRAW_ELLIPSE         "椭圆绘制工具\n椭圆"
+    ID_DRAW_POLYLINE        "折线绘制工具\n折线"
+    ID_DRAW_PIPE            "管道绘制工具\n管道"
+    ID_DRAW_POLYGON         "多边形绘制工具\n多边形"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_DRAW_ARC             "弧线绘制工具\n弧线"
+    ID_DRAW_PIE             "扇形绘制工具\n扇形"
+    ID_DRAW_CHORD           "弧形绘制工具\n弧形"
+    ID_DRAW_TEXT            "文本绘制工具\n文本"
+    ID_DRAW_DATALINK        "数据戳绘制工具\n数据戳"
+    ID_DRAW_VARIABLE        "变量绘制工具\n变量"
+    ID_DRAW_BUTTON          "按钮绘制工具\n按钮"
+    ID_DRAW_MENU            "菜单绘制工具\n菜单"
+    ID_DRAW_TIMER           "定时器绘制工具\n定时器"
+    ID_DRAW_CHART           "趋势曲线绘制工具\n趋势"
+    ID_DRAW_ALMSUM          "报警表绘制工具\n报警表"
+    IDS_HOMEPAGEADDR        "http://www.supercx.com"
+    IDS_DEFAULT_FONTCOLOR   "缺省字体颜色"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_HELP_SEARCH          "收索帮助主题\n收索"
+    ID_EDIT_SCRIPT          "编辑对象的事件脚本函数"
+    ID_TRACKER_RESIZE       "改变选中对象尺寸\n改变尺寸"
+    ID_TRACKER_RESHAPE      "编辑选中对象顶点\n编辑顶点"
+    ID_TRACKER_ROTATE       "自由旋转选中对象\n自由旋转"
+    ID_OBJECT_FORWARD_MOST  "选中对象移到最上\n移至顶层"
+    ID_OBJECT_BACKWORD_MOST "选中对象移到最下\n移至底层"
+    ID_OBJECT_MOVEFORWARD   "选中对象上移一层\n上移一层"
+    ID_OBJECT_MOVEBACK      "选中对象下移一层\n下移一层"
+    ID_EDIT_CLONE           "复制选中对象\n复制"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_CREATE_SYMBOL        "由所选对象生成图符对象\n生成图符"
+    ID_DESIGN_SYMBOL        "设计所选的图符对象\n设计图符"
+    ID_PICTURE_RUN          "进入画面运行模式\n运行"
+    ID_VIEW_LAYOUT_BAR      "显示或隐藏布局栏\n显隐布局栏"
+    ID_VIEW_STAND_BAR       "显示或隐藏标准栏\n显隐标准栏"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_ADD_SUBMODULE        "当前画面窗体插入模块\n插入模块"
+    ID_PICTURE_OPTIONS      "设置选项\n选项"
+    ID_DESIGN_SUBFORM       "设计模块对象\n设计模块"
+    ID_EDIT_SUBFORM         "编辑所选的模块对象\n编辑模块"
+    ID_CREATE_SUBFORM       "由所选对象生成图符对象\n生成模块"
+    ID_BREAK_SYMBOL         "分解所选的图符对象\n分解图符"
+    ID_BREAK_SUBFORM        "分解所选的模块对象\n编辑模块"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_EXECUTE_APPMC        "启动管理控制台\n管理控制台"
+    ID_INSERT_RUNCTRL       "运行控件绘制工具\n运行控件"
+    ID_ADD_BLANK_REPORT     "当前画面插入空白报表"
+    ID_ADD_REPORT_WIZARD    "使用报表向导在当前画面插入报表"
+    ID_ROTATE_LEFT          "向左旋转选中对象\n向左旋转"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_ROTATE_RIGHT         "向右旋转选中对象\n向右旋转"
+    ID_MIRROR_HORIZ         "水平翻转选中对象\n水平翻转"
+    ID_MIRROR_VERT          "垂直翻转选中对象\n垂直翻转"
+    ID_HORIZ_CENTER         "选中的对象水平居中对齐窗体\n水平对齐"
+    ID_VERT_CENTER          "选中的对象垂直居中对齐窗体\n垂直对齐"
+    ID_WINDOW_CLOSE         "关闭当前活动的窗口\n关闭窗口"
+    ID_WINDOW_CLOSEALL      "关闭所有打开的窗口\n关闭所有窗口"
+    ID_WINDOW_NEXT          "激活下一个窗口\n下一个窗口"
+    ID_WINDOW_PREVIOUS      "激活上一个窗口\n上一个窗口"
+    ID_TAB_ORDER            "设置窗体中控件对象的 Tab 键顺序\nTab 键顺序"
+END
+
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+1 TYPELIB "CxDev.tlb"
+
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE 4, 2
+#pragma code_page(936)
+#endif //_WIN32
+#include "res\CxDev.rc2"  // non-Microsoft Visual C++ edited resources
+#include "l.chs\afxres.rc"          // Standard components
+#include "l.chs\afxprint.rc"        // printing/print preview resources
+#include "l.chs\afxolecl.rc"        // OLE container resources
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

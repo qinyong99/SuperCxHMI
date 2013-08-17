@@ -1,0 +1,68 @@
+// CxExtObj.idl : IDL source for CxExtObj.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (CxExtObj.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+import "CxHmiObj.idl";
+import "CxHmiMisc.idl";
+	[
+		object,
+		uuid(D9C899AA-0DCE-49B4-BB73-27D185A56501),
+		dual,
+		helpstring("ICxSQLBuilder Interface"),
+		pointer_default(unique)
+	]
+	interface ICxSQLBuilder : IDispatch
+	{
+		[id(1), helpstring("method Build")] HRESULT Build([in] long ParentWnd, [out, retval] BSTR* pbstrSQL);
+	};
+
+[
+	uuid(ACF61CEA-3805-11D5-A468-8E961CC7BB0B),
+	version(1.0),
+	helpstring("CxExtObj 1.0 Type Library")
+]
+library CXEXTOBJLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+
+	[
+		uuid(5CA14830-C760-4A3A-BBB7-A7241BE9A73B),
+		helpstring("CxBlankPage Class")
+	]
+	coclass CxBlankPage
+	{
+		interface IUnknown;
+	};
+	
+	[
+		uuid(6E390124-837E-447D-AD60-29A84E6EDB19),
+		helpstring("CxDataConnectionPage Class")
+	]
+	coclass CxDataConnectionPage
+	{
+		interface IUnknown;
+	};
+
+	[
+		uuid(D1E7A6A7-609E-4C65-8B81-8C8285904893),
+		helpstring("CxDataRecordsetPage Class")
+	]
+	coclass CxDataRecordsetPage
+	{
+		interface IUnknown;
+	};
+	[
+		uuid(32CF356E-28E4-4D7F-8084-FCA6AC42B55B),
+		helpstring("CxSQLBuilder Class")
+	]
+	coclass CxSQLBuilder
+	{
+		[default] interface ICxSQLBuilder;
+	};
+};

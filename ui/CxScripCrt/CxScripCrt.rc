@@ -1,0 +1,484 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "winres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""winres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "1 TYPELIB ""CxScripCrt.tlb""\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "CxScripCrt Module\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "CxScripCrt\0"
+            VALUE "LegalCopyright", "Copyright 2003\0"
+            VALUE "OriginalFilename", "CxScripCrt.DLL\0"
+            VALUE "ProductName", "CxScripCrt Module\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+            VALUE "OLESelfRegister", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// REGISTRY
+//
+
+IDR_CXSCRIPTCREATOR     REGISTRY DISCARDABLE    "CxScripCreator.rgs"
+IDR_CXSCRIPTEDITOR      REGISTRY DISCARDABLE    "CxScriptEditor.rgs"
+IDR_CXEXPRESSIONCREATOR REGISTRY DISCARDABLE    "CxExpressionCreator.rgs"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_FIND DIALOG DISCARDABLE  30, 73, 280, 65
+STYLE DS_MODALFRAME | DS_3DLOOK | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "查找"
+FONT 9, "宋体"
+BEGIN
+    LTEXT           "查找内容(&F):",-1,5,7,49,8
+    COMBOBOX        IDC_FINDWHAT,55,5,140,95,CBS_DROPDOWN | CBS_AUTOHSCROLL | 
+                    WS_TABSTOP
+    CONTROL         "全字匹配(&W)",IDC_MATCHWORD,"Button",BS_AUTOCHECKBOX | 
+                    WS_GROUP | WS_TABSTOP,5,24,120,10
+    CONTROL         "区分大小写(&C)",IDC_MATCHCASE,"Button",BS_AUTOCHECKBOX | 
+                    WS_GROUP | WS_TABSTOP,5,38,130,10
+    CONTROL         "正则表达式(&E)",IDC_REGEXP,"Button",BS_AUTOCHECKBOX | 
+                    WS_GROUP | WS_TABSTOP,5,52,120,10
+    GROUPBOX        "方向",-1,135,23,60,38,WS_GROUP
+    CONTROL         "向上(&U)",ID_DIRECTIONUP,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,140,34,45,12
+    CONTROL         "向下(&D)",ID_DIRECTIONDOWN,"Button",BS_AUTORADIOBUTTON,
+                    140,47,45,12
+    DEFPUSHBUTTON   "查找下一个(&F)",IDOK,205,5,65,14,WS_GROUP
+    PUSHBUTTON      "标记所有(&M)",IDC_MARKALL,205,26,65,14
+    PUSHBUTTON      "取消",IDCANCEL,205,47,65,14
+END
+
+IDD_REPLACE DIALOG DISCARDABLE  30, 73, 280, 87
+STYLE DS_MODALFRAME | DS_3DLOOK | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "替换"
+FONT 9, "宋体"
+BEGIN
+    LTEXT           "查找内容(&F):",-1,5,7,49,8
+    COMBOBOX        IDC_FINDWHAT,55,5,140,90,CBS_DROPDOWN | CBS_AUTOHSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "替换为(&P):",-1,5,27,43,9
+    COMBOBOX        IDC_REPLACEWITH,55,25,140,95,CBS_DROPDOWN | 
+                    CBS_AUTOHSCROLL | WS_TABSTOP
+    CONTROL         "全字匹配(&W)",IDC_MATCHWORD,"Button",BS_AUTOCHECKBOX | 
+                    WS_GROUP | WS_TABSTOP,5,45,101,10
+    CONTROL         "区分大小写(&C)",IDC_MATCHCASE,"Button",BS_AUTOCHECKBOX | 
+                    WS_GROUP | WS_TABSTOP,5,59,98,10
+    CONTROL         "正则表达式(&E)",IDC_REGEXP,"Button",BS_AUTOCHECKBOX | 
+                    WS_GROUP | WS_TABSTOP,5,73,102,10
+    GROUPBOX        "替换范围",-1,122,45,72,38,WS_GROUP
+    CONTROL         "选中内容(&S)",ID_DIRECTIONUP,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,132,55,55,12
+    CONTROL         "整个文件(&O)",ID_DIRECTIONDOWN,"Button",
+                    BS_AUTORADIOBUTTON,132,68,56,12
+    DEFPUSHBUTTON   "查找下一个(&F)",IDOK,205,5,65,14,WS_GROUP
+    PUSHBUTTON      "替换(&R)",IDC_REPLACE,205,26,65,14
+    PUSHBUTTON      "替换所有(&A)",IDC_REPLACEALL,205,47,65,14
+    PUSHBUTTON      "取消",IDCANCEL,205,68,65,14
+END
+
+IDD_GOLINE DIALOG DISCARDABLE  0, 0, 187, 53
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "转到行"
+FONT 9, "宋体"
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,73,35,50,14
+    PUSHBUTTON      "取消",IDCANCEL,130,35,50,14
+    LTEXT           "行号(1 - 100)",IDC_LINE_TEXT,7,4,53,8
+    EDITTEXT        IDC_EDIT1,7,15,173,14,ES_AUTOHSCROLL | ES_NUMBER
+END
+
+IDD_PAGE_DLG DIALOG DISCARDABLE  0, 0, 193, 151
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "属性"
+FONT 9, "宋体"
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,77,130,50,14
+    PUSHBUTTON      "取消",IDCANCEL,136,130,50,14
+END
+
+IDD_EXPR_CRT DIALOGEX 0, 0, 512, 310
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_CONTROLPARENT
+CAPTION "表达式"
+FONT 9, "宋体"
+BEGIN
+    EDITTEXT        IDC_EDITEXPR,5,224,380,61,ES_MULTILINE | ES_NOHIDESEL | 
+                    WS_VSCROLL
+    PUSHBUTTON      "确定",IDOK,230,290,42,14
+    PUSHBUTTON      "取消",IDCANCEL,280,290,42,14
+    PUSHBUTTON      "符号窗口 >>",IDC_SHOW_SYMBOL,331,290,55,14
+    PUSHBUTTON      "清空",IDC_CLEAR_EDIT,5,290,42,14
+END
+
+IDD_KEYBORAD DIALOGEX 0, 0, 116, 68
+STYLE DS_CONTROL | WS_CHILD | WS_CLIPSIBLINGS | WS_CLIPCHILDREN
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 9, "宋体", 0, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Not",IDC_BUTTON1,0,0,18,11,BS_FLAT | NOT WS_TABSTOP
+    PUSHBUTTON      "And",IDC_BUTTON2,0,12,18,11,BS_FLAT | NOT WS_TABSTOP
+    PUSHBUTTON      "Or",IDC_BUTTON3,0,24,18,11,BS_FLAT | NOT WS_TABSTOP
+    PUSHBUTTON      "Xor",IDC_BUTTON4,0,36,18,11,BS_FLAT | NOT WS_TABSTOP
+    PUSHBUTTON      "&&",IDC_BUTTON5,0,48,18,11,BS_FLAT | NOT WS_TABSTOP
+    PUSHBUTTON      "<",IDC_BUTTON6,17,0,18,11,BS_FLAT | NOT WS_TABSTOP
+    PUSHBUTTON      ">",IDC_BUTTON7,17,12,18,11,BS_FLAT | NOT WS_TABSTOP
+    PUSHBUTTON      "<=",IDC_BUTTON8,17,24,18,11,BS_FLAT | NOT WS_TABSTOP
+    PUSHBUTTON      ">=",IDC_BUTTON9,17,36,18,11,BS_FLAT | NOT WS_TABSTOP
+    PUSHBUTTON      "<>",IDC_BUTTON10,17,48,18,11,BS_FLAT | NOT WS_TABSTOP
+    PUSHBUTTON      "=",IDC_BUTTON11,34,0,18,11,BS_FLAT | NOT WS_TABSTOP
+    PUSHBUTTON      "(",IDC_BUTTON12,34,12,18,11,BS_FLAT | NOT WS_TABSTOP
+    PUSHBUTTON      ")",IDC_BUTTON13,34,24,18,11,BS_FLAT | NOT WS_TABSTOP
+    PUSHBUTTON      "^",IDC_BUTTON14,34,36,18,11,BS_FLAT | NOT WS_TABSTOP
+    PUSHBUTTON      "Mod",IDC_BUTTON15,34,48,18,11,BS_FLAT | NOT WS_TABSTOP
+    PUSHBUTTON      "+",IDC_BUTTON16,51,0,18,11,BS_FLAT | NOT WS_TABSTOP
+    PUSHBUTTON      "-",IDC_BUTTON17,51,12,18,11,BS_FLAT | NOT WS_TABSTOP
+    PUSHBUTTON      "*",IDC_BUTTON18,51,24,18,11,BS_FLAT | NOT WS_TABSTOP
+    PUSHBUTTON      "/",IDC_BUTTON19,51,36,18,11,BS_FLAT | NOT WS_TABSTOP
+    PUSHBUTTON      ".",IDC_BUTTON20,51,48,18,11,BS_FLAT | NOT WS_TABSTOP
+    PUSHBUTTON      "1",IDC_BUTTON21,68,0,18,11,BS_FLAT | NOT WS_TABSTOP
+    PUSHBUTTON      "2",IDC_BUTTON22,68,12,18,11,BS_FLAT | NOT WS_TABSTOP
+    PUSHBUTTON      "3",IDC_BUTTON23,68,24,18,11,BS_FLAT | NOT WS_TABSTOP
+    PUSHBUTTON      "4",IDC_BUTTON24,68,36,18,11,BS_FLAT | NOT WS_TABSTOP
+    PUSHBUTTON      "5",IDC_BUTTON25,68,48,18,11,BS_FLAT | NOT WS_TABSTOP
+    PUSHBUTTON      "6",IDC_BUTTON26,85,0,18,11,BS_FLAT | NOT WS_TABSTOP
+    PUSHBUTTON      "7",IDC_BUTTON27,85,12,18,11,BS_FLAT | NOT WS_TABSTOP
+    PUSHBUTTON      "8",IDC_BUTTON28,85,24,18,11,BS_FLAT | NOT WS_TABSTOP
+    PUSHBUTTON      "9",IDC_BUTTON29,85,36,18,11,BS_FLAT | NOT WS_TABSTOP
+    PUSHBUTTON      "0",IDC_BUTTON30,85,48,18,11,BS_FLAT | NOT WS_TABSTOP
+END
+
+IDD_TREE_LIST DIALOG DISCARDABLE  0, 0, 292, 230
+STYLE DS_CONTROL | WS_CHILD
+FONT 9, "宋体"
+BEGIN
+    CONTROL         "Tree1",IDC_TREE,"SysTreeView32",TVS_HASBUTTONS | 
+                    TVS_HASLINES | TVS_LINESATROOT | TVS_SHOWSELALWAYS | 
+                    WS_BORDER | WS_TABSTOP,0,20,95,200
+    CONTROL         "List1",IDC_LIST,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_SORTASCENDING | 
+                    LVS_NOCOLUMNHEADER | WS_BORDER | WS_TABSTOP,110,30,100,
+                    145
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_FIND, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 61
+    END
+
+    IDD_REPLACE, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 83
+    END
+
+    IDD_GOLINE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 180
+        TOPMARGIN, 4
+        BOTTOMMARGIN, 49
+    END
+
+    IDD_PAGE_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 186
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 144
+    END
+
+    IDD_EXPR_CRT, DIALOG
+    BEGIN
+        RIGHTMARGIN, 491
+        BOTTOMMARGIN, 308
+    END
+
+    IDD_KEYBORAD, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 109
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 61
+    END
+
+    IDD_TREE_LIST, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 285
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 223
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "icon1.ico"
+IDI_PROP                ICON    DISCARDABLE     "prop.ico"
+IDI_METHOD              ICON    DISCARDABLE     "method.ico"
+IDI_OBJECT              ICON    DISCARDABLE     "method1.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU DISCARDABLE 
+BEGIN
+    POPUP "文件(&F)"
+    BEGIN
+        MENUITEM "保存(&S)   \tCtrl+S",         ID_SAVE_EXIT
+        MENUITEM "退出(&X)",                    ID_EXIT
+    END
+    POPUP "编辑(&E)"
+    BEGIN
+        MENUITEM "撤消(&U)\tCtrl+Z",            ID_EDIT_UNDO
+        MENUITEM "恢复(&R)\tCtrl+Y",            ID_EDIT_REDO
+        MENUITEM SEPARATOR
+        MENUITEM "剪切(&T)\tCtrl+X",            ID_EDIT_CUT
+        MENUITEM "拷贝(&C)\tCtrl+C",            ID_EDIT_COPY
+        MENUITEM "粘贴(&P)\tCtrl+V",            ID_EDIT_PASTE
+        MENUITEM "删除(&D)\tDel",               ID_EDIT_CLEAR
+        MENUITEM SEPARATOR
+        MENUITEM "&查找(&F)...\tCtrl+F",        ID_EDIT_FIND
+        MENUITEM "查找下一个(&N)\tF3",          ID_EDIT_REPEAT
+        MENUITEM "替换(&E)\tCtrl+H",            ID_EDIT_REPLACE
+        MENUITEM SEPARATOR
+        MENUITEM "转到(&G)...\tCtrl+G",         ID_EDIT_GOTO
+        POPUP "书签(&K)"
+        BEGIN
+            MENUITEM "切换书签(&T)",                ID_BOOKMARK_TOGGLE
+            MENUITEM "下一书签(&N)",                ID_BOOKMART_NEXT
+            MENUITEM "上一书签(&P)",                ID_BOOKMART_PREVIOUS
+            MENUITEM "清除书签(&C)",                ID_BOOKMARK_CLEAR
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "全选(&S)\tCtrl+A",            ID_EDIT_SELECT_ALL
+    END
+END
+
+IDR_CONTEXTMENU MENU DISCARDABLE 
+BEGIN
+    POPUP "Popup Menu"
+    BEGIN
+        MENUITEM "撤销(&U)",                    ID_EDIT_UNDO
+        MENUITEM "恢复(&R)",                    ID_EDIT_REDO
+        MENUITEM SEPARATOR
+        MENUITEM "剪切(&T)",                    ID_EDIT_CUT
+        MENUITEM "复制(&C)",                    ID_EDIT_COPY
+        MENUITEM "粘贴(&P)",                    ID_EDIT_PASTE
+        MENUITEM "删除(&D)",                    ID_EDIT_CLEAR
+        MENUITEM SEPARATOR
+        MENUITEM "全选(&A)",                    ID_EDIT_SELECT_ALL
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_MAINFRAME TOOLBAR DISCARDABLE  16, 15
+BEGIN
+    BUTTON      ID_SAVE_EXIT
+    SEPARATOR
+    BUTTON      ID_EDIT_CUT
+    BUTTON      ID_EDIT_COPY
+    BUTTON      ID_EDIT_PASTE
+    SEPARATOR
+    BUTTON      ID_EDIT_UNDO
+    BUTTON      ID_EDIT_REDO
+    SEPARATOR
+    BUTTON      ID_EDIT_FIND
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_MAINFRAME           BITMAP  DISCARDABLE     "toolbar1.bmp"
+IDB_CXSCRIPTEIDTOR      BITMAP  DISCARDABLE     "cxscript.bmp"
+IDB_TAGTREE             BITMAP  DISCARDABLE     "bitmap1.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS DISCARDABLE 
+BEGIN
+    "F",            ID_EDIT_FIND,           VIRTKEY, CONTROL, NOINVERT
+    "H",            ID_EDIT_REPLACE,        VIRTKEY, CONTROL, NOINVERT
+    VK_F3,          ID_EDIT_REPEAT,         VIRTKEY, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_PROJNAME            "CxScripCrt"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_ROW_PANE             "Row: 99999"
+    ID_COL_PANE             "Col: 99999"
+    IDR_MAINFRAME           "运行脚本"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_EDIT_CLEAR           "删除选中内容\n删除"
+    ID_EDIT_COPY            "拷贝选中内容并把它放在剪贴板上\n拷贝"
+    ID_EDIT_CUT             "剪切选中内容并把它放在剪贴板上\n剪切"
+    ID_EDIT_FIND            "查找指定的正文\n查找"
+    ID_EDIT_PASTE           "插入剪贴板内容\n粘贴"
+    ID_EDIT_REPEAT          "重复上一步操作\n重复"
+    ID_EDIT_REPLACE         "用不同的正文替换指定的正文\n替换"
+    ID_EDIT_SELECT_ALL      "选中全部文档\n全选"
+    ID_EDIT_UNDO            "撤消最后一步操作\n撤消"
+    ID_EDIT_REDO            "重新执行先前已撤消的操作\n重新执行"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_EDIT_CLONE           "复制选中对象\n复制"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_EDIT_GOTO            "转到指定位置\n转到"
+    ID_BOOKMARK_TOGGLE      "所在行切换书签"
+    ID_BOOKMART_NEXT        "移动到下一书签行"
+    ID_BOOKMART_PREVIOUS    "移动到上一书签行"
+    ID_BOOKMARK_CLEAR       "清除所有书签"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_EDIT_SELECTALL       "选中全部对象\n全选"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_SAVE_EXIT            "保存脚本并退出\n保存"
+    ID_EXIT                 "不保存脚本退出\n退出"
+    ID_VIEW_SYMBOL          "显示/隐藏符号窗口\n符号窗口"
+END
+
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+1 TYPELIB "CxScripCrt.tlb"
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

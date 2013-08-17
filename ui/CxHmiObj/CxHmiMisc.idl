@@ -1,0 +1,554 @@
+// CxOle.idl : IDL source for CxOle.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (CxOle.tlb) and marshalling code.
+
+#include "CxDispid.h"
+import "oaidl.idl";
+import "ocidl.idl";
+
+//钥匙与该版本进行或运算所得值与本版本相同，则可以打开该版本
+//
+//共享版
+//0x 0000 XXXX
+//
+//开发环境钥匙
+//0x 0000 0000
+//可以打开共享版和企业版
+//
+//运行环境钥匙（必须带有软件狗，如果没有软件狗则限制运行时间）
+//0x 0000 0000
+//可以打开单用户版和企业版
+//
+//——————————————————————————————
+//
+//企业版
+//0x 1000 XXXX
+//
+//开发环境钥匙（必须带有软件狗）
+//0x 1000 0000
+//可以打开企业版
+//
+//运行环境钥匙
+//0x 1000 0000
+//可以打开企业版
+
+
+	#define _SUPERCX_OLDVER 0x10001
+	#define _SUPERCX_VER_0100 0x0100 // 企业版1.0
+	#define _SUPERCX_VER_0101 0x0101 // 企业版1.0，内部版0.1
+	#define _SUPERCX_VER_0102 0x0102 // 企业版1.0，内部版0.2
+	#define _SUPERCX_VER_0200 0x0200 // 企业版2.0
+	#define _SUPERCX_VER_0201 0x0201 // 企业版2.1
+	#define _SUPERCX_VER 0x0202 // 企业版2.2
+
+cpp_quote("#ifndef _SUPERCX_OLDVER")
+cpp_quote("#define _SUPERCX_OLDVER 0x10001")
+cpp_quote("#endif")
+
+cpp_quote("#ifndef _SUPERCX_VER_0100")
+cpp_quote("#define _SUPERCX_VER_0100 0x0100")
+cpp_quote("#endif")
+
+cpp_quote("#ifndef _SUPERCX_VER_0101")
+cpp_quote("#define _SUPERCX_VER_0101 0x0101")
+cpp_quote("#endif")
+
+cpp_quote("#ifndef _SUPERCX_VER_0102")
+cpp_quote("#define _SUPERCX_VER_0102 0x0102")
+cpp_quote("#endif")
+
+cpp_quote("#ifndef _SUPERCX_VER_0200")
+cpp_quote("#define _SUPERCX_VER_0200 0x0200")
+cpp_quote("#endif")
+
+cpp_quote("#ifndef _SUPERCX_VER_0201")
+cpp_quote("#define _SUPERCX_VER_0201 0x0201")
+cpp_quote("#endif")
+
+cpp_quote("#ifndef _SUPERCX_VER_0202")
+cpp_quote("#define _SUPERCX_VER_0202 0x0202")
+cpp_quote("#endif")
+
+cpp_quote("#ifndef _SUPERCX_VER_0203")
+cpp_quote("#define _SUPERCX_VER_0203 0x0203")
+cpp_quote("#endif")
+
+cpp_quote("#ifndef _SUPERCX_VER_0204")
+cpp_quote("#define _SUPERCX_VER_0204 0x0204")
+cpp_quote("#endif")
+
+cpp_quote("#ifndef _SUPERCX_VER_0205")
+cpp_quote("#define _SUPERCX_VER_0205 0x0205")
+cpp_quote("#endif")
+
+cpp_quote("#ifndef _SUPERCX_VER_0206")
+cpp_quote("#define _SUPERCX_VER_0206 0x0206")
+cpp_quote("#endif")
+
+cpp_quote("#ifndef _SUPERCX_VER_0207")
+cpp_quote("#define _SUPERCX_VER_0207 0x0207")
+cpp_quote("#endif")
+
+cpp_quote("#ifndef _SUPERCX_VER_0208")
+cpp_quote("#define _SUPERCX_VER_0208 0x0208")
+cpp_quote("#endif")
+
+cpp_quote("#ifndef _SUPERCX_VER_0209")
+cpp_quote("#define _SUPERCX_VER_0209 0x0209")
+cpp_quote("#endif")
+
+cpp_quote("#ifndef _SUPERCX_VER_0210")
+cpp_quote("#define _SUPERCX_VER_0210 0x0210")
+cpp_quote("#endif")
+
+cpp_quote("#ifndef _SUPERCX_VER")
+cpp_quote("#define _SUPERCX_VER 0x0210")
+cpp_quote("#endif")
+
+	typedef struct tagRECTF
+	{
+	   float left;
+	   float top;
+	   float right;
+	   float bottom;
+	} RECTF;
+
+	//自定义属性页查询接口
+	typedef struct tagCXPAGEENTRY
+	{
+		WCHAR szDesc[33];
+		GUID clsidPropPage;
+	}	CXPAGEENTRY;
+
+	typedef
+	[
+		uuid(80008000-8000-8000-8000-800080008101),
+		helpstring("ExtProp Type"),	
+	] 
+	enum
+	{
+		PROPTYPE_UNKNOWN = 0x0,	//未知类型
+		PROPTYPE_COLOR = 0x1,		//颜色
+		PROPTYPE_BOOL = 0x2,	//布尔
+		PROPTYPE_STRING = 0x3,	//字符串
+		PROPTYPE_NUMBER = 0x4,	//数字
+		PROPTYPE_ENUM = 0x5,	//枚举
+		PROPTYPE_FAKEFONT = 0x6, //字体
+		PROPTYPE_FAKEFONTNAME = 0x7, //字体名称
+		PROPTYPE_FAKEFILE = 0x8, //文件
+		PROPTYPE_FAKEFOLDER = 0x9, //文件夹
+		PROPTYPE_FAKEPICTURE = 0xA, //文件夹
+		PROPTYPE_PROPPAGE = 0xB, //文件夹
+		PROPTYPE_TAGGROUP = 0xC, //文件夹
+		PROPTYPE_SECURITYAREA = 0xD, //文件夹
+		PROPTYPE_FAKEBRUSHFILE = 0xE, //文件
+		PROPTYPE_ENUMSTRING = 0xF,	//枚举字符串
+	} enumPropType;
+
+	typedef
+	[
+		uuid(80008000-8000-8000-8000-800080008102),
+		helpstring("DrawShape Type"),	
+	] 
+	enum tagDRAW_SHAPE {
+		DRAW_SELECTION   = 0x0, 
+		DRAW_LINE   = 0x1, 
+		DRAW_RECTANGLE  = 0x2,
+		DRAW_ROUNDRECT = 0x3,
+		DRAW_ELLIPSE = 0x4,
+		DRAW_POLYLINE = 0x5,
+		DRAW_PIPE = 0x6,
+		DRAW_POLYGON = 0x7,
+		DRAW_ARC = 0x8,
+		DRAW_PIE = 0x9,
+		DRAW_CHORD = 0xa,
+		DRAW_TEXT = 0xb,
+		DRAW_DATALINK = 0xc,
+		DRAW_VARIABLE = 0xd,
+		DRAW_BUTTON = 0xe,
+		DRAW_MENU = 0xf,
+		DRAW_TIMER = 0x10,
+		DRAW_CHART = 0x11,
+		DRAW_ALMSUM = 0x12,
+		
+		DRAW_RECTITEM = 0x20,
+	} DRAW_SHAPE;
+
+	typedef
+	[
+		uuid(80008000-8000-8000-8000-800080008103),
+		helpstring("Dynamic Object Type"),	
+	] 
+	enum tagDYNAMIC_TYPE {
+		DYNAMIC_LOOKUP  = 0x0, 
+		DYNAMIC_LINEAR  = 0x1, 
+		DYNAMIC_FORMAT  = 0x2,
+		DYNAMIC_OBJECT  = 0x3,
+	} DYNAMIC_TYPE;
+
+	typedef
+	[
+		uuid(80008000-8000-8000-8000-800080008104),
+		helpstring("CxDev Item Object Type"),	
+	] 
+	enum tagDEVITEM_TYPE {
+		DEVITEM_DRAW  = 0x0, 
+		DEVITEM_CONTROL  = 0x1, 
+		DEVITEM_GROUP  = 0x2
+	} DEVITEM_TYPE;
+
+	//属性动态关联状态
+	#define CSTATE_DISCONNECT_NOTSUPPORTMOUSEINPUT	0x0  //没有关联，不支持鼠标输入
+	#define CSTATE_DISCONNECT_SUPPORTMOUSEINPUT	0x1	 //没有关联，支持鼠标输入
+	#define CSTATE_CONNECT_NOTSUPPORTMOUSEINPUT	0x2	 //关联，不支持鼠标输入
+	#define CSTATE_CONNECT_SUPPORTMOUSEINPUT		0x3  //关联，支持鼠标输入
+	#define CSTATE_CONNECT_ENABLEMOUSEINPUT		0x7  //关联，支持鼠标输入并使能
+	
+	
+	typedef enum tagMIRRORMODE 
+	{
+        MIRRORMODE_HORIZONAL       = 0,
+        MIRRORMODE_VERTICAL        = 1,
+    } MIRRORMODE;
+
+	interface ICxScriptEngineSite;
+	interface ICxEventObj;
+
+
+//////////////////////////////////////////////////
+//属性目录接口
+	typedef int PROPCAT;
+
+	[
+		object,
+		uuid(4D07FC10-F931-11CE-B001-00AA006884E5),
+	
+		helpstring("ICategorizeProperties Interface"),
+		pointer_default(unique)
+	]
+	interface ICategorizeProperties : IUnknown
+	{
+		[helpstring("method MapPropertyToCategory")] 
+		HRESULT MapPropertyToCategory(DISPID dispid, PROPCAT* ppropcat);
+		[helpstring("method GetCategoryName")] 
+		HRESULT GetCategoryName(PROPCAT propcat, LCID lcid, BSTR* pbstrName);
+
+	};
+
+/////////////////////////////////////////////////
+	[
+		object,
+		uuid(80008000-8000-8000-8000-800080008001),
+	
+		helpstring("ICxSpecifyPropertyPages Interface"),
+		pointer_default(unique)
+	]
+	interface ICxPropertyPageSite : IPropertyPageSite
+	{
+		[helpstring("method SetDynamicIcon")] HRESULT SetDynamicIcon(long nIndex);
+	};
+
+	//自定义工具站点接口
+	[
+		object,
+		uuid(80008000-8000-8000-8000-800080008002),
+	
+		helpstring("ICxDrawToolSite Interface"),
+		pointer_default(unique)
+	]
+	interface ICxDrawToolSite : IUnknown
+	{
+		[helpstring("method CaptureMouse")] HRESULT CaptureMouse();
+		[helpstring("method ReleaseMouse")] HRESULT ReleaseMouse();
+		[helpstring("method GetDrawObject")] HRESULT GetDrawObject(REFCLSID clsid, IUnknown **ppUnk);
+		[helpstring("method GetDrawDrawShape")] HRESULT GetDrawShape(DRAW_SHAPE* pDrawShape);
+		[helpstring("method GetWindow")] HRESULT GetWindow(HWND* phwnd);
+		[helpstring("method GetDC")] HRESULT GetDC(HDC* phDC);
+		[helpstring("method ReleaseDC")] HRESULT ReleaseDC(HDC hDC);
+		[helpstring("method DocToClient")] HRESULT DocToClient(POINT* pPoint);
+		[helpstring("method ClientToDoc")] HRESULT ClientToDoc(POINT* pPoint);
+		[helpstring("method GetExpressionCreatorProc")] HRESULT GetExpressionCreatorProc(long lProc);
+		[helpstring("method GetGridSpace")] HRESULT GetGridSpace(SIZE* pSize);
+	};
+
+	//自定义绘制工具接口
+	[
+		object,
+		uuid(80008000-8000-8000-8000-800080008003),
+	
+		helpstring("ICxDrawTool Interface"),
+		pointer_default(unique)
+	]
+	interface ICxDrawTool : IUnknown
+	{
+		[helpstring("method SetDrawToolSite")] HRESULT SetDrawToolSite(ICxDrawToolSite* pDrawToolSite);
+		[helpstring("method DoLButtonDown")] HRESULT DoLButtonDown(UINT nFlags, POINT point);
+		[helpstring("method DoLButtonUp")] HRESULT DoLButtonUp(UINT nFlags, POINT point);
+		[helpstring("method DoMouseMove")] HRESULT DoMouseMove(UINT nFlags, POINT point);
+		[helpstring("method DoLButtonDblClk")] HRESULT DoLButtonDblClk(UINT nFlags, POINT point);
+		[helpstring("method DoRButtonDown")] HRESULT DoRButtonDown(UINT nFlags, POINT point);
+		[helpstring("method DoChar")] HRESULT DoChar(UINT nChar, UINT nRepCnt, UINT nFlags);
+		[helpstring("method DoKeyDown")] HRESULT DoKeyDown(UINT nChar, UINT nRepCnt, UINT nFlags);
+		[helpstring("method DoDraw")] HRESULT DoDraw(HDC hdcDest);
+		[helpstring("method GetBoundingRect")] HRESULT GetBoundingRect(RECT* pBoundingRect);
+		[helpstring("method DoCancel")] HRESULT DoCancel();
+		[helpstring("method DoInit")] HRESULT DoInit();
+	};
+
+	//自定义绘制对象接口站点
+	[
+		local,
+		object,
+		uuid(80008000-8000-8000-8000-80008000800A),
+		
+		helpstring("ICxDrawObjectSite Interface"),
+		pointer_default(unique)
+	]
+	interface ICxDrawObjectSite : IUnknown
+	{
+		[helpstring("method SetCapture")] HRESULT SetCapture(BOOL bCapture);
+		[helpstring("method GetCapture")] HRESULT GetCapture();
+		[helpstring("method SetFocus")] HRESULT SetFocus(BOOL bFocus);
+		[helpstring("method GetFocus")] HRESULT GetFocus();
+		[helpstring("method GetEventObject")] HRESULT GetEventObject(ICxEventObj** ppEvent);
+		[helpstring("method IsRunMode")] HRESULT IsRunMode();
+		[helpstring("method GetClientName")] HRESULT GetClientName(BSTR* pbstrName);
+		[helpstring("method SetClientName")] HRESULT SetClientName(BSTR bstrName);
+		[helpstring("method GetClientLayer")] HRESULT GetClientLayer(long* plLayer);
+		[helpstring("method SetClientLayer")] HRESULT SetClientLayer(long lLayer);
+		[helpstring("method GetClientLocked")] HRESULT GetClientLocked(BOOL* pbLocked);
+		[helpstring("method SetClientLocked")] HRESULT SetClientLocked(BOOL bLocked);
+		[helpstring("method GetClientVisibility")] HRESULT GetClientVisibility(BOOL* pbVisible);
+		[helpstring("method SetClientVisibility")] HRESULT SetClientVisibility(BOOL bVisible);
+		[helpstring("method GetClientToolTip")] HRESULT GetClientToolTip(BSTR *pbstrText);
+		[helpstring("method SetClientToolTip")] HRESULT SetClientToolTip(BSTR bstrText);
+		[helpstring("method GetClientPrivilege")] HRESULT GetClientPrivilege(long *plPrivilege);
+		[helpstring("method SetClientPrivilege")] HRESULT SetClientPrivilege(long lPrivilege);
+		[helpstring("method OnMouseInput")] HRESULT OnMouseInput(const WCHAR* szPropName, BOOL Process);
+		[helpstring("method SetTimer")] HRESULT SetTimer(UINT nElapse);
+		[helpstring("method TrackMouseLeave")] HRESULT TrackMouseLeave();
+		[helpstring("method GetExpressionCreatorProc")] HRESULT GetExpressionCreatorProc(long lProc);
+		[helpstring("method GetWindow")] HRESULT GetWindow(HWND* phwnd);
+		[helpstring("method InvalidateRect")] HRESULT InvalidateRect(LPCRECT prect, BOOL tErase);
+		[helpstring("method InvalidateRgn")] HRESULT InvalidateRgn(HRGN hRgn, BOOL tErase); //原来出现MIDL2139编译错误，在开头加上local
+		[helpstring("method GetDC")] HRESULT GetDC(HDC* phDC);
+		[helpstring("method ReleaseDC")] HRESULT ReleaseDC(HDC hDC);
+		[helpstring("method GetDefaultServer")] HRESULT GetDefaultServer(BSTR *pbstrComputer);
+		[helpstring("method SetNeedStorage")] HRESULT SetNeedStorage();
+		[helpstring("method DocToClient")] HRESULT DocToClient(RECT* pRect);
+		[helpstring("method GetFillBoundRect")] HRESULT GetFillBoundRect(RECT** ppRect);
+	}
+
+	//自定义绘制工具连接点接口
+	[
+		object,
+		uuid(80008000-8000-8000-8000-80008000800B),
+	
+		helpstring("ICxDrawObjectEvents Interface"),
+		pointer_default(unique)
+	]
+	interface ICxDrawObjectAdviseSink : IUnknown
+	{
+		[helpstring("method OnViewChange")] HRESULT OnViewChange();
+		[helpstring("method OnDynamicChange")] HRESULT OnDynamicChange();
+	};
+
+    //自定义绘制对象接口
+	[
+		object,
+		uuid(80008000-8000-8000-8000-800080008004),
+		
+		helpstring("ICxDrawObject Interface"),
+		pointer_default(unique)
+	]
+	interface ICxDrawObject : IUnknown
+	{
+		[helpstring("method SetDrawObjectSite")] HRESULT SetDrawObjectSite(ICxDrawObjectSite* pDrawObjectSite);
+		[helpstring("method Draw")] HRESULT Draw(HDC hdcDest);
+		[helpstring("method Print")] HRESULT Print(HDC hdcDest);
+		[helpstring("method GetPositionRect")] HRESULT GetPositionRect(RECTF* pPositionRect);
+		[helpstring("method GetBoundingRect")] HRESULT GetBoundingRect(RECT* pBoundingRect);
+		[helpstring("method SetAdvise")] HRESULT SetAdvise(ICxDrawObjectAdviseSink * pAdvSink);
+		[helpstring("method GetHandleCount")] HRESULT GetHandleCount(long* pHandleCount);
+		[helpstring("method GetHandle")] HRESULT GetHandle(long nHandle, POINT* pHandlePoint);
+		[helpstring("method GetHandleCursor")] HRESULT GetHandleCursor(long nHandle, HCURSOR* pHandleCursor);
+		[helpstring("method MoveHandleTo")] HRESULT MoveHandleTo(long nHandle, POINT point);
+		[helpstring("method MoveHandlesTo")] HRESULT MoveHandlesTo(POINT* pPoints, int nCount);
+		[helpstring("method MoveTo")] HRESULT MoveTo(RECTF rect, BOOL bUniformScale);
+		[helpstring("method Mirror")] HRESULT Mirror(MIRRORMODE mirrormode);
+		[helpstring("method Rotate")] HRESULT Rotate(long lAngle);
+		[helpstring("method HitTest")] HRESULT HitTest(POINT point, BOOL* pHitTest);
+		[helpstring("method Intersects")] HRESULT Intersects(RECT rect, BOOL* pIntersects);
+		[helpstring("method GetClassName")] HRESULT GetClassName(BSTR* pbstrClassName);
+		[helpstring("method OnWindowMessage")] HRESULT OnWindowMessage(UINT msg, WPARAM WParam, LPARAM LParam, BOOL bSubObj, LRESULT* plResultParam);
+		[helpstring("method GetClassID")] HRESULT GetClassID(CLSID *pClassID);
+		[helpstring("method IsDirty")] HRESULT IsDirty();
+		[helpstring("method GetSizeMax")] HRESULT GetSizeMax(ULARGE_INTEGER* pcbSize);
+		[helpstring("method Load")] HRESULT Load(DWORD dwkey, LPSTREAM pStm);
+		[helpstring("method Save")] HRESULT Save(LPSTREAM pStm, BOOL fClearDirty);
+		[helpstring("method InitNew")] HRESULT InitNew();
+		[helpstring("method GetPages")] HRESULT GetPages(CAUUID* pPages);
+		[helpstring("method DrawTrackerShape")] HRESULT DrawTrackerShape(HDC hdcDest, POINT* pPoints, int nCount);
+		[helpstring("method DrawTrackerHandleShape")] HRESULT DrawTrackerHandleShape(HDC hdcDest, long nHandle, POINT point);
+		[helpstring("method InitRun")] HRESULT InitRun(BOOL* pbHasDynamic, ICxScriptEngineSite* pScriptSite);
+		[helpstring("method FakeParseDynamic")] HRESULT FakeParseDynamic();
+		[helpstring("method ParseDynamic")] HRESULT ParseDynamic();
+		[helpstring("method DrawRotateShape")] HRESULT DrawRotateShape(HDC hdcDest, long lAngle);
+		[helpstring("method RotateAt")] HRESULT RotateAt(POINTF point, float fAngle);
+		[helpstring("method SetRotateBasePoint")] HRESULT SetRotateBasePoint(POINT point);
+		[helpstring("method GetRotateBasePoint")] HRESULT GetRotateBasePoint(POINT* pPoint);
+		[helpstring("method ScaleAt")] HRESULT ScaleAt(POINTF point, float fHorScale, float fVerScale);
+		[helpstring("method DrawRotateAtShape")] HRESULT DrawRotateAtShape(HDC hdcDest, POINTF point, long lAngle);
+		[helpstring("method OnRunModeChange")] HRESULT OnRunModeChange();
+		[helpstring("method OnTimer")] HRESULT OnTimer();
+		[helpstring("method OnMouseLeave")] HRESULT OnMouseLeave();
+		[helpstring("method GetDrawObjectSite")] HRESULT GetDrawObjectSite(ICxDrawObjectSite** ppDrawObjectSite);
+		[helpstring("method HaveDynamic")] HRESULT HaveDynamic();
+		[helpstring("method IsDefaultMousePointer")] HRESULT IsDefaultMousePointer();
+		[helpstring("method LoadStorage")] HRESULT LoadStorage(IStorage* pStorage);
+		[helpstring("method SaveStorage")] HRESULT SaveStorage(IStorage* pStorage, BOOL fSameAsLoad);
+	};
+
+	//自定义绘制工具连接点接口
+	[
+		object,
+		uuid(80008000-8000-8000-8000-800080008005),
+	
+		helpstring("ICxDrawToolEvents Interface"),
+		pointer_default(unique)
+	]
+	interface ICxDrawToolEvents : IUnknown
+	{
+		[helpstring("method OnCreate")] HRESULT OnCreate();
+		[helpstring("method OnViewChange")] HRESULT OnViewChange(RECT* pInvalidRect);
+		[helpstring("method OnCancel")] HRESULT OnCancel();
+	};
+
+	//自定义绘制属性页接口
+	[
+		object,
+		uuid(80008000-8000-8000-8000-800080008006),
+
+		helpstring("ICxPropertyPage Interface"),
+		pointer_default(unique)
+	]
+	interface ICxPropertyPage : IPropertyPage
+	{
+		[helpstring("method IsPagePropSet")] HRESULT IsPagePropSet();
+	};
+
+	//自定义对象站点接口
+	[
+		object,
+		uuid(80008000-8000-8000-8000-80008000800C),
+	
+		helpstring("ICxScriptEngineSite Interface"),
+		pointer_default(unique)
+	]
+	interface ICxScriptEngineSite : IUnknown
+	{
+		[helpstring("method EvaluateExpression")] HRESULT EvaluateExpression(BSTR bstrSource, VARIANT* pvaValidObjects);
+		[helpstring("method Execute")] HRESULT Execute(BSTR bstrStatement);
+		[helpstring("method PreTreatExpression")] HRESULT PreTreatExpression(BSTR bstrSource, BSTR* pbstrSource);
+		[helpstring("method PreTreatExpressionEx")] HRESULT PreTreatExpressionEx(BSTR bstrSource, BSTR* pbstrSource, VARIANT* pvaMin, VARIANT* pvaMax);
+	};
+
+	//自定义动态对象接口
+	[
+		object,
+		uuid(80008000-8000-8000-8000-800080008007),
+	
+		helpstring("ICxDynamicObject Interface"),
+		pointer_default(unique)
+	]
+	interface ICxDynamicObject : IUnknown
+	{
+		[helpstring("method InitNew")] HRESULT InitNew(long lPropInfo);
+		[helpstring("method GetClassName")] HRESULT GetClassName(BSTR *pbstrClassName);
+		[helpstring("method GetCustomPage")] HRESULT GetCustomPage(CLSID *pclsidPropPage);
+		[helpstring("method SetConnectionExpression")] HRESULT SetConnectionExpression(BSTR bstrExpression);
+		[helpstring("method GetConnectionExpression")] HRESULT GetConnectionExpression(BSTR *pbstrExpression);
+		[helpstring("method SetScriptEngineSite")] HRESULT SetScriptEngineSite(ICxScriptEngineSite* pScriptSite);
+		[helpstring("method InitRun")] HRESULT InitRun(ICxScriptEngineSite* pScriptSite, IDispatch* pDispObject, DISPID dispid);
+		[helpstring("method FakeParseConnection")] HRESULT FakeParseConnection();
+		[helpstring("method ParseConnection")] HRESULT ParseConnection();
+		[helpstring("method InvertParseConnection")] HRESULT InvertParseConnection();
+		[helpstring("method Evaluation")] HRESULT Evaluation(VARIANT* pvaInValue, VARIANT* pvaOutValue);
+		[helpstring("method InvertEvaluation")] HRESULT InvertEvaluation(VARIANT* pvaOutValue, VARIANT* pvaInValue);
+		[helpstring("method IsEnableMouseInput")] HRESULT IsEnableMouseInput();
+		[helpstring("method IsInitRun")] HRESULT IsInitRun();
+		[helpstring("method GetPropInfo")] HRESULT GetPropInfo(long* plPropInfo);
+	};
+
+	//自定义扩展属性查询接口
+	[
+		object,
+		uuid(80008000-8000-8000-8000-80008000800a),
+	
+		helpstring("ICxEnumExtendProperty Interface"),
+		pointer_default(unique)
+	]
+	interface ICxEnumExtendProperty : IUnknown
+	{
+		[helpstring("method GetName")] HRESULT GetName(BSTR *pbstrName);
+		[helpstring("method GetDescription")] HRESULT GetDescription(BSTR *pbstrDescription);
+		[helpstring("method GetType")] HRESULT GetType(LONG *pIndexed);
+		[helpstring("method GetDispid")] HRESULT GetDispid(DISPID *pDispid);
+		[helpstring("method Reset")] HRESULT Reset();
+		[helpstring("method Next")] HRESULT Next(LONG *pIndex);
+		[helpstring("method Skip")] HRESULT Skip(LONG celt);
+		[helpstring("method Clone")] HRESULT Clone(ICxEnumExtendProperty **ppenum);
+ 	};
+
+	[
+		object,
+		uuid(A0C942AD-0038-4604-8896-2BBEA48F2C4C),
+	
+		helpstring("ICxExpertPage Interface"),
+		pointer_default(unique)
+	]
+	interface ICxExpertPage : IPropertyPage
+	{
+		[helpstring("method ShowHelpString")] HRESULT ShowHelpString(BOOL bShow);
+		[helpstring("method IsSupportMultiObject")] HRESULT IsSupportMultiObject();
+		[helpstring("method SetExtendObjects")] HRESULT SetExtendObjects(ULONG nObjects, IUnknown** ppUnk, ICxEnumExtendProperty** ppEnumProp);
+	};
+
+	[
+		object,
+		uuid(162CA370-8E65-415d-840D-A4C8EE43052D),
+	
+		helpstring("ICxExpertPageSite Interface"),
+		pointer_default(unique)
+	]
+	interface ICxExpertPageSite : IPropertyPageSite
+	{
+		[helpstring("method OnGetDataSource")] 
+				HRESULT OnGetDataSource(BSTR* pbstrSource);
+		[helpstring("method OnNextEventObject")] 
+				HRESULT OnNextEventObject();
+		[helpstring("method OnEditEventHandler")] 
+				HRESULT OnEditEventHandler(BSTR bstrEvent);
+		[helpstring("method GetEventHandler")] 
+				HRESULT GetEventHandler(BSTR bstrEvent, BSTR *pbstrHandler);
+		[helpstring("method InsertEventHandler")] 
+				HRESULT InsertEventHandler(BSTR bstrEvent, BSTR bstrParams, BSTR bstrHandler);
+		[helpstring("method OnNextDynamicObject")] 
+				HRESULT OnNextDynamicObject();
+		[helpstring("method HaveDynamic")] 
+				HRESULT HaveDynamic();
+	};
+
+[
+	uuid(541343DB-0E32-11D5-8C61-5254AB20ED22),
+	version(1.0),
+	helpstring("CxOle 1.0 Type Library")
+]
+library CXOLELib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+};
+

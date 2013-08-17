@@ -1,0 +1,67 @@
+// CxDrawTools.idl : IDL source for CxDrawTools.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (CxDrawTools.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+import "CxHmiObj.idl";
+import "CxHmiMisc.idl";
+
+[
+	uuid(41EFD0F2-3639-47D9-AA62-D51877DE7879),
+	version(1.0),
+	helpstring("CxDrawTools 1.0 Type Library")
+]
+library CXDRAWTOOLSLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	[
+		uuid(7309E63D-3287-11D5-A468-9299FCC96908),
+		helpstring("RectTool Class")
+	]
+	coclass RectTool
+	{
+		[default] interface IUnknown;
+	};
+
+	[
+		uuid(89B0F88E-F233-4E0A-84F1-4672191B8A2E),
+		helpstring("PolyTool Class")
+	]
+	coclass PolyTool
+	{
+		[default] interface IUnknown;
+	};
+
+	[
+		uuid(D3F3A3BC-42FF-4EDE-8619-C7AFB9BDDFA8),
+		helpstring("PieTool Class")
+	]
+	coclass PieTool
+	{
+		[default] interface IUnknown;
+	};
+
+	[
+		uuid(161F9ED6-E789-47E6-8576-2454F57A37F6),
+		helpstring("TextTool Class")
+	]
+	coclass TextTool
+	{
+		[default] interface IUnknown;
+	};
+
+	[
+		uuid(838DC9B7-46F5-4AB6-8C0F-50CC1121621E),
+		helpstring("DataLinkTool Class")
+	]
+	coclass DataLinkTool
+	{
+		[default] interface IUnknown;
+	};
+};

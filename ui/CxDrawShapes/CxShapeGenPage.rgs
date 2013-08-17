@@ -1,0 +1,23 @@
+HKCR
+{
+	CxDrawShapes.CxShapeGenPage.1 = s 'CxShapeGenPage Class'
+	{
+		CLSID = s '{59E38E0A-D58F-44D8-8FBE-35C3545699A1}'
+	}
+	CxDrawShapes.CxShapeGenPage = s 'CxShapeGenPage Class'
+	{
+		CLSID = s '{59E38E0A-D58F-44D8-8FBE-35C3545699A1}'
+		CurVer = s 'CxDrawShapes.CxShapeGenPage.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {59E38E0A-D58F-44D8-8FBE-35C3545699A1} = s 'CxShapeGenPage Class'
+		{
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+		}
+	}
+}

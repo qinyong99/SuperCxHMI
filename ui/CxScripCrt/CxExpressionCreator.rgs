@@ -1,0 +1,26 @@
+HKCR
+{
+	CxScripCrt.CxExpressionCreator.1 = s 'CxExpressionCreator Class'
+	{
+		CLSID = s '{65FC5AEC-F442-421E-BDA1-B844F9C0A0EC}'
+	}
+	CxScripCrt.CxExpressionCreator = s 'CxExpressionCreator Class'
+	{
+		CLSID = s '{65FC5AEC-F442-421E-BDA1-B844F9C0A0EC}'
+		CurVer = s 'CxScripCrt.CxExpressionCreator.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {65FC5AEC-F442-421E-BDA1-B844F9C0A0EC} = s 'CxExpressionCreator Class'
+		{
+			ProgID = s 'CxScripCrt.CxExpressionCreator.1'
+			VersionIndependentProgID = s 'CxScripCrt.CxExpressionCreator'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{6DC198C0-4DBC-417F-9CCB-5C1567869138}'
+		}
+	}
+}

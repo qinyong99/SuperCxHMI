@@ -1,0 +1,46 @@
+5100 DIALOGEX 0, 0, 49, 73
+STYLE DS_MODALFRAME | WS_POPUP
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "",5101,"Button",BS_OWNERDRAW | WS_TABSTOP,1,1,11,
+                    10,WS_EX_CLIENTEDGE
+    CONTROL         "",5102,"Button",BS_OWNERDRAW | WS_TABSTOP,13,1,11,
+                    10,WS_EX_CLIENTEDGE
+    CONTROL         "",5103,"Button",BS_OWNERDRAW | WS_TABSTOP,25,1,11,
+                    10,WS_EX_CLIENTEDGE
+    CONTROL         "",5104,"Button",BS_OWNERDRAW | WS_TABSTOP,37,1,11,
+                    10,WS_EX_CLIENTEDGE
+    CONTROL         "",5105,"Button",BS_OWNERDRAW | WS_TABSTOP,1,12,11,
+                    10,WS_EX_CLIENTEDGE
+    CONTROL         "",5106,"Button",BS_OWNERDRAW | WS_TABSTOP,13,12,
+                    11,10,WS_EX_CLIENTEDGE
+    CONTROL         "",5107,"Button",BS_OWNERDRAW | WS_TABSTOP,25,12,
+                    11,10,WS_EX_CLIENTEDGE
+    CONTROL         "",5108,"Button",BS_OWNERDRAW | WS_TABSTOP,37,12,
+                    11,10,WS_EX_CLIENTEDGE
+    CONTROL         "",5109,"Button",BS_OWNERDRAW | WS_TABSTOP,1,24,11,
+                    10,WS_EX_CLIENTEDGE
+    CONTROL         "",5110,"Button",BS_OWNERDRAW | WS_TABSTOP,13,24,
+                    11,10,WS_EX_CLIENTEDGE
+    CONTROL         "",5111,"Button",BS_OWNERDRAW | WS_TABSTOP,25,24,
+                    11,10,WS_EX_CLIENTEDGE
+    CONTROL         "",5112,"Button",BS_OWNERDRAW | WS_TABSTOP,37,24,
+                    11,10,WS_EX_CLIENTEDGE
+    CONTROL         "",5113,"Button",BS_OWNERDRAW | WS_TABSTOP,1,36,
+                    11,10,WS_EX_CLIENTEDGE
+    CONTROL         "",5114,"Button",BS_OWNERDRAW | WS_TABSTOP,13,36,
+                    11,10,WS_EX_CLIENTEDGE
+    CONTROL         "",5115,"Button",BS_OWNERDRAW | WS_TABSTOP,25,36,
+                    11,10,WS_EX_CLIENTEDGE
+    CONTROL         "",5116,"Button",BS_OWNERDRAW | WS_TABSTOP,37,36,
+                    11,10,WS_EX_CLIENTEDGE
+    CONTROL         "",5117,"Button",BS_OWNERDRAW | WS_TABSTOP,1,48,
+                    11,10,WS_EX_CLIENTEDGE
+    CONTROL         "",5118,"Button",BS_OWNERDRAW | WS_TABSTOP,13,48,
+                    11,10,WS_EX_CLIENTEDGE
+    CONTROL         "",5119,"Button",BS_OWNERDRAW | WS_TABSTOP,25,48,
+                    11,10,WS_EX_CLIENTEDGE
+    CONTROL         "",5120,"Button",BS_OWNERDRAW | WS_TABSTOP,37,48,
+                    11,10,WS_EX_CLIENTEDGE
+    PUSHBUTTON      "Other...",5121,1,60,47,11
+END

@@ -1,0 +1,26 @@
+HKCR
+{
+	CxDrawShapes.DrawTxt.1 = s 'DrawTxt Class'
+	{
+		CLSID = s '{E9973BB1-6C00-11D5-A46A-B9DB2752B666}'
+	}
+	CxDrawShapes.DrawTxt = s 'DrawTxt Class'
+	{
+		CLSID = s '{E9973BB1-6C00-11D5-A46A-B9DB2752B666}'
+		CurVer = s 'CxDrawShapes.DrawTxt.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {E9973BB1-6C00-11D5-A46A-B9DB2752B666} = s 'DrawTxt Class'
+		{
+			ProgID = s 'CxDrawShapes.DrawTxt.1'
+			VersionIndependentProgID = s 'CxDrawShapes.DrawTxt'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{D75F0066-DC61-4679-A739-5B046E2C9088}'
+		}
+	}
+}

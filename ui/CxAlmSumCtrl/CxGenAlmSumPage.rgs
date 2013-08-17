@@ -1,0 +1,23 @@
+HKCR
+{
+	CxDrawAlmSum.CxGenAlmSumPage.1 = s 'CxGenAlmSumPage Class'
+	{
+		CLSID = s '{D399EE3F-C206-4330-861F-AAB45F68644C}'
+	}
+	CxDrawAlmSum.CxGenAlmSumPage = s 'CxGenAlmSumPage Class'
+	{
+		CLSID = s '{D399EE3F-C206-4330-861F-AAB45F68644C}'
+		CurVer = s 'CxDrawAlmSum.CxGenAlmSumPage.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {D399EE3F-C206-4330-861F-AAB45F68644C} = s 'CxGenAlmSumPage Class'
+		{
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+		}
+	}
+}

@@ -1,0 +1,26 @@
+HKCR
+{
+	CxExtObj.CxReturnInteger.1 = s 'CxReturnInteger Class'
+	{
+		CLSID = s '{08409ECB-D50A-49FD-8ACC-23DABC609D17}'
+	}
+	CxExtObj.CxReturnInteger = s 'CxReturnInteger Class'
+	{
+		CLSID = s '{08409ECB-D50A-49FD-8ACC-23DABC609D17}'
+		CurVer = s 'CxExtObj.CxReturnInteger.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {08409ECB-D50A-49FD-8ACC-23DABC609D17} = s 'CxReturnInteger Class'
+		{
+			ProgID = s 'CxExtObj.CxReturnInteger.1'
+			VersionIndependentProgID = s 'CxExtObj.CxReturnInteger'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{D75F0066-DC61-4679-A739-5B046E2C9088}'
+		}
+	}
+}

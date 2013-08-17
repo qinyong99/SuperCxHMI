@@ -1,0 +1,551 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "winres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""winres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "1 TYPELIB ""CxDrawShapes.tlb""\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "CxDrawShapes Module\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "CxDrawShapes\0"
+            VALUE "LegalCopyright", "Copyright 2003\0"
+            VALUE "OriginalFilename", "CxDrawShapes.DLL\0"
+            VALUE "ProductName", "CxDrawShapes Module\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+            VALUE "OLESelfRegister", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// REGISTRY
+//
+
+IDR_DRAWLINE            REGISTRY DISCARDABLE    "DrawLine.rgs"
+IDR_DRAWRECTANGLE       REGISTRY DISCARDABLE    "DrawRectangle.rgs"
+IDR_DRAWELLIPSE         REGISTRY DISCARDABLE    "DrawEllipse.rgs"
+IDR_DRAWROUNDRECTANGLE  REGISTRY DISCARDABLE    "DrawRoundRectangle.rgs"
+IDR_DRAWPOLYLINE        REGISTRY DISCARDABLE    "DrawPolyLine.rgs"
+IDR_DRAWPIPE            REGISTRY DISCARDABLE    "DrawPipe.rgs"
+IDR_DRAWPOLYGON         REGISTRY DISCARDABLE    "DrawPolygon.rgs"
+IDR_DRAWARC             REGISTRY DISCARDABLE    "DrawArc.rgs"
+IDR_DRAWPIE             REGISTRY DISCARDABLE    "DrawPie.rgs"
+IDR_DRAWCHORD           REGISTRY DISCARDABLE    "DrawChord.rgs"
+IDR_DRAWTXT             REGISTRY DISCARDABLE    "DrawTxt.rgs"
+IDR_DRAWDATALINK        REGISTRY DISCARDABLE    "DrawDataLink.rgs"
+IDR_DRAWBUTTON          REGISTRY DISCARDABLE    "DrawButton.rgs"
+IDR_DRAWIMAGE           REGISTRY DISCARDABLE    "DrawImage.rgs"
+IDR_FLOATPOINT          REGISTRY DISCARDABLE    "FloatPoint.rgs"
+IDR_CXSHAPEGENPAGE      REGISTRY DISCARDABLE    "CxShapeGenPage.rgs"
+IDR_CXPIPEGENPAGE       REGISTRY DISCARDABLE    "CxPipeGenPage.rgs"
+IDR_CXBUTTONGENPAGE     REGISTRY DISCARDABLE    "CxButtonGenPage.rgs"
+IDR_CXIMAGEGENPAGE      REGISTRY DISCARDABLE    "CxImageGenPage.rgs"
+IDR_CXTEXTGENPAGE       REGISTRY DISCARDABLE    "CxTextGenPage.rgs"
+IDR_CXTEXTTEXTPAGE      REGISTRY DISCARDABLE    "CxTextTextPage.rgs"
+IDR_CXDATALINKGENPAGE   REGISTRY DISCARDABLE    "CxDataLinkGenPage.rgs"
+IDR_DRAWVARIABLE        REGISTRY DISCARDABLE    "DrawVariable.rgs"
+IDR_CXVARIABLEGENPAGE   REGISTRY DISCARDABLE    "CxVariableGenPage.rgs"
+IDR_DRAWTIMER           REGISTRY DISCARDABLE    "DrawTimer.rgs"
+IDR_CXTIMERGENPAGE      REGISTRY DISCARDABLE    "CxTimerGenPage.rgs"
+IDR_DRAWMENU            REGISTRY DISCARDABLE    "DrawMenu.rgs"
+IDR_CXMENUGENPAGE       REGISTRY DISCARDABLE    "CxMenuGenPage.rgs"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_CXSHAPEGENPAGE DIALOG DISCARDABLE  0, 0, 247, 184
+STYLE WS_CHILD
+FONT 9, "宋体"
+BEGIN
+    COMBOBOX        IDC_EDGETYPE,71,23,48,92,CBS_DROPDOWNLIST | 
+                    CBS_OWNERDRAWFIXED | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_EDGEWIDTH,179,24,35,14,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_EDGEWIDTHSPIN,"msctls_updown32",
+                    UDS_ARROWKEYS,216,23,9,14
+    EDITTEXT        IDC_HORFILLPER,71,59,36,14,ES_AUTOHSCROLL
+    CONTROL         "Spin2",IDC_HORFILLSPIN,"msctls_updown32",UDS_ARROWKEYS,
+                    110,58,9,14
+    COMBOBOX        IDC_HORFILLDIR,179,59,48,61,CBS_DROPDOWNLIST | 
+                    CBS_OWNERDRAWFIXED | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_VERFILLPER,71,80,35,14,ES_NUMBER
+    CONTROL         "Spin3",IDC_VERFILLSPIN,"msctls_updown32",UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS,109,79,10,14
+    COMBOBOX        IDC_VERFILLDIR,179,80,48,61,CBS_DROPDOWNLIST | 
+                    CBS_OWNERDRAWFIXED | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_FILLTYPE,71,101,48,94,CBS_DROPDOWNLIST | 
+                    CBS_OWNERDRAWFIXED | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_EDGECOLOR,71,134,48,30,CBS_DROPDOWNLIST | 
+                    CBS_OWNERDRAWFIXED | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_HIGHLIGHT_EDGECOLOR,179,132,48,67,CBS_DROPDOWNLIST | 
+                    CBS_OWNERDRAWFIXED | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_FILLCOLOR,71,159,48,30,CBS_DROPDOWNLIST | 
+                    CBS_OWNERDRAWFIXED | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_HIGHLIGHT_FILLCOLOR,179,159,48,30,CBS_DROPDOWNLIST | 
+                    CBS_OWNERDRAWFIXED | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    RTEXT           "水平填充度",IDC_STATIC,24,63,41,9
+    CONTROL         "",IDC_STATIC,"Static",SS_GRAYFRAME | SS_SUNKEN,36,48,
+                    199,1
+    LTEXT           "填充",IDC_STATIC,10,45,17,12
+    RTEXT           "填充类型",IDC_STATIC,17,104,48,9
+    RTEXT           "水平方向",IDC_STATIC,139,62,34,9
+    RTEXT           "垂直填充度",IDC_STATIC,24,83,41,9
+    RTEXT           "垂直方向",IDC_STATIC,135,82,38,9
+    CONTROL         "",IDC_STATIC,"Static",SS_GRAYFRAME | SS_SUNKEN,35,124,
+                    199,1
+    LTEXT           "颜色",IDC_STATIC,9,120,17,12
+    RTEXT           "填充颜色",IDC_STATIC,24,162,41,9
+    RTEXT           "高亮填充颜色",IDC_STATIC,123,161,50,10
+    CONTROL         "",IDC_STATIC,"Static",SS_GRAYFRAME | SS_SUNKEN,35,12,
+                    199,1
+    LTEXT           "边界",IDC_STATIC,11,8,17,12
+    RTEXT           "边界线宽",IDC_STATIC,132,26,41,9
+    RTEXT           "边界线型",IDC_STATIC,24,27,41,9
+    RTEXT           "边界颜色",IDC_STATIC,24,136,41,9
+    RTEXT           "高亮边界颜色",IDC_STATIC,121,136,52,9
+END
+
+IDD_CXPIPEGENPAGE DIALOG DISCARDABLE  0, 0, 241, 145
+STYLE WS_CHILD
+FONT 9, "宋体"
+BEGIN
+    EDITTEXT        IDC_RADIUS,52,30,45,14,ES_AUTOHSCROLL
+    CONTROL         "圆头",IDC_ROUND,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    45,56,32,10
+    COMBOBOX        IDC_LIGHT_COLOR,52,76,48,30,CBS_DROPDOWNLIST | 
+                    CBS_OWNERDRAWFIXED | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_DARK_COLOR,52,101,48,30,CBS_DROPDOWNLIST | 
+                    CBS_OWNERDRAWFIXED | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "流动",IDC_FLOW,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    152,31,32,10
+    CONTROL         "正向流动",IDC_FLOW_DIRECTION,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,152,56,48,10
+    COMBOBOX        IDC_LIQUID_COLOR,165,76,48,30,CBS_DROPDOWNLIST | 
+                    CBS_OWNERDRAWFIXED | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_FLOW_SPEED,165,101,48,72,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "管道",IDC_STATIC,9,12,105,117
+    LTEXT           "半径",IDC_STATIC,31,32,16,8
+    LTEXT           "强光颜色",IDC_STATIC,16,79,35,8
+    LTEXT           "暗光颜色",IDC_STATIC,16,103,36,8
+    GROUPBOX        "液体",IDC_STATIC,127,12,105,117
+    LTEXT           "颜色",IDC_STATIC,145,80,17,8
+    LTEXT           "流速",IDC_STATIC,145,104,17,8
+END
+
+IDD_CXBUTTONGENPAGE DIALOG DISCARDABLE  0, 0, 256, 143
+STYLE WS_CHILD
+FONT 9, "宋体"
+BEGIN
+    EDITTEXT        IDC_CAPTION,47,26,63,14,ES_AUTOHSCROLL
+    COMBOBOX        IDC_FORECOLOR,48,77,48,30,CBS_DROPDOWNLIST | 
+                    CBS_OWNERDRAWFIXED | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_BACKCOLOR,48,103,48,30,CBS_DROPDOWNLIST | 
+                    CBS_OWNERDRAWFIXED | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "浏览...",IDC_NORMAL,166,26,44,14
+    PUSHBUTTON      "清除",IDC_CLEARNORMAL,214,26,24,14
+    PUSHBUTTON      "浏览...",IDC_HOVER,166,50,44,14
+    PUSHBUTTON      "清除",IDC_CLEARHOVER,213,51,24,14
+    PUSHBUTTON      "浏览...",IDC_PUSHED,166,77,44,14
+    PUSHBUTTON      "清除",IDC_CLEARPUSHED,214,77,24,14
+    LTEXT           "前景色",IDC_STATIC,18,80,25,8
+    LTEXT           "背景色",IDC_STATIC,18,105,25,8
+    LTEXT           "字体",IDC_STATIC,25,53,17,8
+    GROUPBOX        "外观",IDC_STATIC,9,10,109,120
+    LTEXT           "文本",IDC_STATIC,25,29,17,8
+    GROUPBOX        "图片",IDC_STATIC,129,10,120,120
+    LTEXT           "默认",IDC_STATIC,141,29,21,8
+    LTEXT           "按下",IDC_STATIC,141,80,17,8
+    LTEXT           "移过",IDC_STATIC,141,54,21,8
+    PUSHBUTTON      "浏览...",IDC_DISABLED,166,100,44,14
+    PUSHBUTTON      "清除",IDC_CLEARDISABLED,214,100,24,14
+    LTEXT           "禁止",IDC_STATIC,141,102,17,8
+    EDITTEXT        IDC_TEXT_FONT,48,50,50,14,ES_AUTOHSCROLL | ES_READONLY
+    PUSHBUTTON      "...",IDC_TEXTFONT_PICK,98,50,15,14
+END
+
+IDD_CXIMAGEGENPAGE DIALOG DISCARDABLE  0, 0, 224, 143
+STYLE WS_CHILD
+FONT 9, "宋体"
+BEGIN
+    GROUPBOX        "效果",IDC_STATIC_OUT,44,0,134,113
+    LTEXT           "当前图片",IDC_STATIC,10,127,33,11
+    COMBOBOX        IDC_COMBO_INDEX,45,124,45,82,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "增 加",IDC_BUTTON_ADD,102,124,50,14
+    PUSHBUTTON      "删 除",IDC_BUTTON_DELETE,165,124,50,14
+END
+
+IDD_CXTEXTTEXTPAGE DIALOG DISCARDABLE  0, 0, 246, 145
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_TEXT,1,1,244,142,ES_MULTILINE | ES_AUTOHSCROLL | 
+                    ES_WANTRETURN
+END
+
+IDD_CXTEXTGENPAGE DIALOG DISCARDABLE  0, 0, 246, 145
+STYLE WS_CHILD
+FONT 9, "宋体"
+BEGIN
+    COMBOBOX        IDC_FONT_NAME,5,19,90,126,CBS_SIMPLE | 
+                    CBS_OWNERDRAWFIXED | CBS_HASSTRINGS | WS_VSCROLL | 
+                    WS_TABSTOP
+    COMBOBOX        IDC_FONT_STYLE,106,19,42,63,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_FONT_SIZE,152,19,42,58,CBS_DROPDOWN | WS_VSCROLL | 
+                    WS_TABSTOP
+    COMBOBOX        IDC_FONT_COLOR,198,18,44,30,CBS_DROPDOWNLIST | 
+                    CBS_OWNERDRAWFIXED | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "删除线",IDC_STRIKE_THROUGH,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,184,53,40,10
+    CONTROL         "下划线",IDC_UNDER_LINE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,118,53,40,10
+    LTEXT           "字体",IDC_STATIC,7,7,17,8
+    LTEXT           "风格",IDC_STATIC,107,7,17,8
+    LTEXT           "大小",IDC_STATIC,152,8,17,8
+    GROUPBOX        "效果",IDC_STATIC,106,38,135,33
+    LTEXT           "颜色",IDC_STATIC,198,8,17,8
+    GROUPBOX        "范例",IDC_SAMPLE_BOX,106,79,134,61
+END
+
+IDD_CXDATALINKGENPAGE DIALOG DISCARDABLE  0, 0, 277, 166
+STYLE WS_CHILD
+FONT 9, "宋体"
+BEGIN
+    EDITTEXT        IDC_EXPRESSION,9,21,228,17,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_CREATE_EXPRESSION,247,22,19,15
+    GROUPBOX        "表达式",IDC_STATIC,0,7,277,41
+END
+
+IDD_FONTDIALOG DIALOG FIXED IMPURE  13, 54, 287, 196
+STYLE DS_MODALFRAME | DS_3DLOOK | DS_CONTEXTHELP | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "字体"
+FONT 9, "宋体"
+BEGIN
+    LTEXT           "字体(&F):",1088,7,5,40,9
+    COMBOBOX        1136,7,16,98,76,CBS_SIMPLE | CBS_OWNERDRAWFIXED | 
+                    CBS_AUTOHSCROLL | CBS_SORT | CBS_HASSTRINGS | 
+                    CBS_DISABLENOSCROLL | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "字形(&Y):",1089,110,5,44,9
+    COMBOBOX        1137,110,16,74,76,CBS_SIMPLE | CBS_DISABLENOSCROLL | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "大小(&S):",1090,189,5,33,8
+    COMBOBOX        1138,190,16,36,76,CBS_SIMPLE | CBS_OWNERDRAWFIXED | 
+                    CBS_AUTOHSCROLL | CBS_SORT | CBS_HASSTRINGS | 
+                    CBS_DISABLENOSCROLL | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "效果",1072,7,97,98,73,WS_GROUP
+    CONTROL         "删除线(&K)",1040,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    13,110,60,10
+    CONTROL         "下划线(&U)",1041,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    13,123,60,10
+    LTEXT           "颜色(&C):",1091,13,138,33,8,NOT WS_VISIBLE
+    COMBOBOX        1139,13,150,82,100,CBS_DROPDOWNLIST | CBS_OWNERDRAWFIXED | 
+                    CBS_AUTOHSCROLL | CBS_HASSTRINGS | NOT WS_VISIBLE | 
+                    WS_BORDER | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "示例",1073,110,97,116,43,WS_GROUP
+    CTEXT           "AaBbYyZz",1092,118,111,100,23,SS_NOPREFIX | NOT 
+                    WS_VISIBLE
+    LTEXT           "",1093,7,172,228,20,SS_NOPREFIX | NOT WS_GROUP
+    LTEXT           "字符集(&R):",1094,110,146,41,8
+    COMBOBOX        1140,110,157,116,30,CBS_DROPDOWNLIST | 
+                    CBS_OWNERDRAWFIXED | CBS_AUTOHSCROLL | CBS_HASSTRINGS | 
+                    WS_BORDER | WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "确定",1,231,16,45,14,WS_GROUP
+    PUSHBUTTON      "取消",2,231,32,45,14,WS_GROUP
+    PUSHBUTTON      "应用(&A)",1026,231,48,45,14,WS_GROUP
+    PUSHBUTTON      "帮助(&H)",1038,231,64,45,14,WS_GROUP
+END
+
+IDD_CXVARIABLEGENPAGE DIALOG DISCARDABLE  0, 0, 277, 151
+STYLE WS_CHILD
+FONT 9, "宋体"
+BEGIN
+    EDITTEXT        IDC_EXPRESSION,9,21,228,17,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_CREATE_EXPRESSION,247,22,19,15
+    CONTROL         "允许赋值到数据源",IDC_EVALUATE_SOURCE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,10,60,80,10
+    LTEXT           "名称",IDC_STATIC,18,95,17,8
+    EDITTEXT        IDC_NAME,40,91,80,14,ES_AUTOHSCROLL
+    LTEXT           "描述",IDC_STATIC,145,94,17,8
+    EDITTEXT        IDC_DESC,170,91,85,14,ES_AUTOHSCROLL
+    LTEXT           "值类型",IDC_STATIC,10,124,25,8
+    COMBOBOX        IDC_VARTYPE,40,122,50,60,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "初始值",IDC_STATIC,137,124,25,8
+    CONTROL         "",IDC_VALUE,"{BFBB9868-C022-436A-A071-192FFE31F7E5}",
+                    WS_TABSTOP,170,122,49,13
+    GROUPBOX        "表达式",IDC_STATIC,0,7,277,41
+END
+
+IDD_CXTIMERGENPAGE DIALOG DISCARDABLE  0, 0, 222, 114
+STYLE WS_CHILD
+FONT 9, "宋体"
+BEGIN
+    EDITTEXT        IDC_INTERVAL,65,32,65,14,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "间隔",IDC_STATIC,41,35,17,8
+    CONTROL         "使能",IDC_ENABLED,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    41,62,32,10
+    LTEXT           "毫秒",IDC_STATIC,135,35,17,8
+END
+
+IDD_CXMENUGENPAGE DIALOG DISCARDABLE  0, 0, 256, 186
+STYLE WS_CHILD
+FONT 9, "宋体"
+BEGIN
+    CONTROL         "显示按钮",IDC_BUTTON_DISPLAYED,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,16,10,48,10
+    LTEXT           "按钮标题",IDC_STATIC,16,28,33,8
+    EDITTEXT        IDC_BUTTON_CAPTION,56,25,185,14,ES_AUTOHSCROLL
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,11,45,230,1
+    PUSHBUTTON      "左移",IDC_LEFT,15,50,15,14,BS_ICON
+    PUSHBUTTON      "右移",IDC_RIGHT,35,50,15,14,BS_ICON
+    PUSHBUTTON      "上移",IDC_UP,55,50,15,14,BS_ICON
+    PUSHBUTTON      "下移",IDC_DOWN,75,50,15,14,BS_ICON
+    PUSHBUTTON      "插入",IDC_INSERT,140,50,45,14
+    PUSHBUTTON      "删除",IDC_REMOVE,195,50,45,14
+    CONTROL         "Tree3",IDC_TREE,"SysTreeView32",TVS_HASBUTTONS | 
+                    TVS_HASLINES | TVS_LINESATROOT | TVS_EDITLABELS | 
+                    TVS_SHOWSELALWAYS | WS_BORDER | WS_TABSTOP,16,65,224,85
+    CONTROL         "分割条",IDC_SEPARATOR,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,16,155,40,10
+    CONTROL         "禁止",IDC_DISABLE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    60,155,32,10
+    CONTROL         "选中",IDC_CHECK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    95,155,32,10
+    LTEXT           "标识",IDC_STATIC,135,156,17,8
+    EDITTEXT        IDC_NAME,160,153,80,14,ES_AUTOHSCROLL
+    CONTROL         "快捷键",IDC_ACCEL_KEY_ENABLE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,15,172,40,10
+    EDITTEXT        IDC_ACCEL_KEY,60,170,180,14,ES_AUTOHSCROLL | WS_DISABLED
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_CXSHAPEGENPAGE DLGINIT
+BEGIN
+    IDC_HIGHLIGHT_EDGECOLOR, 0x403, 1, 0
+"\000" 
+    0
+END
+
+IDD_CXVARIABLEGENPAGE DLGINIT
+BEGIN
+    IDC_VALUE, 0x376, 16, 0
+0x0000, 0x0000, 0x0300, 0x0000, 0x07a6, 0x0000, 0x0211, 0x0000, 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_ARROW               BITMAP  DISCARDABLE     "bitmap1.bmp"
+IDB_TRUETYPE            BITMAP  DISCARDABLE     "TRUETYPE.BMP"
+IDB_MENU                BITMAP  DISCARDABLE     "bmp00001.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_CXPIPEGENPAGE, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 144
+    END
+
+    IDD_CXBUTTONGENPAGE, DIALOG
+    BEGIN
+        RIGHTMARGIN, 249
+        BOTTOMMARGIN, 142
+    END
+
+    IDD_CXVARIABLEGENPAGE, DIALOG
+    BEGIN
+        RIGHTMARGIN, 263
+        BOTTOMMARGIN, 146
+    END
+
+    IDD_CXTIMERGENPAGE, DIALOG
+    BEGIN
+        RIGHTMARGIN, 178
+        BOTTOMMARGIN, 111
+    END
+
+    IDD_CXMENUGENPAGE, DIALOG
+    BEGIN
+        RIGHTMARGIN, 236
+        BOTTOMMARGIN, 183
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_UP                  ICON    DISCARDABLE     "ico00003.ico"
+IDI_DOWN                ICON    DISCARDABLE     "next.ico"
+IDI_RIGHT               ICON    DISCARDABLE     "up1.ico"
+IDI_LEFT                ICON    DISCARDABLE     "dwon1.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_PROJNAME            "CxDrawShapes"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_TITLECxButtonGenPage "常规"
+    IDS_TITLECxShapeGenPage "常规"
+    IDS_HELPFILECxShapeGenPage "Help File Name"
+    IDS_DOCSTRINGCxShapeGenPage "Your Help String"
+    IDS_TITLECxPipeGenPage  "常规"
+    IDS_HELPFILECxPipeGenPage "Help File Name"
+    IDS_DOCSTRINGCxPipeGenPage "Your Help String"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_HELPFILECxButtonGenPage "Help File Name"
+    IDS_DOCSTRINGCxButtonGenPage "Your Help String"
+    IDS_TITLECxImageGenPage "常规"
+    IDS_HELPFILECxImageGenPage "Help File Name"
+    IDS_DOCSTRINGCxImageGenPage "Your Help String"
+    IDS_TITLECxTextGenPage  "常规"
+    IDS_HELPFILECxTextGenPage "Help File Name"
+    IDS_DOCSTRINGCxTextGenPage "Your Help String"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_TITLECxTextTextPage "标题"
+    IDS_HELPFILECxTextTextPage "Help File Name"
+    IDS_DOCSTRINGCxTextTextPage "Your Help String"
+    IDS_TITLECxDataLinkGenPage "常规"
+    IDS_HELPFILECxDataLinkGenPage "Help File Name"
+    IDS_DOCSTRINGCxDataLinkGenPage "Your Help String"
+    IDS_TITLECxVariableGenPage "常规"
+    IDS_HELPFILECxVariableGenPage "Help File Name"
+    IDS_DOCSTRINGCxVariableGenPage "Your Help String"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_TITLECxTimerGenPage "常规"
+    IDS_HELPFILECxTimerGenPage "Help File Name"
+    IDS_DOCSTRINGCxTimerGenPage "Your Help String"
+    IDS_TITLECxMenuGenPage  "常规"
+    IDS_HELPFILECxMenuGenPage "Help File Name"
+    IDS_DOCSTRINGCxMenuGenPage "Your Help String"
+END
+
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+1 TYPELIB "CxDrawShapes.tlb"
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

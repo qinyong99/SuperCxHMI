@@ -1,0 +1,82 @@
+// CxComObj.idl : IDL source for CxComObj.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (CxComObj.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+	[
+		object,
+		uuid(EF162BA6-28EF-11D5-A468-A2981E5E0009),
+		dual,
+		helpstring("ICxColorPicker Interface"),
+		pointer_default(unique)
+	]
+	interface ICxColorPicker : IDispatch
+	{
+		[id(1), helpstring("method Pick")] 
+		HRESULT Pick([in] long hParent, [in] long X, [in] long Y, 
+			[in, optional, defaultvalue(0)] OLE_COLOR clr, [retval, out] OLE_COLOR* pclr);
+		[id(2), helpstring("method Close")] HRESULT Close();
+	};
+	[
+		object,
+		uuid(10C22D34-ED96-4A6F-BCB8-4B9774C580A1),
+		dual,
+		helpstring("ICxFontCombo Interface"),
+		pointer_default(unique)
+	]
+	interface ICxFontCombo : IDispatch
+	{
+		[id(1), helpstring("method PickFont")] HRESULT PickFont([in] long hParent, [in] long x, [in] long y, [in] long lWidth, BSTR bstrCur, BSTR * bstrOut );
+	};
+	[
+		object,
+		uuid(A4AF0C34-23C7-4AE2-8B17-46367377133C),
+		dual,
+		helpstring("ICxColorPicker2 Interface"),
+		pointer_default(unique)
+	]
+	interface ICxColorPicker2 : IDispatch
+	{
+		[id(1), helpstring("method Pick")] 
+		HRESULT Pick([in] long hParent, [in] RECT rect, 
+			[in] OLE_COLOR clrDefault, [in] OLE_COLOR clr, [retval, out] OLE_COLOR* pclr);
+	};
+
+[
+	uuid(EF162B9A-28EF-11D5-A468-A2981E5E0009),
+	version(1.0),
+	helpstring("CxComObj 1.0 Type Library")
+]
+library CXCOMOBJLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	[
+		uuid(EF162BA7-28EF-11D5-A468-A2981E5E0009),
+		helpstring("CxColorPicker Class")
+	]
+	coclass CxColorPicker
+	{
+		[default] interface ICxColorPicker;
+	};
+	[
+		uuid(F7D44E38-BE9A-4BCA-9719-992C0A5E9FEA),
+		helpstring("CxFontCombo Class")
+	]
+	coclass CxFontCombo
+	{
+		[default] interface ICxFontCombo;
+	};
+	[
+		uuid(B91087CE-4A13-11D5-A46A-E0F0AF1B040A),
+		helpstring("CxColorPicker2 Class")
+	]
+	coclass CxColorPicker2
+	{
+		[default] interface ICxColorPicker2;
+	};
+};

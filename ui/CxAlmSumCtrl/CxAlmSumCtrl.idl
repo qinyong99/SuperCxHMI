@@ -1,0 +1,246 @@
+// CxAlmSumCtrl.idl : IDL source for CxAlmSumCtrl.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (CxAlmSumCtrl.tlb) and marshalling code.
+
+#include "CxDispid.h"
+import "oaidl.idl";
+import "ocidl.idl";
+import "CxHmiObj.idl";
+import "CxHmiMisc.idl";
+
+	[
+		object,
+		uuid(688F902B-D488-4099-9949-F294182FD926),
+		dual,
+		helpstring("IAlmSum Interface"),
+		pointer_default(unique)
+	]
+	interface ICxAlmSum : IDispatch
+	{
+		[propget, id(101), helpstring("显示网格")] HRESULT ShowGrid([out, retval] VARIANT_BOOL *pVal);
+		[propput, id(101), helpstring("显示网格")] HRESULT ShowGrid([in] VARIANT_BOOL newVal);
+		[propget, id(102), helpstring("自动卷动")] HRESULT AutoScroll([out, retval] VARIANT_BOOL *pVal);
+		[propput, id(102), helpstring("自动卷动")] HRESULT AutoScroll([in] VARIANT_BOOL newVal);
+		[propget, id(103), helpstring("显示卷动条")] HRESULT ShowScrollBar([out, retval] VARIANT_BOOL *pVal);
+		[propput, id(103), helpstring("显示卷动条")] HRESULT ShowScrollBar([in] VARIANT_BOOL newVal);
+		[propget, id(104), helpstring("显示表头")] HRESULT ShowHeader([out, retval] VARIANT_BOOL *pVal);
+		[propput, id(104), helpstring("显示表头")] HRESULT ShowHeader([in] VARIANT_BOOL newVal);
+		[propget, id(105), helpstring("排序字段")] HRESULT SortColumn([out, retval] long *pVal);
+		[propput, id(105), helpstring("排序字段")] HRESULT SortColumn([in] long newVal);
+		[propget, id(106), helpstring("第二排序字段")] HRESULT SecondSortColumn([out, retval] long *pVal);
+		[propput, id(106), helpstring("第二排序字段")] HRESULT SecondSortColumn([in] long newVal);
+		[propget, id(107), helpstring("排序次序")] HRESULT SortOrder([out, retval] enumSortOrder *pVal);
+		[propput, id(107), helpstring("排序次序")] HRESULT SortOrder([in] enumSortOrder newVal);
+		[propget, id(108), helpstring("节点过滤表")] HRESULT NodeFilterList([out, retval] BSTR *pVal);
+		[propput, id(108), helpstring("节点过滤表")] HRESULT NodeFilterList([in] BSTR newVal);
+		[propget, id(109), helpstring("区域过滤表")] HRESULT AreaFilterList([out, retval] BSTR *pVal);
+		[propput, id(109), helpstring("区域过滤表")] HRESULT AreaFilterList([in] BSTR newVal);
+		[propget, id(110), helpstring("优先级过滤表")] HRESULT PriorityFilterList([out, retval] BSTR *pVal);
+		[propput, id(110), helpstring("优先级过滤表")] HRESULT PriorityFilterList([in] BSTR newVal);
+		[propget, id(111), helpstring("允许确认")] HRESULT AckEnabled([out, retval] VARIANT_BOOL *pVal);
+		[propput, id(111), helpstring("允许确认")] HRESULT AckEnabled([in] VARIANT_BOOL newVal);
+		[propget, id(112), helpstring("允许右键菜单")] HRESULT ContextMenuEnabled([out, retval] VARIANT_BOOL *pVal);
+		[propput, id(112), helpstring("允许右键菜单")] HRESULT ContextMenuEnabled([in] VARIANT_BOOL newVal);
+		[propget, id(113), helpstring("允许在线配置")] HRESULT OnlineConfigureEnabled([out, retval] VARIANT_BOOL *pVal);
+		[propput, id(113), helpstring("允许在线配置")] HRESULT OnlineConfigureEnabled([in] VARIANT_BOOL newVal);
+		[propget, id(114), helpstring("背景颜色")] HRESULT BackColor([out, retval] OLE_COLOR *pVal);
+		[propput, id(114), helpstring("背景颜色")] HRESULT BackColor([in] OLE_COLOR newVal);
+		[propget, id(115), helpstring("表头前景颜色")] HRESULT HeaderForeColor([out, retval] OLE_COLOR *pVal);
+		[propput, id(115), helpstring("表头前景颜色")] HRESULT HeaderForeColor([in] OLE_COLOR newVal);
+		[propget, id(116), helpstring("表头背景颜色")] HRESULT HeaderBackColor([out, retval] OLE_COLOR *pVal);
+		[propput, id(116), helpstring("表头背景颜色")] HRESULT HeaderBackColor([in] OLE_COLOR newVal);
+		[propput, id(117), helpstring("表头字体")] HRESULT HeaderFont([in]IFontDisp* pFont);
+		[propputref, id(117), helpstring("表头字体")]	HRESULT HeaderFont([in]IFontDisp* pFont);
+		[propget, id(117), helpstring("表头字体")] HRESULT HeaderFont([out,retval]IFontDisp** ppFont);
+		[propget, id(118), helpstring("行高度")] HRESULT RowHeight([out, retval] long *pVal);
+		[propput, id(118), helpstring("行高度")] HRESULT RowHeight([in] long newVal);
+		[propget, id(119), helpstring("property RunMode")] HRESULT RunMode([out, retval] VARIANT_BOOL *pVal);
+			
+		[id(1), helpstring("method GetColumnCount")] HRESULT GetColumnCount([out, retval] long* plCount);
+		[id(2), helpstring("method GetColumnLabel")] HRESULT GetColumnLabel([in] long lColumn, [out, retval] BSTR* pbstrLabel);
+		[id(3), helpstring("method IsColumnShow")] HRESULT IsColumnShow([in] long lColumn);
+		[id(4), helpstring("method ShowColumn")] HRESULT ShowColumn([in] long lColumn, [in] BOOL bShow);
+		[id(5), helpstring("method GetShowColumnCount")] HRESULT GetShowColumnCount([out, retval] long* plCount);
+		[id(6), helpstring("method GetShowColumn")] HRESULT GetShowColumn([in] long lIndex, [out, retval] long* plColumn);
+		[id(7), helpstring("method SetStatusColor")] HRESULT SetStatusColor([in] long lStatus, [in] OLE_COLOR clrColor);
+		[id(8), helpstring("method GetStatusColor")] HRESULT GetStatusColor([in] long lStatus, [out, retval] OLE_COLOR* pclrColor);
+		[id(9), helpstring("method SetPriorityColor")] HRESULT SetPriorityColor([in] long lPriority, [in] OLE_COLOR clrColor);
+		[id(10), helpstring("method GetPriorityColor")] HRESULT GetPriorityColor([in] long lPriority, [out, retval] OLE_COLOR* pclrColor);
+		[id(11), helpstring("method GetStatusCount")] HRESULT GetStatusCount([out, retval] long* plCount);
+		[id(12), helpstring("method GetStatusLabel")] HRESULT GetStatusLabel([in] long lStatus, [out, retval] BSTR* pbstrLabel);
+		[id(13), helpstring("method GetPriorityCount")] HRESULT GetPriorityCount([out, retval] long* plCount);
+		[id(14), helpstring("method GetPriorityLabel")] HRESULT GetPriorityLabel([in] long lPrioritys, [out, retval] BSTR* pbstrLabel);
+		[id(15), helpstring("method GetStatusFont")] HRESULT GetStatusFont([in] long lStatus, [out, retval] IFontDisp** ppFont);
+		[id(16), helpstring("method SetStatusFont")] HRESULT SetStatusFont([in] long lStatus, [out, retval] IFontDisp* pFont);
+		[id(17), helpstring("method Sort")] HRESULT Sort();
+		[id(18), helpstring("method EditProperties")] HRESULT EditProperties();
+		[id(19), helpstring("method AcknowledgeAllAlarms")] HRESULT AcknowledgeAllAlarms();
+		[id(20), helpstring("method AcknowledgePageAlarms")] HRESULT AcknowledgePageAlarms();
+	};
+	
+	[
+		object,
+		uuid(203059F9-3CF7-4D6E-97FD-30930C64A065),
+		dual,
+		helpstring("IDrawAlmSum Interface"),
+		pointer_default(unique)
+	]
+	interface IDrawAlmSum : ICxAlmSum
+	{
+		[propget, id(CXPROPID_HorPosition), helpstring("水平位置")] HRESULT HorizontalPosition([out, retval] float *pVal);
+		[propput, id(CXPROPID_HorPosition), helpstring("水平位置")] HRESULT HorizontalPosition([in] float newVal);
+		[propget, id(CXPROPID_VerPosition), helpstring("垂直位置")] HRESULT VerticalPosition([out, retval] float *pVal);
+		[propput, id(CXPROPID_VerPosition), helpstring("垂直位置")] HRESULT VerticalPosition([in] float newVal);
+		[propget, id(CXPROPID_Width), helpstring("宽度")] HRESULT Width([out, retval] float *pVal);
+		[propput, id(CXPROPID_Width), helpstring("宽度")] HRESULT Width([in] float newVal);
+		[propget, id(CXPROPID_Height), helpstring("高度")] HRESULT Height([out, retval] float *pVal);
+		[propput, id(CXPROPID_Height), helpstring("高度")] HRESULT Height([in] float newVal);
+		
+		[propget, id(CXPROPID_Description), helpstring("描述")] HRESULT Description([out, retval] BSTR *pVal);
+		[propput, id(CXPROPID_Description), helpstring("描述")] HRESULT Description([in] BSTR newVal);
+		[propget, id(CXPROPID_Layer), helpstring("图层")] HRESULT Layer([out, retval] int *pVal);
+		[propput, id(CXPROPID_Layer), helpstring("图层")] HRESULT Layer([in] int newVal);
+		[propget, id(CXPROPID_Locked), helpstring("锁定")] HRESULT Locked([out, retval] VARIANT_BOOL *pVal);
+		[propput, id(CXPROPID_Locked), helpstring("锁定")] HRESULT Locked([in] VARIANT_BOOL newVal);
+		[propget, id(CXPROPID_MousePointer), helpstring("鼠标指针")] HRESULT MousePointer([out, retval] enumMousePointer *pVal);
+		[propput, id(CXPROPID_MousePointer), helpstring("鼠标指针")] HRESULT MousePointer([in] enumMousePointer newVal);
+		[propget, id(CXPROPID_Privilege), helpstring("权限")] HRESULT Privilege([out, retval] int *pVal);
+		[propput, id(CXPROPID_Privilege), helpstring("权限")] HRESULT Privilege([in] int newVal);
+		[propget, id(CXPROPID_ToolTipText), helpstring("提示文本")] HRESULT ToolTipText([out, retval] BSTR *pVal);
+		[propput, id(CXPROPID_ToolTipText), helpstring("提示文本")] HRESULT ToolTipText([in] BSTR newVal);
+		[propget, id(CXPROPID_Visible), helpstring("可见")] HRESULT Visible([out, retval] VARIANT_BOOL *pVal);
+		[propput, id(CXPROPID_Visible), helpstring("可见")] HRESULT Visible([in] VARIANT_BOOL newVal);
+	
+		[propput, id(CXPROPID_Name), helpstring("名称")] HRESULT Name([in] BSTR bstrName);
+		[propget, id(CXPROPID_Name), helpstring("名称")] HRESULT Name([out, retval] BSTR* pbstrName);
+		[id(CXMETHID_IsConnected), helpstring("method IsConnected")] 
+		HRESULT IsConnected([in] BSTR bstrPropertyName, [out, retval] VARIANT_BOOL* pbHasConnection);
+		[id(CXMETHID_ConnectObject), helpstring("method ConnectObject")] 
+		HRESULT ConnectObject([in] BSTR bstrPropertyName, [in] IUnknown* punkObject);
+		[id(CXMETHID_ConnectDirect), helpstring("method ConnectDirect")] 
+		HRESULT ConnectDirect([in] BSTR bstrPropertyName, [in] BSTR bstrDataSource);
+		[id(CXMETHID_GetConnectObject), helpstring("method GetConnectObject")] 
+		HRESULT GetConnectObject([in] BSTR bstrPropertyName, [out, retval] IUnknown** ppunkObject);
+		[id(CXMETHID_Disconnect), helpstring("method Disconnect")] 
+		HRESULT Disconnect([in] BSTR bstrPropertyName);
+		[id(CXMETHID_GetConnectState), helpstring("method GetConnectState"), hidden] 
+		HRESULT GetConnectState(DISPID dispid, [out, retval] int* pState);
+	};
+
+	[
+		object,
+		uuid(59A6E30A-0B7E-4938-9B40-5A54383D48BB),
+		dual,
+		helpstring("ICxAlmSumCtrl Interface"),
+		pointer_default(unique)
+	]
+	interface ICxAlmSumCtrl : ICxAlmSum
+	{
+	};
+
+[
+	uuid(BA323D20-89E8-4C23-8EEF-3369511F166E),
+	version(1.0),
+	helpstring("CxAlmSumCtrl 1.0 Type Library")
+]
+library CXALMSUMCTRLLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	[
+		uuid(90B20153-A5C4-4C21-9D24-9353E781800E),
+		helpstring("_ICxAlmSumCtrlEvents Interface")
+	]
+	dispinterface _ICxAlmSumCtrlEvents
+	{
+		properties:
+		methods:
+		[id(CXEVENID_CLICK), helpstring("单击")] HRESULT Click();
+		[id(CXEVENID_DBLCLICK), helpstring("双击")] HRESULT DblClick();
+		[id(CXEVENID_KEYDOWN), helpstring("键盘按下")] HRESULT KeyDown();
+		[id(CXEVENID_KEYUP), helpstring("键盘弹起")] HRESULT KeyUp();
+		[id(CXEVENID_KEYPRESS), helpstring("键盘按住")] HRESULT KeyPress();
+		[id(CXEVENID_MOUSEDOWN), helpstring("鼠标按下")] HRESULT MouseDown();
+		[id(CXEVENID_MOUSEMOVE), helpstring("鼠标移过")] HRESULT MouseMove();
+		[id(CXEVENID_MOUSEUP), helpstring("鼠标弹起")] HRESULT MouseUp();
+		[id(CXEVENID_MOUSELEAVE), helpstring("鼠标离开")] HRESULT MouseLeave();
+		[id(1), helpstring("报警确认")] HRESULT AlarmAcknowledge(BSTR Source);
+	};
+
+	[
+		uuid(967B0FC2-0761-4D0F-865F-0CCB7BA34F3F),
+		helpstring("DrawAlmSum Class")
+	]
+	coclass DrawAlmSum
+	{
+		[default] interface IDrawAlmSum;
+		[default, source] dispinterface _ICxAlmSumCtrlEvents;
+	};
+
+	[
+		uuid(203E598C-03CD-4FD5-8DBB-90E10D210F8C),
+		helpstring("CxAlmSumCtrl Class")
+	]
+	coclass AlmSumCtrl
+	{
+		[default] interface ICxAlmSumCtrl;
+		[default, source] dispinterface _ICxAlmSumCtrlEvents;
+	};
+
+	[
+		uuid(6CF87010-01F4-40D0-9740-A983B19B00A0),
+		helpstring("CxColumnAlmSumPage Class")
+	]
+	coclass CxColumnAlmSumPage
+	{
+		interface IUnknown;
+	};
+
+	[
+		uuid(6032BCD1-51DB-4406-BA72-7B0AF35FD2D8),
+		helpstring("CxFormatAlmSumPage Class")
+	]
+	coclass CxFormatAlmSumPage
+	{
+		interface IUnknown;
+	};
+
+	[
+		uuid(D399EE3F-C206-4330-861F-AAB45F68644C),
+		helpstring("CxGenAlmSumPage Class")
+	]
+	coclass CxGenAlmSumPage
+	{
+		interface IUnknown;
+	};
+
+	[
+		uuid(19B7AE19-1B80-4232-8B8E-337B3B2BE36B),
+		helpstring("CxFilterAlmSumPage Class")
+	]
+	coclass CxFilterAlmSumPage
+	{
+		interface IUnknown;
+	};
+
+	[
+		uuid(3B07E94D-E872-4B86-9975-D9564EF845E9),
+		helpstring("CxOperatorAlmSumPage Class")
+	]
+	coclass CxOperatorAlmSumPage
+	{
+		interface IUnknown;
+	};
+
+	[
+		uuid(2F69918E-22CC-4C0F-83C4-943C3DD611B3),
+		helpstring("CxSortAlmSumPage Class")
+	]
+	coclass CxSortAlmSumPage
+	{
+		interface IUnknown;
+	};
+};

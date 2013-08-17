@@ -1,0 +1,23 @@
+HKCR
+{
+	CxChartCtrl.CxTrendCtrlPage.1 = s 'CxTrendCtrlPage Class'
+	{
+		CLSID = s '{5A09C772-0349-4BE3-B8D9-4AFECF9F6963}'
+	}
+	CxChartCtrl.CxTrendCtrlPage = s 'CxTrendCtrlPage Class'
+	{
+		CLSID = s '{5A09C772-0349-4BE3-B8D9-4AFECF9F6963}'
+		CurVer = s 'CxChartCtrl.CxTrendCtrlPage.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {5A09C772-0349-4BE3-B8D9-4AFECF9F6963} = s 'CxTrendCtrlPage Class'
+		{
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+		}
+	}
+}

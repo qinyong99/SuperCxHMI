@@ -1,0 +1,17 @@
+; WinLockDll.def : Declares the module parameters.
+
+LIBRARY      "WinLockDll.dll"
+
+EXPORTS
+	Desktop_Show_Hide				@1 PRIVATE
+	StartButton_Show_Hide			@2 PRIVATE
+	Taskbar_Show_Hide				@3 PRIVATE
+	Clock_Show_Hide					@4 PRIVATE
+	Keys_Enable_Disable				@5 PRIVATE
+	AltTab1_Enable_Disable			@6 PRIVATE
+	AltTab2_Enable_Disable			@7 PRIVATE
+	TaskSwitching_Enable_Disable	@8 PRIVATE
+	TaskManager_Enable_Disable		@9 PRIVATE
+	CtrlAltDel_Enable_Disable		@10 PRIVATE
+	Thread_Desktop					@11 PRIVATE
+	Process_Desktop					@12 PRIVATE

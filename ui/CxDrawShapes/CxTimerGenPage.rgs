@@ -1,0 +1,23 @@
+HKCR
+{
+	CxDrawShapes.CxTimerGenPage.1 = s 'CxTimerGenPage Class'
+	{
+		CLSID = s '{1361C062-1F58-41ED-8637-0B247C254635}'
+	}
+	CxDrawShapes.CxTimerGenPage = s 'CxTimerGenPage Class'
+	{
+		CLSID = s '{1361C062-1F58-41ED-8637-0B247C254635}'
+		CurVer = s 'CxDrawShapes.CxTimerGenPage.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {1361C062-1F58-41ED-8637-0B247C254635} = s 'CxTimerGenPage Class'
+		{
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+		}
+	}
+}

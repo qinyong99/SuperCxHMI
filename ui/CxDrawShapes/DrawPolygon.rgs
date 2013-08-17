@@ -1,0 +1,26 @@
+HKCR
+{
+	CxDrawShapes.DrawPolygon.1 = s 'DrawPolygon Class'
+	{
+		CLSID = s '{023B8C82-6F41-49FE-B4B6-AC12B0710006}'
+	}
+	CxDrawShapes.DrawPolygon = s 'DrawPolygon Class'
+	{
+		CLSID = s '{023B8C82-6F41-49FE-B4B6-AC12B0710006}'
+		CurVer = s 'CxDrawShapes.DrawPolygon.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {023B8C82-6F41-49FE-B4B6-AC12B0710006} = s 'DrawPolygon Class'
+		{
+			ProgID = s 'CxDrawShapes.DrawPolygon.1'
+			VersionIndependentProgID = s 'CxDrawShapes.DrawPolygon'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{D75F0066-DC61-4679-A739-5B046E2C9088}'
+		}
+	}
+}

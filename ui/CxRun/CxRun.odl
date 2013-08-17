@@ -1,0 +1,42 @@
+// CxRun.odl : type library source for CxRun.exe
+
+// This file will be processed by the MIDL compiler to produce the
+// type library (CxRun.tlb).
+
+[ uuid(5C04906F-CC4A-4614-BCA3-3A30A35A391C), version(1.0) ]
+library CxRun
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+
+	//  Primary dispatch interface for CRunDoc
+	
+	[ uuid(F831BD41-25D5-437C-AA7F-9A3C464CD167) ]
+	dispinterface ICxRun
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CRunDoc)
+			//}}AFX_ODL_PROP
+			
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CRunDoc)
+			//}}AFX_ODL_METHOD
+
+	};
+
+	//  Class information for CRunDoc
+	
+	[ uuid(EB197719-4C10-11D5-A46A-B043DCC54377) ]
+	coclass Document
+	{
+		[default] dispinterface ICxRun;
+	};
+
+	//{{AFX_APPEND_ODL}}
+	//}}AFX_APPEND_ODL}}
+};

@@ -1,0 +1,26 @@
+HKCR
+{
+	CxScripCrt.CxScriptCreator.1 = s 'CxScriptCreator Class'
+	{
+		CLSID = s '{C02BC693-BB26-4193-A144-84053827C71A}'
+	}
+	CxScripCrt.CxScriptCreator = s 'CxScriptCreator Class'
+	{
+		CLSID = s '{C02BC693-BB26-4193-A144-84053827C71A}'
+		CurVer = s 'CxScripCrt.CxScriptCreator.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {C02BC693-BB26-4193-A144-84053827C71A} = s 'CxScriptCreator Class'
+		{
+			ProgID = s 'CxScripCrt.CxScriptCreator.1'
+			VersionIndependentProgID = s 'CxScripCrt.CxScriptCreator'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{6DC198C0-4DBC-417F-9CCB-5C1567869138}'
+		}
+	}
+}

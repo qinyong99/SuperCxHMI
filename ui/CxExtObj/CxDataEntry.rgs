@@ -1,0 +1,26 @@
+HKCR
+{
+	CxExtObj.CxDataEntry.1 = s 'CxDataEntry Class'
+	{
+		CLSID = s '{71185291-1637-4E03-BAD8-B63002AB7E81}'
+	}
+	CxExtObj.CxDataEntry = s 'CxDataEntry Class'
+	{
+		CLSID = s '{71185291-1637-4E03-BAD8-B63002AB7E81}'
+		CurVer = s 'CxExtObj.CxDataEntry.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {71185291-1637-4E03-BAD8-B63002AB7E81} = s 'CxDataEntry Class'
+		{
+			ProgID = s 'CxExtObj.CxDataEntry.1'
+			VersionIndependentProgID = s 'CxExtObj.CxDataEntry'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{D75F0066-DC61-4679-A739-5B046E2C9088}'
+		}
+	}
+}

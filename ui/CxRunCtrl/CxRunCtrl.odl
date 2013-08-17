@@ -1,0 +1,124 @@
+// CxRunCtrl.odl : type library source for ActiveX Control project.
+
+// This file will be processed by the Make Type Library (mktyplib) tool to
+// produce the type library (CxRunCtrl.tlb) that will become a resource in
+// CxRunCtrl.ocx.
+
+#include <olectl.h>
+#include <idispids.h>
+
+[ uuid(277D304B-EDC4-4D2C-A0AE-2A855F8CB399), version(1.6),
+  helpfile("CxRunCtrl.hlp"),
+  helpstring("CxRunCtrl ActiveX Control module"),
+  control ]
+library CXRUNCTRLLib
+{
+	importlib(STDOLE_TLB);
+	importlib(STDTYPE_TLB);
+
+	//  Primary dispatch interface for CRunCtrl
+
+	[ uuid(01E9B944-B3E1-4883-A8D7-945EB1F76B6F),
+	  helpstring("Dispatch interface for RunCtrl Control"), hidden ]
+	dispinterface _DRunCtrl
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CRunCtrl)
+			[id(DISPID_BORDERSTYLE), bindable, requestedit] short BorderStyle;
+			[id(1)] BSTR Picture;
+			[id(2)] boolean RefreshEnabled;
+			[id(3)] boolean ZoomFitWindow;
+			[id(4)] float ZoomRatio;
+			[id(5)] boolean AllowMouseZoom;
+			[id(6)] boolean AllowScrollBars;
+			[id(7)] boolean DragMode;
+			[id(8)] OLE_HANDLE WindowHandle;
+			[id(9)] BSTR CurrentPath;
+			[id(10)] BSTR Server;
+			[id(11)] long Port;
+			[id(12)] BSTR QueryString;
+			[id(13)] BSTR DefaultUser;
+			[id(14)] BSTR DefaultPassword;
+			[id(15)] boolean CreateServerObjectAsLocal;
+			[id(16)] boolean LocalServerUseSACProxy;
+			[id(101)] BSTR CurrentVersion;
+			[id(102)] float ZoomX;
+			[id(103)] float ZoomY;
+			//[id(104)] boolean HighlightMouseObject;
+			//}}AFX_ODL_PROP
+
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CRunCtrl)
+			[id(17), propget] VARIANT Application(BSTR Item);
+			[id(17), propput] void Application(BSTR Item, VARIANT newValue);
+			[id(18), propget] VARIANT Frame(BSTR Item);
+			[id(18), propput] void Frame(BSTR Item, VARIANT newValue);
+			[id(19)] IDispatch* GetActiveWindow();
+			[id(20)] void ClearPicturesCache();
+			[id(21)] void GoBack();
+			[id(22)] void GoForward();
+			[id(23)] boolean CanBack();
+			[id(24)] boolean CanForward();
+			[id(25)] void SetHighlightMouseObject(boolean Highlight);
+			[id(26)] IDispatch* GetMainMenu();
+			[id(27)] IDispatch* GetMainForm();
+			[id(28)] void ZoomIn();
+			[id(29)] void ZoomOut();
+			[id(30)] boolean CanZoomIn();
+			[id(31)] boolean CanZoomOut();
+			[id(32)] void ReloadPicture();
+			[id(33)] boolean VerifySoftLock(boolean AllowDemoStatus);
+			[id(34)] IDispatch* GetInternalObject();
+			//}}AFX_ODL_METHOD
+	};
+
+	//  Event dispatch interface for CRunCtrl
+
+	[ uuid(F3231EF3-BC1A-4198-9AB0-D20AF5D1F407),
+	  helpstring("Event interface for RunCtrl Control") ]
+	dispinterface _DRunCtrlEvents
+	{
+		properties:
+			//  Event interface has no properties
+
+		methods:
+			// NOTE - ClassWizard will maintain event information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_EVENT(CRunCtrl)
+			[id(1)] void PictrueSize(long Width, long Height);
+			[id(2)] void OnQuit();
+			[id(3)] void BeforeShowPicture(BSTR Picture, VARIANT_BOOL* Cancel);
+			[id(4)] void ShowPictureComplete(BSTR Picture);
+			[id(5)] void ContainerContext(VARIANT* Tag);
+			[id(6)] void FrameItemChanged(BSTR Item);
+			[id(7)] void PictureClose(BSTR Picture);
+			[id(8)] void DemoTimeOut();
+			[id(DISPID_CLICK)] void Click();
+			[id(DISPID_DBLCLICK)] void DblClick();
+			[id(DISPID_MOUSEDOWN)] void MouseDown(short Button, short Shift, OLE_XPOS_PIXELS x, OLE_YPOS_PIXELS y);
+			[id(DISPID_MOUSEMOVE)] void MouseMove(short Button, short Shift, OLE_XPOS_PIXELS x, OLE_YPOS_PIXELS y);
+			[id(DISPID_MOUSEUP)] void MouseUp(short Button, short Shift, OLE_XPOS_PIXELS x, OLE_YPOS_PIXELS y);
+			[id(DISPID_KEYDOWN)] void KeyDown(short* KeyCode, short Shift);
+			[id(DISPID_KEYPRESS)] void KeyPress(short* KeyAscii);
+			[id(DISPID_KEYUP)] void KeyUp(short* KeyCode, short Shift);
+			//}}AFX_ODL_EVENT
+	};
+
+	//  Class information for CRunCtrl
+
+	[ uuid(C162A5CC-6BB1-4C0A-9081-C520A4EADDA7),
+	  helpstring("CxRunCtrl Control"), control ]
+	coclass RunCtrl
+	{
+		[default] dispinterface _DRunCtrl;
+		[default, source] dispinterface _DRunCtrlEvents;
+	};
+
+
+	//{{AFX_APPEND_ODL}}
+	//}}AFX_APPEND_ODL}}
+};

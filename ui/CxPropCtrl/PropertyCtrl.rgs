@@ -1,0 +1,34 @@
+HKCR
+{
+	CxPropCtrl.PropertyCtrl.1 = s 'PropertyCtrl Class'
+	{
+		CLSID = s '{71645E31-3595-11D5-A468-EFC5A834B60B}'
+	}
+	CxPropCtrl.PropertyCtrl = s 'PropertyCtrl Class'
+	{
+		CLSID = s '{71645E31-3595-11D5-A468-EFC5A834B60B}'
+		CurVer = s 'CxPropCtrl.PropertyCtrl.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {71645E31-3595-11D5-A468-EFC5A834B60B} = s 'PropertyCtrl Class'
+		{
+			ProgID = s 'CxPropCtrl.PropertyCtrl.1'
+			VersionIndependentProgID = s 'CxPropCtrl.PropertyCtrl'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			ForceRemove 'Control'
+			ForceRemove 'Insertable'
+			ForceRemove 'ToolboxBitmap32' = s '%MODULE%, 101'
+			'MiscStatus' = s '0'
+			{
+			    '1' = s '131473'
+			}
+			'TypeLib' = s '{71645E24-3595-11D5-A468-EFC5A834B60B}'
+			'Version' = s '1.0'
+		}
+	}
+}

@@ -1,0 +1,26 @@
+HKCR
+{
+	CxDrawShapes.DrawButton.1 = s 'DrawButton Class'
+	{
+		CLSID = s '{C7C4FF5F-AA2F-4188-B2E2-FEAC38640873}'
+	}
+	CxDrawShapes.DrawButton = s 'DrawButton Class'
+	{
+		CLSID = s '{C7C4FF5F-AA2F-4188-B2E2-FEAC38640873}'
+		CurVer = s 'CxDrawShapes.DrawButton.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {C7C4FF5F-AA2F-4188-B2E2-FEAC38640873} = s 'DrawButton Class'
+		{
+			ProgID = s 'CxDrawShapes.DrawButton.1'
+			VersionIndependentProgID = s 'CxDrawShapes.DrawButton'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{D75F0066-DC61-4679-A739-5B046E2C9088}'
+		}
+	}
+}

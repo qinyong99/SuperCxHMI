@@ -1,0 +1,282 @@
+// CxScripCrt.idl : IDL source for CxScripCrt.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (CxScripCrt.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+#include "olectl.h"
+
+	interface ICxScriptEditorSite;
+	interface ICxRangeToFormat;
+	interface ICxSymbolTreePage;
+
+	cpp_quote("#define CX_SCRIPT_SYMBOL					0x0001")
+	cpp_quote("#define CX_GLOBAL_SYMBOL					0x0002")
+	cpp_quote("#define CX_HMI_SYMBOL					0x0004")
+	cpp_quote("#define CX_RETVAL_SYMBOL					0x0008")
+	cpp_quote("#define CX_ALL_SYMBOL					(CX_SCRIPT_SYMBOL|CX_GLOBAL_SYMBOL|CX_HMI_SYMBOL|CX_RETVAL_SYMBOL)")
+
+	[
+		object,
+		uuid(951B5279-F5A6-4737-A75C-058C3D493349),
+		dual,
+		helpstring("ICxExpressionCreator Interface"),
+		pointer_default(unique)
+	]
+	interface ICxExpressionCreator : IDispatch
+	{
+		[propget, id(1), helpstring("property Expression")] HRESULT Expression([out, retval] BSTR *pVal);
+		[propput, id(1), helpstring("property Expression")] HRESULT Expression([in] BSTR newVal);
+		[id(2), helpstring("method ShowDialog")] HRESULT ShowDialog();
+		[propget, id(3), helpstring("property UseLocalSetup")] HRESULT UseLocalSetup([out, retval] BOOL *pVal);
+		[propput, id(3), helpstring("property UseLocalSetup")] HRESULT UseLocalSetup([in] BOOL newVal);
+		[id(4), helpstring("method AddGeneralSymbolPage")] HRESULT AddGeneralSymbolPage(DWORD dwSymbolMask);
+		[id(5), helpstring("method AddOPCServerSymbolPage")] HRESULT AddOPCServerSymbolPage();
+		[id(6), helpstring("method AddSymbolTreePage")] HRESULT AddSymbolTreePage(BSTR bstrCaption, [out, retval] ICxSymbolTreePage** ppPage);
+		[propget, id(7), helpstring("property UseTagSymbol")] HRESULT UseTagSymbol([out, retval] BOOL *pVal);
+		[propput, id(7), helpstring("property UseTagSymbol")] HRESULT UseTagSymbol([in] BOOL newVal);
+		[id(8), helpstring("method GetMainSymbolTreePage")] HRESULT GetMainSymbolTreePage([out, retval] ICxSymbolTreePage** ppPage);
+	};
+
+	[
+		object,
+		uuid(71484A11-A77E-470D-88CF-856B031F26DD),
+		helpstring("ICxScriptCreator Interface"),
+		pointer_default(unique)
+	]
+	interface ICxScriptCreator : IUnknown
+	{
+		HRESULT SetSite(ICxScriptEditorSite* pSite);
+		HRESULT SetSupportSymbol(DWORD dwSymbolMask);
+		HRESULT SetScriptText(LPCWSTR lpszCode);
+		HRESULT GetScriptText(LPWSTR* ppszCode);
+		HRESULT EditObjectEventHandler(LPCWSTR lpszObject, LPCWSTR lpszEvent);
+		HRESULT SetParentWindow(HWND hParentWnd);
+	};
+
+	[
+		local,
+		object,
+		uuid(66BED110-A8BC-4420-95F7-C1D1F395043F),
+		helpstring("ICxScriptEditorSite Interface"),
+		pointer_default(unique)
+	]
+	interface ICxScriptEditorSite : IUnknown
+	{
+		HRESULT GetObjectNames(LPENUMSTRING* ppEnumObjects);
+		HRESULT GetObject(LPCWSTR lpszObject, REFIID iid, void **ppObject);
+		HRESULT GetObjectTypeInfo(LPCWSTR lpszObject, ITypeInfo** ppTinfo);
+		HRESULT GetObjectSourceTypeInfo(LPCWSTR lpszObject, ITypeInfo** ppTinfo);
+		HRESULT GetObjectEvents(LPCWSTR lpszObject, LPENUMSTRING* ppEnumEvents);
+		HRESULT GetObjectEventParams(LPCWSTR lpszObject, LPCWSTR lpszEvent, LPENUMSTRING* ppEnumParams);
+		HRESULT GetObjectMembers(LPCWSTR lpszObject, LPENUMSTRING* ppEnumProperties, LPENUMSTRING* ppEnumMethods);
+		HRESULT GetObjectMemberParams(LPCWSTR lpszObject, LPENUMSTRING* ppEnumParams);
+		HRESULT GetGlobalTypeInfoCount(UINT* pnInfoCount);
+		HRESULT GetGlobalTypeInfo(UINT iTypeInfo, ITypeInfo** ppTinfo);
+		HRESULT ShowHelpString(LPCWSTR lpszObject);
+	};
+	
+
+	[
+		object,
+		uuid(B09B94AA-5FF3-4ACA-B3B2-8947D1AA21DB),
+		dual,
+		helpstring("ICxScriptEidtor Interface"),
+		pointer_default(unique)
+	]
+	interface ICxScriptEditor : IDispatch
+	{
+		[id(1), helpstring("method Undo")] HRESULT Undo();
+		[id(2), helpstring("method Redo")] HRESULT Redo();
+		[id(3), helpstring("method Cut")] HRESULT Cut();
+		[id(4), helpstring("method Copy")] HRESULT Copy();
+		[id(5), helpstring("method Paste")] HRESULT Paste();
+		[id(6), helpstring("method Clear")] HRESULT Clear();
+		[id(7), helpstring("method Find")] HRESULT Find();
+		[id(8), helpstring("method FindRepeat")] HRESULT FindRepeat();
+		[id(9), helpstring("method Replace")] HRESULT Replace();
+		[id(10), helpstring("method GoLine")] HRESULT GoLine();
+		[id(11), helpstring("method BookmarkToggle")] HRESULT BookmarkToggle();
+		[id(12), helpstring("method BookmarkNext")] HRESULT BookmarkNext();
+		[id(13), helpstring("method BookmarkPrevious")] HRESULT BookmarkPrevious();
+		[id(14), helpstring("method BookmarkClearAll")] HRESULT BookmarkClearAll();
+		[id(15), helpstring("method SelectAll")] HRESULT SelectAll();
+		[id(16), helpstring("method EmptyUndoBuffer")] HRESULT EmptyUndoBuffer();
+		[id(17), helpstring("method SetSavePoint")] HRESULT SetSavePoint();
+		[id(18), helpstring("method GetModify")] HRESULT GetModify(BOOL* pbModify);
+		[id(19), helpstring("method SetScriptEditorSite")] HRESULT SetScriptEditorSite(IUnknown* pSite);
+		[propget, id(20), helpstring("property Text")] HRESULT Text([out, retval] BSTR *pVal);
+		[propput, id(20), helpstring("property Text")] HRESULT Text([in] BSTR newVal);
+		[id(21), helpstring("method EditObjectEventHandler")] HRESULT EditObjectEventHandler(BSTR bstrObject, BSTR bstrEvent, BOOL bCreateAndEdit);
+		[id(23), helpstring("method GetTextLength")] HRESULT GetTextLength(long* plCount);
+		[id(24), helpstring("method HasSearched")] HRESULT HasSearched(BOOL* pbSearch);
+		[id(25), helpstring("method CanPaste")] HRESULT CanPaste(BOOL* pbPaste);
+		[id(26), helpstring("method CanRedo")] HRESULT CanRedo(BOOL* pRedo);
+		[id(27), helpstring("method CanUndo")] HRESULT CanUndo(BOOL* pUndo);
+		[id(29), helpstring("method SetSelectionStart")] HRESULT SetSelectionStart(long lPos);
+		[id(30), helpstring("method SetSelectionEnd")] HRESULT SetSelectionEnd(long lPos);
+		[id(31), helpstring("method ReplaceSel")] HRESULT ReplaceSel(BSTR bstrText);
+		[id(32), helpstring("method AppendText")] HRESULT AppendText(long lLength, BSTR bstrText);
+		[id(33), helpstring("method GotoLine")] HRESULT GotoLine(long lLine);
+		[id(34), helpstring("method GetLineCount")] HRESULT GetLineCount(long* plCount);
+		[id(35), helpstring("method GetSelText")] HRESULT GetSelText(BSTR* pbstrText);
+		[id(36), helpstring("method GetSelectionStart")] HRESULT GetSelectionStart(long* plPos);
+		[id(37), helpstring("method GetSelectionEnd")] HRESULT GetSelectionEnd(long* plPos);
+		[id(38), helpstring("method GetCurrentPos")] HRESULT GetCurrentPos(long* plPos);
+		[id(39), helpstring("method LineFromPosition")] HRESULT LineFromPosition(long lPos, long* plLine);
+		[id(40), helpstring("method GetColumn")] HRESULT GetColumn(long lPos, long* plCol);
+		[id(41), helpstring("method GetRangeToFormatStruct")] HRESULT GetRangeToFormatStruct(ICxRangeToFormat** ppRangeToFormat);
+		[id(42), helpstring("method FormatRange")] HRESULT FormatRange(BOOL bDraw, BOOL bUseStruct, long* plPos);
+		[id(43), helpstring("method BeginUndoAction")] HRESULT BeginUndoAction();
+		[id(44), helpstring("method EndUndoAction")] HRESULT EndUndoAction();
+		[id(45), helpstring("method DeleteEmptyEventHandler")] HRESULT DeleteEmptyEventHandler();
+		[propget, id(46), helpstring("property SymbolViewVisible")] HRESULT SymbolViewVisible([out, retval] BOOL *pVal);
+		[propput, id(46), helpstring("property SymbolViewVisible")] HRESULT SymbolViewVisible([in] BOOL newVal);
+		[propget, id(47), helpstring("property FindDialogHandle")] HRESULT FindDialogHandle([out, retval] long *pVal);
+		[id(48), helpstring("method SetActive")] HRESULT SetActive(BOOL bActive);
+		[id(49), helpstring("method AddGeneralSymbolPage")] HRESULT AddGeneralSymbolPage(DWORD dwSymbolMask);
+		[id(50), helpstring("method AddSymbolTreePage")] HRESULT AddSymbolTreePage(BSTR bstrCaption, [out, retval] ICxSymbolTreePage** ppPage);
+		[id(51), helpstring("method AddOPCServerSymbolPage")] HRESULT AddOPCServerSymbolPage();
+		[id(52), helpstring("method GetCurrentSymbolTreePage")] HRESULT GetCurrentSymbolTreePage([out, retval] ICxSymbolTreePage** ppPage);
+	};
+
+	[
+		object,
+		uuid(8DA96A1F-B3F2-4959-BCEC-2684934C2C10),
+		dual,
+		helpstring("IRangeToFormat Interface"),
+		pointer_default(unique)
+	]
+	interface ICxRangeToFormat : IDispatch
+	{
+		[propget, id(1), helpstring("property DC")] HRESULT DC([out, retval] long *pVal);
+		[propput, id(1), helpstring("property DC")] HRESULT DC([in] long newVal);
+		[propget, id(2), helpstring("property TargetDC")] HRESULT TargetDC([out, retval] long *pVal);
+		[propput, id(2), helpstring("property TargetDC")] HRESULT TargetDC([in] long newVal);
+		[propget, id(3), helpstring("property Left")] HRESULT Left([out, retval] long *pVal);
+		[propput, id(3), helpstring("property Left")] HRESULT Left([in] long newVal);
+		[propget, id(4), helpstring("property Top")] HRESULT Top([out, retval] long *pVal);
+		[propput, id(4), helpstring("property Top")] HRESULT Top([in] long newVal);
+		[propget, id(5), helpstring("property Right")] HRESULT Right([out, retval] long *pVal);
+		[propput, id(5), helpstring("property Right")] HRESULT Right([in] long newVal);
+		[propget, id(6), helpstring("property Bottom")] HRESULT Bottom([out, retval] long *pVal);
+		[propput, id(6), helpstring("property Bottom")] HRESULT Bottom([in] long newVal);
+		[propget, id(7), helpstring("property PageLeft")] HRESULT PageLeft([out, retval] long *pVal);
+		[propput, id(7), helpstring("property PageLeft")] HRESULT PageLeft([in] long newVal);
+		[propget, id(8), helpstring("property PageTop")] HRESULT PageTop([out, retval] long *pVal);
+		[propput, id(8), helpstring("property PageTop")] HRESULT PageTop([in] long newVal);
+		[propget, id(9), helpstring("property PageRight")] HRESULT PageRight([out, retval] long *pVal);
+		[propput, id(9), helpstring("property PageRight")] HRESULT PageRight([in] long newVal);
+		[propget, id(10), helpstring("property PageBottom")] HRESULT PageBottom([out, retval] long *pVal);
+		[propput, id(10), helpstring("property PageBottom")] HRESULT PageBottom([in] long newVal);
+		[propget, id(11), helpstring("property Min")] HRESULT Min([out, retval] long *pVal);
+		[propput, id(11), helpstring("property Min")] HRESULT Min([in] long newVal);
+		[propget, id(12), helpstring("property Max")] HRESULT Max([out, retval] long *pVal);
+		[propput, id(12), helpstring("property Max")] HRESULT Max([in] long newVal);
+	};
+
+	[
+		local,
+		object,
+		uuid(5ADEB1C0-FF8F-4f7c-A93D-BB4639CC60C9),
+		helpstring("ICxSymbolTreeSite Interface"),
+		pointer_default(unique)
+	]
+	interface ICxSymbolTreeSite : IUnknown
+	{
+		HRESULT GetObjectMembers(LPCWSTR lpszObject, 
+			LPENUMSTRING* ppEnumObjects, LPENUMSTRING* ppEnumProperties, LPENUMSTRING* ppEnumMethods);
+	};
+
+	[
+		object,
+		uuid(384E06F5-34BA-4BD9-B29F-925A5F4783F1),
+		dual,
+		helpstring("ICxExprTreePage Interface"),
+		pointer_default(unique)
+	]
+	interface ICxSymbolTreePage : IDispatch
+	{
+		[propget, id(1), helpstring("property Caption")] HRESULT Caption([out, retval] BSTR *pVal);
+		[propput, id(1), helpstring("property Caption")] HRESULT Caption([in] BSTR newVal);
+		[id(2), helpstring("method InsertNode")] HRESULT InsertNode(OLE_HANDLE hParentItem, BSTR bstrName, 
+			IDispatch* pObject, IUnknown* punkEumProp, [out, retval] OLE_HANDLE* phItem);
+		[id(3), helpstring("method Populate")] HRESULT Populate();
+		[id(4), helpstring("method SetSymbolTreeSite")] HRESULT SetSymbolTreeSite(IUnknown* pSite);
+		[id(5), helpstring("method SetDefaultNameSpace")] HRESULT SetDefaultNameSpace(BSTR bstrName);
+		[id(6), helpstring("method HasNodeExpanded")] HRESULT HasNodeExpanded();
+		[id(7), helpstring("method ExpandNode")] HRESULT ExpandNode(OLE_HANDLE hItem);
+	};
+
+	
+[
+	uuid(6DC198C0-4DBC-417F-9CCB-5C1567869138),
+	version(1.0),
+	helpstring("CxScripCrt 1.0 Type Library")
+]
+library CXSCRIPCRTLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	[
+		uuid(86414D0F-2EFB-4D11-90C7-17918A35163C),
+		helpstring("_ICxScriptCreator1Events Interface")
+	]
+	dispinterface _ICxScriptCreatorEvents
+	{
+		properties:
+		methods:
+		[id(1), helpstring("method PositionChanged")] HRESULT PositionChanged();
+		[id(2), helpstring("method Modified")] HRESULT Modified();
+		[id(3), helpstring("method SymbolViewToggled")] HRESULT SymbolViewToggled();
+		[id(4), helpstring("method SymbolPageChanged")] HRESULT SymbolPageChanged();
+	};
+
+	[
+		uuid(65FC5AEC-F442-421E-BDA1-B844F9C0A0EC),
+		helpstring("CxExpressionCreator Class")
+	]
+	coclass CxExpressionCreator
+	{
+		[default] interface ICxExpressionCreator;
+	};
+
+	[
+		uuid(C02BC693-BB26-4193-A144-84053827C71A),
+		helpstring("CxScriptCreator Class")
+	]
+	coclass CxScriptCreator
+	{
+		[default] interface IUnknown;
+	};
+	[
+		uuid(00EEDA05-1A41-4255-A69C-00F924DF2453),
+		helpstring("CxScriptEditor Class")
+	]
+	coclass CxScriptEditor
+	{
+		[default] interface ICxScriptEditor;
+		[default, source] dispinterface _ICxScriptCreatorEvents;
+	};
+
+	[
+		uuid(FA6E05A4-AB1D-48AA-87A6-E1789AE8264D),
+		helpstring("RangeToFormat Class")
+	]
+	coclass CxRangeToFormat
+	{
+		[default] interface ICxRangeToFormat;
+	};
+
+	[
+		uuid(478B5BDF-C4A3-4741-AFCF-3CED23495E2E),
+		helpstring("CxSymbolTreePage Class")
+	]
+	coclass CxSymbolTreePage
+	{
+		[default] interface ICxSymbolTreePage;
+	};
+};

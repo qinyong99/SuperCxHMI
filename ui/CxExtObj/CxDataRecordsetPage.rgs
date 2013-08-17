@@ -1,0 +1,23 @@
+HKCR
+{
+	CxExtObj.CxDataRecordsetPage.1 = s 'CxDataRecordsetPage Class'
+	{
+		CLSID = s '{D1E7A6A7-609E-4C65-8B81-8C8285904893}'
+	}
+	CxExtObj.CxDataRecordsetPage = s 'CxDataRecordsetPage Class'
+	{
+		CLSID = s '{D1E7A6A7-609E-4C65-8B81-8C8285904893}'
+		CurVer = s 'CxExtObj.CxDataRecordsetPage.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {D1E7A6A7-609E-4C65-8B81-8C8285904893} = s 'CxDataRecordsetPage Class'
+		{
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+		}
+	}
+}

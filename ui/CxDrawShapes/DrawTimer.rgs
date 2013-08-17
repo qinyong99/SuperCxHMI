@@ -1,0 +1,26 @@
+HKCR
+{
+	CxDrawShapes.DrawTimer.1 = s 'DrawTimer Class'
+	{
+		CLSID = s '{617AE6A5-4886-433B-A139-F0C54B519A26}'
+	}
+	CxDrawShapes.DrawTimer = s 'DrawTimer Class'
+	{
+		CLSID = s '{617AE6A5-4886-433B-A139-F0C54B519A26}'
+		CurVer = s 'CxDrawShapes.DrawTimer.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {617AE6A5-4886-433B-A139-F0C54B519A26} = s 'DrawTimer Class'
+		{
+			ProgID = s 'CxDrawShapes.DrawTimer.1'
+			VersionIndependentProgID = s 'CxDrawShapes.DrawTimer'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{47D020EA-E241-4400-8721-D56749368C63}'
+		}
+	}
+}

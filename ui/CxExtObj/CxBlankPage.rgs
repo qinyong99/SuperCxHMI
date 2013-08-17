@@ -1,0 +1,23 @@
+HKCR
+{
+	CxExtObj.CxBlankPage.1 = s 'CxBlankPage Class'
+	{
+		CLSID = s '{5CA14830-C760-4A3A-BBB7-A7241BE9A73B}'
+	}
+	CxExtObj.CxBlankPage = s 'CxBlankPage Class'
+	{
+		CLSID = s '{5CA14830-C760-4A3A-BBB7-A7241BE9A73B}'
+		CurVer = s 'CxExtObj.CxBlankPage.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {5CA14830-C760-4A3A-BBB7-A7241BE9A73B} = s 'CxBlankPage Class'
+		{
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+		}
+	}
+}

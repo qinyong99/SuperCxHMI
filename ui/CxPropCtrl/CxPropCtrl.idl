@@ -1,0 +1,66 @@
+// CxPropCtrl.idl : IDL source for CxPropCtrl.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (CxPropCtrl.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+#include "olectl.h"
+	
+
+	[
+		object,
+		uuid(71645E30-3595-11D5-A468-EFC5A834B60B),
+		dual,
+		helpstring("IPropertyCtrl Interface"),
+		pointer_default(unique)
+	]
+	interface IPropertyCtrl : IDispatch
+	{
+		[id(1), helpstring("method SetSelectedObject")] HRESULT SetSelectedObject(ULONG nObjects, IUnknown **ppObjUnk, BSTR bstrItemName, IUnknown** ppEnumUnk);
+		[id(2), helpstring("method AddComboString")] HRESULT AddComboString(BSTR bstrItemName);
+		[propget, id(3), helpstring("property NameShowHelpString")] HRESULT NameShowHelpString([out, retval] BOOL *pVal);
+		[propput, id(3), helpstring("property NameShowHelpString")] HRESULT NameShowHelpString([in] BOOL newVal);
+		[id(4), helpstring("method GetSelectedItemName")] HRESULT GetSelectedItemName(BSTR *pbstrItemName);
+		[propget, id(5), helpstring("property ShowDynamic")] HRESULT ShowDynamic([out, retval] BOOL *pVal);
+		[propput, id(5), helpstring("property ShowDynamic")] HRESULT ShowDynamic([in] BOOL newVal);
+		[id(6), helpstring("method Refresh")] HRESULT Refresh();
+	};
+
+[
+	uuid(71645E24-3595-11D5-A468-EFC5A834B60B),
+	version(1.0),
+	helpstring("CxPropCtrl 1.0 Type Library")
+]
+library CXPROPCTRLLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	[
+		uuid(DFDB7686-47CC-11D5-A46A-DB96EB38390A),
+		helpstring("_IPropertyCtrlEvents Interface")
+	]
+	dispinterface _IPropertyCtrlEvents
+	{
+		properties:
+		methods:
+		[id(1), helpstring("method ComboDropDown")] HRESULT ComboDropDown();
+		[id(2), helpstring("method ComboSelchange")] HRESULT ComboSelchange();
+//		[id(3), helpstring("method SelNameChange")] HRESULT SelNameChange(BSTR bstrName);
+		[id(3), helpstring("method ShowPropPages")] HRESULT ShowPropPages();
+		[id(4), helpstring("method PropertyChanging")] HRESULT PropertyChanging(DISPID dispid, VARIANT_BOOL* pbCancel);
+		[id(5), helpstring("method PropertyChanged")] HRESULT PropertyChanged(DISPID dispid);
+		[id(6), helpstring("method GetExpressionCreatorProc")] HRESULT GetExpressionCreatorProc(long lProc);
+	};
+	
+	[
+		uuid(71645E31-3595-11D5-A468-EFC5A834B60B),
+		helpstring("PropertyCtrl Class")
+	]
+	coclass PropertyCtrl
+	{
+		[default] interface IPropertyCtrl;
+	};
+};

@@ -1,0 +1,26 @@
+HKCR
+{
+	CxDrawShapes.DrawPie.1 = s 'DrawPie Class'
+	{
+		CLSID = s '{7127E1B2-A7DA-4A86-BC27-A559BFBB7F90}'
+	}
+	CxDrawShapes.DrawPie = s 'DrawPie Class'
+	{
+		CLSID = s '{7127E1B2-A7DA-4A86-BC27-A559BFBB7F90}'
+		CurVer = s 'CxDrawShapes.DrawPie.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {7127E1B2-A7DA-4A86-BC27-A559BFBB7F90} = s 'DrawPie Class'
+		{
+			ProgID = s 'CxDrawShapes.DrawPie.1'
+			VersionIndependentProgID = s 'CxDrawShapes.DrawPie'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{D75F0066-DC61-4679-A739-5B046E2C9088}'
+		}
+	}
+}

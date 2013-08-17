@@ -1,0 +1,23 @@
+HKCR
+{
+	CxLinearDyn.LinearPage.1 = s 'LinearPage Class'
+	{
+		CLSID = s '{893A81C0-5B08-4636-8767-32C16BEB6C79}'
+	}
+	CxLinearDyn.LinearPage = s 'LinearPage Class'
+	{
+		CLSID = s '{893A81C0-5B08-4636-8767-32C16BEB6C79}'
+		CurVer = s 'CxLinearDyn.LinearPage.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {893A81C0-5B08-4636-8767-32C16BEB6C79} = s 'LinearPage Class'
+		{
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+		}
+	}
+}

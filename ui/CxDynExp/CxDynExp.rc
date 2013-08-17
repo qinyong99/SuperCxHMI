@@ -1,0 +1,352 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "winres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""winres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "1 TYPELIB ""CxDynExp.tlb""\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "CxDynExp Module\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "CxDynExp\0"
+            VALUE "LegalCopyright", "Copyright 2005\0"
+            VALUE "OriginalFilename", "CxDynExp.DLL\0"
+            VALUE "ProductName", "CxDynExp Module\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+            VALUE "OLESelfRegister", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// REGISTRY
+//
+
+IDR_CXDYNAMICEXPERT     REGISTRY DISCARDABLE    "CxDynamicExpert.rgs"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_CXDYNAMICEXPERT DIALOG DISCARDABLE  0, 0, 371, 206
+STYLE WS_CHILD
+FONT 9, "宋体"
+BEGIN
+    PUSHBUTTON      "下一动画对象",IDC_NEXT_OBJECT,0,2,90,14
+    CONTROL         "Tree1",IDC_MODES,"SysTreeView32",TVS_HASBUTTONS | 
+                    TVS_HASLINES | TVS_LINESATROOT | TVS_DISABLEDRAGDROP | 
+                    TVS_SHOWSELALWAYS | TVS_NOTOOLTIPS | TVS_CHECKBOXES | 
+                    WS_BORDER | WS_TABSTOP,0,20,90,185
+    EDITTEXT        IDC_EXPRESSION,105,13,228,15,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_CREATE_EXPRESSION,343,14,19,14
+    CONTROL         "",IDC_RECT,"Static",SS_ETCHEDFRAME | NOT WS_VISIBLE,94,
+                    40,277,145
+    PUSHBUTTON      "应用",IDC_APPLY,205,190,50,14
+    GROUPBOX        "表达式",IDC_STATIC,94,0,277,38
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,94,184,277,1
+END
+
+IDD_ADVANCED DIALOG DISCARDABLE  0, 0, 277, 136
+STYLE WS_CHILD
+FONT 9, "宋体"
+BEGIN
+    CONTROL         "表格",IDC_LOOKUP,"Button",BS_AUTORADIOBUTTON | WS_GROUP,
+                    245,22,30,10
+    CONTROL         "线性",IDC_LINEAR,"Button",BS_AUTORADIOBUTTON,245,51,30,
+                    10
+    CONTROL         "格式",IDC_FORMAT,"Button",BS_AUTORADIOBUTTON,245,82,30,
+                    10
+    CONTROL         "直接",IDC_DIRECT,"Button",BS_AUTORADIOBUTTON,245,108,30,
+                    10
+    LTEXT           "",IDC_RECT,0,11,236,110,SS_SUNKEN | NOT WS_VISIBLE | 
+                    NOT WS_GROUP
+    CONTROL         "",IDC_DIV,"Static",SS_BLACKFRAME | SS_SUNKEN,236,14,1,
+                    106
+END
+
+IDD_MOVEMENT DIALOG DISCARDABLE  0, 0, 277, 136
+STYLE WS_CHILD
+FONT 9, "宋体"
+BEGIN
+    LTEXT           "最大值",IDC_STATIC,28,64,27,9
+    EDITTEXT        IDC_LOINVALUE,56,27,54,15,ES_AUTOHSCROLL
+    LTEXT           "最小值",IDC_STATIC,28,32,25,9
+    EDITTEXT        IDC_HIINVALUE,56,59,54,15,ES_AUTOHSCROLL
+    LTEXT           "最大值",IDC_STATIC,164,64,25,9
+    EDITTEXT        IDC_LOOUTVALUE,194,27,54,15,ES_AUTOHSCROLL
+    LTEXT           "最小值",IDC_STATIC,164,32,25,9
+    EDITTEXT        IDC_HIOUTVALUE,194,59,54,15,ES_AUTOHSCROLL
+    CONTROL         "运行时取输入值",IDC_FETCHINPUT,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,21,99,72,10
+    CONTROL         "允许鼠标(或反向)输入",IDC_ENABLEMOUSEINPUT,"Button",
+                    BS_AUTOCHECKBOX | BS_NOTIFY | WS_TABSTOP,21,118,106,10
+    GROUPBOX        "表达式值",IDC_STATIC,19,11,105,75
+    GROUPBOX        "属性",IDC_PROP,155,11,105,75
+    GROUPBOX        "位置类型",IDC_POSITON_TYPE,155,95,105,35
+    CONTROL         "相对",IDC_OFFSET,"Button",BS_AUTORADIOBUTTON | WS_GROUP,
+                    167,111,32,10
+    CONTROL         "绝对",IDC_ABSOLUTE,"Button",BS_AUTORADIOBUTTON,212,111,
+                    32,10
+END
+
+IDD_VISIBLE DIALOG DISCARDABLE  0, 0, 277, 136
+STYLE WS_CHILD
+FONT 9, "宋体"
+BEGIN
+    LTEXT           "提示：",IDC_STATIC,19,20,25,10
+    LTEXT           "当表达式值为真时，对象可见。",IDC_STATIC,20,35,120,65
+END
+
+IDD_SCALE DIALOG DISCARDABLE  0, 0, 277, 136
+STYLE WS_CHILD
+FONT 9, "宋体"
+BEGIN
+    LTEXT           "最大值",IDC_STATIC,28,64,27,9
+    EDITTEXT        IDC_LOINVALUE,56,27,54,15,ES_AUTOHSCROLL
+    LTEXT           "最小值",IDC_STATIC,28,32,25,9
+    EDITTEXT        IDC_HIINVALUE,56,59,54,15,ES_AUTOHSCROLL
+    LTEXT           "最大值",IDC_STATIC,164,64,25,9
+    EDITTEXT        IDC_LOOUTVALUE,194,27,54,15,ES_AUTOHSCROLL
+    LTEXT           "最小值",IDC_STATIC,164,32,25,9
+    EDITTEXT        IDC_HIOUTVALUE,194,59,54,15,ES_AUTOHSCROLL
+    CONTROL         "运行时取输入值",IDC_FETCHINPUT,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,21,99,72,10
+    GROUPBOX        "表达式值",IDC_STATIC,19,11,105,75
+    GROUPBOX        "属性",IDC_PROP,155,11,105,75
+    LTEXT           "缩放基点",IDC_STATIC,156,100,33,8
+    COMBOBOX        IDC_BASE,194,98,65,85,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_FILL DIALOG DISCARDABLE  0, 0, 277, 136
+STYLE WS_CHILD
+FONT 9, "宋体"
+BEGIN
+    LTEXT           "最大值",IDC_STATIC,28,64,27,9
+    EDITTEXT        IDC_LOINVALUE,56,27,54,15,ES_AUTOHSCROLL
+    LTEXT           "最小值",IDC_STATIC,28,32,25,9
+    EDITTEXT        IDC_HIINVALUE,56,59,54,15,ES_AUTOHSCROLL
+    LTEXT           "最大值",IDC_STATIC,164,64,25,9
+    EDITTEXT        IDC_LOOUTVALUE,194,27,54,15,ES_AUTOHSCROLL
+    LTEXT           "最小值",IDC_STATIC,164,32,25,9
+    EDITTEXT        IDC_HIOUTVALUE,194,59,54,15,ES_AUTOHSCROLL
+    CONTROL         "运行时取输入值",IDC_FETCHINPUT,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,21,99,72,10
+    GROUPBOX        "表达式值",IDC_STATIC,19,11,105,75
+    GROUPBOX        "属性",IDC_PROP,155,11,105,75
+    LTEXT           "填充方向",IDC_STATIC,160,100,33,8
+    COMBOBOX        IDC_DIRECTION,195,98,60,85,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_COLOR DIALOG DISCARDABLE  0, 0, 277, 136
+STYLE WS_CHILD
+FONT 9, "宋体"
+BEGIN
+    CONTROL         " 完全匹配",IDC_EXACTMATCH,"Button",BS_AUTORADIOBUTTON,
+                    42,15,52,10
+    CONTROL         "范围比较",IDC_RANGECOMPARE,"Button",BS_AUTORADIOBUTTON,
+                    138,15,48,10
+    CONTROL         "List1",IDC_LIST,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_OWNERDRAWFIXED | WS_BORDER | 
+                    WS_TABSTOP,8,35,210,80
+    PUSHBUTTON      "插入行",IDC_INSERT_ROW,223,41,50,14
+    PUSHBUTTON      "编辑行",IDC_EDIT_ROW,223,69,50,14
+    PUSHBUTTON      "删除行",IDC_DELETE_ROW,223,97,50,14
+END
+
+IDD_ITEM_EDIT DIALOG DISCARDABLE  0, 0, 202, 115
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "编辑行"
+FONT 9, "宋体"
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,76,93,50,14
+    PUSHBUTTON      "取消",IDCANCEL,136,93,50,14
+    EDITTEXT        IDC_ITEM_INPUT1,42,29,42,14,ES_AUTOHSCROLL
+    LTEXT           "最小值",IDC_STATIC,13,31,24,10
+    EDITTEXT        IDC_ITEM_INPUT2,42,58,42,14,ES_AUTOHSCROLL
+    LTEXT           "最大值",IDC_STATIC,13,60,24,10
+    GROUPBOX        "表达式值",IDC_STATIC,7,7,91,73
+    GROUPBOX        "属性值",IDC_STATIC,103,7,91,73
+    CONTROL         "",IDC_OUTPUT,"{BFBB9868-C022-436A-A071-192FFE31F7E5}",
+                    WS_TABSTOP,109,29,77,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_CXDYNAMICEXPERT, DIALOG
+    BEGIN
+        RIGHTMARGIN, 315
+        BOTTOMMARGIN, 180
+    END
+
+    IDD_ADVANCED, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 270
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 129
+    END
+
+    IDD_MOVEMENT, DIALOG
+    BEGIN
+        RIGHTMARGIN, 222
+        BOTTOMMARGIN, 101
+    END
+
+    IDD_VISIBLE, DIALOG
+    BEGIN
+        RIGHTMARGIN, 222
+        BOTTOMMARGIN, 101
+    END
+
+    IDD_SCALE, DIALOG
+    BEGIN
+        RIGHTMARGIN, 222
+        BOTTOMMARGIN, 101
+    END
+
+    IDD_FILL, DIALOG
+    BEGIN
+        RIGHTMARGIN, 222
+        BOTTOMMARGIN, 101
+    END
+
+    IDD_COLOR, DIALOG
+    BEGIN
+        RIGHTMARGIN, 222
+        BOTTOMMARGIN, 101
+    END
+
+    IDD_ITEM_EDIT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 195
+        BOTTOMMARGIN, 108
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_ITEM_EDIT DLGINIT
+BEGIN
+    IDC_OUTPUT, 0x376, 16, 0
+0x0000, 0x0000, 0x0300, 0x0000, 0x0bfd, 0x0000, 0x022c, 0x0000, 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_PROJNAME            "CxDynExp"
+    IDS_TITLECxDynamicExpert "Title"
+    IDS_HELPFILECxDynamicExpert "Help File Name"
+    IDS_DOCSTRINGCxDynamicExpert "Your Help String"
+END
+
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+1 TYPELIB "CxDynExp.tlb"
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

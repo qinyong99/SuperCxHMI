@@ -1,0 +1,84 @@
+// CxDynObjs.idl : IDL source for CxDynObjs.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (CxDynObjs.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+import "CxHmiObj.idl";
+import "CxHmiMisc.idl";
+	
+	[
+		object,
+		uuid(85154308-80E8-4DFF-B56D-B07F29398AEC),
+	
+		helpstring("IDynamicFrm Interface"),
+		pointer_default(unique)
+	]
+	interface IDynamicFrm : IUnknown
+	{
+		[helpstring("method EditDynamic")] HRESULT EditDynamic(long hParent, long X, long Y);
+		[propget, helpstring("property PropertyInfo")] HRESULT PropertyInfo([out, retval] long *pVal);
+		[propput, helpstring("property PropertyInfo")] HRESULT PropertyInfo([in] long newVal);
+		[propget, helpstring("property Source")] HRESULT Source([out, retval] BSTR *pVal);
+		[propput, helpstring("property Source")] HRESULT Source([in] BSTR newVal);
+		[helpstring("method OnCreateExpression")] HRESULT OnCreateExpression(BSTR* pbstr);
+		
+	};	
+
+[
+	uuid(680279D8-82B5-4F7F-B835-EDE7C5A0D725),
+	version(1.0),
+	helpstring("CxDynObjs 1.0 Type Library")
+]
+library CXDYNOBJSLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	[
+		uuid(9F0A1B68-FB38-4726-A565-E259C1CA98E8),
+		helpstring("LookupPage Class")
+	]
+	coclass LookupPage
+	{
+		interface IUnknown;
+	};
+
+	[
+		uuid(893A81C0-5B08-4636-8767-32C16BEB6C79),
+		helpstring("LinearPage Class")
+	]
+	coclass LinearPage
+	{
+		interface IUnknown;
+	};
+
+	[
+		uuid(97F23A79-DAE2-4AA3-A6B3-1628FB5C482C),
+		helpstring("FormatPage Class")
+	]
+	coclass FormatPage
+	{
+		interface IUnknown;
+	};
+
+	[
+		uuid(4B825127-13C1-454C-8B24-05966D8B71C8),
+		helpstring("DirectPage Class")
+	]
+	coclass DirectPage
+	{
+		interface IUnknown;
+	};
+
+	[
+		uuid(E119A745-7237-4F54-ACB9-4E743330DB95),
+		helpstring("DynamicFrm Class")
+	]
+	coclass DynamicFrm
+	{
+		[default] interface IDynamicFrm;
+	};
+};

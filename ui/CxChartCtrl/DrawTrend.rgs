@@ -1,0 +1,26 @@
+HKCR
+{
+	CxChartCtrl.DrawTrend.1 = s 'DrawTrend Class'
+	{
+		CLSID = s '{EF34F70F-78B8-4A70-937C-380244524C67}'
+	}
+	CxChartCtrl.DrawTrend = s 'DrawTrend Class'
+	{
+		CLSID = s '{EF34F70F-78B8-4A70-937C-380244524C67}'
+		CurVer = s 'CxChartCtrl.DrawTrend.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {EF34F70F-78B8-4A70-937C-380244524C67} = s 'DrawTrend Class'
+		{
+			ProgID = s 'CxChartCtrl.DrawTrend.1'
+			VersionIndependentProgID = s 'CxChartCtrl.DrawTrend'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{E0B4114F-E821-4023-B141-5D65BAE2DDDC}'
+		}
+	}
+}

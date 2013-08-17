@@ -1,0 +1,23 @@
+HKCR
+{
+	CxDrawShapes.CxButtonGenPage.1 = s 'CxButtonGenPage Class'
+	{
+		CLSID = s '{30AFFE31-D815-47EF-A10E-CF18CB705A9C}'
+	}
+	CxDrawShapes.CxButtonGenPage = s 'CxButtonGenPage Class'
+	{
+		CLSID = s '{30AFFE31-D815-47EF-A10E-CF18CB705A9C}'
+		CurVer = s 'CxDrawShapes.CxButtonGenPage.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {30AFFE31-D815-47EF-A10E-CF18CB705A9C} = s 'CxButtonGenPage Class'
+		{
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+		}
+	}
+}

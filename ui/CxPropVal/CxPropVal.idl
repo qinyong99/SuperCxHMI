@@ -1,0 +1,63 @@
+// CxPropVal.idl : IDL source for CxPropVal.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (CxPropVal.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+#include "olectl.h"
+	
+
+	[
+		object,
+		uuid(56AA136B-3131-4950-A35B-FEF59A36F2E7),
+		dual,
+		helpstring("ICxPropertyValue Interface"),
+		pointer_default(unique)
+	]
+	interface ICxPropertyValue : IDispatch
+	{
+		[propget, id(1), helpstring("property Type")] HRESULT Type([out, retval] long *pVal);
+		[propput, id(1), helpstring("property Type")] HRESULT Type([in] long newVal);
+		[propget, id(2), helpstring("property Value")] HRESULT Value([out, retval] VARIANT *pVal);
+		[propput, id(2), helpstring("property Value")] HRESULT Value([in] VARIANT newVal);
+		[id(3), helpstring("method AddEnumItem")] HRESULT AddEnumItem(BSTR bstrDesc, VARIANT varValue);
+		[id(4), helpstring("method Reset")] HRESULT Reset();
+		[propget, id(5), helpstring("property Object")] HRESULT Object([out, retval] IUnknown* *pVal);
+		[propput, id(5), helpstring("property Object")] HRESULT Object([in] IUnknown* newVal);
+		[propget, id(6), helpstring("property DefaultValue")] HRESULT DefaultValue([out, retval] VARIANT *pVal);
+		[propput, id(6), helpstring("property DefaultValue")] HRESULT DefaultValue([in] VARIANT newVal);
+	};
+
+[
+	uuid(17145CD7-7FC1-4CFD-8B0C-F1BB3DCE8FCA),
+	version(1.0),
+	helpstring("CxPropVal 1.0 Type Library")
+]
+library CXPROPVALLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	[
+		uuid(68D760B0-885D-4bc2-9402-D18644134B58),
+		helpstring("_IPropertyValueEvents Interface")
+	]
+	dispinterface _IPropertyValueEvents
+	{
+		properties:
+		methods:
+		[id(1), helpstring("method ValueChanged")] HRESULT ValueChanged();
+		[id(2), helpstring("method BeginEdit")] HRESULT BeginEdit();
+	};
+
+	[
+		uuid(BFBB9868-C022-436A-A071-192FFE31F7E5),
+		helpstring("CxPropertyValue Class")
+	]
+	coclass CxPropertyValue
+	{
+		[default] interface ICxPropertyValue;
+	};
+};

@@ -1,0 +1,25 @@
+HKCR
+{
+	CxDynFrm.DynamicFrm.1 = s 'DynamicFrm Class'
+	{
+		CLSID = s '{E119A745-7237-4F54-ACB9-4E743330DB95}'
+	}
+	CxDynFrm.DynamicFrm = s 'DynamicFrm Class'
+	{
+		CLSID = s '{E119A745-7237-4F54-ACB9-4E743330DB95}'
+		CurVer = s 'CxDynFrm.DynamicFrm.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {E119A745-7237-4F54-ACB9-4E743330DB95} = s 'DynamicFrm Class'
+		{
+			ProgID = s 'CxDynFrm.DynamicFrm.1'
+			VersionIndependentProgID = s 'CxDynFrm.DynamicFrm'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{64A4FFD5-9F3A-4312-8937-0000F35CD597}'
+		}
+	}
+}

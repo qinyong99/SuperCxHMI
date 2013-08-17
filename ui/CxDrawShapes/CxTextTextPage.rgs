@@ -1,0 +1,23 @@
+HKCR
+{
+	CxDrawShapes.CxTextTextPage.1 = s 'CxTextTextPage Class'
+	{
+		CLSID = s '{54B8954A-2302-4AD2-9DED-C046377EA507}'
+	}
+	CxDrawShapes.CxTextTextPage = s 'CxTextTextPage Class'
+	{
+		CLSID = s '{54B8954A-2302-4AD2-9DED-C046377EA507}'
+		CurVer = s 'CxDrawShapes.CxTextTextPage.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {54B8954A-2302-4AD2-9DED-C046377EA507} = s 'CxTextTextPage Class'
+		{
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+		}
+	}
+}
