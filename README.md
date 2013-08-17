@@ -3,6 +3,7 @@ SuperCx_HMI
 
 This is SuperCx SCADA/HMI Software's HMI.
 
+[项目详情页面](https://github.com/qinyong99/SuperCx_HMI/wiki)
 
 # 环境要求
 1. VC6 + sp5以上。
@@ -16,4 +17,4 @@ This is SuperCx SCADA/HMI Software's HMI.
    * D:\SuperCx_HMI\LIB\HTMLHELP
 1. 在d:\SuperCx_HMI\bld文件夹中，以管理员权限运行批处理BuildUI.bat，自动完成编译，输出为d:\SuperCx_HMI\bin文件夹。 
 
-[WIKI项目介绍页面](https://github.com/qinyong99/SuperCx_HMI/wiki)
+
