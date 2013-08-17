@@ -3,9 +3,9 @@ SuperCx_HMI
 
 This is SuperCx SCADA/HMI Software's HMI.
 
-![画面开发环境](https://raw.github.com/qinyong99/SuperCx_HMI/master/wiki/image/200691178332.jpg)
-
 [项目详情页面](https://github.com/qinyong99/SuperCx_HMI/wiki)
+
+![画面开发环境](https://raw.github.com/qinyong99/SuperCx_HMI/master/wiki/image/200691178332.jpg)
 
 # 环境要求
 1. VC6 + sp5以上。
