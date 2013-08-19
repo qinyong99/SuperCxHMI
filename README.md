@@ -1,4 +1,4 @@
-SuperCx_HMI
+SuperCxHMI
 ===========
 
 This is SuperCx SCADA/HMI Software's HMI.
