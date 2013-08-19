@@ -17,6 +17,6 @@ This is SuperCx SCADA/HMI Software's HMI.
    * D:\SuperCx_HMI\LIB\WTL\INCLUDE
    * D:\SuperCx_HMI\LIB\GDIPLUS
    * D:\SuperCx_HMI\LIB\HTMLHELP
-1. 在d:\SuperCx_HMI\bld文件夹中，以管理员权限运行批处理BuildUI.bat，自动完成编译，输出为d:\SuperCx_HMI\bin文件夹。 
+1. 在d:\SuperCx_HMI\bld文件夹中，以管理员权限运行批处理BuildUI.bat，自动完成编译，输出为d:\SuperCx_HMI\bin文件夹，开发环境主程序为CxDev.exe，运行环境主程序为CxRun.exe。 
 
 
