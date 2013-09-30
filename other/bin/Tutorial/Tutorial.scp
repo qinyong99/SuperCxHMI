@@ -1,0 +1,6 @@
+[Project]
+Description=教学工程
+[Path]
+Data=<工程路径>\Data\
+Recipe=<工程路径>\Recipe\
+Picture=<工程路径>\Picture\

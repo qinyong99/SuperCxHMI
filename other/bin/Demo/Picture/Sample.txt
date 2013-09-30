@@ -1,0 +1,3 @@
+Hello!
+This is a sample text!
+SuperCx can suport many ActiveX Control!

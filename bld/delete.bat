@@ -16,5 +16,17 @@ del ..\ui\CxPropVal\CxPropVal.h
 del ..\ui\CxRunCtrl\CxRunCtrlIF.H
 del ..\ui\CxScripCrt\CxScripCrt.h
 del ..\ui\CxTagPick\CxTagPick.h
+del ..\ui\CxAlmSumCtrl\dlldata.c
+del ..\ui\CxChartCtrl\dlldata.c
+del ..\ui\CxComObj\dlldata.c
+del ..\ui\CxDynObjs\dlldata.c
+del ..\ui\CxExtObj\dlldata.c
+del ..\ui\CxOle\dlldata.c
+del ..\ui\CxPropCtrl\dlldata.c
+del ..\ui\CxPropVal\dlldata.c
+del ..\ui\CxScripCrt\dlldata.c
+del ..\ui\CxTagPick\dlldata.c
+
 
 pause
+

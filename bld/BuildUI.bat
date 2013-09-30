@@ -15,6 +15,7 @@ set PATH=%PATH%;C:\Program Files\Microsoft Visual Studio\Common\MSDev98\Bin\;C:\
 set DRV_PATH=..\drv
 set SVR_PATH=..\svr
 set UI_PATH=..\ui
+set BIN_FULL=..\bin_full
 set LOG_PATH=.\BuildLog\%DATE%
 set TARGET_PATH="..\rls\SuperCxSetup_3_0"
 
@@ -31,6 +32,8 @@ rem @for /f "tokens=1 delims= " %%a in (uiprojects.inf) do (echo %%a)
 
 rd /s /q ..\bin
 md ..\bin
+rd /s /q ..\bin_full
+md ..\bin_full
 
 echo build common ...
 MSDEV.EXE %UI_PATH%\CxSCBar\CxSCBar.dsw /MAKE "CxSCBar - Win32 Release" /REBUILD >> %VC6_LOG%
@@ -58,6 +61,55 @@ MSDEV.EXE %UI_PATH%\CxDev\CxDev.dsw /MAKE "CxDev - Win32 Release" /REBUILD >> %V
 MSDEV.EXE %UI_PATH%\CxRunCtrl\CxRunCtrl.dsw /MAKE "CxRunCtrl - Win32 Release" /REBUILD >> %VC6_LOG%
 MSDEV.EXE %UI_PATH%\WinLockDll\WinLockDll.dsw /MAKE "WinLockDll - Win32 Release" /REBUILD >> %VC6_LOG%
 MSDEV.EXE %UI_PATH%\CxRun\CxRun.dsw /MAKE "CxRun - Win32 Release" /REBUILD >> %VC6_LOG%
+
+echo copy files ...
+xcopy ..\bin_svr %BIN_FULL% /s /y
+xcopy ..\bin %BIN_FULL% /s /y
+xcopy ..\other\bin %BIN_FULL% /s /y
+
+echo register drv files ...
+regsvr32 /s  %BIN_FULL%\CxCommTask.dll
+regsvr32 /s  %BIN_FULL%\Drivers\CxDrvAIBUS.dll
+regsvr32 /s  %BIN_FULL%\Drivers\CxDrvDDE.dll
+regsvr32 /s  %BIN_FULL%\Drivers\CxDrvFx.dll
+regsvr32 /s  %BIN_FULL%\Drivers\CxDrvHostLink.dll
+regsvr32 /s  %BIN_FULL%\Drivers\CxDrvHWJT08C.dll
+regsvr32 /s  %BIN_FULL%\Drivers\CxDrvIrrigate.dll
+regsvr32 /s  %BIN_FULL%\Drivers\CxDrvLGMK.dll
+regsvr32 /s  %BIN_FULL%\Drivers\CxDrvModbus.dll
+regsvr32 /s  %BIN_FULL%\Drivers\CxDrvNNS.dll
+regsvr32 /s  %BIN_FULL%\Drivers\CxDrvOPC.dll
+regsvr32 /s  %BIN_FULL%\Drivers\CxDrvS7PPI.dll
+regsvr32 /s  %BIN_FULL%\Drivers\CxDrvS7MPI.dll
+regsvr32 /s  %BIN_FULL%\Drivers\CxDrvSimulator.dll
+regsvr32 /s  %BIN_FULL%\Drivers\CxDrvWaterTank.dll
+regsvr32 /s  %BIN_FULL%\Drivers\CxDrvFinsTcp.dll
+regsvr32 /s  %BIN_FULL%\Drivers\CxDrvEC2006.dll
+regsvr32 /s  %BIN_FULL%\Drivers\CxDrvCsMfc.dll
+regsvr32 /s  %BIN_FULL%\Drivers\CxDrvPplRec.dll
+regsvr32 /s  %BIN_FULL%\Drivers\CxDrvSCSQ.dll
+regsvr32 /s  %BIN_FULL%\Drivers\CxDrvTianSuMine.dll
+
+echo register svr files ...
+regsvr32 /s  %BIN_FULL%\CxBasAcs.dll
+regsvr32 /s  %BIN_FULL%\CxBasBlk.dll
+regsvr32 /s  %BIN_FULL%\CxAlmAreMan.dll
+regsvr32 /s  %BIN_FULL%\CxAppMan.dll
+regsvr32 /s  %BIN_FULL%\CxDatMan.dll
+regsvr32 /s  %BIN_FULL%\CxDevMan.dll
+regsvr32 /s  %BIN_FULL%\CxMiscMan.dll
+regsvr32 /s  %BIN_FULL%\CxNodeMan.dll
+regsvr32 /s  %BIN_FULL%\CxPictMan.dll
+regsvr32 /s  %BIN_FULL%\CxRecpMan.dll
+regsvr32 /s  %BIN_FULL%\CxSchedMan.dll
+regsvr32 /s  %BIN_FULL%\CxSecAreMan.dll
+regsvr32 /s  %BIN_FULL%\CxUserMan.dll
+regsvr32 /s  %BIN_FULL%\CxSACProxy.dll
+regsvr32 /s  %BIN_FULL%\CxDatSes.dll
+regsvr32 /s  %BIN_FULL%\CxDBProv.dll
+regsvr32 /s  %BIN_FULL%\CxExcelUtil.dll
+regsvr32 /s  %BIN_FULL%\CxGameManager.dll
+%BIN_FULL%\CxSAC.exe /RegServer
 
 :Install
 

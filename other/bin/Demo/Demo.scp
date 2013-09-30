@@ -1,0 +1,7 @@
+[Path]
+Data=<工程路径>\Data
+HistoryData=<工程路径>\HistoryData
+Picture=<工程路径>\Picture
+Recipe=<工程路径>\Recipe\
+[Project]
+Description=演示工程

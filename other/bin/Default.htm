@@ -1,0 +1,38 @@
+<html >
+<head>
+    <title>SuperCx Web ª≠√Ê‰Ø¿¿</title>
+
+    <script type="text/javascript" src="cxrunctrl.js"></script>
+    <script type="text/javascript">
+        function embedCxRunCtrl(parentElement, pluginId, userContext) {
+            return CxRunCtrl.createObject(
+                parentElement, pluginId,
+                {
+                    width: "1024", height: "690",
+                    Server:"##SERVER##", Port: "##PORT##",
+                    DefaultUser:"system", DefaultPassword: "",
+                    Picture:"Server://../", ZoomFitWindow:"false"
+                },
+                { onError: onSLError, onLoad: onSLLoad }, userContext);
+        }
+
+        function onSLLoad(plugIn, userContext, sender) {
+            // Display load message.
+        }
+
+        function onSLError(sender, args) {
+            // Display error message.
+        }
+    </script>
+</head>
+
+<body topmargin="10" leftmargin="0">
+    <div id="CxRunCtrlHost" style="background:#FFFFFF" align="center">
+         <script type="text/javascript">
+                embedCxRunCtrl(CxRunCtrlHost, "CxRunCtrl", "cx");
+         </script>
+    </div>
+</body>
+
+</html>
+
